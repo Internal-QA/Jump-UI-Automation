@@ -1,0 +1,13 @@
+[32mINFO    [0m UIAutomationLogger:logger.py:60 Starting OTP Test Suite
+[32mINFO    [0m UIAutomationLogger:logger.py:60 ==================================================
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STARTING TEST: test_otp_page_elements
+[32mINFO    [0m UIAutomationLogger:logger.py:60 ==================================================
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Starting OTP page elements test
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Performing login to reach OTP page
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Using credentials: test3
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Successfully logged in and redirected to OTP page
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Verifying OTP page elements
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: OTP page elements test completed successfully
+[32mINFO    [0m UIAutomationLogger:logger.py:60 ==================================================
+[32mINFO    [0m UIAutomationLogger:logger.py:60 FINISHED TEST: test_otp_page_elements
+[32mINFO    [0m UIAutomationLogger:logger.py:60 ==================================================

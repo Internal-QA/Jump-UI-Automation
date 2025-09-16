@@ -1,0 +1,6 @@
+Error creating Chrome driver: [Errno 8] Exec format error: '/Users/shtlpmac015/.wdm/drivers/chromedriver/mac64/139.0.7258.154/chromedriver-mac-arm64/THIRD_PARTY_NOTICES.chromedriver'
+Attempting to use system ChromeDriver...
+Starting test: test_sign_in_button_state_validation
+Using credentials from config file for: valid_user
+Button state validation passed
+Completed test: test_sign_in_button_state_validation

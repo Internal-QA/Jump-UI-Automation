@@ -1,0 +1,12 @@
+[32mINFO    [0m UIAutomationLogger:logger.py:80 ==================================================
+[32mINFO    [0m UIAutomationLogger:logger.py:81 STARTING TEST: test_terms_not_accepted
+[32mINFO    [0m UIAutomationLogger:logger.py:82 ==================================================
+[32mINFO    [0m UIAutomationLogger:logger.py:92 STEP: Starting terms not accepted test
+[32mINFO    [0m UIAutomationLogger:logger.py:92 STEP: Navigating to login page
+[32mINFO    [0m UIAutomationLogger:logger.py:92 STEP: Verifying login page elements are present
+[32mINFO    [0m UIAutomationLogger:logger.py:92 STEP: Attempting login without accepting terms and conditions
+[32mINFO    [0m UIAutomationLogger:logger.py:92 STEP: Current URL after login without terms: https://valueinsightpro.jumpiq.com/auth/login
+[32mINFO    [0m UIAutomationLogger:logger.py:92 STEP: Terms not accepted test completed - login correctly rejected
+[32mINFO    [0m UIAutomationLogger:logger.py:86 ==================================================
+[32mINFO    [0m UIAutomationLogger:logger.py:87 FINISHED TEST: test_terms_not_accepted - STATUS: PASSED
+[32mINFO    [0m UIAutomationLogger:logger.py:88 ==================================================

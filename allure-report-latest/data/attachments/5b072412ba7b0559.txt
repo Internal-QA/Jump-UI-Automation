@@ -1,0 +1,24 @@
+2025-08-28 09:53:51 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 09:53:51 - UIAutomationLogger - INFO - STARTING TEST: test_individual_card_clickability
+2025-08-28 09:53:51 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 09:53:51 - UIAutomationLogger - INFO - STEP: Starting individual card clickability test
+2025-08-28 09:53:51 - UIAutomationLogger - INFO - STEP: Performing complete login and OTP flow to reach home page
+2025-08-28 09:54:11 - UIAutomationLogger - INFO - STEP: Successfully reached OTP page
+2025-08-28 09:54:18 - UIAutomationLogger - INFO - STEP: Successfully completed login and OTP flow - arrived at home page
+2025-08-28 09:54:18 - UIAutomationLogger - INFO - STEP: Testing individual card clickability (1-6)
+2025-08-28 09:54:18 - UIAutomationLogger - INFO - STEP: Testing card 1 clickability
+2025-08-28 09:54:18 - UIAutomationLogger - INFO - STEP: Card 1 clickability validation passed
+2025-08-28 09:54:18 - UIAutomationLogger - INFO - STEP: Testing card 2 clickability
+2025-08-28 09:54:18 - UIAutomationLogger - INFO - STEP: Card 2 clickability validation passed
+2025-08-28 09:54:18 - UIAutomationLogger - INFO - STEP: Testing card 3 clickability
+2025-08-28 09:54:19 - UIAutomationLogger - INFO - STEP: Card 3 clickability validation passed
+2025-08-28 09:54:19 - UIAutomationLogger - INFO - STEP: Testing card 4 clickability
+2025-08-28 09:54:19 - UIAutomationLogger - INFO - STEP: Card 4 clickability validation passed
+2025-08-28 09:54:19 - UIAutomationLogger - INFO - STEP: Testing card 5 clickability
+2025-08-28 09:54:20 - UIAutomationLogger - INFO - STEP: Card 5 clickability validation passed
+2025-08-28 09:54:20 - UIAutomationLogger - INFO - STEP: Testing card 6 clickability
+2025-08-28 09:54:20 - UIAutomationLogger - INFO - STEP: Card 6 clickability validation passed
+2025-08-28 09:54:20 - UIAutomationLogger - INFO - STEP: All individual card clickability tests passed
+2025-08-28 09:54:20 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 09:54:20 - UIAutomationLogger - INFO - FINISHED TEST: test_individual_card_clickability
+2025-08-28 09:54:20 - UIAutomationLogger - INFO - ==================================================

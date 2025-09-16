@@ -1,0 +1,16 @@
+[32mINFO    [0m UIAutomationLogger:logger.py:80 ==================================================
+[32mINFO    [0m UIAutomationLogger:logger.py:81 STARTING TEST: test_password_eye_icon_functionality
+[32mINFO    [0m UIAutomationLogger:logger.py:82 ==================================================
+[32mINFO    [0m UIAutomationLogger:logger.py:60 ==================================================
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STARTING TEST: test_password_eye_icon_functionality
+[32mINFO    [0m UIAutomationLogger:logger.py:60 ==================================================
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Testing password eye icon functionality
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Successfully navigated to login page
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Password entered successfully
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Password eye icon functionality validated successfully
+[32mINFO    [0m UIAutomationLogger:logger.py:60 ==================================================
+[32mINFO    [0m UIAutomationLogger:logger.py:60 FINISHED TEST: test_password_eye_icon_functionality
+[32mINFO    [0m UIAutomationLogger:logger.py:60 ==================================================
+[32mINFO    [0m UIAutomationLogger:logger.py:86 ==================================================
+[32mINFO    [0m UIAutomationLogger:logger.py:87 FINISHED TEST: test_password_eye_icon_functionality - STATUS: PASSED
+[32mINFO    [0m UIAutomationLogger:logger.py:88 ==================================================

@@ -1,0 +1,22 @@
+{
+    "execution_summary": {
+        "start_time": "2025-08-26 13:02:41.105302",
+        "end_time": "2025-08-26 13:02:45.840724",
+        "total_tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "skipped": 0
+    },
+    "test_results": [
+        {
+            "test_name": "test_password_eye_icon_functionality",
+            "status": "passed",
+            "duration": 2.2107181549072266,
+            "error_message": null,
+            "screenshot_path": null,
+            "test_steps": [],
+            "timestamp": "2025-08-26 13:02:45"
+        }
+    ],
+    "generated_at": "2025-08-26T13:02:45.841089"
+}

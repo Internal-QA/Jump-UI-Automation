@@ -1,0 +1,15 @@
+[32mINFO    [0m UIAutomationLogger:logger.py:60 ==================================================
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STARTING TEST: test_valid_otp_verification
+[32mINFO    [0m UIAutomationLogger:logger.py:60 ==================================================
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Starting valid OTP verification test
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Performing login to reach OTP page
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Using credentials: test3
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Successfully logged in and redirected to OTP page
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Entering valid OTP code: 99999
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Checking OTP verification result
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Final URL after OTP verification: https://valueinsightpro.jumpiq.com/JumpFive/home
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Expected redirect URL: https://valueinsightpro.jumpiq.com/JumpFive/home
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Valid OTP verification test completed successfully - redirected to home page
+[32mINFO    [0m UIAutomationLogger:logger.py:60 ==================================================
+[32mINFO    [0m UIAutomationLogger:logger.py:60 FINISHED TEST: test_valid_otp_verification
+[32mINFO    [0m UIAutomationLogger:logger.py:60 ==================================================

@@ -1,0 +1,15 @@
+[32mINFO    [0m UIAutomationLogger:logger.py:60 ==================================================
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STARTING TEST: test_empty_otp_verification
+[32mINFO    [0m UIAutomationLogger:logger.py:60 ==================================================
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Starting empty OTP verification test
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Performing login to reach OTP page
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Using credentials: test3
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Successfully logged in and redirected to OTP page
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Attempting to verify with empty OTP
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Verify button clicked with empty OTP
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Current URL after empty OTP: https://valueinsightpro.jumpiq.com/auth/login
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: No specific error message found for empty OTP
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Empty OTP verification test completed
+[32mINFO    [0m UIAutomationLogger:logger.py:60 ==================================================
+[32mINFO    [0m UIAutomationLogger:logger.py:60 FINISHED TEST: test_empty_otp_verification
+[32mINFO    [0m UIAutomationLogger:logger.py:60 ==================================================

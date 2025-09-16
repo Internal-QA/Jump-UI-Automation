@@ -1,0 +1,23 @@
+2025-08-28 11:57:06 - UIAutomationLogger - INFO - USING EXISTING LOGIN SESSION
+2025-08-28 11:57:08 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 11:57:08 - UIAutomationLogger - INFO - STARTING TEST: test_radius_data_extraction_for_dealer
+2025-08-28 11:57:08 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 11:57:08 - UIAutomationLogger - INFO - STEP: Testing radius data extraction for Acura of Ramsey
+2025-08-28 11:57:08 - UIAutomationLogger - INFO - STEP: Navigating to valuations page (using existing session)
+2025-08-28 11:57:08 - UIAutomationLogger - INFO - STEP: Navigating to home page first
+2025-08-28 11:57:13 - UIAutomationLogger - INFO - STEP: Waiting for home page to fully load
+2025-08-28 11:57:16 - UIAutomationLogger - INFO - STEP: Attempt 1 to click card 2
+2025-08-28 11:59:08 - UIAutomationLogger - WARNING - STEP: Card 2 click attempt 1 failed
+2025-08-28 11:59:13 - UIAutomationLogger - INFO - STEP: Attempt 2 to click card 2
+2025-08-28 12:01:05 - UIAutomationLogger - WARNING - STEP: Card 2 click attempt 2 failed
+2025-08-28 12:01:11 - UIAutomationLogger - INFO - STEP: Attempt 3 to click card 2
+2025-08-28 12:03:02 - UIAutomationLogger - WARNING - STEP: Card 2 click attempt 3 failed
+2025-08-28 12:03:02 - UIAutomationLogger - ERROR - STEP: All attempts to click card 2 failed
+2025-08-28 12:03:02 - UIAutomationLogger - ERROR - STEP: Radius data extraction test failed: Failed to navigate to valuations page
+assert False
+ +  where False = <bound method TestValuations.navigate_to_valuations_via_home_page of <tests.test_valuations.TestValuations object at 0x1089782e0>>()
+ +    where <bound method TestValuations.navigate_to_valuations_via_home_page of <tests.test_valuations.TestValuations object at 0x1089782e0>> = <tests.test_valuations.TestValuations object at 0x1089782e0>.navigate_to_valuations_via_home_page
+2025-08-28 12:03:03 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 12:03:03 - UIAutomationLogger - INFO - FINISHED TEST: test_radius_data_extraction_for_dealer
+2025-08-28 12:03:03 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 12:03:03 - UIAutomationLogger - INFO - TEST PASSED - RETURNING TO HOME PAGE FOR NEXT TEST

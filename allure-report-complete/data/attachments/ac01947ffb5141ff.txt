@@ -1,0 +1,134 @@
+Error creating Chrome driver: Could not reach host. Are you offline?
+Attempting to use system ChromeDriver...
+Starting test: test_new_valuation_dealer_selection
+Test data loaded from: /Users/shtlpmac015/Desktop/Jump-UI-Automation/utils/../test_data/test_data.json
+Credentials loaded from config file: /Users/shtlpmac015/Desktop/Jump-UI-Automation/utils/../config/config.yaml
+Using credentials from config file for: valid_user
+Button state validation passed
+Locator not found: login_page.invalid_credentials - 'invalid_credentials'
+Locator not found: login_page.fields_required - 'fields_required'
+Login successful - redirected to OTP page
+Starting OTP verification with code: 99999
+OTP page loaded successfully
+Entering OTP code: 99999
+OTP entered successfully: 99999
+Clicking verify button
+Verify button clicked successfully
+OTP verification process completed
+Checking if valuations page is loaded
+Valuations page loaded successfully - search field found
+Performing new valuation workflow with dealer: acura of remsey
+Clicking 'New Valuation' button
+Successfully clicked 'New Valuation' button
+Clicking dealer select dropdown
+Handling potential intercepting elements...
+Found intercepting element: //input[@id='home_screen_new_val_uation']
+Found intercepting element: //div[@class='ant-modal-content']
+Found intercepting element: //div[@class='ant-modal-wrap']
+Intercepting elements handled
+Positioning element for click...
+Trying enhanced ActionChains method...
+Successfully clicked dealer select dropdown (enhanced ActionChains)
+Entering dealer name: acura of remsey
+Attempting to enter text in span element
+Successfully entered dealer name: acura of remsey (direct input method)
+Selecting first option from dropdown
+Waiting for dropdown options to appear...
+Trying locator: xpath='//div[contains(@class, 'rc-select-item')]'
+No options found using xpath='//div[contains(@class, 'rc-select-item')]'
+Trying locator: xpath='//div[contains(@class, 'ant-select-item')]'
+Found 2 options using xpath='//div[contains(@class, 'ant-select-item')]'
+Selecting first option with text: 'ACURA OF RAMSEY-Acura-Ramsey-New Jersey'
+Successfully clicked first option (direct click)
+Validating buttons and creating valuation
+Validating default button is clickable
+Default button is clickable
+✓ Default button is clickable - validation passed
+Clicking create valuation button
+Handling potential intercepting elements for create button...
+Found intercepting element: //div[@class='ant-table-column-sorters']
+Found intercepting element: //div[@class='ant-table-column-sorters']
+Found intercepting element: //div[@class='ant-table-column-sorters']
+Found intercepting element: //div[@class='ant-table-column-sorters']
+Found intercepting element: //div[@class='ant-table-column-sorters']
+Found intercepting element: //div[@class='ant-table-column-sorters']
+Found intercepting element: //div[@class='ant-table-column-sorters']
+Found intercepting element: //div[@class='ant-table-column-sorters']
+Found intercepting element: //div[@class='ant-table-column-sorters']
+Found intercepting element: //div[@class='ant-table-column-sorters']
+Found intercepting element: //div[contains(@class, 'ant-table')]
+Found intercepting element: //div[contains(@class, 'ant-table')]
+Found intercepting element: //div[contains(@class, 'ant-table')]
+Found intercepting element: //div[contains(@class, 'ant-table')]
+Found intercepting element: //div[contains(@class, 'ant-table')]
+Found intercepting element: //div[contains(@class, 'ant-table')]
+Found intercepting element: //div[contains(@class, 'ant-table')]
+Found intercepting element: //div[contains(@class, 'ant-table')]
+Found intercepting element: //div[contains(@class, 'ant-table')]
+Found intercepting element: //div[contains(@class, 'ant-table')]
+Found intercepting element: //div[contains(@class, 'ant-table')]
+Found intercepting element: //div[contains(@class, 'ant-table')]
+Found intercepting element: //div[contains(@class, 'ant-table')]
+Found intercepting element: //div[contains(@class, 'ant-table')]
+Found intercepting element: //div[contains(@class, 'sorter')]
+Found intercepting element: //div[contains(@class, 'sorter')]
+Found intercepting element: //div[contains(@class, 'sorter')]
+Found intercepting element: //div[contains(@class, 'sorter')]
+Found intercepting element: //div[contains(@class, 'sorter')]
+Found intercepting element: //div[contains(@class, 'sorter')]
+Found intercepting element: //div[contains(@class, 'sorter')]
+Found intercepting element: //div[contains(@class, 'sorter')]
+Found intercepting element: //div[contains(@class, 'sorter')]
+Found intercepting element: //div[contains(@class, 'sorter')]
+Intercepting elements for create button handled
+Positioning create button for click...
+Trying enhanced ActionChains for create button...
+Successfully clicked create valuation button (enhanced ActionChains)
+✓ Create valuation button clicked successfully
+Complete new valuation workflow finished successfully with dealer: acura of remsey
+Validating buttons and creating valuation
+Validating default button is clickable
+Default button is clickable
+✓ Default button is clickable - validation passed
+Clicking create valuation button
+Handling potential intercepting elements for create button...
+Found intercepting element: //div[@class='ant-table-column-sorters']
+Found intercepting element: //div[@class='ant-table-column-sorters']
+Found intercepting element: //div[@class='ant-table-column-sorters']
+Found intercepting element: //div[@class='ant-table-column-sorters']
+Found intercepting element: //div[@class='ant-table-column-sorters']
+Found intercepting element: //div[@class='ant-table-column-sorters']
+Found intercepting element: //div[@class='ant-table-column-sorters']
+Found intercepting element: //div[@class='ant-table-column-sorters']
+Found intercepting element: //div[@class='ant-table-column-sorters']
+Found intercepting element: //div[@class='ant-table-column-sorters']
+Found intercepting element: //div[contains(@class, 'ant-table')]
+Found intercepting element: //div[contains(@class, 'ant-table')]
+Found intercepting element: //div[contains(@class, 'ant-table')]
+Found intercepting element: //div[contains(@class, 'ant-table')]
+Found intercepting element: //div[contains(@class, 'ant-table')]
+Found intercepting element: //div[contains(@class, 'ant-table')]
+Found intercepting element: //div[contains(@class, 'ant-table')]
+Found intercepting element: //div[contains(@class, 'ant-table')]
+Found intercepting element: //div[contains(@class, 'ant-table')]
+Found intercepting element: //div[contains(@class, 'ant-table')]
+Found intercepting element: //div[contains(@class, 'ant-table')]
+Found intercepting element: //div[contains(@class, 'ant-table')]
+Found intercepting element: //div[contains(@class, 'ant-table')]
+Found intercepting element: //div[contains(@class, 'ant-table')]
+Found intercepting element: //div[contains(@class, 'sorter')]
+Found intercepting element: //div[contains(@class, 'sorter')]
+Found intercepting element: //div[contains(@class, 'sorter')]
+Found intercepting element: //div[contains(@class, 'sorter')]
+Found intercepting element: //div[contains(@class, 'sorter')]
+Found intercepting element: //div[contains(@class, 'sorter')]
+Found intercepting element: //div[contains(@class, 'sorter')]
+Found intercepting element: //div[contains(@class, 'sorter')]
+Found intercepting element: //div[contains(@class, 'sorter')]
+Found intercepting element: //div[contains(@class, 'sorter')]
+Intercepting elements for create button handled
+Positioning create button for click...
+Trying enhanced ActionChains for create button...
+Successfully clicked create valuation button (enhanced ActionChains)
+✓ Create valuation button clicked successfully
+Completed test: test_new_valuation_dealer_selection - PASSED

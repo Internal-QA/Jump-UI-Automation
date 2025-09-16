@@ -1,0 +1,22 @@
+{
+    "execution_summary": {
+        "start_time": "2025-08-26 14:40:03.799500",
+        "end_time": "2025-08-26 14:40:25.482794",
+        "total_tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "skipped": 0
+    },
+    "test_results": [
+        {
+            "test_name": "test_privacy_policy_button_functionality",
+            "status": "passed",
+            "duration": 19.83864712715149,
+            "error_message": null,
+            "screenshot_path": null,
+            "test_steps": [],
+            "timestamp": "2025-08-26 14:40:25"
+        }
+    ],
+    "generated_at": "2025-08-26T14:40:25.483089"
+}

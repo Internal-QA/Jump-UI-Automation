@@ -1,0 +1,20 @@
+2025-08-28 11:32:52 - UIAutomationLogger - INFO - USING EXISTING LOGIN SESSION
+2025-08-28 11:32:55 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 11:32:55 - UIAutomationLogger - INFO - STARTING TEST: test_adjusted_profit_calculation_validation
+2025-08-28 11:32:55 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 11:32:55 - UIAutomationLogger - INFO - STEP: Testing adjusted profit calculation formula validation
+2025-08-28 11:32:55 - UIAutomationLogger - INFO - STEP: Navigating to valuations page (using existing session)
+2025-08-28 11:32:55 - UIAutomationLogger - INFO - STEP: Navigating to home page first
+2025-08-28 11:33:00 - UIAutomationLogger - INFO - STEP: Waiting for home page to fully load
+2025-08-28 11:33:03 - UIAutomationLogger - INFO - STEP: Attempt 1 to click card 2
+2025-08-28 11:34:55 - UIAutomationLogger - WARNING - STEP: Card 2 click attempt 1 failed
+2025-08-28 11:35:00 - UIAutomationLogger - INFO - STEP: Attempt 2 to click card 2
+2025-08-28 11:36:52 - UIAutomationLogger - WARNING - STEP: Card 2 click attempt 2 failed
+2025-08-28 11:36:57 - UIAutomationLogger - INFO - STEP: Attempt 3 to click card 2
+2025-08-28 11:38:49 - UIAutomationLogger - WARNING - STEP: Card 2 click attempt 3 failed
+2025-08-28 11:38:49 - UIAutomationLogger - ERROR - STEP: All attempts to click card 2 failed
+2025-08-28 11:38:49 - UIAutomationLogger - ERROR - STEP: Adjusted profit calculation validation test failed: Failed to navigate to valuations page
+assert False
+ +  where False = <bound method TestValuations.navigate_to_valuations_via_home_page of <tests.test_valuations.TestValuations object at 0x108978b80>>()
+ +    where <bound method TestValuations.navigate_to_valuations_via_home_page of <tests.test_valuations.TestValuations object at 0x108978b80>> = <tests.test_valuations.TestValuations object at 0x108978b80>.navigate_to_valuations_via_home_page
+2025-08-28 11:38:50 - UIAutomationLogger - INFO - TEST PASSED - RETURNING TO HOME PAGE FOR NEXT TEST

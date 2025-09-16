@@ -1,0 +1,21 @@
+2025-08-28 09:55:59 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 09:55:59 - UIAutomationLogger - INFO - STARTING TEST: test_login_page_elements
+2025-08-28 09:55:59 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 09:55:59 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 09:55:59 - UIAutomationLogger - INFO - STARTING TEST: test_login_page_elements
+2025-08-28 09:55:59 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 09:55:59 - UIAutomationLogger - INFO - STEP: Starting login page elements test
+2025-08-28 09:56:00 - UIAutomationLogger - INFO - STEP: Navigating to login page
+2025-08-28 09:56:00 - UIAutomationLogger - INFO - STEP: Checking email field presence
+2025-08-28 09:56:00 - UIAutomationLogger - INFO - STEP: Checking password field presence
+2025-08-28 09:56:00 - UIAutomationLogger - INFO - STEP: Checking checkbox presence
+2025-08-28 09:56:00 - UIAutomationLogger - INFO - STEP: Checking sign in button presence
+2025-08-28 09:56:00 - UIAutomationLogger - INFO - STEP: Verifying sign in button text
+2025-08-28 09:56:00 - UIAutomationLogger - INFO - STEP: Taking screenshot of login page
+2025-08-28 09:56:00 - UIAutomationLogger - INFO - STEP: Login page elements test completed successfully
+2025-08-28 09:56:00 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 09:56:00 - UIAutomationLogger - INFO - FINISHED TEST: test_login_page_elements
+2025-08-28 09:56:00 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 09:56:00 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 09:56:00 - UIAutomationLogger - INFO - FINISHED TEST: test_login_page_elements - STATUS: PASSED
+2025-08-28 09:56:00 - UIAutomationLogger - INFO - ==================================================

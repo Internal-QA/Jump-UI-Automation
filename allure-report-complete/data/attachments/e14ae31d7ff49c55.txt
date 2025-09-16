@@ -1,0 +1,24 @@
+2025-08-28 11:02:36 - UIAutomationLogger - INFO - CREATING FRESH BROWSER SESSION DUE TO PREVIOUS FAILURE
+2025-08-28 11:02:38 - UIAutomationLogger - INFO - PERFORMING ONE-TIME LOGIN FOR TEST SESSION
+2025-08-28 11:02:38 - UIAutomationLogger - INFO - STEP: Performing session login with timeout protection
+2025-08-28 11:03:00 - UIAutomationLogger - INFO - STEP: Session login and OTP verification successful
+2025-08-28 11:03:00 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 11:03:00 - UIAutomationLogger - INFO - STARTING TEST: test_valuations_search_filters_validation
+2025-08-28 11:03:00 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 11:03:00 - UIAutomationLogger - INFO - STEP: Testing detailed search filters validation
+2025-08-28 11:03:00 - UIAutomationLogger - INFO - STEP: Navigating to valuations page (using existing session)
+2025-08-28 11:03:00 - UIAutomationLogger - INFO - STEP: Waiting for home page to fully load
+2025-08-28 11:03:03 - UIAutomationLogger - INFO - STEP: Attempt 1 to click card 2
+2025-08-28 11:03:54 - UIAutomationLogger - INFO - STEP: Card 2 clicked successfully
+2025-08-28 11:03:54 - UIAutomationLogger - INFO - STEP: Validating valuations page load
+2025-08-28 11:03:54 - UIAutomationLogger - INFO - STEP: Testing search with term: gold coast
+2025-08-28 11:04:05 - UIAutomationLogger - INFO - STEP: Search for 'gold coast' returned results: True
+2025-08-28 11:04:08 - UIAutomationLogger - INFO - STEP: Testing search with term: sydney
+2025-08-28 11:04:22 - UIAutomationLogger - INFO - STEP: Search for 'sydney' returned results: True
+2025-08-28 11:04:25 - UIAutomationLogger - INFO - STEP: Testing search with term: melbourne
+2025-08-28 11:04:37 - UIAutomationLogger - INFO - STEP: Search for 'melbourne' returned results: True
+2025-08-28 11:04:39 - UIAutomationLogger - INFO - STEP: Search filters validation test completed successfully
+2025-08-28 11:04:39 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 11:04:39 - UIAutomationLogger - INFO - FINISHED TEST: test_valuations_search_filters_validation
+2025-08-28 11:04:39 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 11:04:39 - UIAutomationLogger - INFO - TEST PASSED - RETURNING TO HOME PAGE FOR NEXT TEST

@@ -1,0 +1,112 @@
+{
+    "execution_summary": {
+        "start_time": "2025-08-26 15:20:39.723933",
+        "end_time": "2025-08-26 15:21:33.926312",
+        "total_tests": 7,
+        "passed": 7,
+        "failed": 0,
+        "skipped": 0
+    },
+    "test_results": [
+        {
+            "test_name": "test_valid_login",
+            "status": "passed",
+            "duration": 0.16708707809448242,
+            "error_message": null,
+            "screenshot_path": null,
+            "test_steps": [],
+            "timestamp": "2025-08-26 15:20:41"
+        },
+        {
+            "test_name": "test_invalid_email",
+            "status": "passed",
+            "duration": 8.650120973587036,
+            "error_message": null,
+            "screenshot_path": null,
+            "test_steps": [
+                "Starting invalid email test",
+                "Using invalid email: invalid@example.com",
+                "Navigating to login page",
+                "Verifying login page elements are present",
+                "Attempting login with invalid email",
+                "Current URL after failed login: https://valueinsightpro.jumpiq.com/auth/login",
+                "Invalid email test completed - login correctly rejected"
+            ],
+            "timestamp": "2025-08-26 15:20:51"
+        },
+        {
+            "test_name": "test_empty_email",
+            "status": "passed",
+            "duration": 7.761974811553955,
+            "error_message": null,
+            "screenshot_path": null,
+            "test_steps": [
+                "Starting empty email test",
+                "Navigating to login page",
+                "Verifying login page elements are present",
+                "Attempting login with empty email",
+                "Current URL after empty email login: https://valueinsightpro.jumpiq.com/auth/login",
+                "Empty email test completed - login correctly rejected"
+            ],
+            "timestamp": "2025-08-26 15:21:00"
+        },
+        {
+            "test_name": "test_empty_password",
+            "status": "passed",
+            "duration": 7.661424160003662,
+            "error_message": null,
+            "screenshot_path": null,
+            "test_steps": [
+                "Starting empty password test",
+                "Navigating to login page",
+                "Verifying login page elements are present",
+                "Attempting login with empty password",
+                "Current URL after empty password login: https://valueinsightpro.jumpiq.com/auth/login",
+                "Empty password test completed - login correctly rejected"
+            ],
+            "timestamp": "2025-08-26 15:21:09"
+        },
+        {
+            "test_name": "test_terms_not_accepted",
+            "status": "passed",
+            "duration": 15.038514852523804,
+            "error_message": null,
+            "screenshot_path": null,
+            "test_steps": [
+                "Starting terms not accepted test",
+                "Navigating to login page",
+                "Verifying login page elements are present",
+                "Attempting login without accepting terms and conditions",
+                "Current URL after login without terms: https://valueinsightpro.jumpiq.com/auth/login",
+                "Terms not accepted test completed - login correctly rejected"
+            ],
+            "timestamp": "2025-08-26 15:21:26"
+        },
+        {
+            "test_name": "test_login_page_elements",
+            "status": "passed",
+            "duration": 0.3448212146759033,
+            "error_message": null,
+            "screenshot_path": null,
+            "test_steps": [],
+            "timestamp": "2025-08-26 15:21:28"
+        },
+        {
+            "test_name": "test_clear_login_form",
+            "status": "passed",
+            "duration": 3.8599119186401367,
+            "error_message": null,
+            "screenshot_path": null,
+            "test_steps": [
+                "Starting clear login form test",
+                "Navigating to login page",
+                "Filling login form with test data",
+                "Verifying checkbox is checked",
+                "Clearing the login form",
+                "Verifying form is cleared"
+            ],
+            "timestamp": "2025-08-26 15:21:33"
+        }
+    ],
+    "generated_at": "2025-08-26T15:21:33.926887"
+}

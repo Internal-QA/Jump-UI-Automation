@@ -1,0 +1,16 @@
+[32mINFO    [0m UIAutomationLogger:logger.py:60 USING EXISTING LOGIN SESSION
+[32mINFO    [0m UIAutomationLogger:logger.py:60 ==================================================
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STARTING TEST: test_expense_calculation_formula_demo
+[32mINFO    [0m UIAutomationLogger:logger.py:60 ==================================================
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Demonstrating expense calculation formula
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Testing expense calculation for year 2023
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Expense calculation validation PASSED for 2023
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Testing expense calculation for year 2022
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Expense calculation validation PASSED for 2022
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Testing expense calculation for year 2021
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Expense calculation validation PASSED for 2021
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: All expense calculation demonstrations completed successfully
+[32mINFO    [0m UIAutomationLogger:logger.py:60 ==================================================
+[32mINFO    [0m UIAutomationLogger:logger.py:60 FINISHED TEST: test_expense_calculation_formula_demo
+[32mINFO    [0m UIAutomationLogger:logger.py:60 ==================================================
+[32mINFO    [0m UIAutomationLogger:logger.py:60 TEST PASSED - RETURNING TO HOME PAGE FOR NEXT TEST

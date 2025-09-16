@@ -1,0 +1,12 @@
+[32mINFO    [0m UIAutomationLogger:logger.py:80 ==================================================
+[32mINFO    [0m UIAutomationLogger:logger.py:81 STARTING TEST: test_empty_password
+[32mINFO    [0m UIAutomationLogger:logger.py:82 ==================================================
+[32mINFO    [0m UIAutomationLogger:logger.py:92 STEP: Starting empty password test
+[32mINFO    [0m UIAutomationLogger:logger.py:92 STEP: Navigating to login page
+[32mINFO    [0m UIAutomationLogger:logger.py:92 STEP: Verifying login page elements are present
+[32mINFO    [0m UIAutomationLogger:logger.py:92 STEP: Attempting login with empty password
+[32mINFO    [0m UIAutomationLogger:logger.py:92 STEP: Current URL after empty password login: https://valueinsightpro.jumpiq.com/auth/login
+[32mINFO    [0m UIAutomationLogger:logger.py:92 STEP: Empty password test completed - login correctly rejected
+[32mINFO    [0m UIAutomationLogger:logger.py:86 ==================================================
+[32mINFO    [0m UIAutomationLogger:logger.py:87 FINISHED TEST: test_empty_password - STATUS: PASSED
+[32mINFO    [0m UIAutomationLogger:logger.py:88 ==================================================

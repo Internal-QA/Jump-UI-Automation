@@ -1,0 +1,13 @@
+2025-08-28 09:56:02 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 09:56:02 - UIAutomationLogger - INFO - STARTING TEST: test_clear_login_form
+2025-08-28 09:56:02 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 09:56:02 - UIAutomationLogger - INFO - STEP: Starting clear login form test
+2025-08-28 09:56:02 - UIAutomationLogger - INFO - STEP: Navigating to login page
+2025-08-28 09:56:02 - UIAutomationLogger - INFO - STEP: Filling login form with test data
+2025-08-28 09:56:02 - UIAutomationLogger - INFO - STEP: Verifying checkbox is checked
+2025-08-28 09:56:02 - UIAutomationLogger - INFO - STEP: Clearing the login form
+2025-08-28 09:56:02 - UIAutomationLogger - INFO - STEP: Verifying form is cleared
+2025-08-28 09:56:13 - UIAutomationLogger - INFO - STEP: Clear login form test completed successfully
+2025-08-28 09:56:13 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 09:56:13 - UIAutomationLogger - INFO - FINISHED TEST: test_clear_login_form - STATUS: PASSED
+2025-08-28 09:56:13 - UIAutomationLogger - INFO - ==================================================

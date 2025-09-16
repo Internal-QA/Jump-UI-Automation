@@ -1,0 +1,15 @@
+[32mINFO    [0m UIAutomationLogger:logger.py:60 Starting Login Test Suite
+[32mINFO    [0m UIAutomationLogger:logger.py:80 ==================================================
+[32mINFO    [0m UIAutomationLogger:logger.py:81 STARTING TEST: test_valid_login
+[32mINFO    [0m UIAutomationLogger:logger.py:82 ==================================================
+[32mINFO    [0m UIAutomationLogger:logger.py:60 ==================================================
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STARTING TEST: test_valid_login
+[32mINFO    [0m UIAutomationLogger:logger.py:60 ==================================================
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Starting valid login test
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Valid login test completed successfully
+[32mINFO    [0m UIAutomationLogger:logger.py:60 ==================================================
+[32mINFO    [0m UIAutomationLogger:logger.py:60 FINISHED TEST: test_valid_login
+[32mINFO    [0m UIAutomationLogger:logger.py:60 ==================================================
+[32mINFO    [0m UIAutomationLogger:logger.py:86 ==================================================
+[32mINFO    [0m UIAutomationLogger:logger.py:87 FINISHED TEST: test_valid_login - STATUS: PASSED
+[32mINFO    [0m UIAutomationLogger:logger.py:88 ==================================================

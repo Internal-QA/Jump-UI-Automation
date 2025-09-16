@@ -1,0 +1,7 @@
+Test Run Started: 2025-09-15 22:44:00.152493
+Command: /Library/Developer/CommandLineTools/usr/bin/python3 -m pytest tests/ -v --tb=short
+================================================================================
+
+
+
+TEST RUN TIMED OUT AFTER 5 MINUTES

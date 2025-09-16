@@ -1,0 +1,12 @@
+2025-08-28 09:55:33 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 09:55:33 - UIAutomationLogger - INFO - STARTING TEST: test_empty_password
+2025-08-28 09:55:33 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 09:55:33 - UIAutomationLogger - INFO - STEP: Starting empty password test
+2025-08-28 09:55:33 - UIAutomationLogger - INFO - STEP: Navigating to login page
+2025-08-28 09:55:33 - UIAutomationLogger - INFO - STEP: Verifying login page elements are present
+2025-08-28 09:55:33 - UIAutomationLogger - INFO - STEP: Attempting login with empty password
+2025-08-28 09:55:40 - UIAutomationLogger - INFO - STEP: Current URL after empty password login: https://valueinsightpro.jumpiq.com/auth/login
+2025-08-28 09:55:40 - UIAutomationLogger - INFO - STEP: Empty password test completed - login correctly rejected
+2025-08-28 09:55:40 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 09:55:40 - UIAutomationLogger - INFO - FINISHED TEST: test_empty_password - STATUS: PASSED
+2025-08-28 09:55:40 - UIAutomationLogger - INFO - ==================================================

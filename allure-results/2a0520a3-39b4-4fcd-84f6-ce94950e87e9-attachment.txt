@@ -1,0 +1,62 @@
+Error creating Chrome driver: [Errno 8] Exec format error: '/Users/shtlpmac015/.wdm/drivers/chromedriver/mac64/140.0.7339.82/chromedriver-mac-arm64/THIRD_PARTY_NOTICES.chromedriver'
+Attempting to use system ChromeDriver...
+Starting test: test_02_validate_all_dashboard_cards_are_clickable
+Test data loaded from: /Users/shtlpmac015/Desktop/Jump-UI-Automation/utils/../test_data/test_data.json
+Credentials loaded from config file: /Users/shtlpmac015/Desktop/Jump-UI-Automation/utils/../config/config.yaml
+Test data loaded from: /Users/shtlpmac015/Desktop/Jump-UI-Automation/utils/../test_data/test_data.json
+Starting test: test_02_validate_all_dashboard_cards_are_clickable
+Using credentials from config file for: valid_user
+Button state validation passed
+Locator not found: login_page.invalid_credentials - 'invalid_credentials'
+Locator not found: login_page.fields_required - 'fields_required'
+Login successful - redirected to OTP page
+OTP page loaded successfully
+Starting OTP verification with code: 99999
+OTP page loaded successfully
+Entering OTP code: 99999
+OTP entered successfully: 99999
+Clicking verify button
+Verify button clicked successfully
+OTP verification process completed
+Checking if home page is loaded
+Home page loaded successfully - landing page container found
+Failure screenshot saved: screenshots/FAILED_home_page_before_cards_test_20250916_095014.png
+Attempting to click card 1
+Checking if card 1 is clickable
+Card 1 is clickable
+Successfully clicked card 1
+Attempting to click card 2
+Checking if card 2 is clickable
+Card 2 is clickable
+Successfully clicked card 2
+Attempting to click card 3
+Checking if card 3 is clickable
+Card 3 is clickable
+Successfully clicked card 3
+Attempting to click card 4
+Checking if card 4 is clickable
+Card 4 is clickable
+Successfully clicked card 4
+Attempting to click card 5
+Checking if card 5 is clickable
+Card 5 is clickable
+Successfully clicked card 5
+Error taking failure screenshot: Message: invalid session id
+Stacktrace:
+0   chromedriver                        0x0000000102653674 cxxbridge1$str$ptr + 2882776
+1   chromedriver                        0x000000010264b5a0 cxxbridge1$str$ptr + 2849796
+2   chromedriver                        0x0000000102174f50 _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 73040
+3   chromedriver                        0x00000001021afc18 _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 313880
+4   chromedriver                        0x00000001021d8210 _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 479248
+5   chromedriver                        0x00000001021d7518 _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 475928
+6   chromedriver                        0x0000000102144194 chromedriver + 98708
+7   chromedriver                        0x0000000102617ba4 cxxbridge1$str$ptr + 2638344
+8   chromedriver                        0x000000010261adbc cxxbridge1$str$ptr + 2651168
+9   chromedriver                        0x00000001025f8640 cxxbridge1$str$ptr + 2509988
+10  chromedriver                        0x000000010261b668 cxxbridge1$str$ptr + 2653388
+11  chromedriver                        0x00000001025e9ddc cxxbridge1$str$ptr + 2450496
+12  chromedriver                        0x0000000102142438 chromedriver + 91192
+13  dyld                                0x00000001929deb98 start + 6076
+
+Completed test: test_02_validate_all_dashboard_cards_are_clickable
+Completed test: test_02_validate_all_dashboard_cards_are_clickable

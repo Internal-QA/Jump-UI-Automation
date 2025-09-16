@@ -1,0 +1,14 @@
+2025-09-16 09:49:13 - UIAutomationLogger - INFO - Logger initialized. Log file: /Users/shtlpmac015/Desktop/Jump-UI-Automation/utils/../logs/test_execution_20250916_094913.log
+2025-09-16 09:49:13 - UIAutomationLogger - INFO - Starting Home Page Test Suite
+2025-09-16 09:49:16 - UIAutomationLogger - INFO - ==================================================
+2025-09-16 09:49:16 - UIAutomationLogger - INFO - STARTING TEST: test_01_validate_home_page_elements_after_login
+2025-09-16 09:49:16 - UIAutomationLogger - INFO - ==================================================
+2025-09-16 09:49:16 - UIAutomationLogger - INFO - STEP: Starting home page elements presence test
+2025-09-16 09:49:16 - UIAutomationLogger - INFO - STEP: Performing complete login and OTP flow to reach home page
+2025-09-16 09:49:38 - UIAutomationLogger - INFO - STEP: Successfully reached OTP page
+2025-09-16 09:49:45 - UIAutomationLogger - INFO - STEP: Successfully completed login and OTP flow - arrived at home page
+2025-09-16 09:49:45 - UIAutomationLogger - INFO - STEP: Validating home page elements are present
+2025-09-16 09:49:45 - UIAutomationLogger - INFO - STEP: Home page elements presence validation passed
+2025-09-16 09:49:45 - UIAutomationLogger - INFO - ==================================================
+2025-09-16 09:49:45 - UIAutomationLogger - INFO - FINISHED TEST: test_01_validate_home_page_elements_after_login
+2025-09-16 09:49:45 - UIAutomationLogger - INFO - ==================================================

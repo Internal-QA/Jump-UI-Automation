@@ -1,0 +1,59 @@
+[32mINFO    [0m UIAutomationLogger:logger.py:60 USING EXISTING LOGIN SESSION
+[32mINFO    [0m UIAutomationLogger:logger.py:60 ==================================================
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STARTING TEST: test_end_to_end_valuations_workflow
+[32mINFO    [0m UIAutomationLogger:logger.py:60 ==================================================
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Testing complete end-to-end valuations workflow
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Navigating to valuations page (using existing session)
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Attempting direct URL navigation to valuations
+[32mINFO    [0m UIAutomationLogger:logger.py:60 Trying valuations URL: https://valueinsightpro.jumpiq.com/valuations
+[32mINFO    [0m UIAutomationLogger:logger.py:60 Current URL after navigation: https://valueinsightpro.jumpiq.com/auth/login?redirect=/valuations
+[33mWARNING [0m UIAutomationLogger:logger.py:68 Direct URL reached valuations but page validation failed
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Attempting home page card navigation
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Navigating to home page first
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Waiting for home page to fully load
+[32mINFO    [0m UIAutomationLogger:logger.py:60 Debug screenshot saved: screenshots/debug_home_page_20250829_123818.png
+[33mWARNING [0m UIAutomationLogger:logger.py:68 No 'card' text found in page source
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Attempt 1 to click card 2
+[33mWARNING [0m UIAutomationLogger:logger.py:68 STEP: Card 2 click attempt 1 failed
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Attempt 2 to click card 2
+[33mWARNING [0m UIAutomationLogger:logger.py:68 STEP: Card 2 click attempt 2 failed
+[33mWARNING [0m UIAutomationLogger:logger.py:68 Card navigation failed: Message: invalid session id
+Stacktrace:
+0   chromedriver                        0x00000001006f6e00 cxxbridge1$str$ptr + 2742224
+1   chromedriver                        0x00000001006eed00 cxxbridge1$str$ptr + 2709200
+2   chromedriver                        0x0000000100238f2c cxxbridge1$string$len + 90124
+3   chromedriver                        0x0000000100273db8 cxxbridge1$string$len + 331416
+4   chromedriver                        0x000000010029c3a4 cxxbridge1$string$len + 496772
+5   chromedriver                        0x000000010029b6ac cxxbridge1$string$len + 493452
+6   chromedriver                        0x000000010020819c chromedriver + 98716
+7   chromedriver                        0x00000001006ba478 cxxbridge1$str$ptr + 2494024
+8   chromedriver                        0x00000001006bd6a4 cxxbridge1$str$ptr + 2506868
+9   chromedriver                        0x000000010069b3b0 cxxbridge1$str$ptr + 2366848
+10  chromedriver                        0x00000001006bdf4c cxxbridge1$str$ptr + 2509084
+11  chromedriver                        0x000000010068c4a8 cxxbridge1$str$ptr + 2305656
+12  chromedriver                        0x0000000100206430 chromedriver + 91184
+13  dyld                                0x000000019df8c274 start + 2840
+
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Attempting alternative menu navigation
+[1m[31mERROR   [0m UIAutomationLogger:logger.py:72 All navigation methods failed
+[1m[31mERROR   [0m UIAutomationLogger:logger.py:72 STEP: End-to-end valuations workflow test failed: Failed to complete end-to-end navigation
+assert False
+ +  where False = <bound method TestValuations.navigate_to_valuations_via_home_page of <tests.test_valuations.TestValuations object at 0x104c7c9d0>>()
+ +    where <bound method TestValuations.navigate_to_valuations_via_home_page of <tests.test_valuations.TestValuations object at 0x104c7c9d0>> = <tests.test_valuations.TestValuations object at 0x104c7c9d0>.navigate_to_valuations_via_home_page
+[32mINFO    [0m UIAutomationLogger:logger.py:60 TEST PASSED - RETURNING TO HOME PAGE FOR NEXT TEST
+[33mWARNING [0m UIAutomationLogger:logger.py:68 Failed to return to home page: Message: invalid session id
+Stacktrace:
+0   chromedriver                        0x00000001006f6e00 cxxbridge1$str$ptr + 2742224
+1   chromedriver                        0x00000001006eed00 cxxbridge1$str$ptr + 2709200
+2   chromedriver                        0x0000000100238f2c cxxbridge1$string$len + 90124
+3   chromedriver                        0x0000000100273db8 cxxbridge1$string$len + 331416
+4   chromedriver                        0x000000010029c3a4 cxxbridge1$string$len + 496772
+5   chromedriver                        0x000000010029b6ac cxxbridge1$string$len + 493452
+6   chromedriver                        0x000000010020819c chromedriver + 98716
+7   chromedriver                        0x00000001006ba478 cxxbridge1$str$ptr + 2494024
+8   chromedriver                        0x00000001006bd6a4 cxxbridge1$str$ptr + 2506868
+9   chromedriver                        0x000000010069b3b0 cxxbridge1$str$ptr + 2366848
+10  chromedriver                        0x00000001006bdf4c cxxbridge1$str$ptr + 2509084
+11  chromedriver                        0x000000010068c4a8 cxxbridge1$str$ptr + 2305656
+12  chromedriver                        0x0000000100206430 chromedriver + 91184
+13  dyld                                0x000000019df8c274 start + 2840

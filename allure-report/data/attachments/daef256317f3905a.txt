@@ -1,0 +1,13 @@
+[32mINFO    [0m UIAutomationLogger:logger.py:80 ==================================================
+[32mINFO    [0m UIAutomationLogger:logger.py:81 STARTING TEST: test_clear_login_form
+[32mINFO    [0m UIAutomationLogger:logger.py:82 ==================================================
+[32mINFO    [0m UIAutomationLogger:logger.py:92 STEP: Starting clear login form test
+[32mINFO    [0m UIAutomationLogger:logger.py:92 STEP: Navigating to login page
+[32mINFO    [0m UIAutomationLogger:logger.py:92 STEP: Filling login form with test data
+[32mINFO    [0m UIAutomationLogger:logger.py:92 STEP: Verifying checkbox is checked
+[32mINFO    [0m UIAutomationLogger:logger.py:92 STEP: Clearing the login form
+[32mINFO    [0m UIAutomationLogger:logger.py:92 STEP: Verifying form is cleared
+[32mINFO    [0m UIAutomationLogger:logger.py:92 STEP: Clear login form test completed successfully
+[32mINFO    [0m UIAutomationLogger:logger.py:86 ==================================================
+[32mINFO    [0m UIAutomationLogger:logger.py:87 FINISHED TEST: test_clear_login_form - STATUS: PASSED
+[32mINFO    [0m UIAutomationLogger:logger.py:88 ==================================================

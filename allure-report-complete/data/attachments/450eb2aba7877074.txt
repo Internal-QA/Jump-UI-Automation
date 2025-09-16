@@ -1,0 +1,277 @@
+Error creating Chrome driver: [Errno 8] Exec format error: '/Users/shtlpmac015/.wdm/drivers/chromedriver/mac64/139.0.7258.154/chromedriver-mac-arm64/THIRD_PARTY_NOTICES.chromedriver'
+Attempting to use system ChromeDriver...
+Starting test: test_new_valuation_dealer_selection
+Test data loaded from: /Users/shtlpmac015/Desktop/Jump-UI-Automation/utils/../test_data/test_data.json
+Credentials loaded from config file: /Users/shtlpmac015/Desktop/Jump-UI-Automation/utils/../config/config.yaml
+Attempting to click card 2 with interception handling
+Handling potential intercepting elements...
+Intercepting elements handled
+Trying alternative locator 1: //div[@class='cards_wrapper']//div[@class='card'][2]
+Alternative locator 1 failed: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='cards_wrapper']//div[@class='card'][2]"}
+  (Session info: chrome=139.0.7258.139); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000104e6ee00 cxxbridge1$str$ptr + 2742224
+1   chromedriver                        0x0000000104e66d00 cxxbridge1$str$ptr + 2709200
+2   chromedriver                        0x00000001049b10b8 cxxbridge1$string$len + 90520
+3   chromedriver                        0x00000001049f85d8 cxxbridge1$string$len + 382648
+4   chromedriver                        0x0000000104a39980 cxxbridge1$string$len + 649824
+5   chromedriver                        0x00000001049ec8f4 cxxbridge1$string$len + 334292
+6   chromedriver                        0x0000000104e32478 cxxbridge1$str$ptr + 2494024
+7   chromedriver                        0x0000000104e356a4 cxxbridge1$str$ptr + 2506868
+8   chromedriver                        0x0000000104e133b0 cxxbridge1$str$ptr + 2366848
+9   chromedriver                        0x0000000104e35f4c cxxbridge1$str$ptr + 2509084
+10  chromedriver                        0x0000000104e044a8 cxxbridge1$str$ptr + 2305656
+11  chromedriver                        0x0000000104e55644 cxxbridge1$str$ptr + 2637844
+12  chromedriver                        0x0000000104e557d0 cxxbridge1$str$ptr + 2638240
+13  chromedriver                        0x0000000104e6694c cxxbridge1$str$ptr + 2708252
+14  libsystem_pthread.dylib             0x000000019e30c2e4 _pthread_start + 136
+15  libsystem_pthread.dylib             0x000000019e3070fc thread_start + 8
+
+Trying alternative locator 2: //div[contains(@class, 'cards_wrapper')]//div[contains(@class, 'card')][2]
+Alternative locator 2 failed: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@class, 'cards_wrapper')]//div[contains(@class, 'card')][2]"}
+  (Session info: chrome=139.0.7258.139); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000104e6ee00 cxxbridge1$str$ptr + 2742224
+1   chromedriver                        0x0000000104e66d00 cxxbridge1$str$ptr + 2709200
+2   chromedriver                        0x00000001049b10b8 cxxbridge1$string$len + 90520
+3   chromedriver                        0x00000001049f85d8 cxxbridge1$string$len + 382648
+4   chromedriver                        0x0000000104a39980 cxxbridge1$string$len + 649824
+5   chromedriver                        0x00000001049ec8f4 cxxbridge1$string$len + 334292
+6   chromedriver                        0x0000000104e32478 cxxbridge1$str$ptr + 2494024
+7   chromedriver                        0x0000000104e356a4 cxxbridge1$str$ptr + 2506868
+8   chromedriver                        0x0000000104e133b0 cxxbridge1$str$ptr + 2366848
+9   chromedriver                        0x0000000104e35f4c cxxbridge1$str$ptr + 2509084
+10  chromedriver                        0x0000000104e044a8 cxxbridge1$str$ptr + 2305656
+11  chromedriver                        0x0000000104e55644 cxxbridge1$str$ptr + 2637844
+12  chromedriver                        0x0000000104e557d0 cxxbridge1$str$ptr + 2638240
+13  chromedriver                        0x0000000104e6694c cxxbridge1$str$ptr + 2708252
+14  libsystem_pthread.dylib             0x000000019e30c2e4 _pthread_start + 136
+15  libsystem_pthread.dylib             0x000000019e3070fc thread_start + 8
+
+Trying alternative locator 3: //div[contains(@class, 'card')][2]
+Alternative locator 3 failed: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@class, 'card')][2]"}
+  (Session info: chrome=139.0.7258.139); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000104e6ee00 cxxbridge1$str$ptr + 2742224
+1   chromedriver                        0x0000000104e66d00 cxxbridge1$str$ptr + 2709200
+2   chromedriver                        0x00000001049b10b8 cxxbridge1$string$len + 90520
+3   chromedriver                        0x00000001049f85d8 cxxbridge1$string$len + 382648
+4   chromedriver                        0x0000000104a39980 cxxbridge1$string$len + 649824
+5   chromedriver                        0x00000001049ec8f4 cxxbridge1$string$len + 334292
+6   chromedriver                        0x0000000104e32478 cxxbridge1$str$ptr + 2494024
+7   chromedriver                        0x0000000104e356a4 cxxbridge1$str$ptr + 2506868
+8   chromedriver                        0x0000000104e133b0 cxxbridge1$str$ptr + 2366848
+9   chromedriver                        0x0000000104e35f4c cxxbridge1$str$ptr + 2509084
+10  chromedriver                        0x0000000104e044a8 cxxbridge1$str$ptr + 2305656
+11  chromedriver                        0x0000000104e55644 cxxbridge1$str$ptr + 2637844
+12  chromedriver                        0x0000000104e557d0 cxxbridge1$str$ptr + 2638240
+13  chromedriver                        0x0000000104e6694c cxxbridge1$str$ptr + 2708252
+14  libsystem_pthread.dylib             0x000000019e30c2e4 _pthread_start + 136
+15  libsystem_pthread.dylib             0x000000019e3070fc thread_start + 8
+
+Trying alternative locator 4: (//div[contains(@class, 'card')])[2]
+Alternative locator 4 failed: Message: no such element: Unable to locate element: {"method":"xpath","selector":"(//div[contains(@class, 'card')])[2]"}
+  (Session info: chrome=139.0.7258.139); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000104e6ee00 cxxbridge1$str$ptr + 2742224
+1   chromedriver                        0x0000000104e66d00 cxxbridge1$str$ptr + 2709200
+2   chromedriver                        0x00000001049b10b8 cxxbridge1$string$len + 90520
+3   chromedriver                        0x00000001049f85d8 cxxbridge1$string$len + 382648
+4   chromedriver                        0x0000000104a39980 cxxbridge1$string$len + 649824
+5   chromedriver                        0x00000001049ec8f4 cxxbridge1$string$len + 334292
+6   chromedriver                        0x0000000104e32478 cxxbridge1$str$ptr + 2494024
+7   chromedriver                        0x0000000104e356a4 cxxbridge1$str$ptr + 2506868
+8   chromedriver                        0x0000000104e133b0 cxxbridge1$str$ptr + 2366848
+9   chromedriver                        0x0000000104e35f4c cxxbridge1$str$ptr + 2509084
+10  chromedriver                        0x0000000104e044a8 cxxbridge1$str$ptr + 2305656
+11  chromedriver                        0x0000000104e55644 cxxbridge1$str$ptr + 2637844
+12  chromedriver                        0x0000000104e557d0 cxxbridge1$str$ptr + 2638240
+13  chromedriver                        0x0000000104e6694c cxxbridge1$str$ptr + 2708252
+14  libsystem_pthread.dylib             0x000000019e30c2e4 _pthread_start + 136
+15  libsystem_pthread.dylib             0x000000019e3070fc thread_start + 8
+
+Debugging: Looking for all available cards...
+Found 0 card elements
+Card 2 element not found after all strategies
+Attempting to click card 2 with interception handling
+Handling potential intercepting elements...
+Intercepting elements handled
+Trying alternative locator 1: //div[@class='cards_wrapper']//div[@class='card'][2]
+Alternative locator 1 failed: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='cards_wrapper']//div[@class='card'][2]"}
+  (Session info: chrome=139.0.7258.139); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000104e6ee00 cxxbridge1$str$ptr + 2742224
+1   chromedriver                        0x0000000104e66d00 cxxbridge1$str$ptr + 2709200
+2   chromedriver                        0x00000001049b10b8 cxxbridge1$string$len + 90520
+3   chromedriver                        0x00000001049f85d8 cxxbridge1$string$len + 382648
+4   chromedriver                        0x0000000104a39980 cxxbridge1$string$len + 649824
+5   chromedriver                        0x00000001049ec8f4 cxxbridge1$string$len + 334292
+6   chromedriver                        0x0000000104e32478 cxxbridge1$str$ptr + 2494024
+7   chromedriver                        0x0000000104e356a4 cxxbridge1$str$ptr + 2506868
+8   chromedriver                        0x0000000104e133b0 cxxbridge1$str$ptr + 2366848
+9   chromedriver                        0x0000000104e35f4c cxxbridge1$str$ptr + 2509084
+10  chromedriver                        0x0000000104e044a8 cxxbridge1$str$ptr + 2305656
+11  chromedriver                        0x0000000104e55644 cxxbridge1$str$ptr + 2637844
+12  chromedriver                        0x0000000104e557d0 cxxbridge1$str$ptr + 2638240
+13  chromedriver                        0x0000000104e6694c cxxbridge1$str$ptr + 2708252
+14  libsystem_pthread.dylib             0x000000019e30c2e4 _pthread_start + 136
+15  libsystem_pthread.dylib             0x000000019e3070fc thread_start + 8
+
+Trying alternative locator 2: //div[contains(@class, 'cards_wrapper')]//div[contains(@class, 'card')][2]
+Alternative locator 2 failed: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@class, 'cards_wrapper')]//div[contains(@class, 'card')][2]"}
+  (Session info: chrome=139.0.7258.139); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000104e6ee00 cxxbridge1$str$ptr + 2742224
+1   chromedriver                        0x0000000104e66d00 cxxbridge1$str$ptr + 2709200
+2   chromedriver                        0x00000001049b10b8 cxxbridge1$string$len + 90520
+3   chromedriver                        0x00000001049f85d8 cxxbridge1$string$len + 382648
+4   chromedriver                        0x0000000104a39980 cxxbridge1$string$len + 649824
+5   chromedriver                        0x00000001049ec8f4 cxxbridge1$string$len + 334292
+6   chromedriver                        0x0000000104e32478 cxxbridge1$str$ptr + 2494024
+7   chromedriver                        0x0000000104e356a4 cxxbridge1$str$ptr + 2506868
+8   chromedriver                        0x0000000104e133b0 cxxbridge1$str$ptr + 2366848
+9   chromedriver                        0x0000000104e35f4c cxxbridge1$str$ptr + 2509084
+10  chromedriver                        0x0000000104e044a8 cxxbridge1$str$ptr + 2305656
+11  chromedriver                        0x0000000104e55644 cxxbridge1$str$ptr + 2637844
+12  chromedriver                        0x0000000104e557d0 cxxbridge1$str$ptr + 2638240
+13  chromedriver                        0x0000000104e6694c cxxbridge1$str$ptr + 2708252
+14  libsystem_pthread.dylib             0x000000019e30c2e4 _pthread_start + 136
+15  libsystem_pthread.dylib             0x000000019e3070fc thread_start + 8
+
+Trying alternative locator 3: //div[contains(@class, 'card')][2]
+Alternative locator 3 failed: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@class, 'card')][2]"}
+  (Session info: chrome=139.0.7258.139); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000104e6ee00 cxxbridge1$str$ptr + 2742224
+1   chromedriver                        0x0000000104e66d00 cxxbridge1$str$ptr + 2709200
+2   chromedriver                        0x00000001049b10b8 cxxbridge1$string$len + 90520
+3   chromedriver                        0x00000001049f85d8 cxxbridge1$string$len + 382648
+4   chromedriver                        0x0000000104a39980 cxxbridge1$string$len + 649824
+5   chromedriver                        0x00000001049ec8f4 cxxbridge1$string$len + 334292
+6   chromedriver                        0x0000000104e32478 cxxbridge1$str$ptr + 2494024
+7   chromedriver                        0x0000000104e356a4 cxxbridge1$str$ptr + 2506868
+8   chromedriver                        0x0000000104e133b0 cxxbridge1$str$ptr + 2366848
+9   chromedriver                        0x0000000104e35f4c cxxbridge1$str$ptr + 2509084
+10  chromedriver                        0x0000000104e044a8 cxxbridge1$str$ptr + 2305656
+11  chromedriver                        0x0000000104e55644 cxxbridge1$str$ptr + 2637844
+12  chromedriver                        0x0000000104e557d0 cxxbridge1$str$ptr + 2638240
+13  chromedriver                        0x0000000104e6694c cxxbridge1$str$ptr + 2708252
+14  libsystem_pthread.dylib             0x000000019e30c2e4 _pthread_start + 136
+15  libsystem_pthread.dylib             0x000000019e3070fc thread_start + 8
+
+Trying alternative locator 4: (//div[contains(@class, 'card')])[2]
+Alternative locator 4 failed: Message: no such element: Unable to locate element: {"method":"xpath","selector":"(//div[contains(@class, 'card')])[2]"}
+  (Session info: chrome=139.0.7258.139); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000104e6ee00 cxxbridge1$str$ptr + 2742224
+1   chromedriver                        0x0000000104e66d00 cxxbridge1$str$ptr + 2709200
+2   chromedriver                        0x00000001049b10b8 cxxbridge1$string$len + 90520
+3   chromedriver                        0x00000001049f85d8 cxxbridge1$string$len + 382648
+4   chromedriver                        0x0000000104a39980 cxxbridge1$string$len + 649824
+5   chromedriver                        0x00000001049ec8f4 cxxbridge1$string$len + 334292
+6   chromedriver                        0x0000000104e32478 cxxbridge1$str$ptr + 2494024
+7   chromedriver                        0x0000000104e356a4 cxxbridge1$str$ptr + 2506868
+8   chromedriver                        0x0000000104e133b0 cxxbridge1$str$ptr + 2366848
+9   chromedriver                        0x0000000104e35f4c cxxbridge1$str$ptr + 2509084
+10  chromedriver                        0x0000000104e044a8 cxxbridge1$str$ptr + 2305656
+11  chromedriver                        0x0000000104e55644 cxxbridge1$str$ptr + 2637844
+12  chromedriver                        0x0000000104e557d0 cxxbridge1$str$ptr + 2638240
+13  chromedriver                        0x0000000104e6694c cxxbridge1$str$ptr + 2708252
+14  libsystem_pthread.dylib             0x000000019e30c2e4 _pthread_start + 136
+15  libsystem_pthread.dylib             0x000000019e3070fc thread_start + 8
+
+Debugging: Looking for all available cards...
+Found 0 card elements
+Card 2 element not found after all strategies
+Attempting to click card 2 with interception handling
+Handling potential intercepting elements...
+Intercepting elements handled
+Trying alternative locator 1: //div[@class='cards_wrapper']//div[@class='card'][2]
+Alternative locator 1 failed: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='cards_wrapper']//div[@class='card'][2]"}
+  (Session info: chrome=139.0.7258.139); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000104e6ee00 cxxbridge1$str$ptr + 2742224
+1   chromedriver                        0x0000000104e66d00 cxxbridge1$str$ptr + 2709200
+2   chromedriver                        0x00000001049b10b8 cxxbridge1$string$len + 90520
+3   chromedriver                        0x00000001049f85d8 cxxbridge1$string$len + 382648
+4   chromedriver                        0x0000000104a39980 cxxbridge1$string$len + 649824
+5   chromedriver                        0x00000001049ec8f4 cxxbridge1$string$len + 334292
+6   chromedriver                        0x0000000104e32478 cxxbridge1$str$ptr + 2494024
+7   chromedriver                        0x0000000104e356a4 cxxbridge1$str$ptr + 2506868
+8   chromedriver                        0x0000000104e133b0 cxxbridge1$str$ptr + 2366848
+9   chromedriver                        0x0000000104e35f4c cxxbridge1$str$ptr + 2509084
+10  chromedriver                        0x0000000104e044a8 cxxbridge1$str$ptr + 2305656
+11  chromedriver                        0x0000000104e55644 cxxbridge1$str$ptr + 2637844
+12  chromedriver                        0x0000000104e557d0 cxxbridge1$str$ptr + 2638240
+13  chromedriver                        0x0000000104e6694c cxxbridge1$str$ptr + 2708252
+14  libsystem_pthread.dylib             0x000000019e30c2e4 _pthread_start + 136
+15  libsystem_pthread.dylib             0x000000019e3070fc thread_start + 8
+
+Trying alternative locator 2: //div[contains(@class, 'cards_wrapper')]//div[contains(@class, 'card')][2]
+Alternative locator 2 failed: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@class, 'cards_wrapper')]//div[contains(@class, 'card')][2]"}
+  (Session info: chrome=139.0.7258.139); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000104e6ee00 cxxbridge1$str$ptr + 2742224
+1   chromedriver                        0x0000000104e66d00 cxxbridge1$str$ptr + 2709200
+2   chromedriver                        0x00000001049b10b8 cxxbridge1$string$len + 90520
+3   chromedriver                        0x00000001049f85d8 cxxbridge1$string$len + 382648
+4   chromedriver                        0x0000000104a39980 cxxbridge1$string$len + 649824
+5   chromedriver                        0x00000001049ec8f4 cxxbridge1$string$len + 334292
+6   chromedriver                        0x0000000104e32478 cxxbridge1$str$ptr + 2494024
+7   chromedriver                        0x0000000104e356a4 cxxbridge1$str$ptr + 2506868
+8   chromedriver                        0x0000000104e133b0 cxxbridge1$str$ptr + 2366848
+9   chromedriver                        0x0000000104e35f4c cxxbridge1$str$ptr + 2509084
+10  chromedriver                        0x0000000104e044a8 cxxbridge1$str$ptr + 2305656
+11  chromedriver                        0x0000000104e55644 cxxbridge1$str$ptr + 2637844
+12  chromedriver                        0x0000000104e557d0 cxxbridge1$str$ptr + 2638240
+13  chromedriver                        0x0000000104e6694c cxxbridge1$str$ptr + 2708252
+14  libsystem_pthread.dylib             0x000000019e30c2e4 _pthread_start + 136
+15  libsystem_pthread.dylib             0x000000019e3070fc thread_start + 8
+
+Trying alternative locator 3: //div[contains(@class, 'card')][2]
+Alternative locator 3 failed: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@class, 'card')][2]"}
+  (Session info: chrome=139.0.7258.139); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000104e6ee00 cxxbridge1$str$ptr + 2742224
+1   chromedriver                        0x0000000104e66d00 cxxbridge1$str$ptr + 2709200
+2   chromedriver                        0x00000001049b10b8 cxxbridge1$string$len + 90520
+3   chromedriver                        0x00000001049f85d8 cxxbridge1$string$len + 382648
+4   chromedriver                        0x0000000104a39980 cxxbridge1$string$len + 649824
+5   chromedriver                        0x00000001049ec8f4 cxxbridge1$string$len + 334292
+6   chromedriver                        0x0000000104e32478 cxxbridge1$str$ptr + 2494024
+7   chromedriver                        0x0000000104e356a4 cxxbridge1$str$ptr + 2506868
+8   chromedriver                        0x0000000104e133b0 cxxbridge1$str$ptr + 2366848
+9   chromedriver                        0x0000000104e35f4c cxxbridge1$str$ptr + 2509084
+10  chromedriver                        0x0000000104e044a8 cxxbridge1$str$ptr + 2305656
+11  chromedriver                        0x0000000104e55644 cxxbridge1$str$ptr + 2637844
+12  chromedriver                        0x0000000104e557d0 cxxbridge1$str$ptr + 2638240
+13  chromedriver                        0x0000000104e6694c cxxbridge1$str$ptr + 2708252
+14  libsystem_pthread.dylib             0x000000019e30c2e4 _pthread_start + 136
+15  libsystem_pthread.dylib             0x000000019e3070fc thread_start + 8
+
+Trying alternative locator 4: (//div[contains(@class, 'card')])[2]
+Alternative locator 4 failed: Message: no such element: Unable to locate element: {"method":"xpath","selector":"(//div[contains(@class, 'card')])[2]"}
+  (Session info: chrome=139.0.7258.139); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000104e6ee00 cxxbridge1$str$ptr + 2742224
+1   chromedriver                        0x0000000104e66d00 cxxbridge1$str$ptr + 2709200
+2   chromedriver                        0x00000001049b10b8 cxxbridge1$string$len + 90520
+3   chromedriver                        0x00000001049f85d8 cxxbridge1$string$len + 382648
+4   chromedriver                        0x0000000104a39980 cxxbridge1$string$len + 649824
+5   chromedriver                        0x00000001049ec8f4 cxxbridge1$string$len + 334292
+6   chromedriver                        0x0000000104e32478 cxxbridge1$str$ptr + 2494024
+7   chromedriver                        0x0000000104e356a4 cxxbridge1$str$ptr + 2506868
+8   chromedriver                        0x0000000104e133b0 cxxbridge1$str$ptr + 2366848
+9   chromedriver                        0x0000000104e35f4c cxxbridge1$str$ptr + 2509084
+10  chromedriver                        0x0000000104e044a8 cxxbridge1$str$ptr + 2305656
+11  chromedriver                        0x0000000104e55644 cxxbridge1$str$ptr + 2637844
+12  chromedriver                        0x0000000104e557d0 cxxbridge1$str$ptr + 2638240
+13  chromedriver                        0x0000000104e6694c cxxbridge1$str$ptr + 2708252
+14  libsystem_pthread.dylib             0x000000019e30c2e4 _pthread_start + 136
+15  libsystem_pthread.dylib             0x000000019e3070fc thread_start + 8
+
+Debugging: Looking for all available cards...
+Found 0 card elements
+Card 2 element not found after all strategies
+Failure screenshot saved: screenshots/FAILED_new_valuation_dealer_selection_error_20250828_111641.png
+Completed test: test_new_valuation_dealer_selection - PASSED

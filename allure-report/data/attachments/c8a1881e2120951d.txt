@@ -1,0 +1,17 @@
+2025-08-28 10:04:35 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 10:04:35 - UIAutomationLogger - INFO - STARTING TEST: test_otp_expiration_and_resend_functionality
+2025-08-28 10:04:35 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 10:04:35 - UIAutomationLogger - INFO - STEP: Starting OTP expiration and resend functionality test
+2025-08-28 10:04:35 - UIAutomationLogger - INFO - STEP: Performing login to reach OTP page
+2025-08-28 10:04:35 - UIAutomationLogger - INFO - STEP: Using credentials: test3
+2025-08-28 10:04:57 - UIAutomationLogger - INFO - STEP: Successfully logged in and redirected to OTP page
+2025-08-28 10:04:57 - UIAutomationLogger - INFO - STEP: Successfully reached OTP verification page
+2025-08-28 10:04:58 - UIAutomationLogger - INFO - STEP: Waiting 2 minutes for OTP to expire...
+2025-08-28 10:06:58 - UIAutomationLogger - INFO - STEP: OTP expiration wait completed
+2025-08-28 10:06:58 - UIAutomationLogger - INFO - STEP: Checking if resend OTP button is clickable after expiration
+2025-08-28 10:07:10 - UIAutomationLogger - ERROR - STEP: OTP expiration and resend functionality test failed: Resend OTP button should be clickable after expiration
+assert False
+2025-08-28 10:07:10 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 10:07:10 - UIAutomationLogger - INFO - FINISHED TEST: test_otp_expiration_and_resend_functionality
+2025-08-28 10:07:10 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 10:07:10 - UIAutomationLogger - INFO - OTP Test Suite completed

@@ -1,0 +1,18 @@
+[32mINFO    [0m UIAutomationLogger:logger.py:60 ==================================================
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STARTING TEST: test_end_to_end_login_and_otp
+[32mINFO    [0m UIAutomationLogger:logger.py:60 ==================================================
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Starting complete end-to-end login and OTP test
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Starting complete flow with credentials: test3
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Navigating to login page
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Performing login
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Verifying OTP page loaded
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Performing OTP verification with code: 99999
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Checking final verification result
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Final URL after complete flow: https://valueinsightpro.jumpiq.com/JumpFive/home
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Expected redirect URL: https://valueinsightpro.jumpiq.com/JumpFive/home
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: OTP verification successful: True
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Redirect URL validation passed - successfully redirected to home page
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: End-to-end login and OTP test completed successfully
+[32mINFO    [0m UIAutomationLogger:logger.py:60 ==================================================
+[32mINFO    [0m UIAutomationLogger:logger.py:60 FINISHED TEST: test_end_to_end_login_and_otp
+[32mINFO    [0m UIAutomationLogger:logger.py:60 ==================================================

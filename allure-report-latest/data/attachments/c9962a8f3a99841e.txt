@@ -1,0 +1,21 @@
+2025-08-28 10:56:38 - UIAutomationLogger - INFO - USING EXISTING LOGIN SESSION
+2025-08-28 10:56:40 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 10:56:40 - UIAutomationLogger - INFO - STARTING TEST: test_valuations_search_functionality
+2025-08-28 10:56:40 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 10:56:40 - UIAutomationLogger - INFO - STEP: Testing valuations search functionality
+2025-08-28 10:56:40 - UIAutomationLogger - INFO - STEP: Navigating to valuations page (using existing session)
+2025-08-28 10:56:40 - UIAutomationLogger - INFO - STEP: Navigating to home page first
+2025-08-28 10:56:46 - UIAutomationLogger - INFO - STEP: Waiting for home page to fully load
+2025-08-28 10:56:49 - UIAutomationLogger - INFO - STEP: Attempt 1 to click card 2
+2025-08-28 10:58:40 - UIAutomationLogger - WARNING - STEP: Card 2 click attempt 1 failed
+2025-08-28 10:58:46 - UIAutomationLogger - INFO - STEP: Attempt 2 to click card 2
+2025-08-28 11:00:37 - UIAutomationLogger - WARNING - STEP: Card 2 click attempt 2 failed
+2025-08-28 11:00:43 - UIAutomationLogger - INFO - STEP: Attempt 3 to click card 2
+2025-08-28 11:02:35 - UIAutomationLogger - WARNING - STEP: Card 2 click attempt 3 failed
+2025-08-28 11:02:35 - UIAutomationLogger - ERROR - STEP: All attempts to click card 2 failed
+2025-08-28 11:02:35 - UIAutomationLogger - ERROR - STEP: Search functionality test failed: Failed to navigate to valuations page
+assert False
+ +  where False = <bound method TestValuations.navigate_to_valuations_via_home_page of <tests.test_valuations.TestValuations object at 0x10896b9d0>>()
+ +    where <bound method TestValuations.navigate_to_valuations_via_home_page of <tests.test_valuations.TestValuations object at 0x10896b9d0>> = <tests.test_valuations.TestValuations object at 0x10896b9d0>.navigate_to_valuations_via_home_page
+2025-08-28 11:02:35 - UIAutomationLogger - WARNING - TEST FAILED: test_valuations_search_functionality - Will close browser for next test
+2025-08-28 11:02:36 - UIAutomationLogger - INFO - BROWSER CLOSED DUE TO TEST FAILURE

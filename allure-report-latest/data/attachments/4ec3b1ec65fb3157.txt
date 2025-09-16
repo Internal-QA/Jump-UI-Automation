@@ -1,0 +1,14 @@
+2025-08-28 09:56:15 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 09:56:15 - UIAutomationLogger - INFO - STARTING TEST: test_successful_login_otp_redirect
+2025-08-28 09:56:15 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 09:56:15 - UIAutomationLogger - INFO - STEP: Starting OTP redirect validation test
+2025-08-28 09:56:15 - UIAutomationLogger - INFO - STEP: Testing OTP redirect with credentials: test3
+2025-08-28 09:56:15 - UIAutomationLogger - INFO - STEP: Navigating to login page
+2025-08-28 09:56:15 - UIAutomationLogger - INFO - STEP: Performing login to test OTP redirect
+2025-08-28 09:56:20 - UIAutomationLogger - INFO - STEP: Checking for redirect to OTP verification page
+2025-08-28 09:56:21 - UIAutomationLogger - INFO - STEP: Final URL after login: https://valueinsightpro.jumpiq.com/auth/otp-verify
+2025-08-28 09:56:21 - UIAutomationLogger - INFO - STEP: Expected OTP URL: https://valueinsightpro.jumpiq.com/auth/otp-verify
+2025-08-28 09:56:21 - UIAutomationLogger - INFO - STEP: ✅ OTP redirect validation test completed successfully
+2025-08-28 09:56:21 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 09:56:21 - UIAutomationLogger - INFO - FINISHED TEST: test_successful_login_otp_redirect - STATUS: PASSED
+2025-08-28 09:56:21 - UIAutomationLogger - INFO - ==================================================

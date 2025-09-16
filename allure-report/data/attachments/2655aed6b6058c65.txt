@@ -1,0 +1,20 @@
+2025-08-28 11:16:46 - UIAutomationLogger - INFO - USING EXISTING LOGIN SESSION
+2025-08-28 11:16:48 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 11:16:48 - UIAutomationLogger - INFO - STARTING TEST: test_complete_new_valuation_workflow
+2025-08-28 11:16:48 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 11:16:48 - UIAutomationLogger - INFO - STEP: Testing complete new valuation workflow
+2025-08-28 11:16:48 - UIAutomationLogger - INFO - STEP: Navigating to valuations page (using existing session)
+2025-08-28 11:16:48 - UIAutomationLogger - INFO - STEP: Navigating to home page first
+2025-08-28 11:16:53 - UIAutomationLogger - INFO - STEP: Waiting for home page to fully load
+2025-08-28 11:16:56 - UIAutomationLogger - INFO - STEP: Attempt 1 to click card 2
+2025-08-28 11:18:48 - UIAutomationLogger - WARNING - STEP: Card 2 click attempt 1 failed
+2025-08-28 11:18:53 - UIAutomationLogger - INFO - STEP: Attempt 2 to click card 2
+2025-08-28 11:20:45 - UIAutomationLogger - WARNING - STEP: Card 2 click attempt 2 failed
+2025-08-28 11:20:50 - UIAutomationLogger - INFO - STEP: Attempt 3 to click card 2
+2025-08-28 11:22:42 - UIAutomationLogger - WARNING - STEP: Card 2 click attempt 3 failed
+2025-08-28 11:22:42 - UIAutomationLogger - ERROR - STEP: All attempts to click card 2 failed
+2025-08-28 11:22:42 - UIAutomationLogger - ERROR - STEP: Complete new valuation workflow test failed: Failed to navigate to valuations page
+assert False
+ +  where False = <bound method TestValuations.navigate_to_valuations_via_home_page of <tests.test_valuations.TestValuations object at 0x10896bee0>>()
+ +    where <bound method TestValuations.navigate_to_valuations_via_home_page of <tests.test_valuations.TestValuations object at 0x10896bee0>> = <tests.test_valuations.TestValuations object at 0x10896bee0>.navigate_to_valuations_via_home_page
+2025-08-28 11:22:42 - UIAutomationLogger - INFO - TEST PASSED - RETURNING TO HOME PAGE FOR NEXT TEST

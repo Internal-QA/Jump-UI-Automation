@@ -1,0 +1,20 @@
+[32mINFO    [0m UIAutomationLogger:logger.py:56 Logger initialized. Log file: /Users/shtlpmac015/Desktop/Jump-UI-Automation/utils/../logs/test_execution_20250829_122930.log
+[32mINFO    [0m UIAutomationLogger:logger.py:60 PERFORMING ONE-TIME LOGIN FOR TEST SESSION
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Performing session login with timeout protection
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Session login and OTP verification successful
+[32mINFO    [0m UIAutomationLogger:logger.py:60 ==================================================
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STARTING TEST: test_valuations_page_access_via_card_2
+[32mINFO    [0m UIAutomationLogger:logger.py:60 ==================================================
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Testing navigation to valuations page via card 2
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Navigating to valuations page (using existing session)
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Attempting direct URL navigation to valuations
+[32mINFO    [0m UIAutomationLogger:logger.py:60 Trying valuations URL: https://valueinsightpro.jumpiq.com/JumpFive/valuations
+[32mINFO    [0m UIAutomationLogger:logger.py:60 Current URL after navigation: https://valueinsightpro.jumpiq.com/JumpFive/valuations
+[32mINFO    [0m UIAutomationLogger:logger.py:60 ✓ Direct URL navigation to valuations successful
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Successfully navigated to valuations page
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: All required elements validated on valuations page
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Valuations page access test completed successfully
+[32mINFO    [0m UIAutomationLogger:logger.py:60 ==================================================
+[32mINFO    [0m UIAutomationLogger:logger.py:60 FINISHED TEST: test_valuations_page_access_via_card_2
+[32mINFO    [0m UIAutomationLogger:logger.py:60 ==================================================
+[32mINFO    [0m UIAutomationLogger:logger.py:60 TEST PASSED - RETURNING TO HOME PAGE FOR NEXT TEST

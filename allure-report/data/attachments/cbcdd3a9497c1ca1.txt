@@ -1,0 +1,13 @@
+2025-08-28 09:55:13 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 09:55:13 - UIAutomationLogger - INFO - STARTING TEST: test_invalid_email
+2025-08-28 09:55:13 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 09:55:13 - UIAutomationLogger - INFO - STEP: Starting invalid email test
+2025-08-28 09:55:13 - UIAutomationLogger - INFO - STEP: Using invalid email: invalid@example.com
+2025-08-28 09:55:13 - UIAutomationLogger - INFO - STEP: Navigating to login page
+2025-08-28 09:55:13 - UIAutomationLogger - INFO - STEP: Verifying login page elements are present
+2025-08-28 09:55:13 - UIAutomationLogger - INFO - STEP: Attempting login with invalid email
+2025-08-28 09:55:21 - UIAutomationLogger - INFO - STEP: Current URL after failed login: https://valueinsightpro.jumpiq.com/auth/login
+2025-08-28 09:55:21 - UIAutomationLogger - INFO - STEP: Invalid email test completed - login correctly rejected
+2025-08-28 09:55:21 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 09:55:21 - UIAutomationLogger - INFO - FINISHED TEST: test_invalid_email - STATUS: PASSED
+2025-08-28 09:55:21 - UIAutomationLogger - INFO - ==================================================

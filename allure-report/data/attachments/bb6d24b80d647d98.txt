@@ -1,0 +1,18 @@
+2025-08-28 10:03:30 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 10:03:30 - UIAutomationLogger - INFO - STARTING TEST: test_end_to_end_login_and_otp
+2025-08-28 10:03:30 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 10:03:30 - UIAutomationLogger - INFO - STEP: Starting complete end-to-end login and OTP test
+2025-08-28 10:03:30 - UIAutomationLogger - INFO - STEP: Starting complete flow with credentials: test3
+2025-08-28 10:03:30 - UIAutomationLogger - INFO - STEP: Navigating to login page
+2025-08-28 10:03:30 - UIAutomationLogger - INFO - STEP: Performing login
+2025-08-28 10:03:50 - UIAutomationLogger - INFO - STEP: Verifying OTP page loaded
+2025-08-28 10:03:50 - UIAutomationLogger - INFO - STEP: Performing OTP verification with code: 99999
+2025-08-28 10:03:52 - UIAutomationLogger - INFO - STEP: Checking final verification result
+2025-08-28 10:04:00 - UIAutomationLogger - INFO - STEP: Final URL after complete flow: https://valueinsightpro.jumpiq.com/JumpFive/home
+2025-08-28 10:04:00 - UIAutomationLogger - INFO - STEP: Expected redirect URL: https://valueinsightpro.jumpiq.com/JumpFive/home
+2025-08-28 10:04:00 - UIAutomationLogger - INFO - STEP: OTP verification successful: True
+2025-08-28 10:04:00 - UIAutomationLogger - INFO - STEP: Redirect URL validation passed - successfully redirected to home page
+2025-08-28 10:04:00 - UIAutomationLogger - INFO - STEP: End-to-end login and OTP test completed successfully
+2025-08-28 10:04:00 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 10:04:00 - UIAutomationLogger - INFO - FINISHED TEST: test_end_to_end_login_and_otp
+2025-08-28 10:04:00 - UIAutomationLogger - INFO - ==================================================

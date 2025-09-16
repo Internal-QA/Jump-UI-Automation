@@ -1,0 +1,191 @@
+# XPath Locators Configuration for UI Automation Framework
+# Only contains locators that are actually used in the code
+
+# Login Page Locators
+login_page:
+  url: "https://valueinsightpro.jumpiq.com/auth/login"
+  
+  # Main form elements (used in login_page.py)
+  email_field: "//input[@id='company-email']"
+  password_field: "//span[@class='ant-input-affix-wrapper css-bixahu ant-input-outlined ant-input-password input']//input[@type='password']"
+  password_field_alt1: "//input[@type='password']"
+  
+  sign_in_button: "//button[normalize-space()='Sign In']"
+  terms_checkbox: "//span[contains(@class, 'ant-checkbox') and not(contains(@class, 'ant-checkbox-inner'))]"
+  
+  # Password eye icon
+  password_eye_icon: "//span[@class='ant-input-suffix']"
+  
+  # Help functionality
+  need_help_button: "//div[contains(text(),'Need help?')]"
+  help_window: "//div[contains(@class, 'ant-modal') or contains(@class, 'modal') or contains(@class, 'popup') or contains(@class, 'help') or contains(@role, 'dialog')]"
+  help_window_close_button: "//button[@aria-label='Close']"
+  help_window_content: "//div[contains(@class, 'ant-modal-body') or contains(@class, 'modal-content') or contains(@class, 'help-content') or contains(@class, 'modal-body')]"
+  
+  # Privacy Policy functionality
+  privacy_policy_button: "//div[normalize-space()='Privacy Policy']"
+  privacy_policy_window: "//div[contains(@class, 'ant-modal') or contains(@class, 'modal') or contains(@class, 'popup') or contains(@class, 'privacy') or contains(@role, 'dialog')]"
+  privacy_policy_close_button: "//button[@aria-label='Close']"
+  privacy_policy_content: "//div[contains(@class, 'ant-modal-body') or contains(@class, 'modal-content') or contains(@class, 'privacy-content') or contains(@class, 'modal-body')]"
+  
+  # Error and loading elements (used in login_page.py)
+  general_error: "//div[contains(@class, 'error') or contains(@class, 'alert-danger')]"
+  loading_indicator: "//div[contains(@class, 'loading') or contains(@class, 'spinner')]"
+
+# OTP Verification Page Locators
+otp_page:
+  url: "https://valueinsightpro.jumpiq.com/auth/otp-verify"
+  
+  # OTP form elements (used in otp_page.py)
+  otp_input: "//input[@class='ant-input css-bixahu ant-input-outlined custom-input ant-input-compact-item ant-input-compact-first-item']"
+  verify_button: "//button[@class='ant-btn css-bixahu ant-btn-default fa_btn']"
+  resend_otp_button: "//button[@class='ant-btn css-bixahu ant-btn-link resendbtn']"
+  
+  # Error and success messages (used in otp_page.py)
+  invalid_otp_error: "//div[contains(text(), 'Invalid OTP') or contains(text(), 'incorrect') or contains(text(), 'Remaining attempts')]"
+  invalid_otp_alert: "//*[contains(text(), 'Invalid OTP. Remaining attempts:')]"
+  otp_expired_error: "//div[contains(text(), 'expired') or contains(text(), 'timeout')]"
+  otp_required_error: "//div[contains(text(), 'OTP is required')]"
+  otp_success: "//div[contains(text(), 'verified') or contains(@class, 'success')]"
+  
+  # General alert/notification selectors for error messages
+  alert_message: "//div[contains(@class, 'alert') or contains(@class, 'notification') or contains(@class, 'message') or contains(@class, 'toast')]"
+  error_notification: "//*[contains(@class, 'error') or contains(@class, 'danger') or contains(@class, 'alert')]"
+  
+  # Session expired popup and error messages
+  session_expired_popup: "//div[contains(@class, 'ant-modal')] | //div[contains(@role, 'dialog')] | //div[contains(@class, 'modal')] | //div[contains(@class, 'popup')]"
+  session_expired_message: "//*[contains(text(), 'Session Expired') or contains(text(), 'session expired') or contains(text(), 'Session expired') or contains(text(), 'expired') or contains(text(), 'timeout')]"
+  popup_ok_button: "//button[contains(text(), 'OK')] | //button[contains(text(), 'ok')] | //button[contains(@class, 'ant-btn-primary')] | //button[contains(@class, 'primary')]"
+  popup_close_button: "//button[contains(@class, 'close')] | //button[@aria-label='Close'] | //span[contains(@class, 'close')] | //*[contains(@class, 'ant-modal-close')]"
+  
+  # Any visible popup or modal - for debugging
+  any_popup: "//div[contains(@class, 'modal')] | //div[contains(@class, 'popup')] | //div[contains(@class, 'alert')] | //div[contains(@class, 'notification')] | //div[contains(@role, 'dialog')]"
+  any_error_text: "//*[contains(text(), 'error') or contains(text(), 'Error') or contains(text(), 'invalid') or contains(text(), 'Invalid') or contains(text(), 'expired') or contains(text(), 'Expired')]"
+
+# Home Page Locators (after successful login and OTP verification)
+home_page:
+  url: "https://valueinsightpro.jumpiq.com/JumpFive/home"
+  
+  # Main page container (used in home_page.py)
+  landing_page_container: "//div[@id='landing-page']"
+  cards_wrapper: "//div[@class='cards_wrapper']"
+  
+  # Individual card elements (used in home_page.py) - targeting the actual card divs found
+  card_1: "//div[@class='cards_wrapper']/div[1][@class='card']"
+  card_2: "//div[@class='cards_wrapper']/div[2][@class='card']"
+  card_3: "//div[@class='cards_wrapper']/div[3][@class='card']"
+  card_4: "//div[@class='cards_wrapper']/div[4][@class='card']"
+  card_5: "//div[@class='cards_wrapper']/div[5][@class='card']"
+  card_6: "//div[@class='cards_wrapper']/div[6][@class='card']"
+  
+  # Alternative generic card selectors for debugging
+  any_card: "//div[@class='cards_wrapper']//div[contains(@class,'card')]"
+  all_cards: "//div[@class='cards_wrapper']/div"
+
+# Valuations Page Locators (after clicking card 2 from home page)
+valuations_page:
+  url: "https://valueinsightpro.jumpiq.com/JumpFive/valuations"
+  
+  # Search functionality elements (used in valuations_page.py)
+  search_field: "//input[@id='home_screen_search']"
+  search_button: "//button[normalize-space()='Search']"
+  
+  # Results and data validation elements
+  results_container: "//div[contains(@class, 'results') or contains(@class, 'data') or contains(@class, 'table')]"
+  data_table: "//table | //div[contains(@class, 'table')]"
+  no_results_message: "//div[contains(text(), 'No results') or contains(text(), 'no data') or contains(text(), 'not found')]"
+  loading_indicator: "//div[contains(@class, 'loading') or contains(@class, 'spinner')]"
+  
+  # Generic data row selectors for validation
+  data_rows: "//tr[position()>1] | //div[contains(@class, 'row') and not(contains(@class, 'header'))]"
+  search_results: "//*[contains(text(), 'gold coast') or contains(text(), 'Gold Coast')]"
+  
+  # New Valuation functionality elements
+  new_valuation_button: "//button[normalize-space()='+ New Valuation']"
+  dealer_select_dropdown: "//input[@id='rc_select_0']"  # Updated based on debug results
+  dealer_selection_item: "//span[@class='ant-select-selection-item']"
+  
+  # Dropdown and form elements
+  dropdown_options: "//div[contains(@class, 'rc-select-item')]"
+  dropdown_first_option: "//div[contains(@class, 'rc-select-item')][1]"
+  form_container: "//div[contains(@class, 'ant-modal')]"
+  
+  # Valuation creation buttons
+  default_button: "//button[@class='ant-btn css-bixahu ant-btn-default']"
+  create_valuation_button: "//button[@class='ant-btn css-bixahu ant-btn-primary']"
+  
+  # Valuation workflow steps
+  financials_step_icon: "//div[@class='ant-steps-item ant-steps-item-finish ant-steps-item-active']//div[@class='ant-steps-item-icon']"
+  
+  # TimeFrame panel elements
+  timeframe_radio_button: "//div[@id='rc-tabs-6-panel-TimeFrame']//span[@class='ant-radio-button ant-radio-button-checked']"
+  
+  # Financial data extraction locators
+  financial_table: "//table | //div[contains(@class, 'financial')]"
+  gross_profit_row: "//tr[td[contains(text(), 'Gross Profit')] or contains(text(), 'Gross Profit')]"
+  net_profit_row: "//tr[td[contains(text(), 'Net Profit')] or contains(text(), 'Net Profit')]"
+  net_additions_row: "//tr[td[contains(text(), 'Net Additions')] or contains(text(), 'Net Additions')]"
+  expenses_row: "//tr[td[contains(text(), 'Expenses')] or contains(text(), 'Expenses')]"
+  add_backs_row: "//tr[td[contains(text(), 'Add Backs')] or contains(text(), 'Add Backs')]"
+  adjusted_profit_row: "//tr[td[contains(text(), 'Adjusted Profit')] or contains(text(), 'Adjusted Profit')]"
+  
+  # Year column selectors (based on table structure)
+  year_2020_column: "//th[contains(text(), '2020')] | //td[contains(text(), '2020')]"
+  year_2021_column: "//th[contains(text(), '2021')] | //td[contains(text(), '2021')]"
+  year_2022_column: "//th[contains(text(), '2022')] | //td[contains(text(), '2022')]"
+  year_2023_column: "//th[contains(text(), '2023')] | //td[contains(text(), '2023')]"
+  year_2024_column: "//th[contains(text(), '2024')] | //td[contains(text(), '2024')]"
+  
+  # Page load indicators
+  valuation_created_indicator: "//div[contains(@class, 'ant-steps')]"
+  loading_spinner: "//div[contains(@class, 'loading') or contains(@class, 'spinner')]"
+
+# Common Elements (used across multiple pages)
+common:
+  # Generic error elements (used in otp_page.py)
+  any_error: "//div[contains(@class, 'error')] | //span[contains(@class, 'error')]"
+
+# Portfolio Page Locators
+portfolio_page:
+  url: "/JumpFive/portfolio"
+  
+  # Main page elements
+  page_container: "//div[contains(@class, 'portfolio')] | //div[contains(@class, 'content')] | //div[contains(@class, 'main')]"
+  page_header: "//h1[contains(text(), 'Portfolio')] | //h2[contains(text(), 'Portfolio')] | //div[contains(@class, 'header')]"
+  
+  # Search functionality
+  search_input: "//input[@placeholder*='search' or @placeholder*='Search'] | //input[@type='search'] | //input[contains(@class, 'search')]"
+  search_button: "//button[contains(text(), 'Search')] | //button[@type='submit'] | //button[contains(@class, 'search')]"
+  search_results: "//div[contains(@class, 'results')] | //div[contains(@class, 'search-results')]"
+  
+  # Portfolio items
+  portfolio_items: "//div[contains(@class, 'portfolio-item')] | //div[contains(@class, 'item')] | //div[contains(@class, 'card')]"
+  portfolio_item_title: ".//h3 | .//h4 | .//div[contains(@class, 'title')] | .//a[contains(@class, 'title')]"
+  portfolio_item_description: ".//p | .//div[contains(@class, 'description')] | .//div[contains(@class, 'summary')]"
+  portfolio_item_link: ".//a | .//button"
+  
+  # Filtering and sorting
+  filter_dropdown: "//select[contains(@class, 'filter')] | //div[contains(@class, 'filter')]"
+  category_filters: "//button[contains(@class, 'category')] | //a[contains(@class, 'category')] | //div[contains(@class, 'filter-option')]"
+  sort_dropdown: "//select[contains(@class, 'sort')] | //div[contains(@class, 'sort')]"
+  sort_options: "//option | //a[contains(@class, 'sort-option')] | //div[contains(@class, 'sort-option')]"
+  
+  # Pagination
+  pagination_container: "//div[contains(@class, 'pagination')] | //nav[contains(@class, 'pagination')] | //ul[contains(@class, 'pagination')]"
+  next_page_button: "//button[contains(text(), 'Next')] | //a[contains(text(), 'Next')] | //button[contains(@class, 'next')]"
+  previous_page_button: "//button[contains(text(), 'Previous')] | //a[contains(text(), 'Previous')] | //button[contains(@class, 'prev')]"
+  page_numbers: "//button[contains(@class, 'page')] | //a[contains(@class, 'page')] | //span[contains(@class, 'page')]"
+  
+  # Item details modal/popup
+  item_details_modal: "//div[contains(@class, 'modal')] | //div[contains(@class, 'popup')] | //div[contains(@class, 'dialog')]"
+  modal_close_button: "//button[contains(@class, 'close')] | //button[@aria-label='Close'] | //span[contains(@class, 'close')]"
+  item_details_content: "//div[contains(@class, 'modal-body')] | //div[contains(@class, 'content')] | //div[contains(@class, 'details')]"
+  
+  # Navigation elements
+  breadcrumb: "//nav[contains(@class, 'breadcrumb')] | //div[contains(@class, 'breadcrumb')] | //ol[contains(@class, 'breadcrumb')]"
+  back_button: "//button[contains(text(), 'Back')] | //a[contains(text(), 'Back')] | //button[contains(@class, 'back')]"
+  
+  # Error and loading states
+  no_results_message: "//div[contains(text(), 'No results')] | //div[contains(text(), 'No items')] | //div[contains(@class, 'empty')]"
+  loading_indicator: "//div[contains(@class, 'loading')] | //div[contains(@class, 'spinner')] | //div[contains(@class, 'loader')]"
+  error_message: "//div[contains(@class, 'error')] | //div[contains(@class, 'alert-danger')] | //span[contains(@class, 'error')]" 

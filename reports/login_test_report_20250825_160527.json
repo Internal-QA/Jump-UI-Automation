@@ -1,0 +1,169 @@
+{
+    "execution_summary": {
+        "start_time": "2025-08-25 16:03:11.155952",
+        "end_time": "2025-08-25 16:05:27.805614",
+        "total_tests": 9,
+        "passed": 5,
+        "failed": 4,
+        "skipped": 0
+    },
+    "test_results": [
+        {
+            "test_name": "test_valid_login",
+            "status": "failed",
+            "duration": 24.446352243423462,
+            "error_message": "Login failed: Login process failed\nassert False",
+            "screenshot_path": "screenshots/failed_test_valid_login_20250825_160338.png",
+            "test_steps": [
+                "Starting valid login test",
+                "Using credentials: test3",
+                "Performing complete login validation with OTP redirect check",
+                "Login attempted: True",
+                "Login successful: False",
+                "Redirected to OTP: False",
+                "Button enabled correctly: False",
+                "Final URL: ",
+                "Execution time: 24.37 seconds",
+                "Form state validation details:",
+                "  - Initial state recorded: True",
+                "  - After email entered: True",
+                "  - After password entered: True",
+                "  - After checkbox checked: False",
+                "  - All stages correct: False",
+                "Error message: Login process failed"
+            ],
+            "timestamp": "2025-08-25 16:03:38"
+        },
+        {
+            "test_name": "test_invalid_email",
+            "status": "passed",
+            "duration": 15.941107988357544,
+            "error_message": null,
+            "screenshot_path": null,
+            "test_steps": [
+                "Starting invalid email test",
+                "Using invalid email: invalid@example.com",
+                "Navigating to login page",
+                "Verifying login page elements are present",
+                "Attempting login with invalid email",
+                "Current URL after failed login: https://valueinsightpro.jumpiq.com/auth/login",
+                "Invalid email test completed - login correctly rejected"
+            ],
+            "timestamp": "2025-08-25 16:03:56"
+        },
+        {
+            "test_name": "test_empty_email",
+            "status": "passed",
+            "duration": 14.897258996963501,
+            "error_message": null,
+            "screenshot_path": null,
+            "test_steps": [
+                "Starting empty email test",
+                "Navigating to login page",
+                "Verifying login page elements are present",
+                "Attempting login with empty email",
+                "Current URL after empty email login: https://valueinsightpro.jumpiq.com/auth/login",
+                "Empty email test completed - login correctly rejected"
+            ],
+            "timestamp": "2025-08-25 16:04:12"
+        },
+        {
+            "test_name": "test_empty_password",
+            "status": "passed",
+            "duration": 14.847843885421753,
+            "error_message": null,
+            "screenshot_path": null,
+            "test_steps": [
+                "Starting empty password test",
+                "Navigating to login page",
+                "Verifying login page elements are present",
+                "Attempting login with empty password",
+                "Current URL after empty password login: https://valueinsightpro.jumpiq.com/auth/login",
+                "Empty password test completed - login correctly rejected"
+            ],
+            "timestamp": "2025-08-25 16:04:29"
+        },
+        {
+            "test_name": "test_terms_not_accepted",
+            "status": "passed",
+            "duration": 15.011800050735474,
+            "error_message": null,
+            "screenshot_path": null,
+            "test_steps": [
+                "Starting terms not accepted test",
+                "Navigating to login page",
+                "Verifying login page elements are present",
+                "Attempting login without accepting terms and conditions",
+                "Current URL after login without terms: https://valueinsightpro.jumpiq.com/auth/login",
+                "Terms not accepted test completed - login correctly rejected"
+            ],
+            "timestamp": "2025-08-25 16:04:45"
+        },
+        {
+            "test_name": "test_login_page_elements",
+            "status": "passed",
+            "duration": 0.6380889415740967,
+            "error_message": null,
+            "screenshot_path": null,
+            "test_steps": [
+                "Starting login page elements test",
+                "Navigating to login page",
+                "Checking email field presence",
+                "Checking password field presence",
+                "Checking checkbox presence",
+                "Checking sign in button presence",
+                "Verifying sign in button text",
+                "Taking screenshot of login page",
+                "Login page elements test completed successfully"
+            ],
+            "timestamp": "2025-08-25 16:04:47"
+        },
+        {
+            "test_name": "test_clear_login_form",
+            "status": "failed",
+            "duration": 10.855554103851318,
+            "error_message": "Failed to check terms checkbox\nassert False\n +  where False = <bound method LoginPage.check_terms_and_conditions of <pages.login_page.LoginPage object at 0x105f8cfd0>>()\n +    where <bound method LoginPage.check_terms_and_conditions of <pages.login_page.LoginPage object at 0x105f8cfd0>> = <pages.login_page.LoginPage object at 0x105f8cfd0>.check_terms_and_conditions\n +      where <pages.login_page.LoginPage object at 0x105f8cfd0> = <tests.test_login.TestLogin object at 0x1054d73d0>.login_page",
+            "screenshot_path": "screenshots/failed_test_clear_login_form_20250825_160500.png",
+            "test_steps": [
+                "Starting clear login form test",
+                "Navigating to login page",
+                "Filling login form with test data"
+            ],
+            "timestamp": "2025-08-25 16:05:00"
+        },
+        {
+            "test_name": "test_successful_login_otp_redirect",
+            "status": "failed",
+            "duration": 12.778337001800537,
+            "error_message": "Login process failed\nassert False",
+            "screenshot_path": "screenshots/failed_test_successful_login_otp_redirect_20250825_160514.png",
+            "test_steps": [
+                "Starting OTP redirect validation test",
+                "Testing OTP redirect with credentials: test3",
+                "Navigating to login page",
+                "Performing login to test OTP redirect"
+            ],
+            "timestamp": "2025-08-25 16:05:14"
+        },
+        {
+            "test_name": "test_sign_in_button_state_validation",
+            "status": "failed",
+            "duration": 10.804238080978394,
+            "error_message": "Button not enabled after checking terms checkbox\nassert False\n +  where False = <built-in method get of dict object at 0x11807c200>('after_checkbox', False)\n +    where <built-in method get of dict object at 0x11807c200> = {'after_checkbox': False, 'after_email': True, 'after_password': True, 'all_stages_correct': False, ...}.get",
+            "screenshot_path": "screenshots/failed_test_sign_in_button_state_validation_20250825_160527.png",
+            "test_steps": [
+                "Starting sign-in button state validation test",
+                "Navigating to login page",
+                "Verifying login page elements are present",
+                "Performing comprehensive button state validation",
+                "Initial state recorded: True",
+                "Email field completion handled: True",
+                "Password field completion handled: True",
+                "Checkbox completion handled: False",
+                "Complete form enables button: False"
+            ],
+            "timestamp": "2025-08-25 16:05:27"
+        }
+    ],
+    "generated_at": "2025-08-25T16:05:27.806127"
+}

@@ -1,0 +1,143 @@
+{
+    "execution_summary": {
+        "start_time": "2025-08-25 15:05:22.777376",
+        "end_time": "2025-08-25 15:07:12.904325",
+        "total_tests": 8,
+        "passed": 5,
+        "failed": 3,
+        "skipped": 0
+    },
+    "test_results": [
+        {
+            "test_name": "test_valid_login",
+            "status": "failed",
+            "duration": 12.929786920547485,
+            "error_message": "Login failed: Login process failed\nassert False",
+            "screenshot_path": "screenshots/failed_test_valid_login_20250825_150537.png",
+            "test_steps": [
+                "Starting valid login test",
+                "Using credentials: test@example.com",
+                "Performing complete login validation with OTP redirect check",
+                "Login attempted: True",
+                "Login successful: False",
+                "Redirected to OTP: False",
+                "Final URL: ",
+                "Execution time: 12.87 seconds",
+                "Error message: Login process failed"
+            ],
+            "timestamp": "2025-08-25 15:05:37"
+        },
+        {
+            "test_name": "test_invalid_email",
+            "status": "passed",
+            "duration": 15.9042649269104,
+            "error_message": null,
+            "screenshot_path": null,
+            "test_steps": [
+                "Starting invalid email test",
+                "Using invalid email: invalid@example.com",
+                "Navigating to login page",
+                "Verifying login page elements are present",
+                "Attempting login with invalid email",
+                "Current URL after failed login: https://valueinsightpro.jumpiq.com/auth/login",
+                "Invalid email test completed - login correctly rejected"
+            ],
+            "timestamp": "2025-08-25 15:05:55"
+        },
+        {
+            "test_name": "test_empty_email",
+            "status": "passed",
+            "duration": 14.715038061141968,
+            "error_message": null,
+            "screenshot_path": null,
+            "test_steps": [
+                "Starting empty email test",
+                "Navigating to login page",
+                "Verifying login page elements are present",
+                "Attempting login with empty email",
+                "Current URL after empty email login: https://valueinsightpro.jumpiq.com/auth/login",
+                "Empty email test completed - login correctly rejected"
+            ],
+            "timestamp": "2025-08-25 15:06:11"
+        },
+        {
+            "test_name": "test_empty_password",
+            "status": "passed",
+            "duration": 14.896783828735352,
+            "error_message": null,
+            "screenshot_path": null,
+            "test_steps": [
+                "Starting empty password test",
+                "Navigating to login page",
+                "Verifying login page elements are present",
+                "Attempting login with empty password",
+                "Current URL after empty password login: https://valueinsightpro.jumpiq.com/auth/login",
+                "Empty password test completed - login correctly rejected"
+            ],
+            "timestamp": "2025-08-25 15:06:27"
+        },
+        {
+            "test_name": "test_terms_not_accepted",
+            "status": "passed",
+            "duration": 14.82978630065918,
+            "error_message": null,
+            "screenshot_path": null,
+            "test_steps": [
+                "Starting terms not accepted test",
+                "Navigating to login page",
+                "Verifying login page elements are present",
+                "Attempting login without accepting terms and conditions",
+                "Current URL after login without terms: https://valueinsightpro.jumpiq.com/auth/login",
+                "Terms not accepted test completed - login correctly rejected"
+            ],
+            "timestamp": "2025-08-25 15:06:44"
+        },
+        {
+            "test_name": "test_login_page_elements",
+            "status": "passed",
+            "duration": 0.4643878936767578,
+            "error_message": null,
+            "screenshot_path": null,
+            "test_steps": [
+                "Starting login page elements test",
+                "Navigating to login page",
+                "Checking email field presence",
+                "Checking password field presence",
+                "Checking checkbox presence",
+                "Checking sign in button presence",
+                "Verifying sign in button text",
+                "Taking screenshot of login page",
+                "Login page elements test completed successfully"
+            ],
+            "timestamp": "2025-08-25 15:06:45"
+        },
+        {
+            "test_name": "test_clear_login_form",
+            "status": "failed",
+            "duration": 10.723896980285645,
+            "error_message": "Failed to check terms checkbox\nassert False\n +  where False = <bound method LoginPage.check_terms_and_conditions of <pages.login_page.LoginPage object at 0x104973ee0>>()\n +    where <bound method LoginPage.check_terms_and_conditions of <pages.login_page.LoginPage object at 0x104973ee0>> = <pages.login_page.LoginPage object at 0x104973ee0>.check_terms_and_conditions\n +      where <pages.login_page.LoginPage object at 0x104973ee0> = <tests.test_login.TestLogin object at 0x1046eab50>.login_page",
+            "screenshot_path": "screenshots/failed_test_clear_login_form_20250825_150658.png",
+            "test_steps": [
+                "Starting clear login form test",
+                "Navigating to login page",
+                "Filling login form with test data"
+            ],
+            "timestamp": "2025-08-25 15:06:58"
+        },
+        {
+            "test_name": "test_successful_login_otp_redirect",
+            "status": "failed",
+            "duration": 12.684928178787231,
+            "error_message": "Login process failed\nassert False",
+            "screenshot_path": "screenshots/failed_test_successful_login_otp_redirect_20250825_150712.png",
+            "test_steps": [
+                "Starting OTP redirect validation test",
+                "Testing OTP redirect with credentials: test@example.com",
+                "Navigating to login page",
+                "Performing login to test OTP redirect"
+            ],
+            "timestamp": "2025-08-25 15:07:12"
+        }
+    ],
+    "generated_at": "2025-08-25T15:07:12.904755"
+}

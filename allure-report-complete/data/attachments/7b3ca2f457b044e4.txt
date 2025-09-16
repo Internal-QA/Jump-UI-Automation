@@ -1,0 +1,30 @@
+[32mINFO    [0m UIAutomationLogger:logger.py:60 USING EXISTING LOGIN SESSION
+[32mINFO    [0m UIAutomationLogger:logger.py:60 ==================================================
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STARTING TEST: test_valuations_search_functionality
+[32mINFO    [0m UIAutomationLogger:logger.py:60 ==================================================
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Testing valuations search functionality
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Navigating to valuations page (using existing session)
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Attempting direct URL navigation to valuations
+[32mINFO    [0m UIAutomationLogger:logger.py:60 Trying valuations URL: https://valueinsightpro.jumpiq.com/valuations
+[32mINFO    [0m UIAutomationLogger:logger.py:60 Current URL after navigation: https://valueinsightpro.jumpiq.com/auth/login?redirect=/valuations
+[33mWARNING [0m UIAutomationLogger:logger.py:68 Direct URL reached valuations but page validation failed
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Attempting home page card navigation
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Navigating to home page first
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Waiting for home page to fully load
+[32mINFO    [0m UIAutomationLogger:logger.py:60 Debug screenshot saved: screenshots/debug_home_page_20250829_123019.png
+[33mWARNING [0m UIAutomationLogger:logger.py:68 No 'card' text found in page source
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Attempt 1 to click card 2
+[33mWARNING [0m UIAutomationLogger:logger.py:68 STEP: Card 2 click attempt 1 failed
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Attempt 2 to click card 2
+[33mWARNING [0m UIAutomationLogger:logger.py:68 STEP: Card 2 click attempt 2 failed
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Attempt 3 to click card 2
+[33mWARNING [0m UIAutomationLogger:logger.py:68 STEP: Card 2 click attempt 3 failed
+[1m[31mERROR   [0m UIAutomationLogger:logger.py:72 STEP: All attempts to click card 2 failed
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Attempting alternative menu navigation
+[1m[31mERROR   [0m UIAutomationLogger:logger.py:72 All navigation methods failed
+[1m[31mERROR   [0m UIAutomationLogger:logger.py:72 STEP: Search functionality test failed: Failed to navigate to valuations page
+assert False
+ +  where False = <bound method TestValuations.navigate_to_valuations_via_home_page of <tests.test_valuations.TestValuations object at 0x104c7c880>>()
+ +    where <bound method TestValuations.navigate_to_valuations_via_home_page of <tests.test_valuations.TestValuations object at 0x104c7c880>> = <tests.test_valuations.TestValuations object at 0x104c7c880>.navigate_to_valuations_via_home_page
+[33mWARNING [0m UIAutomationLogger:logger.py:68 TEST FAILED: test_valuations_search_functionality - Will close browser for next test
+[32mINFO    [0m UIAutomationLogger:logger.py:60 BROWSER CLOSED DUE TO TEST FAILURE

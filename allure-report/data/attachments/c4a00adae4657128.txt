@@ -1,0 +1,5 @@
+Error creating Chrome driver: [Errno 8] Exec format error: '/Users/shtlpmac015/.wdm/drivers/chromedriver/mac64/139.0.7258.154/chromedriver-mac-arm64/THIRD_PARTY_NOTICES.chromedriver'
+Attempting to use system ChromeDriver...
+Starting test: test_login_page_elements
+Failure screenshot saved: screenshots/FAILED_login_page_elements_20250828_095600.png
+Completed test: test_login_page_elements

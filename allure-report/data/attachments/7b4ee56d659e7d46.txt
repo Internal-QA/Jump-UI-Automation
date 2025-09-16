@@ -1,0 +1,17 @@
+[32mINFO    [0m UIAutomationLogger:logger.py:60 ==================================================
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STARTING TEST: test_otp_expiration_and_resend_functionality
+[32mINFO    [0m UIAutomationLogger:logger.py:60 ==================================================
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Starting OTP expiration and resend functionality test
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Performing login to reach OTP page
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Using credentials: test3
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Successfully logged in and redirected to OTP page
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Successfully reached OTP verification page
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Waiting 2 minutes for OTP to expire...
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: OTP expiration wait completed
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Checking if resend OTP button is clickable after expiration
+[31m[1mERROR   [0m UIAutomationLogger:logger.py:72 STEP: OTP expiration and resend functionality test failed: Resend OTP button should be clickable after expiration
+assert False
+[32mINFO    [0m UIAutomationLogger:logger.py:60 ==================================================
+[32mINFO    [0m UIAutomationLogger:logger.py:60 FINISHED TEST: test_otp_expiration_and_resend_functionality
+[32mINFO    [0m UIAutomationLogger:logger.py:60 ==================================================
+[32mINFO    [0m UIAutomationLogger:logger.py:60 OTP Test Suite completed

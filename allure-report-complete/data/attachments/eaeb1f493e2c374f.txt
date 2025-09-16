@@ -1,0 +1,17 @@
+[32mINFO    [0m UIAutomationLogger:logger.py:60 ==================================================
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STARTING TEST: test_otp_redirect_url_validation
+[32mINFO    [0m UIAutomationLogger:logger.py:60 ==================================================
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Starting OTP redirect URL validation test
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Performing login to reach OTP page
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Using credentials: test3
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Successfully logged in and redirected to OTP page
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Performing OTP verification to test redirect URL
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Initial OTP page URL: https://valueinsightpro.jumpiq.com/auth/otp-verify
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Waiting for redirect after OTP verification
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Final URL after OTP: https://valueinsightpro.jumpiq.com/JumpFive/home
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Expected home page URL: https://valueinsightpro.jumpiq.com/JumpFive/home
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: OTP redirect URL validation test completed successfully
+[32mINFO    [0m UIAutomationLogger:logger.py:60 STEP: Successfully redirected from OTP page to home page: https://valueinsightpro.jumpiq.com/JumpFive/home
+[32mINFO    [0m UIAutomationLogger:logger.py:60 ==================================================
+[32mINFO    [0m UIAutomationLogger:logger.py:60 FINISHED TEST: test_otp_redirect_url_validation
+[32mINFO    [0m UIAutomationLogger:logger.py:60 ==================================================

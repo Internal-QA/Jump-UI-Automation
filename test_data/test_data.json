@@ -1,0 +1,77 @@
+{
+    "login_credentials": {
+        "valid_user": {
+            "email": "test3",
+            "password": "value@123"
+        },
+        "invalid_user": {
+            "email": "invalid@example.com",
+            "password": "WrongPassword"
+        },
+        "empty_credentials": {
+            "email": "",
+            "password": ""
+        }
+    },
+    "test_scenarios": {
+        "positive_tests": [
+            {
+                "test_name": "valid_login",
+                "description": "Login with valid credentials",
+                "email": "test3",
+                "password": "value@123",
+                "accept_terms": true,
+                "expected_result": "success"
+            }
+        ],
+        "negative_tests": [
+            {
+                "test_name": "invalid_email",
+                "description": "Login with invalid email",
+                "email": "invalid@example.com",
+                "password": "value@123",
+                "accept_terms": true,
+                "expected_result": "failure"
+            },
+            {
+                "test_name": "invalid_password",
+                "description": "Login with invalid password",
+                "email": "test3",
+                "password": "WrongPassword",
+                "accept_terms": true,
+                "expected_result": "failure"
+            },
+            {
+                "test_name": "empty_email",
+                "description": "Login with empty email",
+                "email": "",
+                "password": "value@123",
+                "accept_terms": true,
+                "expected_result": "failure"
+            },
+            {
+                "test_name": "empty_password",
+                "description": "Login with empty password",
+                "email": "test3",
+                "password": "",
+                "accept_terms": true,
+                "expected_result": "failure"
+            },
+            {
+                "test_name": "terms_not_accepted",
+                "description": "Login without accepting terms",
+                "email": "test3",
+                "password": "value@123",
+                "accept_terms": false,
+                "expected_result": "failure"
+            }
+        ]
+    },
+    "expected_messages": {
+        "login_success": "Login successful",
+        "invalid_credentials": "Invalid credentials",
+        "empty_email": "Email is required",
+        "empty_password": "Password is required",
+        "terms_required": "Please accept terms and conditions"
+    }
+}

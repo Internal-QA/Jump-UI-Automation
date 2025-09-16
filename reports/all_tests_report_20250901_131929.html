@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title id="head-title">all_tests_report_20250901_131929.html</title>
+      <style type="text/css">body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  /* do not increase min-width as some may use split screens */
+  min-width: 800px;
+  color: #999;
+}
+
+h1 {
+  font-size: 24px;
+  color: black;
+}
+
+h2 {
+  font-size: 16px;
+  color: black;
+}
+
+p {
+  color: black;
+}
+
+a {
+  color: #999;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+/******************************
+ * SUMMARY INFORMATION
+ ******************************/
+#environment td {
+  padding: 5px;
+  border: 1px solid #e6e6e6;
+  vertical-align: top;
+}
+#environment tr:nth-child(odd) {
+  background-color: #f6f6f6;
+}
+#environment ul {
+  margin: 0;
+  padding: 0 20px;
+}
+
+/******************************
+ * TEST RESULT COLORS
+ ******************************/
+span.passed,
+.passed .col-result {
+  color: green;
+}
+
+span.skipped,
+span.xfailed,
+span.rerun,
+.skipped .col-result,
+.xfailed .col-result,
+.rerun .col-result {
+  color: orange;
+}
+
+span.error,
+span.failed,
+span.xpassed,
+.error .col-result,
+.failed .col-result,
+.xpassed .col-result {
+  color: red;
+}
+
+.col-links__extra {
+  margin-right: 3px;
+}
+
+/******************************
+ * RESULTS TABLE
+ *
+ * 1. Table Layout
+ * 2. Extra
+ * 3. Sorting items
+ *
+ ******************************/
+/*------------------
+ * 1. Table Layout
+ *------------------*/
+#results-table {
+  border: 1px solid #e6e6e6;
+  color: #999;
+  font-size: 12px;
+  width: 100%;
+}
+#results-table th,
+#results-table td {
+  padding: 5px;
+  border: 1px solid #e6e6e6;
+  text-align: left;
+}
+#results-table th {
+  font-weight: bold;
+}
+
+/*------------------
+ * 2. Extra
+ *------------------*/
+.logwrapper {
+  max-height: 230px;
+  overflow-y: scroll;
+  background-color: #e6e6e6;
+}
+.logwrapper.expanded {
+  max-height: none;
+}
+.logwrapper.expanded .logexpander:after {
+  content: "collapse [-]";
+}
+.logwrapper .logexpander {
+  z-index: 1;
+  position: sticky;
+  top: 10px;
+  width: max-content;
+  border: 1px solid;
+  border-radius: 3px;
+  padding: 5px 7px;
+  margin: 10px 0 10px calc(100% - 80px);
+  cursor: pointer;
+  background-color: #e6e6e6;
+}
+.logwrapper .logexpander:after {
+  content: "expand [+]";
+}
+.logwrapper .logexpander:hover {
+  color: #000;
+  border-color: #000;
+}
+.logwrapper .log {
+  min-height: 40px;
+  position: relative;
+  top: -50px;
+  height: calc(100% + 50px);
+  border: 1px solid #e6e6e6;
+  color: black;
+  display: block;
+  font-family: "Courier New", Courier, monospace;
+  padding: 5px;
+  padding-right: 80px;
+  white-space: pre-wrap;
+}
+
+div.media {
+  border: 1px solid #e6e6e6;
+  float: right;
+  height: 240px;
+  margin: 0 5px;
+  overflow: hidden;
+  width: 320px;
+}
+
+.media-container {
+  display: grid;
+  grid-template-columns: 25px auto 25px;
+  align-items: center;
+  flex: 1 1;
+  overflow: hidden;
+  height: 200px;
+}
+
+.media-container--fullscreen {
+  grid-template-columns: 0px auto 0px;
+}
+
+.media-container__nav--right,
+.media-container__nav--left {
+  text-align: center;
+  cursor: pointer;
+}
+
+.media-container__viewport {
+  cursor: pointer;
+  text-align: center;
+  height: inherit;
+}
+.media-container__viewport img,
+.media-container__viewport video {
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
+}
+
+.media__name,
+.media__counter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex: 0 0 25px;
+  align-items: center;
+}
+
+.collapsible td:not(.col-links) {
+  cursor: pointer;
+}
+.collapsible td:not(.col-links):hover::after {
+  color: #bbb;
+  font-style: italic;
+  cursor: pointer;
+}
+
+.col-result {
+  width: 130px;
+}
+.col-result:hover::after {
+  content: " (hide details)";
+}
+
+.col-result.collapsed:hover::after {
+  content: " (show details)";
+}
+
+#environment-header h2:hover::after {
+  content: " (hide details)";
+  color: #bbb;
+  font-style: italic;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+#environment-header.collapsed h2:hover::after {
+  content: " (show details)";
+  color: #bbb;
+  font-style: italic;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+/*------------------
+ * 3. Sorting items
+ *------------------*/
+.sortable {
+  cursor: pointer;
+}
+.sortable.desc:after {
+  content: " ";
+  position: relative;
+  left: 5px;
+  bottom: -12.5px;
+  border: 10px solid #4caf50;
+  border-bottom: 0;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+.sortable.asc:after {
+  content: " ";
+  position: relative;
+  left: 5px;
+  bottom: 12.5px;
+  border: 10px solid #4caf50;
+  border-top: 0;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+
+.hidden, .summary__reload__button.hidden {
+  display: none;
+}
+
+.summary__data {
+  flex: 0 0 550px;
+}
+.summary__reload {
+  flex: 1 1;
+  display: flex;
+  justify-content: center;
+}
+.summary__reload__button {
+  flex: 0 0 300px;
+  display: flex;
+  color: white;
+  font-weight: bold;
+  background-color: #4caf50;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.summary__reload__button:hover {
+  background-color: #46a049;
+}
+.summary__spacer {
+  flex: 0 0 550px;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filters,
+.collapse {
+  display: flex;
+  align-items: center;
+}
+.filters button,
+.collapse button {
+  color: #999;
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.filters button:hover,
+.collapse button:hover {
+  color: #ccc;
+}
+
+.filter__label {
+  margin-right: 10px;
+}
+
+      </style>
+    
+  </head>
+  <body>
+    <h1 id="title">all_tests_report_20250901_131929.html</h1>
+    <p>Report generated on 01-Sep-2025 at 15:22:53 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a>
+        v4.1.1</p>
+    <div id="environment-header">
+      <h2>Environment</h2>
+    </div>
+    <table id="environment"></table>
+    <!-- TEMPLATES -->
+      <template id="template_environment_row">
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+    </template>
+    <template id="template_results-table__body--empty">
+      <tbody class="results-table-row">
+        <tr id="not-found-message">
+          <td colspan="4">No results found. Check the filters.</th>
+        </tr>
+    </template>
+    <template id="template_results-table__tbody">
+      <tbody class="results-table-row">
+        <tr class="collapsible">
+        </tr>
+        <tr class="extras-row">
+          <td class="extra" colspan="4">
+            <div class="extraHTML"></div>
+            <div class="media">
+              <div class="media-container">
+                  <div class="media-container__nav--left"><</div>
+                  <div class="media-container__viewport">
+                    <img src="" />
+                    <video controls>
+                      <source src="" type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="media-container__nav--right">></div>
+                </div>
+                <div class="media__name"></div>
+                <div class="media__counter"></div>
+            </div>
+            <div class="logwrapper">
+              <div class="logexpander"></div>
+              <div class="log"></div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </template>
+    <!-- END TEMPLATES -->
+    <div class="summary">
+      <div class="summary__data">
+        <h2>Summary</h2>
+        <div class="additional-summary prefix">
+        </div>
+        <p class="run-count">41 tests took 01:29:14.</p>
+        <p class="filter">(Un)check the boxes to filter the results.</p>
+        <div class="summary__reload">
+          <div class="summary__reload__button hidden" onclick="location.reload()">
+            <div>There are still tests running. <br />Reload this page to get the latest results!</div>
+          </div>
+        </div>
+        <div class="summary__spacer"></div>
+        <div class="controls">
+          <div class="filters">
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="failed" />
+            <span class="failed">11 Failed,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="passed" />
+            <span class="passed">30 Passed,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="skipped" disabled/>
+            <span class="skipped">0 Skipped,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="xfailed" disabled/>
+            <span class="xfailed">0 Expected failures,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="xpassed" disabled/>
+            <span class="xpassed">0 Unexpected passes,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="error" />
+            <span class="error">4 Errors,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="rerun" disabled/>
+            <span class="rerun">0 Reruns</span>
+          </div>
+          <div class="collapse">
+            <button id="show_all_details">Show all details</button>&nbsp;/&nbsp;<button id="hide_all_details">Hide all details</button>
+          </div>
+        </div>
+      </div>
+      <div class="additional-summary summary">
+      </div>
+      <div class="additional-summary postfix">
+      </div>
+    </div>
+    <table id="results-table">
+      <thead id="results-table-head">
+        <tr>
+          <th class="sortable" data-column-type="result">Result</th>
+          <th class="sortable" data-column-type="testId">Test</th>
+          <th class="sortable" data-column-type="duration">Duration</th>
+          <th>Links</th>
+        </tr>
+      </thead>
+    </table>
+  </body>
+  <footer>
+    <div id="data-container" data-jsonblob="{&#34;environment&#34;: {&#34;Python&#34;: &#34;3.9.6&#34;, &#34;Platform&#34;: &#34;macOS-15.3.1-arm64-arm-64bit&#34;, &#34;Packages&#34;: {&#34;pytest&#34;: &#34;7.4.3&#34;, &#34;pluggy&#34;: &#34;1.6.0&#34;}, &#34;Plugins&#34;: {&#34;Faker&#34;: &#34;22.6.0&#34;, &#34;sugar&#34;: &#34;1.0.0&#34;, &#34;html&#34;: &#34;4.1.1&#34;, &#34;json-report&#34;: &#34;1.5.0&#34;, &#34;metadata&#34;: &#34;3.1.1&#34;, &#34;cov&#34;: &#34;4.1.0&#34;, &#34;rerunfailures&#34;: &#34;15.1&#34;, &#34;ordering&#34;: &#34;0.6&#34;, &#34;xdist&#34;: &#34;3.5.0&#34;, &#34;allure-pytest&#34;: &#34;2.13.2&#34;}}, &#34;tests&#34;: {&#34;tests/test_home.py::TestHome::test_home_page_elements_presence&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_home.py::TestHome::test_home_page_elements_presence&#34;, &#34;duration&#34;: &#34;00:00:43&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_home.py::TestHome::test_home_page_elements_presence&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:43&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log setup ------------------------------\nINFO     UIAutomationLogger:logger.py:56 Logger initialized. Log file: /Users/shtlpmac015/Desktop/Jump-UI-Automation/utils/../logs/test_execution_20250901_131931.log\nINFO     UIAutomationLogger:logger.py:60 Starting Home Page Test Suite\n\n------------------------------ Captured log call -------------------------------\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STARTING TEST: test_home_page_elements_presence\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STEP: Starting home page elements presence test\nINFO     UIAutomationLogger:logger.py:60 STEP: Performing complete login and OTP flow to reach home page\nINFO     UIAutomationLogger:logger.py:60 STEP: Successfully reached OTP page\nINFO     UIAutomationLogger:logger.py:60 STEP: Successfully completed login and OTP flow - arrived at home page\nINFO     UIAutomationLogger:logger.py:60 STEP: Validating home page elements are present\nINFO     UIAutomationLogger:logger.py:60 STEP: Home page elements presence validation passed\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 FINISHED TEST: test_home_page_elements_presence\nINFO     UIAutomationLogger:logger.py:60 ==================================================\n\n&#34;}], &#34;tests/test_home.py::TestHome::test_all_cards_clickable_validation&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_home.py::TestHome::test_all_cards_clickable_validation&#34;, &#34;duration&#34;: &#34;00:00:29&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_home.py::TestHome::test_all_cards_clickable_validation&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:29&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STARTING TEST: test_all_cards_clickable_validation\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STEP: Starting validation of all 6 home page cards clickability\nINFO     UIAutomationLogger:logger.py:60 STEP: Performing complete login and OTP flow to reach home page\nINFO     UIAutomationLogger:logger.py:60 STEP: Successfully reached OTP page\nINFO     UIAutomationLogger:logger.py:60 STEP: Successfully completed login and OTP flow - arrived at home page\nINFO     UIAutomationLogger:logger.py:60 STEP: Validating that all 6 cards are clickable\nINFO     UIAutomationLogger:logger.py:60 STEP: All 6 home page cards clickability validation passed\nINFO     UIAutomationLogger:logger.py:60 STEP: Cards 1-6 are all clickable as expected\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 FINISHED TEST: test_all_cards_clickable_validation\nINFO     UIAutomationLogger:logger.py:60 ==================================================\n\n&#34;}], &#34;tests/test_home.py::TestHome::test_individual_card_clickability&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_home.py::TestHome::test_individual_card_clickability&#34;, &#34;duration&#34;: &#34;00:00:31&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_home.py::TestHome::test_individual_card_clickability&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:31&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STARTING TEST: test_individual_card_clickability\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STEP: Starting individual card clickability test\nINFO     UIAutomationLogger:logger.py:60 STEP: Performing complete login and OTP flow to reach home page\nINFO     UIAutomationLogger:logger.py:60 STEP: Successfully reached OTP page\nINFO     UIAutomationLogger:logger.py:60 STEP: Successfully completed login and OTP flow - arrived at home page\nINFO     UIAutomationLogger:logger.py:60 STEP: Testing individual card clickability (1-6)\nINFO     UIAutomationLogger:logger.py:60 STEP: Testing card 1 clickability\nINFO     UIAutomationLogger:logger.py:60 STEP: Card 1 clickability validation passed\nINFO     UIAutomationLogger:logger.py:60 STEP: Testing card 2 clickability\nINFO     UIAutomationLogger:logger.py:60 STEP: Card 2 clickability validation passed\nINFO     UIAutomationLogger:logger.py:60 STEP: Testing card 3 clickability\nINFO     UIAutomationLogger:logger.py:60 STEP: Card 3 clickability validation passed\nINFO     UIAutomationLogger:logger.py:60 STEP: Testing card 4 clickability\nINFO     UIAutomationLogger:logger.py:60 STEP: Card 4 clickability validation passed\nINFO     UIAutomationLogger:logger.py:60 STEP: Testing card 5 clickability\nINFO     UIAutomationLogger:logger.py:60 STEP: Card 5 clickability validation passed\nINFO     UIAutomationLogger:logger.py:60 STEP: Testing card 6 clickability\nINFO     UIAutomationLogger:logger.py:60 STEP: Card 6 clickability validation passed\nINFO     UIAutomationLogger:logger.py:60 STEP: All individual card clickability tests passed\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 FINISHED TEST: test_individual_card_clickability\nINFO     UIAutomationLogger:logger.py:60 ==================================================\n\n&#34;}], &#34;tests/test_home.py::TestHome::test_end_to_end_with_home_validation&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_home.py::TestHome::test_end_to_end_with_home_validation&#34;, &#34;duration&#34;: &#34;00:00:30&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_home.py::TestHome::test_end_to_end_with_home_validation&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:30&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STARTING TEST: test_end_to_end_with_home_validation\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STEP: Starting complete end-to-end flow with home page validation\nINFO     UIAutomationLogger:logger.py:60 STEP: Performing complete login and OTP flow to reach home page\nINFO     UIAutomationLogger:logger.py:60 STEP: Successfully reached OTP page\nINFO     UIAutomationLogger:logger.py:60 STEP: Successfully completed login and OTP flow - arrived at home page\nINFO     UIAutomationLogger:logger.py:60 STEP: Performing comprehensive home page validation\nINFO     UIAutomationLogger:logger.py:60 STEP: Home page URL validation passed: https://valueinsightpro.jumpiq.com/JumpFive/home\nINFO     UIAutomationLogger:logger.py:60 STEP: End-to-end flow with home page validation completed successfully\nINFO     UIAutomationLogger:logger.py:60 STEP: All validations passed - Login -&amp;gt; OTP -&amp;gt; Home page cards all clickable\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 FINISHED TEST: test_end_to_end_with_home_validation\nINFO     UIAutomationLogger:logger.py:60 ==================================================\n\n---------------------------- Captured log teardown -----------------------------\nINFO     UIAutomationLogger:logger.py:60 Home Page Test Suite completed&#34;}], &#34;tests/test_login.py::TestLogin::test_valid_login&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_login.py::TestLogin::test_valid_login&#34;, &#34;duration&#34;: &#34;00:00:25&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_login.py::TestLogin::test_valid_login&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:25&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log setup ------------------------------\nINFO     UIAutomationLogger:logger.py:60 Starting Login Test Suite\nINFO     UIAutomationLogger:logger.py:80 ==================================================\nINFO     UIAutomationLogger:logger.py:81 STARTING TEST: test_valid_login\nINFO     UIAutomationLogger:logger.py:82 ==================================================\n\n------------------------------ Captured log call -------------------------------\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STARTING TEST: test_valid_login\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STEP: Starting valid login test\nINFO     UIAutomationLogger:logger.py:60 STEP: Valid login test completed successfully\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 FINISHED TEST: test_valid_login\nINFO     UIAutomationLogger:logger.py:60 ==================================================\n\n---------------------------- Captured log teardown -----------------------------\nINFO     UIAutomationLogger:logger.py:86 ==================================================\nINFO     UIAutomationLogger:logger.py:87 FINISHED TEST: test_valid_login - STATUS: PASSED\nINFO     UIAutomationLogger:logger.py:88 ==================================================&#34;}], &#34;tests/test_login.py::TestLogin::test_invalid_email&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_login.py::TestLogin::test_invalid_email&#34;, &#34;duration&#34;: &#34;00:00:13&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_login.py::TestLogin::test_invalid_email&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:13&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log setup ------------------------------\nINFO     UIAutomationLogger:logger.py:80 ==================================================\nINFO     UIAutomationLogger:logger.py:81 STARTING TEST: test_invalid_email\nINFO     UIAutomationLogger:logger.py:82 ==================================================\n\n------------------------------ Captured log call -------------------------------\nINFO     UIAutomationLogger:logger.py:92 STEP: Starting invalid email test\nINFO     UIAutomationLogger:logger.py:92 STEP: Using invalid email: invalid@example.com\nINFO     UIAutomationLogger:logger.py:92 STEP: Navigating to login page\nINFO     UIAutomationLogger:logger.py:92 STEP: Verifying login page elements are present\nINFO     UIAutomationLogger:logger.py:92 STEP: Attempting login with invalid email\nINFO     UIAutomationLogger:logger.py:92 STEP: Current URL after failed login: https://valueinsightpro.jumpiq.com/auth/login\nINFO     UIAutomationLogger:logger.py:92 STEP: Invalid email test completed - login correctly rejected\n\n---------------------------- Captured log teardown -----------------------------\nINFO     UIAutomationLogger:logger.py:86 ==================================================\nINFO     UIAutomationLogger:logger.py:87 FINISHED TEST: test_invalid_email - STATUS: PASSED\nINFO     UIAutomationLogger:logger.py:88 ==================================================&#34;}], &#34;tests/test_login.py::TestLogin::test_empty_email&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_login.py::TestLogin::test_empty_email&#34;, &#34;duration&#34;: &#34;00:00:13&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_login.py::TestLogin::test_empty_email&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:13&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log setup ------------------------------\nINFO     UIAutomationLogger:logger.py:80 ==================================================\nINFO     UIAutomationLogger:logger.py:81 STARTING TEST: test_empty_email\nINFO     UIAutomationLogger:logger.py:82 ==================================================\n\n------------------------------ Captured log call -------------------------------\nINFO     UIAutomationLogger:logger.py:92 STEP: Starting empty email test\nINFO     UIAutomationLogger:logger.py:92 STEP: Navigating to login page\nINFO     UIAutomationLogger:logger.py:92 STEP: Verifying login page elements are present\nINFO     UIAutomationLogger:logger.py:92 STEP: Attempting login with empty email\nINFO     UIAutomationLogger:logger.py:92 STEP: Current URL after empty email login: https://valueinsightpro.jumpiq.com/auth/login\nINFO     UIAutomationLogger:logger.py:92 STEP: Empty email test completed - login correctly rejected\n\n---------------------------- Captured log teardown -----------------------------\nINFO     UIAutomationLogger:logger.py:86 ==================================================\nINFO     UIAutomationLogger:logger.py:87 FINISHED TEST: test_empty_email - STATUS: PASSED\nINFO     UIAutomationLogger:logger.py:88 ==================================================&#34;}], &#34;tests/test_login.py::TestLogin::test_empty_password&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_login.py::TestLogin::test_empty_password&#34;, &#34;duration&#34;: &#34;00:00:13&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_login.py::TestLogin::test_empty_password&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:13&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log setup ------------------------------\nINFO     UIAutomationLogger:logger.py:80 ==================================================\nINFO     UIAutomationLogger:logger.py:81 STARTING TEST: test_empty_password\nINFO     UIAutomationLogger:logger.py:82 ==================================================\n\n------------------------------ Captured log call -------------------------------\nINFO     UIAutomationLogger:logger.py:92 STEP: Starting empty password test\nINFO     UIAutomationLogger:logger.py:92 STEP: Navigating to login page\nINFO     UIAutomationLogger:logger.py:92 STEP: Verifying login page elements are present\nINFO     UIAutomationLogger:logger.py:92 STEP: Attempting login with empty password\nINFO     UIAutomationLogger:logger.py:92 STEP: Current URL after empty password login: https://valueinsightpro.jumpiq.com/auth/login\nINFO     UIAutomationLogger:logger.py:92 STEP: Empty password test completed - login correctly rejected\n\n---------------------------- Captured log teardown -----------------------------\nINFO     UIAutomationLogger:logger.py:86 ==================================================\nINFO     UIAutomationLogger:logger.py:87 FINISHED TEST: test_empty_password - STATUS: PASSED\nINFO     UIAutomationLogger:logger.py:88 ==================================================&#34;}], &#34;tests/test_login.py::TestLogin::test_terms_not_accepted&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_login.py::TestLogin::test_terms_not_accepted&#34;, &#34;duration&#34;: &#34;00:00:19&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_login.py::TestLogin::test_terms_not_accepted&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:19&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log setup ------------------------------\nINFO     UIAutomationLogger:logger.py:80 ==================================================\nINFO     UIAutomationLogger:logger.py:81 STARTING TEST: test_terms_not_accepted\nINFO     UIAutomationLogger:logger.py:82 ==================================================\n\n------------------------------ Captured log call -------------------------------\nINFO     UIAutomationLogger:logger.py:92 STEP: Starting terms not accepted test\nINFO     UIAutomationLogger:logger.py:92 STEP: Navigating to login page\nINFO     UIAutomationLogger:logger.py:92 STEP: Verifying login page elements are present\nINFO     UIAutomationLogger:logger.py:92 STEP: Attempting login without accepting terms and conditions\nINFO     UIAutomationLogger:logger.py:92 STEP: Current URL after login without terms: https://valueinsightpro.jumpiq.com/auth/login\nINFO     UIAutomationLogger:logger.py:92 STEP: Terms not accepted test completed - login correctly rejected\n\n---------------------------- Captured log teardown -----------------------------\nINFO     UIAutomationLogger:logger.py:86 ==================================================\nINFO     UIAutomationLogger:logger.py:87 FINISHED TEST: test_terms_not_accepted - STATUS: PASSED\nINFO     UIAutomationLogger:logger.py:88 ==================================================&#34;}], &#34;tests/test_login.py::TestLogin::test_login_page_elements&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_login.py::TestLogin::test_login_page_elements&#34;, &#34;duration&#34;: &#34;00:00:04&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_login.py::TestLogin::test_login_page_elements&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:04&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log setup ------------------------------\nINFO     UIAutomationLogger:logger.py:80 ==================================================\nINFO     UIAutomationLogger:logger.py:81 STARTING TEST: test_login_page_elements\nINFO     UIAutomationLogger:logger.py:82 ==================================================\n\n------------------------------ Captured log call -------------------------------\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STARTING TEST: test_login_page_elements\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STEP: Starting login page elements test\nINFO     UIAutomationLogger:logger.py:60 STEP: Navigating to login page\nINFO     UIAutomationLogger:logger.py:60 STEP: Checking email field presence\nINFO     UIAutomationLogger:logger.py:60 STEP: Checking password field presence\nINFO     UIAutomationLogger:logger.py:60 STEP: Checking checkbox presence\nINFO     UIAutomationLogger:logger.py:60 STEP: Checking sign in button presence\nINFO     UIAutomationLogger:logger.py:60 STEP: Verifying sign in button text\nINFO     UIAutomationLogger:logger.py:60 STEP: Taking screenshot of login page\nINFO     UIAutomationLogger:logger.py:60 STEP: Login page elements test completed successfully\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 FINISHED TEST: test_login_page_elements\nINFO     UIAutomationLogger:logger.py:60 ==================================================\n\n---------------------------- Captured log teardown -----------------------------\nINFO     UIAutomationLogger:logger.py:86 ==================================================\nINFO     UIAutomationLogger:logger.py:87 FINISHED TEST: test_login_page_elements - STATUS: PASSED\nINFO     UIAutomationLogger:logger.py:88 ==================================================&#34;}], &#34;tests/test_login.py::TestLogin::test_clear_login_form&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_login.py::TestLogin::test_clear_login_form&#34;, &#34;duration&#34;: &#34;00:00:15&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_login.py::TestLogin::test_clear_login_form&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:15&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log setup ------------------------------\nINFO     UIAutomationLogger:logger.py:80 ==================================================\nINFO     UIAutomationLogger:logger.py:81 STARTING TEST: test_clear_login_form\nINFO     UIAutomationLogger:logger.py:82 ==================================================\n\n------------------------------ Captured log call -------------------------------\nINFO     UIAutomationLogger:logger.py:92 STEP: Starting clear login form test\nINFO     UIAutomationLogger:logger.py:92 STEP: Navigating to login page\nINFO     UIAutomationLogger:logger.py:92 STEP: Filling login form with test data\nINFO     UIAutomationLogger:logger.py:92 STEP: Verifying checkbox is checked\nINFO     UIAutomationLogger:logger.py:92 STEP: Clearing the login form\nINFO     UIAutomationLogger:logger.py:92 STEP: Verifying form is cleared\nINFO     UIAutomationLogger:logger.py:92 STEP: Clear login form test completed successfully\n\n---------------------------- Captured log teardown -----------------------------\nINFO     UIAutomationLogger:logger.py:86 ==================================================\nINFO     UIAutomationLogger:logger.py:87 FINISHED TEST: test_clear_login_form - STATUS: PASSED\nINFO     UIAutomationLogger:logger.py:88 ==================================================&#34;}], &#34;tests/test_login.py::TestLogin::test_successful_login_otp_redirect&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_login.py::TestLogin::test_successful_login_otp_redirect&#34;, &#34;duration&#34;: &#34;00:00:11&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_login.py::TestLogin::test_successful_login_otp_redirect&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:11&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log setup ------------------------------\nINFO     UIAutomationLogger:logger.py:80 ==================================================\nINFO     UIAutomationLogger:logger.py:81 STARTING TEST: test_successful_login_otp_redirect\nINFO     UIAutomationLogger:logger.py:82 ==================================================\n\n------------------------------ Captured log call -------------------------------\nINFO     UIAutomationLogger:logger.py:92 STEP: Starting OTP redirect validation test\nINFO     UIAutomationLogger:logger.py:92 STEP: Testing OTP redirect with credentials: test3\nINFO     UIAutomationLogger:logger.py:92 STEP: Navigating to login page\nINFO     UIAutomationLogger:logger.py:92 STEP: Performing login to test OTP redirect\nINFO     UIAutomationLogger:logger.py:92 STEP: Checking for redirect to OTP verification page\nINFO     UIAutomationLogger:logger.py:92 STEP: Final URL after login: https://valueinsightpro.jumpiq.com/auth/otp-verify\nINFO     UIAutomationLogger:logger.py:92 STEP: Expected OTP URL: https://valueinsightpro.jumpiq.com/auth/otp-verify\nINFO     UIAutomationLogger:logger.py:92 STEP: \u2705 OTP redirect validation test completed successfully\n\n---------------------------- Captured log teardown -----------------------------\nINFO     UIAutomationLogger:logger.py:86 ==================================================\nINFO     UIAutomationLogger:logger.py:87 FINISHED TEST: test_successful_login_otp_redirect - STATUS: PASSED\nINFO     UIAutomationLogger:logger.py:88 ==================================================&#34;}], &#34;tests/test_login.py::TestLogin::test_sign_in_button_state_validation&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_login.py::TestLogin::test_sign_in_button_state_validation&#34;, &#34;duration&#34;: &#34;00:00:05&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_login.py::TestLogin::test_sign_in_button_state_validation&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:05&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log setup ------------------------------\nINFO     UIAutomationLogger:logger.py:80 ==================================================\nINFO     UIAutomationLogger:logger.py:81 STARTING TEST: test_sign_in_button_state_validation\nINFO     UIAutomationLogger:logger.py:82 ==================================================\n\n------------------------------ Captured log call -------------------------------\nINFO     UIAutomationLogger:logger.py:92 STEP: Starting sign-in button state validation test\nINFO     UIAutomationLogger:logger.py:92 STEP: Navigating to login page\nINFO     UIAutomationLogger:logger.py:92 STEP: Verifying login page elements are present\nINFO     UIAutomationLogger:logger.py:92 STEP: Performing comprehensive button state validation\nINFO     UIAutomationLogger:logger.py:92 STEP: Initial state recorded: True\nINFO     UIAutomationLogger:logger.py:92 STEP: Email field completion handled: True\nINFO     UIAutomationLogger:logger.py:92 STEP: Password field completion handled: True\nINFO     UIAutomationLogger:logger.py:92 STEP: Checkbox completion handled: True\nINFO     UIAutomationLogger:logger.py:92 STEP: Complete form enables button: True\nINFO     UIAutomationLogger:logger.py:92 STEP: \u2705 Sign-in button state validation test completed successfully\n\n---------------------------- Captured log teardown -----------------------------\nINFO     UIAutomationLogger:logger.py:86 ==================================================\nINFO     UIAutomationLogger:logger.py:87 FINISHED TEST: test_sign_in_button_state_validation - STATUS: PASSED\nINFO     UIAutomationLogger:logger.py:88 ==================================================&#34;}], &#34;tests/test_login.py::TestLogin::test_password_eye_icon_functionality&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_login.py::TestLogin::test_password_eye_icon_functionality&#34;, &#34;duration&#34;: &#34;00:00:48&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_login.py::TestLogin::test_password_eye_icon_functionality&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:48&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log setup ------------------------------\nINFO     UIAutomationLogger:logger.py:80 ==================================================\nINFO     UIAutomationLogger:logger.py:81 STARTING TEST: test_password_eye_icon_functionality\nINFO     UIAutomationLogger:logger.py:82 ==================================================\n\n------------------------------ Captured log call -------------------------------\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STARTING TEST: test_password_eye_icon_functionality\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STEP: Testing password eye icon functionality\nINFO     UIAutomationLogger:logger.py:60 STEP: Successfully navigated to login page\nINFO     UIAutomationLogger:logger.py:60 STEP: Password entered successfully\nINFO     UIAutomationLogger:logger.py:60 STEP: Password eye icon functionality validated successfully\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 FINISHED TEST: test_password_eye_icon_functionality\nINFO     UIAutomationLogger:logger.py:60 ==================================================\n\n---------------------------- Captured log teardown -----------------------------\nINFO     UIAutomationLogger:logger.py:86 ==================================================\nINFO     UIAutomationLogger:logger.py:87 FINISHED TEST: test_password_eye_icon_functionality - STATUS: PASSED\nINFO     UIAutomationLogger:logger.py:88 ==================================================&#34;}], &#34;tests/test_login.py::TestLogin::test_need_help_button_functionality&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_login.py::TestLogin::test_need_help_button_functionality&#34;, &#34;duration&#34;: &#34;00:01:31&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_login.py::TestLogin::test_need_help_button_functionality&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:01:31&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log setup ------------------------------\nINFO     UIAutomationLogger:logger.py:80 ==================================================\nINFO     UIAutomationLogger:logger.py:81 STARTING TEST: test_need_help_button_functionality\nINFO     UIAutomationLogger:logger.py:82 ==================================================\n\n------------------------------ Captured log call -------------------------------\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STARTING TEST: test_need_help_button_functionality\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STEP: Testing &amp;#x27;Need help?&amp;#x27; button functionality\nINFO     UIAutomationLogger:logger.py:60 STEP: Successfully navigated to login page\nINFO     UIAutomationLogger:logger.py:60 STEP: &amp;#x27;Need help?&amp;#x27; button functionality validated successfully\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 FINISHED TEST: test_need_help_button_functionality\nINFO     UIAutomationLogger:logger.py:60 ==================================================\n\n---------------------------- Captured log teardown -----------------------------\nINFO     UIAutomationLogger:logger.py:86 ==================================================\nINFO     UIAutomationLogger:logger.py:87 FINISHED TEST: test_need_help_button_functionality - STATUS: PASSED\nINFO     UIAutomationLogger:logger.py:88 ==================================================&#34;}], &#34;tests/test_login.py::TestLogin::test_privacy_policy_button_functionality&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_login.py::TestLogin::test_privacy_policy_button_functionality&#34;, &#34;duration&#34;: &#34;00:00:20&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_login.py::TestLogin::test_privacy_policy_button_functionality&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:20&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log setup ------------------------------\nINFO     UIAutomationLogger:logger.py:80 ==================================================\nINFO     UIAutomationLogger:logger.py:81 STARTING TEST: test_privacy_policy_button_functionality\nINFO     UIAutomationLogger:logger.py:82 ==================================================\n\n------------------------------ Captured log call -------------------------------\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STARTING TEST: test_privacy_policy_button_functionality\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STEP: Testing &amp;#x27;Privacy Policy&amp;#x27; button functionality\nINFO     UIAutomationLogger:logger.py:60 STEP: Successfully navigated to login page\nINFO     UIAutomationLogger:logger.py:60 STEP: &amp;#x27;Privacy Policy&amp;#x27; button functionality validated successfully\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 FINISHED TEST: test_privacy_policy_button_functionality\nINFO     UIAutomationLogger:logger.py:60 ==================================================\n\n---------------------------- Captured log teardown -----------------------------\nINFO     UIAutomationLogger:logger.py:86 ==================================================\nINFO     UIAutomationLogger:logger.py:87 FINISHED TEST: test_privacy_policy_button_functionality - STATUS: PASSED\nINFO     UIAutomationLogger:logger.py:88 ==================================================\nINFO     UIAutomationLogger:logger.py:60 Login Test Suite completed\nINFO     UIAutomationLogger:logger.py:60 HTML Report: /Users/shtlpmac015/Desktop/Jump-UI-Automation/utils/../reports/login_test_report_20250901_132621.html\nINFO     UIAutomationLogger:logger.py:60 JSON Report: /Users/shtlpmac015/Desktop/Jump-UI-Automation/utils/../reports/login_test_report_20250901_132621.json&#34;}], &#34;tests/test_otp.py::TestOTP::test_otp_page_elements&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_otp.py::TestOTP::test_otp_page_elements&#34;, &#34;duration&#34;: &#34;00:00:29&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_otp.py::TestOTP::test_otp_page_elements&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:29&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log setup ------------------------------\nINFO     UIAutomationLogger:logger.py:60 Starting OTP Test Suite\n\n------------------------------ Captured log call -------------------------------\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STARTING TEST: test_otp_page_elements\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STEP: Starting OTP page elements test\nINFO     UIAutomationLogger:logger.py:60 STEP: Performing login to reach OTP page\nINFO     UIAutomationLogger:logger.py:60 STEP: Using credentials: test3\nINFO     UIAutomationLogger:logger.py:60 STEP: Successfully logged in and redirected to OTP page\nINFO     UIAutomationLogger:logger.py:60 STEP: Verifying OTP page elements\nINFO     UIAutomationLogger:logger.py:60 STEP: OTP page elements test completed successfully\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 FINISHED TEST: test_otp_page_elements\nINFO     UIAutomationLogger:logger.py:60 ==================================================\n\n&#34;}], &#34;tests/test_otp.py::TestOTP::test_valid_otp_verification&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_otp.py::TestOTP::test_valid_otp_verification&#34;, &#34;duration&#34;: &#34;00:00:36&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_otp.py::TestOTP::test_valid_otp_verification&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:36&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STARTING TEST: test_valid_otp_verification\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STEP: Starting valid OTP verification test\nINFO     UIAutomationLogger:logger.py:60 STEP: Performing login to reach OTP page\nINFO     UIAutomationLogger:logger.py:60 STEP: Using credentials: test3\nINFO     UIAutomationLogger:logger.py:60 STEP: Successfully logged in and redirected to OTP page\nINFO     UIAutomationLogger:logger.py:60 STEP: Entering valid OTP code: 99999\nINFO     UIAutomationLogger:logger.py:60 STEP: Checking OTP verification result\nINFO     UIAutomationLogger:logger.py:60 STEP: Final URL after OTP verification: https://valueinsightpro.jumpiq.com/JumpFive/home\nINFO     UIAutomationLogger:logger.py:60 STEP: Expected redirect URL: https://valueinsightpro.jumpiq.com/JumpFive/home\nINFO     UIAutomationLogger:logger.py:60 STEP: Valid OTP verification test completed successfully - redirected to home page\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 FINISHED TEST: test_valid_otp_verification\nINFO     UIAutomationLogger:logger.py:60 ==================================================\n\n&#34;}], &#34;tests/test_otp.py::TestOTP::test_invalid_otp_verification&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_otp.py::TestOTP::test_invalid_otp_verification&#34;, &#34;duration&#34;: &#34;00:01:45&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_otp.py::TestOTP::test_invalid_otp_verification&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:01:45&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STARTING TEST: test_invalid_otp_verification\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STEP: Starting invalid OTP verification test\nINFO     UIAutomationLogger:logger.py:60 STEP: Performing login to reach OTP page\nINFO     UIAutomationLogger:logger.py:60 STEP: Using credentials: test3\nINFO     UIAutomationLogger:logger.py:60 STEP: Successfully logged in and redirected to OTP page\nINFO     UIAutomationLogger:logger.py:60 STEP: Entering invalid OTP code: 12345\nINFO     UIAutomationLogger:logger.py:60 STEP: Checking for error message after invalid OTP\nINFO     UIAutomationLogger:logger.py:60 STEP: Current URL after invalid OTP: https://valueinsightpro.jumpiq.com/auth/otp-verify\nINFO     UIAutomationLogger:logger.py:60 STEP: No error message found - this may indicate a detection issue\nINFO     UIAutomationLogger:logger.py:60 STEP: Invalid OTP correctly rejected - remained on OTP page\nINFO     UIAutomationLogger:logger.py:60 STEP: Invalid OTP verification test completed\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 FINISHED TEST: test_invalid_otp_verification\nINFO     UIAutomationLogger:logger.py:60 ==================================================\n\n&#34;}], &#34;tests/test_otp.py::TestOTP::test_empty_otp_verification&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_otp.py::TestOTP::test_empty_otp_verification&#34;, &#34;duration&#34;: &#34;00:01:27&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_otp.py::TestOTP::test_empty_otp_verification&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:01:27&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STARTING TEST: test_empty_otp_verification\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STEP: Starting empty OTP verification test\nINFO     UIAutomationLogger:logger.py:60 STEP: Performing login to reach OTP page\nINFO     UIAutomationLogger:logger.py:60 STEP: Using credentials: test3\nINFO     UIAutomationLogger:logger.py:60 STEP: Successfully logged in and redirected to OTP page\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempting to verify with empty OTP\nINFO     UIAutomationLogger:logger.py:60 STEP: Verify button clicked with empty OTP\nINFO     UIAutomationLogger:logger.py:60 STEP: Current URL after empty OTP: https://valueinsightpro.jumpiq.com/auth/login\nINFO     UIAutomationLogger:logger.py:60 STEP: No specific error message found for empty OTP\nINFO     UIAutomationLogger:logger.py:60 STEP: Empty OTP verification test completed\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 FINISHED TEST: test_empty_otp_verification\nINFO     UIAutomationLogger:logger.py:60 ==================================================\n\n&#34;}], &#34;tests/test_otp.py::TestOTP::test_otp_field_functionality&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_otp.py::TestOTP::test_otp_field_functionality&#34;, &#34;duration&#34;: &#34;00:00:29&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_otp.py::TestOTP::test_otp_field_functionality&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:29&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STARTING TEST: test_otp_field_functionality\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STEP: Starting OTP field functionality test\nINFO     UIAutomationLogger:logger.py:60 STEP: Performing login to reach OTP page\nINFO     UIAutomationLogger:logger.py:60 STEP: Using credentials: test3\nINFO     UIAutomationLogger:logger.py:60 STEP: Successfully logged in and redirected to OTP page\nINFO     UIAutomationLogger:logger.py:60 STEP: Testing OTP field with code: 12345\nINFO     UIAutomationLogger:logger.py:60 STEP: OTP entered successfully\nINFO     UIAutomationLogger:logger.py:60 STEP: Clearing field and entering new OTP: 67890\nINFO     UIAutomationLogger:logger.py:60 STEP: OTP field cleared and new value entered successfully\nINFO     UIAutomationLogger:logger.py:60 STEP: OTP field functionality test completed successfully\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 FINISHED TEST: test_otp_field_functionality\nINFO     UIAutomationLogger:logger.py:60 ==================================================\n\n&#34;}], &#34;tests/test_otp.py::TestOTP::test_end_to_end_login_and_otp&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_otp.py::TestOTP::test_end_to_end_login_and_otp&#34;, &#34;duration&#34;: &#34;00:00:37&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_otp.py::TestOTP::test_end_to_end_login_and_otp&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:37&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STARTING TEST: test_end_to_end_login_and_otp\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STEP: Starting complete end-to-end login and OTP test\nINFO     UIAutomationLogger:logger.py:60 STEP: Starting complete flow with credentials: test3\nINFO     UIAutomationLogger:logger.py:60 STEP: Navigating to login page\nINFO     UIAutomationLogger:logger.py:60 STEP: Performing login\nINFO     UIAutomationLogger:logger.py:60 STEP: Verifying OTP page loaded\nINFO     UIAutomationLogger:logger.py:60 STEP: Performing OTP verification with code: 99999\nINFO     UIAutomationLogger:logger.py:60 STEP: Checking final verification result\nINFO     UIAutomationLogger:logger.py:60 STEP: Final URL after complete flow: https://valueinsightpro.jumpiq.com/JumpFive/home\nINFO     UIAutomationLogger:logger.py:60 STEP: Expected redirect URL: https://valueinsightpro.jumpiq.com/JumpFive/home\nINFO     UIAutomationLogger:logger.py:60 STEP: OTP verification successful: True\nINFO     UIAutomationLogger:logger.py:60 STEP: Redirect URL validation passed - successfully redirected to home page\nINFO     UIAutomationLogger:logger.py:60 STEP: End-to-end login and OTP test completed successfully\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 FINISHED TEST: test_end_to_end_login_and_otp\nINFO     UIAutomationLogger:logger.py:60 ==================================================\n\n&#34;}], &#34;tests/test_otp.py::TestOTP::test_otp_redirect_url_validation&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_otp.py::TestOTP::test_otp_redirect_url_validation&#34;, &#34;duration&#34;: &#34;00:00:34&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_otp.py::TestOTP::test_otp_redirect_url_validation&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:34&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STARTING TEST: test_otp_redirect_url_validation\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STEP: Starting OTP redirect URL validation test\nINFO     UIAutomationLogger:logger.py:60 STEP: Performing login to reach OTP page\nINFO     UIAutomationLogger:logger.py:60 STEP: Using credentials: test3\nINFO     UIAutomationLogger:logger.py:60 STEP: Successfully logged in and redirected to OTP page\nINFO     UIAutomationLogger:logger.py:60 STEP: Performing OTP verification to test redirect URL\nINFO     UIAutomationLogger:logger.py:60 STEP: Initial OTP page URL: https://valueinsightpro.jumpiq.com/auth/otp-verify\nINFO     UIAutomationLogger:logger.py:60 STEP: Waiting for redirect after OTP verification\nINFO     UIAutomationLogger:logger.py:60 STEP: Final URL after OTP: https://valueinsightpro.jumpiq.com/JumpFive/home\nINFO     UIAutomationLogger:logger.py:60 STEP: Expected home page URL: https://valueinsightpro.jumpiq.com/JumpFive/home\nINFO     UIAutomationLogger:logger.py:60 STEP: OTP redirect URL validation test completed successfully\nINFO     UIAutomationLogger:logger.py:60 STEP: Successfully redirected from OTP page to home page: https://valueinsightpro.jumpiq.com/JumpFive/home\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 FINISHED TEST: test_otp_redirect_url_validation\nINFO     UIAutomationLogger:logger.py:60 ==================================================\n\n&#34;}], &#34;tests/test_otp.py::TestOTP::test_otp_expiration_and_resend_functionality&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_otp.py::TestOTP::test_otp_expiration_and_resend_functionality&#34;, &#34;duration&#34;: &#34;00:02:35&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_otp.py::TestOTP::test_otp_expiration_and_resend_functionality&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:02:35&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STARTING TEST: test_otp_expiration_and_resend_functionality\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STEP: Starting OTP expiration and resend functionality test\nINFO     UIAutomationLogger:logger.py:60 STEP: Performing login to reach OTP page\nINFO     UIAutomationLogger:logger.py:60 STEP: Using credentials: test3\nINFO     UIAutomationLogger:logger.py:60 STEP: Successfully logged in and redirected to OTP page\nINFO     UIAutomationLogger:logger.py:60 STEP: Successfully reached OTP verification page\nINFO     UIAutomationLogger:logger.py:60 STEP: Waiting 2 minutes for OTP to expire...\nINFO     UIAutomationLogger:logger.py:60 STEP: OTP expiration wait completed\nINFO     UIAutomationLogger:logger.py:60 STEP: Checking if resend OTP button is clickable after expiration\nINFO     UIAutomationLogger:logger.py:60 STEP: Resend button is clickable - validation passed\nINFO     UIAutomationLogger:logger.py:60 STEP: Clicking resend OTP button\nINFO     UIAutomationLogger:logger.py:60 STEP: Resend OTP button clicked successfully\nINFO     UIAutomationLogger:logger.py:60 STEP: Entering valid OTP after resend: 99999\nINFO     UIAutomationLogger:logger.py:60 STEP: Waiting for redirect after valid OTP\nINFO     UIAutomationLogger:logger.py:60 STEP: Final URL after OTP resend flow: https://valueinsightpro.jumpiq.com/JumpFive/home\nINFO     UIAutomationLogger:logger.py:60 STEP: Expected redirect URL: https://valueinsightpro.jumpiq.com/JumpFive/home\nINFO     UIAutomationLogger:logger.py:60 STEP: OTP expiration and resend functionality test completed successfully\nINFO     UIAutomationLogger:logger.py:60 STEP: All validations passed - OTP expired, resend worked, valid OTP accepted, proper redirect achieved\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 FINISHED TEST: test_otp_expiration_and_resend_functionality\nINFO     UIAutomationLogger:logger.py:60 ==================================================\n\n---------------------------- Captured log teardown -----------------------------\nINFO     UIAutomationLogger:logger.py:60 OTP Test Suite completed&#34;}], &#34;tests/test_valuations.py::TestValuations::test_valuations_page_access_via_card_2&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_valuations.py::TestValuations::test_valuations_page_access_via_card_2&#34;, &#34;duration&#34;: &#34;00:00:31&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_valuations.py::TestValuations::test_valuations_page_access_via_card_2&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:31&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log setup ------------------------------\nINFO     UIAutomationLogger:logger.py:60 PERFORMING ONE-TIME LOGIN FOR TEST SESSION\nINFO     UIAutomationLogger:logger.py:60 STEP: Performing session login with timeout protection\nINFO     UIAutomationLogger:logger.py:60 STEP: Session login and OTP verification successful\n\n------------------------------ Captured log call -------------------------------\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STARTING TEST: test_valuations_page_access_via_card_2\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STEP: Testing navigation to valuations page via card 2\nINFO     UIAutomationLogger:logger.py:60 STEP: Navigating to valuations page (using existing session)\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempting direct URL navigation to valuations\nINFO     UIAutomationLogger:logger.py:60 Trying valuations URL: https://valueinsightpro.jumpiq.com/JumpFive/valuations\nINFO     UIAutomationLogger:logger.py:60 Current URL after navigation: https://valueinsightpro.jumpiq.com/JumpFive/valuations\nINFO     UIAutomationLogger:logger.py:60 \u2713 Direct URL navigation to valuations successful\nINFO     UIAutomationLogger:logger.py:60 STEP: Successfully navigated to valuations page\nINFO     UIAutomationLogger:logger.py:60 STEP: All required elements validated on valuations page\nINFO     UIAutomationLogger:logger.py:60 STEP: Valuations page access test completed successfully\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 FINISHED TEST: test_valuations_page_access_via_card_2\nINFO     UIAutomationLogger:logger.py:60 ==================================================\n\n---------------------------- Captured log teardown -----------------------------\nINFO     UIAutomationLogger:logger.py:60 TEST PASSED - RETURNING TO HOME PAGE FOR NEXT TEST&#34;}], &#34;tests/test_valuations.py::TestValuations::test_valuations_search_functionality&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;testId&#34;: &#34;tests/test_valuations.py::TestValuations::test_valuations_search_functionality&#34;, &#34;duration&#34;: &#34;00:06:45&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Failed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_valuations.py::TestValuations::test_valuations_search_functionality&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:06:45&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;self = &amp;lt;tests.test_valuations.TestValuations object at 0x1068e3df0&amp;gt;\n\n    @allure.story(&amp;quot;Valuations Search Functionality&amp;quot;)\n    @allure.title(&amp;quot;Test valuations page search functionality with &amp;#x27;gold coast&amp;#x27; search term&amp;quot;)\n    def test_valuations_search_functionality(self):\n        &amp;quot;&amp;quot;&amp;quot;Test valuations page search functionality with &amp;#x27;gold coast&amp;#x27; search term&amp;quot;&amp;quot;&amp;quot;\n        self.logger.info(&amp;quot;==================================================&amp;quot;)\n        self.logger.info(&amp;quot;STARTING TEST: test_valuations_search_functionality&amp;quot;)\n        self.logger.info(&amp;quot;==================================================&amp;quot;)\n        self.logger.info(&amp;quot;STEP: Testing valuations search functionality&amp;quot;)\n    \n        try:\n            # Navigate to valuations page\n&amp;gt;           assert self.navigate_to_valuations_via_home_page(), &amp;quot;Failed to navigate to valuations page&amp;quot;\nE           AssertionError: Failed to navigate to valuations page\nE           assert False\nE            +  where False = &amp;lt;bound method TestValuations.navigate_to_valuations_via_home_page of &amp;lt;tests.test_valuations.TestValuations object at 0x1068e3df0&amp;gt;&amp;gt;()\nE            +    where &amp;lt;bound method TestValuations.navigate_to_valuations_via_home_page of &amp;lt;tests.test_valuations.TestValuations object at 0x1068e3df0&amp;gt;&amp;gt; = &amp;lt;tests.test_valuations.TestValuations object at 0x1068e3df0&amp;gt;.navigate_to_valuations_via_home_page\n\ntests/test_valuations.py:354: AssertionError\n\n------------------------------ Captured log setup ------------------------------\nINFO     UIAutomationLogger:logger.py:60 USING EXISTING LOGIN SESSION\n\n------------------------------ Captured log call -------------------------------\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STARTING TEST: test_valuations_search_functionality\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STEP: Testing valuations search functionality\nINFO     UIAutomationLogger:logger.py:60 STEP: Navigating to valuations page (using existing session)\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempting direct URL navigation to valuations\nINFO     UIAutomationLogger:logger.py:60 Trying valuations URL: https://valueinsightpro.jumpiq.com/valuations\nINFO     UIAutomationLogger:logger.py:60 Current URL after navigation: https://valueinsightpro.jumpiq.com/auth/login?redirect=/valuations\nWARNING  UIAutomationLogger:logger.py:68 Direct URL reached valuations but page validation failed\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempting home page card navigation\nINFO     UIAutomationLogger:logger.py:60 STEP: Navigating to home page first\nINFO     UIAutomationLogger:logger.py:60 STEP: Waiting for home page to fully load\nINFO     UIAutomationLogger:logger.py:60 Debug screenshot saved: screenshots/debug_home_page_20250901_133541.png\nWARNING  UIAutomationLogger:logger.py:68 No &amp;#x27;card&amp;#x27; text found in page source\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempt 1 to click card 2\nWARNING  UIAutomationLogger:logger.py:68 STEP: Card 2 click attempt 1 failed\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempt 2 to click card 2\nWARNING  UIAutomationLogger:logger.py:68 STEP: Card 2 click attempt 2 failed\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempt 3 to click card 2\nWARNING  UIAutomationLogger:logger.py:68 STEP: Card 2 click attempt 3 failed\nERROR    UIAutomationLogger:logger.py:72 STEP: All attempts to click card 2 failed\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempting alternative menu navigation\nERROR    UIAutomationLogger:logger.py:72 All navigation methods failed\nERROR    UIAutomationLogger:logger.py:72 STEP: Search functionality test failed: Failed to navigate to valuations page\nassert False\n +  where False = &amp;lt;bound method TestValuations.navigate_to_valuations_via_home_page of &amp;lt;tests.test_valuations.TestValuations object at 0x1068e3df0&amp;gt;&amp;gt;()\n +    where &amp;lt;bound method TestValuations.navigate_to_valuations_via_home_page of &amp;lt;tests.test_valuations.TestValuations object at 0x1068e3df0&amp;gt;&amp;gt; = &amp;lt;tests.test_valuations.TestValuations object at 0x1068e3df0&amp;gt;.navigate_to_valuations_via_home_page\n\n---------------------------- Captured log teardown -----------------------------\nWARNING  UIAutomationLogger:logger.py:68 TEST FAILED: test_valuations_search_functionality - Will close browser for next test\nINFO     UIAutomationLogger:logger.py:60 BROWSER CLOSED DUE TO TEST FAILURE&#34;}], &#34;tests/test_valuations.py::TestValuations::test_valuations_search_filters_validation&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_valuations.py::TestValuations::test_valuations_search_filters_validation&#34;, &#34;duration&#34;: &#34;00:01:10&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_valuations.py::TestValuations::test_valuations_search_filters_validation&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:01:10&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log setup ------------------------------\nINFO     UIAutomationLogger:logger.py:60 CREATING FRESH BROWSER SESSION DUE TO PREVIOUS FAILURE\nINFO     UIAutomationLogger:logger.py:60 PERFORMING ONE-TIME LOGIN FOR TEST SESSION\nINFO     UIAutomationLogger:logger.py:60 STEP: Performing session login with timeout protection\nINFO     UIAutomationLogger:logger.py:60 STEP: Session login and OTP verification successful\n\n------------------------------ Captured log call -------------------------------\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STARTING TEST: test_valuations_search_filters_validation\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STEP: Testing detailed search filters validation\nINFO     UIAutomationLogger:logger.py:60 STEP: Navigating to valuations page (using existing session)\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempting direct URL navigation to valuations\nINFO     UIAutomationLogger:logger.py:60 Trying valuations URL: https://valueinsightpro.jumpiq.com/JumpFive/valuations\nINFO     UIAutomationLogger:logger.py:60 Current URL after navigation: https://valueinsightpro.jumpiq.com/JumpFive/valuations\nINFO     UIAutomationLogger:logger.py:60 \u2713 Direct URL navigation to valuations successful\nINFO     UIAutomationLogger:logger.py:60 STEP: Testing search with term: gold coast\nINFO     UIAutomationLogger:logger.py:60 STEP: Search for &amp;#x27;gold coast&amp;#x27; returned results: True\nINFO     UIAutomationLogger:logger.py:60 STEP: Testing search with term: sydney\nINFO     UIAutomationLogger:logger.py:60 STEP: Search for &amp;#x27;sydney&amp;#x27; returned results: True\nINFO     UIAutomationLogger:logger.py:60 STEP: Testing search with term: melbourne\nINFO     UIAutomationLogger:logger.py:60 STEP: Search for &amp;#x27;melbourne&amp;#x27; returned results: True\nINFO     UIAutomationLogger:logger.py:60 STEP: Search filters validation test completed successfully\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 FINISHED TEST: test_valuations_search_filters_validation\nINFO     UIAutomationLogger:logger.py:60 ==================================================\n\n---------------------------- Captured log teardown -----------------------------\nINFO     UIAutomationLogger:logger.py:60 TEST PASSED - RETURNING TO HOME PAGE FOR NEXT TEST&#34;}], &#34;tests/test_valuations.py::TestValuations::test_end_to_end_valuations_workflow&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;testId&#34;: &#34;tests/test_valuations.py::TestValuations::test_end_to_end_valuations_workflow&#34;, &#34;duration&#34;: &#34;00:02:49&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Failed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_valuations.py::TestValuations::test_end_to_end_valuations_workflow&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:02:49&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;self = &amp;lt;tests.test_valuations.TestValuations object at 0x1068f9340&amp;gt;\n\n    @allure.story(&amp;quot;End-to-End Valuations Workflow&amp;quot;)\n    @allure.title(&amp;quot;Complete end-to-end test: Login -&amp;gt; OTP -&amp;gt; Home -&amp;gt; Card 2 -&amp;gt; Valuations -&amp;gt; Search&amp;quot;)\n    def test_end_to_end_valuations_workflow(self):\n        &amp;quot;&amp;quot;&amp;quot;Complete end-to-end test: Login -&amp;gt; OTP -&amp;gt; Home -&amp;gt; Card 2 -&amp;gt; Valuations -&amp;gt; Search&amp;quot;&amp;quot;&amp;quot;\n        self.logger.info(&amp;quot;==================================================&amp;quot;)\n        self.logger.info(&amp;quot;STARTING TEST: test_end_to_end_valuations_workflow&amp;quot;)\n        self.logger.info(&amp;quot;==================================================&amp;quot;)\n        self.logger.info(&amp;quot;STEP: Testing complete end-to-end valuations workflow&amp;quot;)\n    \n        try:\n            # Step 1: Navigate to valuations page (includes login, OTP, home navigation)\n&amp;gt;           assert self.navigate_to_valuations_via_home_page(), &amp;quot;Failed to complete end-to-end navigation&amp;quot;\nE           AssertionError: Failed to complete end-to-end navigation\nE           assert False\nE            +  where False = &amp;lt;bound method TestValuations.navigate_to_valuations_via_home_page of &amp;lt;tests.test_valuations.TestValuations object at 0x1068f9340&amp;gt;&amp;gt;()\nE            +    where &amp;lt;bound method TestValuations.navigate_to_valuations_via_home_page of &amp;lt;tests.test_valuations.TestValuations object at 0x1068f9340&amp;gt;&amp;gt; = &amp;lt;tests.test_valuations.TestValuations object at 0x1068f9340&amp;gt;.navigate_to_valuations_via_home_page\n\ntests/test_valuations.py:457: AssertionError\n\n------------------------------ Captured log setup ------------------------------\nINFO     UIAutomationLogger:logger.py:60 USING EXISTING LOGIN SESSION\n\n------------------------------ Captured log call -------------------------------\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STARTING TEST: test_end_to_end_valuations_workflow\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STEP: Testing complete end-to-end valuations workflow\nINFO     UIAutomationLogger:logger.py:60 STEP: Navigating to valuations page (using existing session)\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempting direct URL navigation to valuations\nINFO     UIAutomationLogger:logger.py:60 Trying valuations URL: https://valueinsightpro.jumpiq.com/valuations\nINFO     UIAutomationLogger:logger.py:60 Current URL after navigation: https://valueinsightpro.jumpiq.com/auth/login?redirect=/valuations\nWARNING  UIAutomationLogger:logger.py:68 Direct URL reached valuations but page validation failed\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempting home page card navigation\nINFO     UIAutomationLogger:logger.py:60 STEP: Navigating to home page first\nINFO     UIAutomationLogger:logger.py:60 STEP: Waiting for home page to fully load\nINFO     UIAutomationLogger:logger.py:60 Debug screenshot saved: screenshots/debug_home_page_20250901_134337.png\nWARNING  UIAutomationLogger:logger.py:68 No &amp;#x27;card&amp;#x27; text found in page source\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempt 1 to click card 2\nWARNING  UIAutomationLogger:logger.py:68 STEP: Card 2 click attempt 1 failed\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempt 2 to click card 2\nWARNING  UIAutomationLogger:logger.py:68 STEP: Card 2 click attempt 2 failed\nWARNING  UIAutomationLogger:logger.py:68 Card navigation failed: Message: invalid session id\nStacktrace:\n0   chromedriver                        0x0000000104c36e00 cxxbridge1$str$ptr + 2742224\n1   chromedriver                        0x0000000104c2ed00 cxxbridge1$str$ptr + 2709200\n2   chromedriver                        0x0000000104778f2c cxxbridge1$string$len + 90124\n3   chromedriver                        0x00000001047b3db8 cxxbridge1$string$len + 331416\n4   chromedriver                        0x00000001047dc3a4 cxxbridge1$string$len + 496772\n5   chromedriver                        0x00000001047db6ac cxxbridge1$string$len + 493452\n6   chromedriver                        0x000000010474819c chromedriver + 98716\n7   chromedriver                        0x0000000104bfa478 cxxbridge1$str$ptr + 2494024\n8   chromedriver                        0x0000000104bfd6a4 cxxbridge1$str$ptr + 2506868\n9   chromedriver                        0x0000000104bdb3b0 cxxbridge1$str$ptr + 2366848\n10  chromedriver                        0x0000000104bfdf4c cxxbridge1$str$ptr + 2509084\n11  chromedriver                        0x0000000104bcc4a8 cxxbridge1$str$ptr + 2305656\n12  chromedriver                        0x0000000104746430 chromedriver + 91184\n13  dyld                                0x000000019df8c274 start + 2840\n\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempting alternative menu navigation\nERROR    UIAutomationLogger:logger.py:72 All navigation methods failed\nERROR    UIAutomationLogger:logger.py:72 STEP: End-to-end valuations workflow test failed: Failed to complete end-to-end navigation\nassert False\n +  where False = &amp;lt;bound method TestValuations.navigate_to_valuations_via_home_page of &amp;lt;tests.test_valuations.TestValuations object at 0x1068f9340&amp;gt;&amp;gt;()\n +    where &amp;lt;bound method TestValuations.navigate_to_valuations_via_home_page of &amp;lt;tests.test_valuations.TestValuations object at 0x1068f9340&amp;gt;&amp;gt; = &amp;lt;tests.test_valuations.TestValuations object at 0x1068f9340&amp;gt;.navigate_to_valuations_via_home_page\n\n---------------------------- Captured log teardown -----------------------------\nINFO     UIAutomationLogger:logger.py:60 TEST PASSED - RETURNING TO HOME PAGE FOR NEXT TEST\nWARNING  UIAutomationLogger:logger.py:68 Failed to return to home page: Message: invalid session id\nStacktrace:\n0   chromedriver                        0x0000000104c36e00 cxxbridge1$str$ptr + 2742224\n1   chromedriver                        0x0000000104c2ed00 cxxbridge1$str$ptr + 2709200\n2   chromedriver                        0x0000000104778f2c cxxbridge1$string$len + 90124\n3   chromedriver                        0x00000001047b3db8 cxxbridge1$string$len + 331416\n4   chromedriver                        0x00000001047dc3a4 cxxbridge1$string$len + 496772\n5   chromedriver                        0x00000001047db6ac cxxbridge1$string$len + 493452\n6   chromedriver                        0x000000010474819c chromedriver + 98716\n7   chromedriver                        0x0000000104bfa478 cxxbridge1$str$ptr + 2494024\n8   chromedriver                        0x0000000104bfd6a4 cxxbridge1$str$ptr + 2506868\n9   chromedriver                        0x0000000104bdb3b0 cxxbridge1$str$ptr + 2366848\n10  chromedriver                        0x0000000104bfdf4c cxxbridge1$str$ptr + 2509084\n11  chromedriver                        0x0000000104bcc4a8 cxxbridge1$str$ptr + 2305656\n12  chromedriver                        0x0000000104746430 chromedriver + 91184\n13  dyld                                0x000000019df8c274 start + 2840&#34;}], &#34;tests/test_valuations.py::TestValuations::test_new_valuation_dealer_selection&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;testId&#34;: &#34;tests/test_valuations.py::TestValuations::test_new_valuation_dealer_selection&#34;, &#34;duration&#34;: &#34;00:07:00&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Failed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_valuations.py::TestValuations::test_new_valuation_dealer_selection&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:07:00&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;self = &amp;lt;tests.test_valuations.TestValuations object at 0x1068f94f0&amp;gt;\n\n    @allure.story(&amp;quot;New Valuation Dealership Selection&amp;quot;)\n    @allure.title(&amp;quot;Test New Valuation button click and dealer selection with &amp;#x27;acura of remsey&amp;#x27;&amp;quot;)\n    def test_new_valuation_dealer_selection(self):\n        &amp;quot;&amp;quot;&amp;quot;Test New Valuation button click and dealer selection with &amp;#x27;acura of remsey&amp;#x27;&amp;quot;&amp;quot;&amp;quot;\n        self.logger.info(&amp;quot;==================================================&amp;quot;)\n        self.logger.info(&amp;quot;STARTING TEST: test_new_valuation_dealer_selection&amp;quot;)\n        self.logger.info(&amp;quot;==================================================&amp;quot;)\n        self.logger.info(&amp;quot;STEP: Testing new valuation dealer selection&amp;quot;)\n    \n        try:\n            # Navigate to valuations page\n&amp;gt;           assert self.navigate_to_valuations_via_home_page(), &amp;quot;Failed to navigate to valuations page&amp;quot;\nE           AssertionError: Failed to navigate to valuations page\nE           assert False\nE            +  where False = &amp;lt;bound method TestValuations.navigate_to_valuations_via_home_page of &amp;lt;tests.test_valuations.TestValuations object at 0x1068f94f0&amp;gt;&amp;gt;()\nE            +    where &amp;lt;bound method TestValuations.navigate_to_valuations_via_home_page of &amp;lt;tests.test_valuations.TestValuations object at 0x1068f94f0&amp;gt;&amp;gt; = &amp;lt;tests.test_valuations.TestValuations object at 0x1068f94f0&amp;gt;.navigate_to_valuations_via_home_page\n\ntests/test_valuations.py:495: AssertionError\n\n------------------------------ Captured log setup ------------------------------\nINFO     UIAutomationLogger:logger.py:60 CREATING FRESH BROWSER SESSION DUE TO PREVIOUS FAILURE\nINFO     UIAutomationLogger:logger.py:60 PERFORMING ONE-TIME LOGIN FOR TEST SESSION\nINFO     UIAutomationLogger:logger.py:60 STEP: Performing session login with timeout protection\nERROR    UIAutomationLogger:logger.py:72 Session login failed: Session login failed: {&amp;#x27;login_attempted&amp;#x27;: True, &amp;#x27;login_successful&amp;#x27;: True, &amp;#x27;redirected_to_otp&amp;#x27;: False, &amp;#x27;form_state_validation&amp;#x27;: {&amp;#x27;initial_state&amp;#x27;: True, &amp;#x27;after_email&amp;#x27;: True, &amp;#x27;after_password&amp;#x27;: True, &amp;#x27;after_checkbox&amp;#x27;: True, &amp;#x27;all_stages_correct&amp;#x27;: True}, &amp;#x27;button_enabled_correctly&amp;#x27;: True, &amp;#x27;final_url&amp;#x27;: &amp;#x27;https://valueinsightpro.jumpiq.com/auth/login&amp;#x27;, &amp;#x27;error_message&amp;#x27;: &amp;#x27;Expected redirect to OTP page, but stayed at: https://valueinsightpro.jumpiq.com/auth/login&amp;#x27;, &amp;#x27;execution_time&amp;#x27;: 911.4142379760742}\nERROR    UIAutomationLogger:logger.py:72 Session login failed: Session login failed: {&amp;#x27;login_attempted&amp;#x27;: True, &amp;#x27;login_successful&amp;#x27;: True, &amp;#x27;redirected_to_otp&amp;#x27;: False, &amp;#x27;form_state_validation&amp;#x27;: {&amp;#x27;initial_state&amp;#x27;: True, &amp;#x27;after_email&amp;#x27;: True, &amp;#x27;after_password&amp;#x27;: True, &amp;#x27;after_checkbox&amp;#x27;: True, &amp;#x27;all_stages_correct&amp;#x27;: True}, &amp;#x27;button_enabled_correctly&amp;#x27;: True, &amp;#x27;final_url&amp;#x27;: &amp;#x27;https://valueinsightpro.jumpiq.com/auth/login&amp;#x27;, &amp;#x27;error_message&amp;#x27;: &amp;#x27;Expected redirect to OTP page, but stayed at: https://valueinsightpro.jumpiq.com/auth/login&amp;#x27;, &amp;#x27;execution_time&amp;#x27;: 911.4142379760742}\n\n------------------------------ Captured log call -------------------------------\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STARTING TEST: test_new_valuation_dealer_selection\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STEP: Testing new valuation dealer selection\nINFO     UIAutomationLogger:logger.py:60 STEP: Navigating to valuations page (using existing session)\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempting direct URL navigation to valuations\nINFO     UIAutomationLogger:logger.py:60 Trying valuations URL: https://valueinsightpro.jumpiq.com/valuations\nINFO     UIAutomationLogger:logger.py:60 Current URL after navigation: https://valueinsightpro.jumpiq.com/auth/login?redirect=/valuations\nWARNING  UIAutomationLogger:logger.py:68 Direct URL reached valuations but page validation failed\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempting home page card navigation\nINFO     UIAutomationLogger:logger.py:60 STEP: Navigating to home page first\nINFO     UIAutomationLogger:logger.py:60 STEP: Waiting for home page to fully load\nINFO     UIAutomationLogger:logger.py:60 Debug screenshot saved: screenshots/debug_home_page_20250901_140135.png\nWARNING  UIAutomationLogger:logger.py:68 No &amp;#x27;card&amp;#x27; text found in page source\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempt 1 to click card 2\nWARNING  UIAutomationLogger:logger.py:68 STEP: Card 2 click attempt 1 failed\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempt 2 to click card 2\nWARNING  UIAutomationLogger:logger.py:68 STEP: Card 2 click attempt 2 failed\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempt 3 to click card 2\nWARNING  UIAutomationLogger:logger.py:68 STEP: Card 2 click attempt 3 failed\nERROR    UIAutomationLogger:logger.py:72 STEP: All attempts to click card 2 failed\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempting alternative menu navigation\nERROR    UIAutomationLogger:logger.py:72 All navigation methods failed\nERROR    UIAutomationLogger:logger.py:72 STEP: New valuation dealer selection test failed: Failed to navigate to valuations page\nassert False\n +  where False = &amp;lt;bound method TestValuations.navigate_to_valuations_via_home_page of &amp;lt;tests.test_valuations.TestValuations object at 0x1068f94f0&amp;gt;&amp;gt;()\n +    where &amp;lt;bound method TestValuations.navigate_to_valuations_via_home_page of &amp;lt;tests.test_valuations.TestValuations object at 0x1068f94f0&amp;gt;&amp;gt; = &amp;lt;tests.test_valuations.TestValuations object at 0x1068f94f0&amp;gt;.navigate_to_valuations_via_home_page\n\n---------------------------- Captured log teardown -----------------------------\nINFO     UIAutomationLogger:logger.py:60 TEST PASSED - RETURNING TO HOME PAGE FOR NEXT TEST&#34;}], &#34;tests/test_valuations.py::TestValuations::test_complete_new_valuation_workflow&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_valuations.py::TestValuations::test_complete_new_valuation_workflow&#34;, &#34;duration&#34;: &#34;00:01:24&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_valuations.py::TestValuations::test_complete_new_valuation_workflow&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:01:24&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log setup ------------------------------\nINFO     UIAutomationLogger:logger.py:60 PERFORMING ONE-TIME LOGIN FOR TEST SESSION\nINFO     UIAutomationLogger:logger.py:60 STEP: Performing session login with timeout protection\nINFO     UIAutomationLogger:logger.py:60 STEP: Session login and OTP verification successful\n\n------------------------------ Captured log call -------------------------------\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STARTING TEST: test_complete_new_valuation_workflow\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STEP: Testing complete new valuation workflow\nINFO     UIAutomationLogger:logger.py:60 STEP: Navigating to valuations page (using existing session)\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempting direct URL navigation to valuations\nINFO     UIAutomationLogger:logger.py:60 Trying valuations URL: https://valueinsightpro.jumpiq.com/JumpFive/valuations\nINFO     UIAutomationLogger:logger.py:60 Current URL after navigation: https://valueinsightpro.jumpiq.com/JumpFive/valuations\nINFO     UIAutomationLogger:logger.py:60 \u2713 Direct URL navigation to valuations successful\nINFO     UIAutomationLogger:logger.py:60 STEP: Starting complete workflow with dealer: acura of remsey\nINFO     UIAutomationLogger:logger.py:60 STEP: Complete new valuation workflow completed successfully\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 FINISHED TEST: test_complete_new_valuation_workflow\nINFO     UIAutomationLogger:logger.py:60 ==================================================\n\n---------------------------- Captured log teardown -----------------------------\nINFO     UIAutomationLogger:logger.py:60 TEST PASSED - RETURNING TO HOME PAGE FOR NEXT TEST&#34;}], &#34;tests/test_valuations.py::TestValuations::test_complete_valuation_workflow_with_financials&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;testId&#34;: &#34;tests/test_valuations.py::TestValuations::test_complete_valuation_workflow_with_financials&#34;, &#34;duration&#34;: &#34;00:06:45&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Failed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_valuations.py::TestValuations::test_complete_valuation_workflow_with_financials&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:06:45&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;self = &amp;lt;tests.test_valuations.TestValuations object at 0x1068f9850&amp;gt;\n\n    @allure.story(&amp;quot;Complete Valuation Workflow with Financials&amp;quot;)\n    @allure.title(&amp;quot;Test complete valuation workflow including financials step&amp;quot;)\n    def test_complete_valuation_workflow_with_financials(self):\n        &amp;quot;&amp;quot;&amp;quot;Test complete valuation workflow including financials step&amp;quot;&amp;quot;&amp;quot;\n        self.logger.info(&amp;quot;==================================================&amp;quot;)\n        self.logger.info(&amp;quot;STARTING TEST: test_complete_valuation_workflow_with_financials&amp;quot;)\n        self.logger.info(&amp;quot;==================================================&amp;quot;)\n        self.logger.info(&amp;quot;STEP: Testing complete valuation workflow with financials validation&amp;quot;)\n    \n        try:\n            # Navigate to valuations page with timeout\n            self.logger.info(&amp;quot;STEP: Navigating to valuations page&amp;quot;)\n            navigation_success = self.navigate_to_valuations_via_home_page()\n            if not navigation_success:\n                self.logger.error(&amp;quot;Failed to navigate to valuations page&amp;quot;)\n&amp;gt;               assert False, &amp;quot;Failed to navigate to valuations page&amp;quot;\nE               AssertionError: Failed to navigate to valuations page\nE               assert False\n\ntests/test_valuations.py:587: AssertionError\n\n------------------------------ Captured log setup ------------------------------\nINFO     UIAutomationLogger:logger.py:60 USING EXISTING LOGIN SESSION\n\n------------------------------ Captured log call -------------------------------\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STARTING TEST: test_complete_valuation_workflow_with_financials\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STEP: Testing complete valuation workflow with financials validation\nINFO     UIAutomationLogger:logger.py:60 STEP: Navigating to valuations page\nINFO     UIAutomationLogger:logger.py:60 STEP: Navigating to valuations page (using existing session)\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempting direct URL navigation to valuations\nINFO     UIAutomationLogger:logger.py:60 Trying valuations URL: https://valueinsightpro.jumpiq.com/valuations\nINFO     UIAutomationLogger:logger.py:60 Current URL after navigation: https://valueinsightpro.jumpiq.com/auth/login?redirect=/valuations\nWARNING  UIAutomationLogger:logger.py:68 Direct URL reached valuations but page validation failed\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempting home page card navigation\nINFO     UIAutomationLogger:logger.py:60 STEP: Navigating to home page first\nINFO     UIAutomationLogger:logger.py:60 STEP: Waiting for home page to fully load\nINFO     UIAutomationLogger:logger.py:60 Debug screenshot saved: screenshots/debug_home_page_20250901_142203.png\nWARNING  UIAutomationLogger:logger.py:68 No &amp;#x27;card&amp;#x27; text found in page source\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempt 1 to click card 2\nWARNING  UIAutomationLogger:logger.py:68 STEP: Card 2 click attempt 1 failed\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempt 2 to click card 2\nWARNING  UIAutomationLogger:logger.py:68 STEP: Card 2 click attempt 2 failed\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempt 3 to click card 2\nWARNING  UIAutomationLogger:logger.py:68 STEP: Card 2 click attempt 3 failed\nERROR    UIAutomationLogger:logger.py:72 STEP: All attempts to click card 2 failed\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempting alternative menu navigation\nERROR    UIAutomationLogger:logger.py:72 All navigation methods failed\nERROR    UIAutomationLogger:logger.py:72 Failed to navigate to valuations page\nERROR    UIAutomationLogger:logger.py:72 STEP: Complete valuation workflow test failed: Failed to navigate to valuations page\nassert False\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 FINISHED TEST: test_complete_valuation_workflow_with_financials\nINFO     UIAutomationLogger:logger.py:60 ==================================================\n\n---------------------------- Captured log teardown -----------------------------\nWARNING  UIAutomationLogger:logger.py:68 TEST FAILED: test_complete_valuation_workflow_with_financials - Will close browser for next test\nINFO     UIAutomationLogger:logger.py:60 BROWSER CLOSED DUE TO TEST FAILURE&#34;}], &#34;tests/test_valuations.py::TestValuations::test_financial_expense_calculation_validation&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_valuations.py::TestValuations::test_financial_expense_calculation_validation&#34;, &#34;duration&#34;: &#34;00:05:18&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_valuations.py::TestValuations::test_financial_expense_calculation_validation&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:05:18&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log setup ------------------------------\nINFO     UIAutomationLogger:logger.py:60 CREATING FRESH BROWSER SESSION DUE TO PREVIOUS FAILURE\nINFO     UIAutomationLogger:logger.py:60 PERFORMING ONE-TIME LOGIN FOR TEST SESSION\nINFO     UIAutomationLogger:logger.py:60 STEP: Performing session login with timeout protection\nINFO     UIAutomationLogger:logger.py:60 STEP: Session login and OTP verification successful\n\n------------------------------ Captured log call -------------------------------\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STARTING TEST: test_financial_expense_calculation_validation\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STEP: Testing expense calculation formula validation\nINFO     UIAutomationLogger:logger.py:60 STEP: Navigating to valuations page (using existing session)\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempting direct URL navigation to valuations\nINFO     UIAutomationLogger:logger.py:60 Trying valuations URL: https://valueinsightpro.jumpiq.com/JumpFive/valuations\nINFO     UIAutomationLogger:logger.py:60 Current URL after navigation: https://valueinsightpro.jumpiq.com/JumpFive/valuations\nINFO     UIAutomationLogger:logger.py:60 \u2713 Direct URL navigation to valuations successful\nINFO     UIAutomationLogger:logger.py:60 STEP: Executing complete valuation workflow to reach financials\nINFO     UIAutomationLogger:logger.py:60 STEP: Successfully reached financials page - starting expense calculation\nINFO     UIAutomationLogger:logger.py:60 STEP: Expense calculation validation completed successfully\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 FINISHED TEST: test_financial_expense_calculation_validation\nINFO     UIAutomationLogger:logger.py:60 ==================================================\n\n---------------------------- Captured log teardown -----------------------------\nINFO     UIAutomationLogger:logger.py:60 TEST PASSED - RETURNING TO HOME PAGE FOR NEXT TEST&#34;}], &#34;tests/test_valuations.py::TestValuations::test_expense_calculation_formula_demo&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_valuations.py::TestValuations::test_expense_calculation_formula_demo&#34;, &#34;duration&#34;: &#34;00:00:06&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_valuations.py::TestValuations::test_expense_calculation_formula_demo&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:06&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log setup ------------------------------\nINFO     UIAutomationLogger:logger.py:60 USING EXISTING LOGIN SESSION\n\n------------------------------ Captured log call -------------------------------\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STARTING TEST: test_expense_calculation_formula_demo\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STEP: Demonstrating expense calculation formula\nINFO     UIAutomationLogger:logger.py:60 STEP: Testing expense calculation for year 2023\nINFO     UIAutomationLogger:logger.py:60 STEP: Expense calculation validation PASSED for 2023\nINFO     UIAutomationLogger:logger.py:60 STEP: Testing expense calculation for year 2022\nINFO     UIAutomationLogger:logger.py:60 STEP: Expense calculation validation PASSED for 2022\nINFO     UIAutomationLogger:logger.py:60 STEP: Testing expense calculation for year 2021\nINFO     UIAutomationLogger:logger.py:60 STEP: Expense calculation validation PASSED for 2021\nINFO     UIAutomationLogger:logger.py:60 STEP: All expense calculation demonstrations completed successfully\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 FINISHED TEST: test_expense_calculation_formula_demo\nINFO     UIAutomationLogger:logger.py:60 ==================================================\n\n---------------------------- Captured log teardown -----------------------------\nINFO     UIAutomationLogger:logger.py:60 TEST PASSED - RETURNING TO HOME PAGE FOR NEXT TEST&#34;}], &#34;tests/test_valuations.py::TestValuations::test_adjusted_profit_calculation_validation&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;testId&#34;: &#34;tests/test_valuations.py::TestValuations::test_adjusted_profit_calculation_validation&#34;, &#34;duration&#34;: &#34;00:06:41&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Failed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_valuations.py::TestValuations::test_adjusted_profit_calculation_validation&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:06:41&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;self = &amp;lt;tests.test_valuations.TestValuations object at 0x1068f9d60&amp;gt;\n\n    @allure.story(&amp;quot;Adjusted Profit Calculation Validation&amp;quot;)\n    @allure.title(&amp;quot;Test adjusted profit calculation using the given formula and validate against actual data&amp;quot;)\n    def test_adjusted_profit_calculation_validation(self):\n        &amp;quot;&amp;quot;&amp;quot;Test adjusted profit calculation using the given formula and validate against actual data&amp;quot;&amp;quot;&amp;quot;\n        self.logger.info(&amp;quot;==================================================&amp;quot;)\n        self.logger.info(&amp;quot;STARTING TEST: test_adjusted_profit_calculation_validation&amp;quot;)\n        self.logger.info(&amp;quot;==================================================&amp;quot;)\n        self.logger.info(&amp;quot;STEP: Testing adjusted profit calculation formula validation&amp;quot;)\n    \n        try:\n            # Navigate to valuations page and complete workflow to reach financials\n&amp;gt;           assert self.navigate_to_valuations_via_home_page(), &amp;quot;Failed to navigate to valuations page&amp;quot;\nE           AssertionError: Failed to navigate to valuations page\nE           assert False\nE            +  where False = &amp;lt;bound method TestValuations.navigate_to_valuations_via_home_page of &amp;lt;tests.test_valuations.TestValuations object at 0x1068f9d60&amp;gt;&amp;gt;()\nE            +    where &amp;lt;bound method TestValuations.navigate_to_valuations_via_home_page of &amp;lt;tests.test_valuations.TestValuations object at 0x1068f9d60&amp;gt;&amp;gt; = &amp;lt;tests.test_valuations.TestValuations object at 0x1068f9d60&amp;gt;.navigate_to_valuations_via_home_page\n\ntests/test_valuations.py:786: AssertionError\n\n------------------------------ Captured log setup ------------------------------\nINFO     UIAutomationLogger:logger.py:60 USING EXISTING LOGIN SESSION\n\n------------------------------ Captured log call -------------------------------\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STARTING TEST: test_adjusted_profit_calculation_validation\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STEP: Testing adjusted profit calculation formula validation\nINFO     UIAutomationLogger:logger.py:60 STEP: Navigating to valuations page (using existing session)\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempting direct URL navigation to valuations\nINFO     UIAutomationLogger:logger.py:60 Trying valuations URL: https://valueinsightpro.jumpiq.com/valuations\nINFO     UIAutomationLogger:logger.py:60 Current URL after navigation: https://valueinsightpro.jumpiq.com/auth/login?redirect=/valuations\nWARNING  UIAutomationLogger:logger.py:68 Direct URL reached valuations but page validation failed\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempting home page card navigation\nINFO     UIAutomationLogger:logger.py:60 STEP: Navigating to home page first\nINFO     UIAutomationLogger:logger.py:60 STEP: Waiting for home page to fully load\nINFO     UIAutomationLogger:logger.py:60 Debug screenshot saved: screenshots/debug_home_page_20250901_143412.png\nWARNING  UIAutomationLogger:logger.py:68 No &amp;#x27;card&amp;#x27; text found in page source\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempt 1 to click card 2\nWARNING  UIAutomationLogger:logger.py:68 STEP: Card 2 click attempt 1 failed\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempt 2 to click card 2\nWARNING  UIAutomationLogger:logger.py:68 STEP: Card 2 click attempt 2 failed\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempt 3 to click card 2\nWARNING  UIAutomationLogger:logger.py:68 STEP: Card 2 click attempt 3 failed\nERROR    UIAutomationLogger:logger.py:72 STEP: All attempts to click card 2 failed\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempting alternative menu navigation\nERROR    UIAutomationLogger:logger.py:72 All navigation methods failed\nERROR    UIAutomationLogger:logger.py:72 STEP: Adjusted profit calculation validation test failed: Failed to navigate to valuations page\nassert False\n +  where False = &amp;lt;bound method TestValuations.navigate_to_valuations_via_home_page of &amp;lt;tests.test_valuations.TestValuations object at 0x1068f9d60&amp;gt;&amp;gt;()\n +    where &amp;lt;bound method TestValuations.navigate_to_valuations_via_home_page of &amp;lt;tests.test_valuations.TestValuations object at 0x1068f9d60&amp;gt;&amp;gt; = &amp;lt;tests.test_valuations.TestValuations object at 0x1068f9d60&amp;gt;.navigate_to_valuations_via_home_page\n\n---------------------------- Captured log teardown -----------------------------\nINFO     UIAutomationLogger:logger.py:60 TEST PASSED - RETURNING TO HOME PAGE FOR NEXT TEST\nWARNING  UIAutomationLogger:logger.py:68 Failed to return to home page: Message: invalid session id\nStacktrace:\n0   chromedriver                        0x0000000102e42e00 cxxbridge1$str$ptr + 2742224\n1   chromedriver                        0x0000000102e3ad00 cxxbridge1$str$ptr + 2709200\n2   chromedriver                        0x0000000102984f2c cxxbridge1$string$len + 90124\n3   chromedriver                        0x00000001029bfdb8 cxxbridge1$string$len + 331416\n4   chromedriver                        0x00000001029e83a4 cxxbridge1$string$len + 496772\n5   chromedriver                        0x00000001029e76ac cxxbridge1$string$len + 493452\n6   chromedriver                        0x000000010295419c chromedriver + 98716\n7   chromedriver                        0x0000000102e06478 cxxbridge1$str$ptr + 2494024\n8   chromedriver                        0x0000000102e096a4 cxxbridge1$str$ptr + 2506868\n9   chromedriver                        0x0000000102de73b0 cxxbridge1$str$ptr + 2366848\n10  chromedriver                        0x0000000102e09f4c cxxbridge1$str$ptr + 2509084\n11  chromedriver                        0x0000000102dd84a8 cxxbridge1$str$ptr + 2305656\n12  chromedriver                        0x0000000102952430 chromedriver + 91184\n13  dyld                                0x000000019df8c274 start + 2840&#34;}], &#34;tests/test_valuations.py::TestValuations::test_comprehensive_financial_calculations_validation&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;testId&#34;: &#34;tests/test_valuations.py::TestValuations::test_comprehensive_financial_calculations_validation&#34;, &#34;duration&#34;: &#34;00:01:08&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Failed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_valuations.py::TestValuations::test_comprehensive_financial_calculations_validation&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:01:08&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;self = &amp;lt;tests.test_valuations.TestValuations object at 0x1068f9f10&amp;gt;\n\n    @allure.story(&amp;quot;Comprehensive Financial Calculations Validation&amp;quot;)\n    @allure.title(&amp;quot;Test both expense and adjusted profit calculations together&amp;quot;)\n    def test_comprehensive_financial_calculations_validation(self):\n        &amp;quot;&amp;quot;&amp;quot;Test both expense and adjusted profit calculations together&amp;quot;&amp;quot;&amp;quot;\n        self.logger.info(&amp;quot;==================================================&amp;quot;)\n        self.logger.info(&amp;quot;STARTING TEST: test_comprehensive_financial_calculations_validation&amp;quot;)\n        self.logger.info(&amp;quot;==================================================&amp;quot;)\n        self.logger.info(&amp;quot;STEP: Testing comprehensive financial calculations validation&amp;quot;)\n    \n        try:\n            # Navigate to valuations page and complete workflow to reach financials\n&amp;gt;           assert self.navigate_to_valuations_via_home_page(), &amp;quot;Failed to navigate to valuations page&amp;quot;\nE           AssertionError: Failed to navigate to valuations page\nE           assert False\nE            +  where False = &amp;lt;bound method TestValuations.navigate_to_valuations_via_home_page of &amp;lt;tests.test_valuations.TestValuations object at 0x1068f9f10&amp;gt;&amp;gt;()\nE            +    where &amp;lt;bound method TestValuations.navigate_to_valuations_via_home_page of &amp;lt;tests.test_valuations.TestValuations object at 0x1068f9f10&amp;gt;&amp;gt; = &amp;lt;tests.test_valuations.TestValuations object at 0x1068f9f10&amp;gt;.navigate_to_valuations_via_home_page\n\ntests/test_valuations.py:822: AssertionError\n\n------------------------------ Captured log setup ------------------------------\nINFO     UIAutomationLogger:logger.py:60 CREATING FRESH BROWSER SESSION DUE TO PREVIOUS FAILURE\nINFO     UIAutomationLogger:logger.py:60 PERFORMING ONE-TIME LOGIN FOR TEST SESSION\nINFO     UIAutomationLogger:logger.py:60 STEP: Performing session login with timeout protection\nINFO     UIAutomationLogger:logger.py:60 STEP: Session login and OTP verification successful\n\n------------------------------ Captured log call -------------------------------\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STARTING TEST: test_comprehensive_financial_calculations_validation\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STEP: Testing comprehensive financial calculations validation\nINFO     UIAutomationLogger:logger.py:60 STEP: Navigating to valuations page (using existing session)\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempting direct URL navigation to valuations\nINFO     UIAutomationLogger:logger.py:60 Trying valuations URL: https://valueinsightpro.jumpiq.com/valuations\nWARNING  UIAutomationLogger:logger.py:68 Direct URL navigation failed: Message: unknown error: net::ERR_INTERNET_DISCONNECTED\n  (Session info: chrome=139.0.7258.155)\nStacktrace:\n0   chromedriver                        0x00000001007c6e00 cxxbridge1$str$ptr + 2742224\n1   chromedriver                        0x00000001007bed00 cxxbridge1$str$ptr + 2709200\n2   chromedriver                        0x00000001003090b8 cxxbridge1$string$len + 90520\n3   chromedriver                        0x0000000100301540 cxxbridge1$string$len + 58912\n4   chromedriver                        0x00000001002f41d0 cxxbridge1$string$len + 4784\n5   chromedriver                        0x00000001002f5bd0 cxxbridge1$string$len + 11440\n6   chromedriver                        0x00000001002f4624 cxxbridge1$string$len + 5892\n7   chromedriver                        0x00000001002f3f78 cxxbridge1$string$len + 4184\n8   chromedriver                        0x00000001002f3cc4 cxxbridge1$string$len + 3492\n9   chromedriver                        0x00000001002f1a7c chromedriver + 203388\n10  chromedriver                        0x00000001002f24d8 chromedriver + 206040\n11  chromedriver                        0x000000010030c11c cxxbridge1$string$len + 102908\n12  chromedriver                        0x0000000100392414 cxxbridge1$string$len + 652532\n13  chromedriver                        0x0000000100391980 cxxbridge1$string$len + 649824\n14  chromedriver                        0x00000001003448f4 cxxbridge1$string$len + 334292\n15  chromedriver                        0x000000010078a478 cxxbridge1$str$ptr + 2494024\n16  chromedriver                        0x000000010078d6a4 cxxbridge1$str$ptr + 2506868\n17  chromedriver                        0x000000010076b3b0 cxxbridge1$str$ptr + 2366848\n18  chromedriver                        0x000000010078df4c cxxbridge1$str$ptr + 2509084\n19  chromedriver                        0x000000010075c4a8 cxxbridge1$str$ptr + 2305656\n20  chromedriver                        0x00000001007ad644 cxxbridge1$str$ptr + 2637844\n21  chromedriver                        0x00000001007ad7d0 cxxbridge1$str$ptr + 2638240\n22  chromedriver                        0x00000001007be94c cxxbridge1$str$ptr + 2708252\n23  libsystem_pthread.dylib             0x000000019e30c2e4 _pthread_start + 136\n24  libsystem_pthread.dylib             0x000000019e3070fc thread_start + 8\n\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempting home page card navigation\nINFO     UIAutomationLogger:logger.py:60 STEP: Navigating to home page first\nWARNING  UIAutomationLogger:logger.py:68 Card navigation failed: Message: unknown error: net::ERR_INTERNET_DISCONNECTED\n  (Session info: chrome=139.0.7258.155)\nStacktrace:\n0   chromedriver                        0x00000001007c6e00 cxxbridge1$str$ptr + 2742224\n1   chromedriver                        0x00000001007bed00 cxxbridge1$str$ptr + 2709200\n2   chromedriver                        0x00000001003090b8 cxxbridge1$string$len + 90520\n3   chromedriver                        0x0000000100301540 cxxbridge1$string$len + 58912\n4   chromedriver                        0x00000001002f41d0 cxxbridge1$string$len + 4784\n5   chromedriver                        0x00000001002f5bd0 cxxbridge1$string$len + 11440\n6   chromedriver                        0x00000001002f4624 cxxbridge1$string$len + 5892\n7   chromedriver                        0x00000001002f3f78 cxxbridge1$string$len + 4184\n8   chromedriver                        0x00000001002f3cc4 cxxbridge1$string$len + 3492\n9   chromedriver                        0x00000001002f1a7c chromedriver + 203388\n10  chromedriver                        0x00000001002f24d8 chromedriver + 206040\n11  chromedriver                        0x000000010030c11c cxxbridge1$string$len + 102908\n12  chromedriver                        0x0000000100392414 cxxbridge1$string$len + 652532\n13  chromedriver                        0x0000000100391980 cxxbridge1$string$len + 649824\n14  chromedriver                        0x00000001003448f4 cxxbridge1$string$len + 334292\n15  chromedriver                        0x000000010078a478 cxxbridge1$str$ptr + 2494024\n16  chromedriver                        0x000000010078d6a4 cxxbridge1$str$ptr + 2506868\n17  chromedriver                        0x000000010076b3b0 cxxbridge1$str$ptr + 2366848\n18  chromedriver                        0x000000010078df4c cxxbridge1$str$ptr + 2509084\n19  chromedriver                        0x000000010075c4a8 cxxbridge1$str$ptr + 2305656\n20  chromedriver                        0x00000001007ad644 cxxbridge1$str$ptr + 2637844\n21  chromedriver                        0x00000001007ad7d0 cxxbridge1$str$ptr + 2638240\n22  chromedriver                        0x00000001007be94c cxxbridge1$str$ptr + 2708252\n23  libsystem_pthread.dylib             0x000000019e30c2e4 _pthread_start + 136\n24  libsystem_pthread.dylib             0x000000019e3070fc thread_start + 8\n\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempting alternative menu navigation\nERROR    UIAutomationLogger:logger.py:72 All navigation methods failed\nERROR    UIAutomationLogger:logger.py:72 STEP: Comprehensive financial calculations validation test failed: Failed to navigate to valuations page\nassert False\n +  where False = &amp;lt;bound method TestValuations.navigate_to_valuations_via_home_page of &amp;lt;tests.test_valuations.TestValuations object at 0x1068f9f10&amp;gt;&amp;gt;()\n +    where &amp;lt;bound method TestValuations.navigate_to_valuations_via_home_page of &amp;lt;tests.test_valuations.TestValuations object at 0x1068f9f10&amp;gt;&amp;gt; = &amp;lt;tests.test_valuations.TestValuations object at 0x1068f9f10&amp;gt;.navigate_to_valuations_via_home_page\n\n---------------------------- Captured log teardown -----------------------------\nINFO     UIAutomationLogger:logger.py:60 TEST PASSED - RETURNING TO HOME PAGE FOR NEXT TEST&#34;}], &#34;tests/test_valuations.py::TestValuations::test_adjusted_profit_calculation_formula_demo&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_valuations.py::TestValuations::test_adjusted_profit_calculation_formula_demo&#34;, &#34;duration&#34;: &#34;00:00:08&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_valuations.py::TestValuations::test_adjusted_profit_calculation_formula_demo&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:08&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;------------------------------ Captured log setup ------------------------------\nINFO     UIAutomationLogger:logger.py:60 USING EXISTING LOGIN SESSION\n\n------------------------------ Captured log call -------------------------------\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STARTING TEST: test_adjusted_profit_calculation_formula_demo\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STEP: Demonstrating adjusted profit calculation formula\nINFO     UIAutomationLogger:logger.py:60 STEP: Testing adjusted profit calculation for year 2023\nINFO     UIAutomationLogger:logger.py:60 STEP: Adjusted profit calculation validation PASSED for 2023\nINFO     UIAutomationLogger:logger.py:60 STEP: Testing adjusted profit calculation for year 2022\nINFO     UIAutomationLogger:logger.py:60 STEP: Adjusted profit calculation validation PASSED for 2022\nINFO     UIAutomationLogger:logger.py:60 STEP: Testing adjusted profit calculation for year 2021\nINFO     UIAutomationLogger:logger.py:60 STEP: Adjusted profit calculation validation PASSED for 2021\nINFO     UIAutomationLogger:logger.py:60 STEP: All adjusted profit calculation demonstrations completed successfully\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 FINISHED TEST: test_adjusted_profit_calculation_formula_demo\nINFO     UIAutomationLogger:logger.py:60 ==================================================\n\n---------------------------- Captured log teardown -----------------------------\nINFO     UIAutomationLogger:logger.py:60 TEST PASSED - RETURNING TO HOME PAGE FOR NEXT TEST&#34;}], &#34;tests/test_valuations.py::TestValuations::test_financial_calculations_with_javascript&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;testId&#34;: &#34;tests/test_valuations.py::TestValuations::test_financial_calculations_with_javascript&#34;, &#34;duration&#34;: &#34;00:06:47&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Failed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_valuations.py::TestValuations::test_financial_calculations_with_javascript&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:06:47&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;self = &amp;lt;tests.test_valuations.TestValuations object at 0x1068d4fd0&amp;gt;\n\n    @allure.story(&amp;quot;JavaScript Financial Calculations Test&amp;quot;)\n    @allure.title(&amp;quot;Test financial calculations using JavaScript extraction&amp;quot;)\n    def test_financial_calculations_with_javascript(self):\n        &amp;quot;&amp;quot;&amp;quot;Test financial calculations using JavaScript for value extraction&amp;quot;&amp;quot;&amp;quot;\n        self.logger.info(&amp;quot;==================================================&amp;quot;)\n        self.logger.info(&amp;quot;STARTING TEST: test_financial_calculations_with_javascript&amp;quot;)\n        self.logger.info(&amp;quot;==================================================&amp;quot;)\n        self.logger.info(&amp;quot;STEP: Testing JavaScript-based financial calculations&amp;quot;)\n    \n        try:\n            # Navigate to valuations page and complete workflow to reach financials\n&amp;gt;           assert self.navigate_to_valuations_via_home_page(), &amp;quot;Failed to navigate to valuations page&amp;quot;\nE           AssertionError: Failed to navigate to valuations page\nE           assert False\nE            +  where False = &amp;lt;bound method TestValuations.navigate_to_valuations_via_home_page of &amp;lt;tests.test_valuations.TestValuations object at 0x1068d4fd0&amp;gt;&amp;gt;()\nE            +    where &amp;lt;bound method TestValuations.navigate_to_valuations_via_home_page of &amp;lt;tests.test_valuations.TestValuations object at 0x1068d4fd0&amp;gt;&amp;gt; = &amp;lt;tests.test_valuations.TestValuations object at 0x1068d4fd0&amp;gt;.navigate_to_valuations_via_home_page\n\ntests/test_valuations.py:956: AssertionError\n\n------------------------------ Captured log setup ------------------------------\nINFO     UIAutomationLogger:logger.py:60 USING EXISTING LOGIN SESSION\n\n------------------------------ Captured log call -------------------------------\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STARTING TEST: test_financial_calculations_with_javascript\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STEP: Testing JavaScript-based financial calculations\nINFO     UIAutomationLogger:logger.py:60 STEP: Navigating to valuations page (using existing session)\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempting direct URL navigation to valuations\nINFO     UIAutomationLogger:logger.py:60 Trying valuations URL: https://valueinsightpro.jumpiq.com/valuations\nINFO     UIAutomationLogger:logger.py:60 Current URL after navigation: https://valueinsightpro.jumpiq.com/auth/login?redirect=/valuations\nWARNING  UIAutomationLogger:logger.py:68 Direct URL reached valuations but page validation failed\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempting home page card navigation\nINFO     UIAutomationLogger:logger.py:60 STEP: Navigating to home page first\nINFO     UIAutomationLogger:logger.py:60 STEP: Waiting for home page to fully load\nINFO     UIAutomationLogger:logger.py:60 Debug screenshot saved: screenshots/debug_home_page_20250901_144903.png\nWARNING  UIAutomationLogger:logger.py:68 No &amp;#x27;card&amp;#x27; text found in page source\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempt 1 to click card 2\nWARNING  UIAutomationLogger:logger.py:68 STEP: Card 2 click attempt 1 failed\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempt 2 to click card 2\nWARNING  UIAutomationLogger:logger.py:68 STEP: Card 2 click attempt 2 failed\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempt 3 to click card 2\nWARNING  UIAutomationLogger:logger.py:68 STEP: Card 2 click attempt 3 failed\nERROR    UIAutomationLogger:logger.py:72 STEP: All attempts to click card 2 failed\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempting alternative menu navigation\nERROR    UIAutomationLogger:logger.py:72 All navigation methods failed\nERROR    UIAutomationLogger:logger.py:72 STEP: JavaScript financial calculations test failed: Failed to navigate to valuations page\nassert False\n +  where False = &amp;lt;bound method TestValuations.navigate_to_valuations_via_home_page of &amp;lt;tests.test_valuations.TestValuations object at 0x1068d4fd0&amp;gt;&amp;gt;()\n +    where &amp;lt;bound method TestValuations.navigate_to_valuations_via_home_page of &amp;lt;tests.test_valuations.TestValuations object at 0x1068d4fd0&amp;gt;&amp;gt; = &amp;lt;tests.test_valuations.TestValuations object at 0x1068d4fd0&amp;gt;.navigate_to_valuations_via_home_page\n\n---------------------------- Captured log teardown -----------------------------\nINFO     UIAutomationLogger:logger.py:60 TEST PASSED - RETURNING TO HOME PAGE FOR NEXT TEST&#34;}], &#34;tests/test_valuations.py::TestValuations::test_javascript_value_extraction_demo&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;testId&#34;: &#34;tests/test_valuations.py::TestValuations::test_javascript_value_extraction_demo&#34;, &#34;duration&#34;: &#34;00:06:48&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Failed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_valuations.py::TestValuations::test_javascript_value_extraction_demo&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:06:48&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;self = &amp;lt;tests.test_valuations.TestValuations object at 0x1068d4730&amp;gt;\n\n    @allure.story(&amp;quot;JavaScript Value Extraction Demo&amp;quot;)\n    @allure.title(&amp;quot;Test JavaScript value extraction using demo data&amp;quot;)\n    def test_javascript_value_extraction_demo(self):\n        &amp;quot;&amp;quot;&amp;quot;Test JavaScript value extraction functionality using demo data&amp;quot;&amp;quot;&amp;quot;\n        self.logger.info(&amp;quot;==================================================&amp;quot;)\n        self.logger.info(&amp;quot;STARTING TEST: test_javascript_value_extraction_demo&amp;quot;)\n        self.logger.info(&amp;quot;==================================================&amp;quot;)\n        self.logger.info(&amp;quot;STEP: Testing standalone JavaScript value extraction&amp;quot;)\n    \n        try:\n            # Navigate to any page to have a browser context\n&amp;gt;           assert self.navigate_to_valuations_via_home_page(), &amp;quot;Failed to navigate to valuations page&amp;quot;\nE           AssertionError: Failed to navigate to valuations page\nE           assert False\nE            +  where False = &amp;lt;bound method TestValuations.navigate_to_valuations_via_home_page of &amp;lt;tests.test_valuations.TestValuations object at 0x1068d4730&amp;gt;&amp;gt;()\nE            +    where &amp;lt;bound method TestValuations.navigate_to_valuations_via_home_page of &amp;lt;tests.test_valuations.TestValuations object at 0x1068d4730&amp;gt;&amp;gt; = &amp;lt;tests.test_valuations.TestValuations object at 0x1068d4730&amp;gt;.navigate_to_valuations_via_home_page\n\ntests/test_valuations.py:1001: AssertionError\n\n------------------------------ Captured log setup ------------------------------\nINFO     UIAutomationLogger:logger.py:60 USING EXISTING LOGIN SESSION\n\n------------------------------ Captured log call -------------------------------\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STARTING TEST: test_javascript_value_extraction_demo\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STEP: Testing standalone JavaScript value extraction\nINFO     UIAutomationLogger:logger.py:60 STEP: Navigating to valuations page (using existing session)\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempting direct URL navigation to valuations\nINFO     UIAutomationLogger:logger.py:60 Trying valuations URL: https://valueinsightpro.jumpiq.com/valuations\nINFO     UIAutomationLogger:logger.py:60 Current URL after navigation: https://valueinsightpro.jumpiq.com/auth/login?redirect=/valuations\nWARNING  UIAutomationLogger:logger.py:68 Direct URL reached valuations but page validation failed\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempting home page card navigation\nINFO     UIAutomationLogger:logger.py:60 STEP: Navigating to home page first\nINFO     UIAutomationLogger:logger.py:60 STEP: Waiting for home page to fully load\nINFO     UIAutomationLogger:logger.py:60 Debug screenshot saved: screenshots/debug_home_page_20250901_145551.png\nWARNING  UIAutomationLogger:logger.py:68 No &amp;#x27;card&amp;#x27; text found in page source\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempt 1 to click card 2\nWARNING  UIAutomationLogger:logger.py:68 STEP: Card 2 click attempt 1 failed\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempt 2 to click card 2\nWARNING  UIAutomationLogger:logger.py:68 STEP: Card 2 click attempt 2 failed\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempt 3 to click card 2\nWARNING  UIAutomationLogger:logger.py:68 STEP: Card 2 click attempt 3 failed\nERROR    UIAutomationLogger:logger.py:72 STEP: All attempts to click card 2 failed\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempting alternative menu navigation\nERROR    UIAutomationLogger:logger.py:72 All navigation methods failed\nERROR    UIAutomationLogger:logger.py:72 STEP: JavaScript value extraction demo failed: Failed to navigate to valuations page\nassert False\n +  where False = &amp;lt;bound method TestValuations.navigate_to_valuations_via_home_page of &amp;lt;tests.test_valuations.TestValuations object at 0x1068d4730&amp;gt;&amp;gt;()\n +    where &amp;lt;bound method TestValuations.navigate_to_valuations_via_home_page of &amp;lt;tests.test_valuations.TestValuations object at 0x1068d4730&amp;gt;&amp;gt; = &amp;lt;tests.test_valuations.TestValuations object at 0x1068d4730&amp;gt;.navigate_to_valuations_via_home_page\n\n---------------------------- Captured log teardown -----------------------------\nINFO     UIAutomationLogger:logger.py:60 TEST PASSED - RETURNING TO HOME PAGE FOR NEXT TEST&#34;}], &#34;tests/test_valuations.py::TestValuations::test_radius_data_extraction_for_dealer&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;testId&#34;: &#34;tests/test_valuations.py::TestValuations::test_radius_data_extraction_for_dealer&#34;, &#34;duration&#34;: &#34;00:06:49&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Failed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_valuations.py::TestValuations::test_radius_data_extraction_for_dealer&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:06:49&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;self = &amp;lt;tests.test_valuations.TestValuations object at 0x1068d46d0&amp;gt;\n\n    @allure.story(&amp;quot;Radius Data Extraction Test&amp;quot;)\n    @allure.title(&amp;quot;Test radius page data extraction for Acura of Ramsey&amp;quot;)\n    def test_radius_data_extraction_for_dealer(self):\n        &amp;quot;&amp;quot;&amp;quot;Test extracting radius page data for Acura of Ramsey dealer&amp;quot;&amp;quot;&amp;quot;\n        self.logger.info(&amp;quot;==================================================&amp;quot;)\n        self.logger.info(&amp;quot;STARTING TEST: test_radius_data_extraction_for_dealer&amp;quot;)\n        self.logger.info(&amp;quot;==================================================&amp;quot;)\n        self.logger.info(&amp;quot;STEP: Testing radius data extraction for Acura of Ramsey&amp;quot;)\n    \n        try:\n            # Navigate to valuations page\n&amp;gt;           assert self.navigate_to_valuations_via_home_page(), &amp;quot;Failed to navigate to valuations page&amp;quot;\nE           AssertionError: Failed to navigate to valuations page\nE           assert False\nE            +  where False = &amp;lt;bound method TestValuations.navigate_to_valuations_via_home_page of &amp;lt;tests.test_valuations.TestValuations object at 0x1068d46d0&amp;gt;&amp;gt;()\nE            +    where &amp;lt;bound method TestValuations.navigate_to_valuations_via_home_page of &amp;lt;tests.test_valuations.TestValuations object at 0x1068d46d0&amp;gt;&amp;gt; = &amp;lt;tests.test_valuations.TestValuations object at 0x1068d46d0&amp;gt;.navigate_to_valuations_via_home_page\n\ntests/test_valuations.py:1034: AssertionError\n\n------------------------------ Captured log setup ------------------------------\nINFO     UIAutomationLogger:logger.py:60 USING EXISTING LOGIN SESSION\n\n------------------------------ Captured log call -------------------------------\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STARTING TEST: test_radius_data_extraction_for_dealer\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STEP: Testing radius data extraction for Acura of Ramsey\nINFO     UIAutomationLogger:logger.py:60 STEP: Navigating to valuations page (using existing session)\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempting direct URL navigation to valuations\nINFO     UIAutomationLogger:logger.py:60 Trying valuations URL: https://valueinsightpro.jumpiq.com/valuations\nINFO     UIAutomationLogger:logger.py:60 Current URL after navigation: https://valueinsightpro.jumpiq.com/auth/login?redirect=/valuations\nWARNING  UIAutomationLogger:logger.py:68 Direct URL reached valuations but page validation failed\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempting home page card navigation\nINFO     UIAutomationLogger:logger.py:60 STEP: Navigating to home page first\nINFO     UIAutomationLogger:logger.py:60 STEP: Waiting for home page to fully load\nINFO     UIAutomationLogger:logger.py:60 Debug screenshot saved: screenshots/debug_home_page_20250901_150240.png\nWARNING  UIAutomationLogger:logger.py:68 No &amp;#x27;card&amp;#x27; text found in page source\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempt 1 to click card 2\nWARNING  UIAutomationLogger:logger.py:68 STEP: Card 2 click attempt 1 failed\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempt 2 to click card 2\nWARNING  UIAutomationLogger:logger.py:68 STEP: Card 2 click attempt 2 failed\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempt 3 to click card 2\nWARNING  UIAutomationLogger:logger.py:68 STEP: Card 2 click attempt 3 failed\nERROR    UIAutomationLogger:logger.py:72 STEP: All attempts to click card 2 failed\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempting alternative menu navigation\nERROR    UIAutomationLogger:logger.py:72 All navigation methods failed\nERROR    UIAutomationLogger:logger.py:72 STEP: Radius data extraction test failed: Failed to navigate to valuations page\nassert False\n +  where False = &amp;lt;bound method TestValuations.navigate_to_valuations_via_home_page of &amp;lt;tests.test_valuations.TestValuations object at 0x1068d46d0&amp;gt;&amp;gt;()\n +    where &amp;lt;bound method TestValuations.navigate_to_valuations_via_home_page of &amp;lt;tests.test_valuations.TestValuations object at 0x1068d46d0&amp;gt;&amp;gt; = &amp;lt;tests.test_valuations.TestValuations object at 0x1068d46d0&amp;gt;.navigate_to_valuations_via_home_page\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 FINISHED TEST: test_radius_data_extraction_for_dealer\nINFO     UIAutomationLogger:logger.py:60 ==================================================\n\n---------------------------- Captured log teardown -----------------------------\nINFO     UIAutomationLogger:logger.py:60 TEST PASSED - RETURNING TO HOME PAGE FOR NEXT TEST&#34;}], &#34;tests/test_valuations.py::TestValuations::test_real_estate_tab_validation&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;testId&#34;: &#34;tests/test_valuations.py::TestValuations::test_real_estate_tab_validation&#34;, &#34;duration&#34;: &#34;00:06:49&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Failed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_valuations.py::TestValuations::test_real_estate_tab_validation&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:06:49&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;self = &amp;lt;tests.test_valuations.TestValuations object at 0x1068d4640&amp;gt;\n\n    @allure.story(&amp;quot;Real Estate Tab Validation&amp;quot;)\n    @allure.title(&amp;quot;Test Real Estate tab functionality and calculation validation&amp;quot;)\n    def test_real_estate_tab_validation(self):\n        &amp;quot;&amp;quot;&amp;quot;Test Real Estate tab click, page load, and calculation validation&amp;quot;&amp;quot;&amp;quot;\n        try:\n            self.logger.info(&amp;quot;=&amp;quot; * 50)\n            self.logger.info(&amp;quot;STARTING TEST: test_real_estate_tab_validation&amp;quot;)\n            self.logger.info(&amp;quot;=&amp;quot; * 50)\n            self.logger.info(&amp;quot;STEP: Testing Real Estate tab functionality&amp;quot;)\n    \n            # Step 1: Navigate to valuations page\n            self.logger.info(&amp;quot;STEP: Navigating to valuations page&amp;quot;)\n&amp;gt;           assert self.navigate_to_valuations_via_home_page(), &amp;quot;Failed to navigate to valuations page&amp;quot;\nE           AssertionError: Failed to navigate to valuations page\nE           assert False\nE            +  where False = &amp;lt;bound method TestValuations.navigate_to_valuations_via_home_page of &amp;lt;tests.test_valuations.TestValuations object at 0x1068d4640&amp;gt;&amp;gt;()\nE            +    where &amp;lt;bound method TestValuations.navigate_to_valuations_via_home_page of &amp;lt;tests.test_valuations.TestValuations object at 0x1068d4640&amp;gt;&amp;gt; = &amp;lt;tests.test_valuations.TestValuations object at 0x1068d4640&amp;gt;.navigate_to_valuations_via_home_page\n\ntests/test_valuations.py:1104: AssertionError\n\nDuring handling of the above exception, another exception occurred:\n\nself = &amp;lt;tests.test_valuations.TestValuations object at 0x1068d4640&amp;gt;\n\n    @allure.story(&amp;quot;Real Estate Tab Validation&amp;quot;)\n    @allure.title(&amp;quot;Test Real Estate tab functionality and calculation validation&amp;quot;)\n    def test_real_estate_tab_validation(self):\n        &amp;quot;&amp;quot;&amp;quot;Test Real Estate tab click, page load, and calculation validation&amp;quot;&amp;quot;&amp;quot;\n        try:\n            self.logger.info(&amp;quot;=&amp;quot; * 50)\n            self.logger.info(&amp;quot;STARTING TEST: test_real_estate_tab_validation&amp;quot;)\n            self.logger.info(&amp;quot;=&amp;quot; * 50)\n            self.logger.info(&amp;quot;STEP: Testing Real Estate tab functionality&amp;quot;)\n    \n            # Step 1: Navigate to valuations page\n            self.logger.info(&amp;quot;STEP: Navigating to valuations page&amp;quot;)\n            assert self.navigate_to_valuations_via_home_page(), &amp;quot;Failed to navigate to valuations page&amp;quot;\n    \n            # Step 2: Navigate through to get to the Real Estate workflow\n            self.logger.info(&amp;quot;STEP: Initiating valuation workflow to reach Real Estate tab&amp;quot;)\n    \n            # Click New Valuation button\n            new_val_clicked = self.valuations_page.click_new_valuation_button(timeout=5)\n            if not new_val_clicked:\n                self.logger.warning(&amp;quot;New Valuation button not found, attempting to continue...&amp;quot;)\n    \n            # Select dealer if dropdown appears\n            time.sleep(2)\n            dealer_selected = self.valuations_page.select_dealer_from_dropdown(&amp;quot;acura of ramsey&amp;quot;, timeout=5)\n            if not dealer_selected:\n                self.logger.warning(&amp;quot;Dealer dropdown not found, attempting to continue...&amp;quot;)\n    \n            # Wait for workflow to be ready\n            time.sleep(3)\n    \n            # Step 3: Click on Real Estate tab\n            self.logger.info(&amp;quot;STEP: Clicking on Real Estate tab&amp;quot;)\n            real_estate_tab_clicked = self.valuations_page.click_real_estate_tab(timeout=10)\n            assert real_estate_tab_clicked, &amp;quot;Failed to click Real Estate tab&amp;quot;\n    \n            # Step 4: Validate Real Estate page load\n            self.logger.info(&amp;quot;STEP: Validating Real Estate page load&amp;quot;)\n            page_loaded = self.valuations_page.validate_real_estate_page_load(timeout=10)\n            assert page_loaded, &amp;quot;Real Estate page did not load correctly&amp;quot;\n    \n            # Step 5: Validate the calculation formula\n            self.logger.info(&amp;quot;STEP: Validating Real Estate calculation formula&amp;quot;)\n            calculation_valid = self.valuations_page.validate_real_estate_calculation(timeout=10)\n            assert calculation_valid, &amp;quot;Real Estate calculation validation failed: Last Sale Value \u2260 Land + Improvements&amp;quot;\n    \n            # Step 6: Take success screenshot\n            self.logger.info(&amp;quot;STEP: Taking success screenshot&amp;quot;)\n            screenshot_path = self.take_screenshot(&amp;quot;real_estate_validation_success&amp;quot;)\n            if screenshot_path:\n                allure.attach.file(screenshot_path, name=&amp;quot;Real Estate Validation Success&amp;quot;, attachment_type=allure.attachment_type.PNG)\n    \n            self.logger.info(&amp;quot;\u2713 Real Estate tab validation completed successfully&amp;quot;)\n    \n        except Exception as e:\n            self.logger.error(f&amp;quot;STEP: Real Estate tab validation failed: {str(e)}&amp;quot;)\n&amp;gt;           screenshot_path = self.take_screenshot(&amp;quot;FAILED_real_estate_validation_error&amp;quot;)\nE           AttributeError: &amp;#x27;TestValuations&amp;#x27; object has no attribute &amp;#x27;take_screenshot&amp;#x27;\n\ntests/test_valuations.py:1148: AttributeError\n\n------------------------------ Captured log setup ------------------------------\nINFO     UIAutomationLogger:logger.py:60 USING EXISTING LOGIN SESSION\n\n------------------------------ Captured log call -------------------------------\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STARTING TEST: test_real_estate_tab_validation\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STEP: Testing Real Estate tab functionality\nINFO     UIAutomationLogger:logger.py:60 STEP: Navigating to valuations page\nINFO     UIAutomationLogger:logger.py:60 STEP: Navigating to valuations page (using existing session)\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempting direct URL navigation to valuations\nINFO     UIAutomationLogger:logger.py:60 Trying valuations URL: https://valueinsightpro.jumpiq.com/valuations\nINFO     UIAutomationLogger:logger.py:60 Current URL after navigation: https://valueinsightpro.jumpiq.com/auth/login?redirect=/valuations\nWARNING  UIAutomationLogger:logger.py:68 Direct URL reached valuations but page validation failed\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempting home page card navigation\nINFO     UIAutomationLogger:logger.py:60 STEP: Navigating to home page first\nINFO     UIAutomationLogger:logger.py:60 STEP: Waiting for home page to fully load\nINFO     UIAutomationLogger:logger.py:60 Debug screenshot saved: screenshots/debug_home_page_20250901_150929.png\nWARNING  UIAutomationLogger:logger.py:68 No &amp;#x27;card&amp;#x27; text found in page source\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempt 1 to click card 2\nWARNING  UIAutomationLogger:logger.py:68 STEP: Card 2 click attempt 1 failed\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempt 2 to click card 2\nWARNING  UIAutomationLogger:logger.py:68 STEP: Card 2 click attempt 2 failed\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempt 3 to click card 2\nWARNING  UIAutomationLogger:logger.py:68 STEP: Card 2 click attempt 3 failed\nERROR    UIAutomationLogger:logger.py:72 STEP: All attempts to click card 2 failed\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempting alternative menu navigation\nERROR    UIAutomationLogger:logger.py:72 All navigation methods failed\nERROR    UIAutomationLogger:logger.py:72 STEP: Real Estate tab validation failed: Failed to navigate to valuations page\nassert False\n +  where False = &amp;lt;bound method TestValuations.navigate_to_valuations_via_home_page of &amp;lt;tests.test_valuations.TestValuations object at 0x1068d4640&amp;gt;&amp;gt;()\n +    where &amp;lt;bound method TestValuations.navigate_to_valuations_via_home_page of &amp;lt;tests.test_valuations.TestValuations object at 0x1068d4640&amp;gt;&amp;gt; = &amp;lt;tests.test_valuations.TestValuations object at 0x1068d4640&amp;gt;.navigate_to_valuations_via_home_page\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 FINISHED TEST: test_real_estate_tab_validation\nINFO     UIAutomationLogger:logger.py:60 ==================================================\n\n---------------------------- Captured log teardown -----------------------------\nINFO     UIAutomationLogger:logger.py:60 TEST PASSED - RETURNING TO HOME PAGE FOR NEXT TEST&#34;}], &#34;tests/test_valuations.py::TestValuations::test_real_estate_calculation_demo&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;testId&#34;: &#34;tests/test_valuations.py::TestValuations::test_real_estate_calculation_demo&#34;, &#34;duration&#34;: &#34;00:06:53&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Failed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_valuations.py::TestValuations::test_real_estate_calculation_demo&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:06:53&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;self = &amp;lt;tests.test_valuations.TestValuations object at 0x1068d41f0&amp;gt;\n\n    @allure.story(&amp;quot;Real Estate Calculation Formula Demo&amp;quot;)\n    @allure.title(&amp;quot;Test Real Estate calculation extraction and validation (standalone)&amp;quot;)\n    def test_real_estate_calculation_demo(self):\n        &amp;quot;&amp;quot;&amp;quot;Test Real Estate calculation functionality as a standalone demo&amp;quot;&amp;quot;&amp;quot;\n        try:\n            self.logger.info(&amp;quot;=&amp;quot; * 50)\n            self.logger.info(&amp;quot;STARTING TEST: test_real_estate_calculation_demo&amp;quot;)\n            self.logger.info(&amp;quot;=&amp;quot; * 50)\n            self.logger.info(&amp;quot;STEP: Testing Real Estate calculation as demo&amp;quot;)\n    \n            # Step 1: Navigate to valuations page\n            self.logger.info(&amp;quot;STEP: Navigating to valuations page&amp;quot;)\n&amp;gt;           assert self.navigate_to_valuations_via_home_page(), &amp;quot;Failed to navigate to valuations page&amp;quot;\nE           AssertionError: Failed to navigate to valuations page\nE           assert False\nE            +  where False = &amp;lt;bound method TestValuations.navigate_to_valuations_via_home_page of &amp;lt;tests.test_valuations.TestValuations object at 0x1068d41f0&amp;gt;&amp;gt;()\nE            +    where &amp;lt;bound method TestValuations.navigate_to_valuations_via_home_page of &amp;lt;tests.test_valuations.TestValuations object at 0x1068d41f0&amp;gt;&amp;gt; = &amp;lt;tests.test_valuations.TestValuations object at 0x1068d41f0&amp;gt;.navigate_to_valuations_via_home_page\n\ntests/test_valuations.py:1170: AssertionError\n\nDuring handling of the above exception, another exception occurred:\n\nself = &amp;lt;tests.test_valuations.TestValuations object at 0x1068d41f0&amp;gt;\n\n    @allure.story(&amp;quot;Real Estate Calculation Formula Demo&amp;quot;)\n    @allure.title(&amp;quot;Test Real Estate calculation extraction and validation (standalone)&amp;quot;)\n    def test_real_estate_calculation_demo(self):\n        &amp;quot;&amp;quot;&amp;quot;Test Real Estate calculation functionality as a standalone demo&amp;quot;&amp;quot;&amp;quot;\n        try:\n            self.logger.info(&amp;quot;=&amp;quot; * 50)\n            self.logger.info(&amp;quot;STARTING TEST: test_real_estate_calculation_demo&amp;quot;)\n            self.logger.info(&amp;quot;=&amp;quot; * 50)\n            self.logger.info(&amp;quot;STEP: Testing Real Estate calculation as demo&amp;quot;)\n    \n            # Step 1: Navigate to valuations page\n            self.logger.info(&amp;quot;STEP: Navigating to valuations page&amp;quot;)\n            assert self.navigate_to_valuations_via_home_page(), &amp;quot;Failed to navigate to valuations page&amp;quot;\n    \n            # Step 2: Try to access Real Estate data directly\n            self.logger.info(&amp;quot;STEP: Attempting to extract Real Estate values&amp;quot;)\n    \n            # First try clicking the Real Estate tab if possible\n            real_estate_tab_clicked = self.valuations_page.click_real_estate_tab(timeout=5)\n            if real_estate_tab_clicked:\n                self.logger.info(&amp;quot;Successfully clicked Real Estate tab&amp;quot;)\n                time.sleep(3)\n            else:\n                self.logger.warning(&amp;quot;Could not click Real Estate tab, trying direct extraction&amp;quot;)\n    \n            # Extract and validate values\n            values = self.valuations_page.extract_real_estate_values_with_javascript(timeout=10)\n    \n            if values and any(values.values()):\n                self.logger.info(&amp;quot;STEP: Successfully extracted Real Estate values&amp;quot;)\n                self.logger.info(f&amp;quot;Real Estate Data: {values}&amp;quot;)\n    \n                # Validate calculation if we have the required values\n                if all(key in values and values[key] &amp;gt; 0 for key in [&amp;#x27;lastSaleValue&amp;#x27;, &amp;#x27;landPerAcre&amp;#x27;, &amp;#x27;improvementsPerSqFt&amp;#x27;]):\n                    calculation_valid = self.valuations_page.validate_real_estate_calculation(timeout=5)\n                    if calculation_valid:\n                        self.logger.info(&amp;quot;\u2713 Real Estate calculation demo successful&amp;quot;)\n                    else:\n                        self.logger.warning(&amp;quot;Real Estate calculation demo - formula validation failed&amp;quot;)\n                else:\n                    self.logger.warning(&amp;quot;Real Estate calculation demo - insufficient data for validation&amp;quot;)\n            else:\n                self.logger.warning(&amp;quot;Real Estate calculation demo - no values extracted&amp;quot;)\n    \n            # Take screenshot regardless of results\n            screenshot_path = self.take_screenshot(&amp;quot;real_estate_demo&amp;quot;)\n            if screenshot_path:\n                allure.attach.file(screenshot_path, name=&amp;quot;Real Estate Demo&amp;quot;, attachment_type=allure.attachment_type.PNG)\n    \n            self.logger.info(&amp;quot;Real Estate calculation demo completed&amp;quot;)\n    \n        except Exception as e:\n            self.logger.error(f&amp;quot;STEP: Real Estate calculation demo failed: {str(e)}&amp;quot;)\n&amp;gt;           screenshot_path = self.take_screenshot(&amp;quot;FAILED_real_estate_demo_error&amp;quot;)\nE           AttributeError: &amp;#x27;TestValuations&amp;#x27; object has no attribute &amp;#x27;take_screenshot&amp;#x27;\n\ntests/test_valuations.py:1211: AttributeError\n\n------------------------------ Captured log setup ------------------------------\nINFO     UIAutomationLogger:logger.py:60 USING EXISTING LOGIN SESSION\n\n------------------------------ Captured log call -------------------------------\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STARTING TEST: test_real_estate_calculation_demo\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 STEP: Testing Real Estate calculation as demo\nINFO     UIAutomationLogger:logger.py:60 STEP: Navigating to valuations page\nINFO     UIAutomationLogger:logger.py:60 STEP: Navigating to valuations page (using existing session)\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempting direct URL navigation to valuations\nINFO     UIAutomationLogger:logger.py:60 Trying valuations URL: https://valueinsightpro.jumpiq.com/valuations\nINFO     UIAutomationLogger:logger.py:60 Current URL after navigation: https://valueinsightpro.jumpiq.com/auth/login?redirect=/valuations\nWARNING  UIAutomationLogger:logger.py:68 Direct URL reached valuations but page validation failed\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempting home page card navigation\nINFO     UIAutomationLogger:logger.py:60 STEP: Navigating to home page first\nINFO     UIAutomationLogger:logger.py:60 STEP: Waiting for home page to fully load\nINFO     UIAutomationLogger:logger.py:60 Debug screenshot saved: screenshots/debug_home_page_20250901_151623.png\nWARNING  UIAutomationLogger:logger.py:68 No &amp;#x27;card&amp;#x27; text found in page source\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempt 1 to click card 2\nWARNING  UIAutomationLogger:logger.py:68 STEP: Card 2 click attempt 1 failed\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempt 2 to click card 2\nWARNING  UIAutomationLogger:logger.py:68 STEP: Card 2 click attempt 2 failed\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempt 3 to click card 2\nWARNING  UIAutomationLogger:logger.py:68 STEP: Card 2 click attempt 3 failed\nERROR    UIAutomationLogger:logger.py:72 STEP: All attempts to click card 2 failed\nINFO     UIAutomationLogger:logger.py:60 STEP: Attempting alternative menu navigation\nERROR    UIAutomationLogger:logger.py:72 All navigation methods failed\nERROR    UIAutomationLogger:logger.py:72 STEP: Real Estate calculation demo failed: Failed to navigate to valuations page\nassert False\n +  where False = &amp;lt;bound method TestValuations.navigate_to_valuations_via_home_page of &amp;lt;tests.test_valuations.TestValuations object at 0x1068d41f0&amp;gt;&amp;gt;()\n +    where &amp;lt;bound method TestValuations.navigate_to_valuations_via_home_page of &amp;lt;tests.test_valuations.TestValuations object at 0x1068d41f0&amp;gt;&amp;gt; = &amp;lt;tests.test_valuations.TestValuations object at 0x1068d41f0&amp;gt;.navigate_to_valuations_via_home_page\nINFO     UIAutomationLogger:logger.py:60 ==================================================\nINFO     UIAutomationLogger:logger.py:60 FINISHED TEST: test_real_estate_calculation_demo\nINFO     UIAutomationLogger:logger.py:60 ==================================================\n\n---------------------------- Captured log teardown -----------------------------\nINFO     UIAutomationLogger:logger.py:60 TEST PASSED - RETURNING TO HOME PAGE FOR NEXT TEST&#34;}], &#34;tests/test_valuations_simple.py::TestValuationsSimple::test_basic_valuations_navigation&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Error&#34;, &#34;testId&#34;: &#34;tests/test_valuations_simple.py::TestValuationsSimple::test_basic_valuations_navigation::setup&#34;, &#34;duration&#34;: &#34;4 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Error&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_valuations_simple.py::TestValuationsSimple::test_basic_valuations_navigation::setup&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;4 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;self = &amp;lt;tests.test_valuations_simple.TestValuationsSimple object at 0x10694cd00&amp;gt;\nmethod = &amp;lt;bound method TestValuationsSimple.test_basic_valuations_navigation of &amp;lt;tests.test_valuations_simple.TestValuationsSimple object at 0x10694cd00&amp;gt;&amp;gt;\n\n    def setup_method(self, method):\n        &amp;quot;&amp;quot;&amp;quot;Setup method called before each test method&amp;quot;&amp;quot;&amp;quot;\n&amp;gt;       super().setup_method()\nE       TypeError: setup_method() missing 1 required positional argument: &amp;#x27;method&amp;#x27;\n\ntests/test_valuations_simple.py:21: TypeError\n&#34;}], &#34;tests/test_valuations_simple.py::TestValuationsSimple::test_home_page_navigation&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Error&#34;, &#34;testId&#34;: &#34;tests/test_valuations_simple.py::TestValuationsSimple::test_home_page_navigation::setup&#34;, &#34;duration&#34;: &#34;0 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Error&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_valuations_simple.py::TestValuationsSimple::test_home_page_navigation::setup&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;0 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;self = &amp;lt;tests.test_valuations_simple.TestValuationsSimple object at 0x10694cf40&amp;gt;\nmethod = &amp;lt;bound method TestValuationsSimple.test_home_page_navigation of &amp;lt;tests.test_valuations_simple.TestValuationsSimple object at 0x10694cf40&amp;gt;&amp;gt;\n\n    def setup_method(self, method):\n        &amp;quot;&amp;quot;&amp;quot;Setup method called before each test method&amp;quot;&amp;quot;&amp;quot;\n&amp;gt;       super().setup_method()\nE       TypeError: setup_method() missing 1 required positional argument: &amp;#x27;method&amp;#x27;\n\ntests/test_valuations_simple.py:21: TypeError\n&#34;}], &#34;tests/test_valuations_simple.py::TestValuationsSimple::test_real_estate_tab_functionality&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Error&#34;, &#34;testId&#34;: &#34;tests/test_valuations_simple.py::TestValuationsSimple::test_real_estate_tab_functionality::setup&#34;, &#34;duration&#34;: &#34;0 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Error&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_valuations_simple.py::TestValuationsSimple::test_real_estate_tab_functionality::setup&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;0 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;self = &amp;lt;tests.test_valuations_simple.TestValuationsSimple object at 0x10694cbe0&amp;gt;\nmethod = &amp;lt;bound method TestValuationsSimple.test_real_estate_tab_functionality of &amp;lt;tests.test_valuations_simple.TestValuationsSimple object at 0x10694cbe0&amp;gt;&amp;gt;\n\n    def setup_method(self, method):\n        &amp;quot;&amp;quot;&amp;quot;Setup method called before each test method&amp;quot;&amp;quot;&amp;quot;\n&amp;gt;       super().setup_method()\nE       TypeError: setup_method() missing 1 required positional argument: &amp;#x27;method&amp;#x27;\n\ntests/test_valuations_simple.py:21: TypeError\n&#34;}], &#34;tests/test_valuations_simple.py::TestValuationsSimple::test_financial_calculations_simple&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Error&#34;, &#34;testId&#34;: &#34;tests/test_valuations_simple.py::TestValuationsSimple::test_financial_calculations_simple::setup&#34;, &#34;duration&#34;: &#34;0 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Error&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_valuations_simple.py::TestValuationsSimple::test_financial_calculations_simple::setup&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;0 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;self = &amp;lt;tests.test_valuations_simple.TestValuationsSimple object at 0x10694c880&amp;gt;\nmethod = &amp;lt;bound method TestValuationsSimple.test_financial_calculations_simple of &amp;lt;tests.test_valuations_simple.TestValuationsSimple object at 0x10694c880&amp;gt;&amp;gt;\n\n    def setup_method(self, method):\n        &amp;quot;&amp;quot;&amp;quot;Setup method called before each test method&amp;quot;&amp;quot;&amp;quot;\n&amp;gt;       super().setup_method()\nE       TypeError: setup_method() missing 1 required positional argument: &amp;#x27;method&amp;#x27;\n\ntests/test_valuations_simple.py:21: TypeError\n&#34;}]}, &#34;renderCollapsed&#34;: [&#34;passed&#34;], &#34;initialSort&#34;: &#34;result&#34;, &#34;title&#34;: &#34;all_tests_report_20250901_131929.html&#34;}"></div>
+    <script>
+      (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
+const { getCollapsedCategory, setCollapsedIds } = require('./storage.js')
+
+class DataManager {
+    setManager(data) {
+        const collapsedCategories = [...getCollapsedCategory(data.renderCollapsed)]
+        const collapsedIds = []
+        const tests = Object.values(data.tests).flat().map((test, index) => {
+            const collapsed = collapsedCategories.includes(test.result.toLowerCase())
+            const id = `test_${index}`
+            if (collapsed) {
+                collapsedIds.push(id)
+            }
+            return {
+                ...test,
+                id,
+                collapsed,
+            }
+        })
+        const dataBlob = { ...data, tests }
+        this.data = { ...dataBlob }
+        this.renderData = { ...dataBlob }
+        setCollapsedIds(collapsedIds)
+    }
+
+    get allData() {
+        return { ...this.data }
+    }
+
+    resetRender() {
+        this.renderData = { ...this.data }
+    }
+
+    setRender(data) {
+        this.renderData.tests = [...data]
+    }
+
+    toggleCollapsedItem(id) {
+        this.renderData.tests = this.renderData.tests.map((test) =>
+            test.id === id ? { ...test, collapsed: !test.collapsed } : test,
+        )
+    }
+
+    set allCollapsed(collapsed) {
+        this.renderData = { ...this.renderData, tests: [...this.renderData.tests.map((test) => (
+            { ...test, collapsed }
+        ))] }
+    }
+
+    get testSubset() {
+        return [...this.renderData.tests]
+    }
+
+    get environment() {
+        return this.renderData.environment
+    }
+
+    get initialSort() {
+        return this.data.initialSort
+    }
+}
+
+module.exports = {
+    manager: new DataManager(),
+}
+
+},{"./storage.js":8}],2:[function(require,module,exports){
+const mediaViewer = require('./mediaviewer.js')
+const templateEnvRow = document.getElementById('template_environment_row')
+const templateResult = document.getElementById('template_results-table__tbody')
+
+function htmlToElements(html) {
+    const temp = document.createElement('template')
+    temp.innerHTML = html
+    return temp.content.childNodes
+}
+
+const find = (selector, elem) => {
+    if (!elem) {
+        elem = document
+    }
+    return elem.querySelector(selector)
+}
+
+const findAll = (selector, elem) => {
+    if (!elem) {
+        elem = document
+    }
+    return [...elem.querySelectorAll(selector)]
+}
+
+const dom = {
+    getStaticRow: (key, value) => {
+        const envRow = templateEnvRow.content.cloneNode(true)
+        const isObj = typeof value === 'object' && value !== null
+        const values = isObj ? Object.keys(value).map((k) => `${k}: ${value[k]}`) : null
+
+        const valuesElement = htmlToElements(
+            values ? `<ul>${values.map((val) => `<li>${val}</li>`).join('')}<ul>` : `<div>${value}</div>`)[0]
+        const td = findAll('td', envRow)
+        td[0].textContent = key
+        td[1].appendChild(valuesElement)
+
+        return envRow
+    },
+    getResultTBody: ({ testId, id, log, extras, resultsTableRow, tableHtml, result, collapsed }) => {
+        const resultBody = templateResult.content.cloneNode(true)
+        resultBody.querySelector('tbody').classList.add(result.toLowerCase())
+        resultBody.querySelector('tbody').id = testId
+        resultBody.querySelector('.collapsible').dataset.id = id
+
+        resultsTableRow.forEach((html) => {
+            const t = document.createElement('template')
+            t.innerHTML = html
+            resultBody.querySelector('.collapsible').appendChild(t.content)
+        })
+
+        if (log) {
+            // Wrap lines starting with "E" with span.error to color those lines red
+            const wrappedLog = log.replace(/^E.*$/gm, (match) => `<span class="error">${match}</span>`)
+            resultBody.querySelector('.log').innerHTML = wrappedLog
+        } else {
+            resultBody.querySelector('.log').remove()
+        }
+
+        if (collapsed) {
+            resultBody.querySelector('.collapsible > td')?.classList.add('collapsed')
+            resultBody.querySelector('.extras-row').classList.add('hidden')
+        } else {
+            resultBody.querySelector('.collapsible > td')?.classList.remove('collapsed')
+        }
+
+        const media = []
+        extras?.forEach(({ name, format_type, content }) => {
+            if (['image', 'video'].includes(format_type)) {
+                media.push({ path: content, name, format_type })
+            }
+
+            if (format_type === 'html') {
+                resultBody.querySelector('.extraHTML').insertAdjacentHTML('beforeend', `<div>${content}</div>`)
+            }
+        })
+        mediaViewer.setup(resultBody, media)
+
+        // Add custom html from the pytest_html_results_table_html hook
+        tableHtml?.forEach((item) => {
+            resultBody.querySelector('td[class="extra"]').insertAdjacentHTML('beforeend', item)
+        })
+
+        return resultBody
+    },
+}
+
+module.exports = {
+    dom,
+    htmlToElements,
+    find,
+    findAll,
+}
+
+},{"./mediaviewer.js":6}],3:[function(require,module,exports){
+const { manager } = require('./datamanager.js')
+const { doSort } = require('./sort.js')
+const storageModule = require('./storage.js')
+
+const getFilteredSubSet = (filter) =>
+    manager.allData.tests.filter(({ result }) => filter.includes(result.toLowerCase()))
+
+const doInitFilter = () => {
+    const currentFilter = storageModule.getVisible()
+    const filteredSubset = getFilteredSubSet(currentFilter)
+    manager.setRender(filteredSubset)
+}
+
+const doFilter = (type, show) => {
+    if (show) {
+        storageModule.showCategory(type)
+    } else {
+        storageModule.hideCategory(type)
+    }
+
+    const currentFilter = storageModule.getVisible()
+    const filteredSubset = getFilteredSubSet(currentFilter)
+    manager.setRender(filteredSubset)
+
+    const sortColumn = storageModule.getSort()
+    doSort(sortColumn, true)
+}
+
+module.exports = {
+    doFilter,
+    doInitFilter,
+}
+
+},{"./datamanager.js":1,"./sort.js":7,"./storage.js":8}],4:[function(require,module,exports){
+const { redraw, bindEvents, renderStatic } = require('./main.js')
+const { doInitFilter } = require('./filter.js')
+const { doInitSort } = require('./sort.js')
+const { manager } = require('./datamanager.js')
+const data = JSON.parse(document.getElementById('data-container').dataset.jsonblob)
+
+function init() {
+    manager.setManager(data)
+    doInitFilter()
+    doInitSort()
+    renderStatic()
+    redraw()
+    bindEvents()
+}
+
+init()
+
+},{"./datamanager.js":1,"./filter.js":3,"./main.js":5,"./sort.js":7}],5:[function(require,module,exports){
+const { dom, find, findAll } = require('./dom.js')
+const { manager } = require('./datamanager.js')
+const { doSort } = require('./sort.js')
+const { doFilter } = require('./filter.js')
+const {
+    getVisible,
+    getCollapsedIds,
+    setCollapsedIds,
+    getSort,
+    getSortDirection,
+    possibleFilters,
+} = require('./storage.js')
+
+const removeChildren = (node) => {
+    while (node.firstChild) {
+        node.removeChild(node.firstChild)
+    }
+}
+
+const renderStatic = () => {
+    const renderEnvironmentTable = () => {
+        const environment = manager.environment
+        const rows = Object.keys(environment).map((key) => dom.getStaticRow(key, environment[key]))
+        const table = document.getElementById('environment')
+        removeChildren(table)
+        rows.forEach((row) => table.appendChild(row))
+    }
+    renderEnvironmentTable()
+}
+
+const addItemToggleListener = (elem) => {
+    elem.addEventListener('click', ({ target }) => {
+        const id = target.parentElement.dataset.id
+        manager.toggleCollapsedItem(id)
+
+        const collapsedIds = getCollapsedIds()
+        if (collapsedIds.includes(id)) {
+            const updated = collapsedIds.filter((item) => item !== id)
+            setCollapsedIds(updated)
+        } else {
+            collapsedIds.push(id)
+            setCollapsedIds(collapsedIds)
+        }
+        redraw()
+    })
+}
+
+const renderContent = (tests) => {
+    const sortAttr = getSort(manager.initialSort)
+    const sortAsc = JSON.parse(getSortDirection())
+    const rows = tests.map(dom.getResultTBody)
+    const table = document.getElementById('results-table')
+    const tableHeader = document.getElementById('results-table-head')
+
+    const newTable = document.createElement('table')
+    newTable.id = 'results-table'
+
+    // remove all sorting classes and set the relevant
+    findAll('.sortable', tableHeader).forEach((elem) => elem.classList.remove('asc', 'desc'))
+    tableHeader.querySelector(`.sortable[data-column-type="${sortAttr}"]`)?.classList.add(sortAsc ? 'desc' : 'asc')
+    newTable.appendChild(tableHeader)
+
+    if (!rows.length) {
+        const emptyTable = document.getElementById('template_results-table__body--empty').content.cloneNode(true)
+        newTable.appendChild(emptyTable)
+    } else {
+        rows.forEach((row) => {
+            if (!!row) {
+                findAll('.collapsible td:not(.col-links', row).forEach(addItemToggleListener)
+                find('.logexpander', row).addEventListener('click',
+                    (evt) => evt.target.parentNode.classList.toggle('expanded'),
+                )
+                newTable.appendChild(row)
+            }
+        })
+    }
+
+    table.replaceWith(newTable)
+}
+
+const renderDerived = () => {
+    const currentFilter = getVisible()
+    possibleFilters.forEach((result) => {
+        const input = document.querySelector(`input[data-test-result="${result}"]`)
+        input.checked = currentFilter.includes(result)
+    })
+}
+
+const bindEvents = () => {
+    const filterColumn = (evt) => {
+        const { target: element } = evt
+        const { testResult } = element.dataset
+
+        doFilter(testResult, element.checked)
+        const collapsedIds = getCollapsedIds()
+        const updated = manager.renderData.tests.map((test) => {
+            return {
+                ...test,
+                collapsed: collapsedIds.includes(test.id),
+            }
+        })
+        manager.setRender(updated)
+        redraw()
+    }
+
+    const header = document.getElementById('environment-header')
+    header.addEventListener('click', () => {
+        const table = document.getElementById('environment')
+        table.classList.toggle('hidden')
+        header.classList.toggle('collapsed')
+    })
+
+    findAll('input[name="filter_checkbox"]').forEach((elem) => {
+        elem.addEventListener('click', filterColumn)
+    })
+
+    findAll('.sortable').forEach((elem) => {
+        elem.addEventListener('click', (evt) => {
+            const { target: element } = evt
+            const { columnType } = element.dataset
+            doSort(columnType)
+            redraw()
+        })
+    })
+
+    document.getElementById('show_all_details').addEventListener('click', () => {
+        manager.allCollapsed = false
+        setCollapsedIds([])
+        redraw()
+    })
+    document.getElementById('hide_all_details').addEventListener('click', () => {
+        manager.allCollapsed = true
+        const allIds = manager.renderData.tests.map((test) => test.id)
+        setCollapsedIds(allIds)
+        redraw()
+    })
+}
+
+const redraw = () => {
+    const { testSubset } = manager
+
+    renderContent(testSubset)
+    renderDerived()
+}
+
+module.exports = {
+    redraw,
+    bindEvents,
+    renderStatic,
+}
+
+},{"./datamanager.js":1,"./dom.js":2,"./filter.js":3,"./sort.js":7,"./storage.js":8}],6:[function(require,module,exports){
+class MediaViewer {
+    constructor(assets) {
+        this.assets = assets
+        this.index = 0
+    }
+
+    nextActive() {
+        this.index = this.index === this.assets.length - 1 ? 0 : this.index + 1
+        return [this.activeFile, this.index]
+    }
+
+    prevActive() {
+        this.index = this.index === 0 ? this.assets.length - 1 : this.index -1
+        return [this.activeFile, this.index]
+    }
+
+    get currentIndex() {
+        return this.index
+    }
+
+    get activeFile() {
+        return this.assets[this.index]
+    }
+}
+
+
+const setup = (resultBody, assets) => {
+    if (!assets.length) {
+        resultBody.querySelector('.media').classList.add('hidden')
+        return
+    }
+
+    const mediaViewer = new MediaViewer(assets)
+    const container = resultBody.querySelector('.media-container')
+    const leftArrow = resultBody.querySelector('.media-container__nav--left')
+    const rightArrow = resultBody.querySelector('.media-container__nav--right')
+    const mediaName = resultBody.querySelector('.media__name')
+    const counter = resultBody.querySelector('.media__counter')
+    const imageEl = resultBody.querySelector('img')
+    const sourceEl = resultBody.querySelector('source')
+    const videoEl = resultBody.querySelector('video')
+
+    const setImg = (media, index) => {
+        if (media?.format_type === 'image') {
+            imageEl.src = media.path
+
+            imageEl.classList.remove('hidden')
+            videoEl.classList.add('hidden')
+        } else if (media?.format_type === 'video') {
+            sourceEl.src = media.path
+
+            videoEl.classList.remove('hidden')
+            imageEl.classList.add('hidden')
+        }
+
+        mediaName.innerText = media?.name
+        counter.innerText = `${index + 1} / ${assets.length}`
+    }
+    setImg(mediaViewer.activeFile, mediaViewer.currentIndex)
+
+    const moveLeft = () => {
+        const [media, index] = mediaViewer.prevActive()
+        setImg(media, index)
+    }
+    const doRight = () => {
+        const [media, index] = mediaViewer.nextActive()
+        setImg(media, index)
+    }
+    const openImg = () => {
+        window.open(mediaViewer.activeFile.path, '_blank')
+    }
+    if (assets.length === 1) {
+        container.classList.add('media-container--fullscreen')
+    } else {
+        leftArrow.addEventListener('click', moveLeft)
+        rightArrow.addEventListener('click', doRight)
+    }
+    imageEl.addEventListener('click', openImg)
+}
+
+module.exports = {
+    setup,
+}
+
+},{}],7:[function(require,module,exports){
+const { manager } = require('./datamanager.js')
+const storageModule = require('./storage.js')
+
+const genericSort = (list, key, ascending, customOrder) => {
+    let sorted
+    if (customOrder) {
+        sorted = list.sort((a, b) => {
+            const aValue = a.result.toLowerCase()
+            const bValue = b.result.toLowerCase()
+
+            const aIndex = customOrder.findIndex((item) => item.toLowerCase() === aValue)
+            const bIndex = customOrder.findIndex((item) => item.toLowerCase() === bValue)
+
+            // Compare the indices to determine the sort order
+            return aIndex - bIndex
+        })
+    } else {
+        sorted = list.sort((a, b) => a[key] === b[key] ? 0 : a[key] > b[key] ? 1 : -1)
+    }
+
+    if (ascending) {
+        sorted.reverse()
+    }
+    return sorted
+}
+
+const durationSort = (list, ascending) => {
+    const parseDuration = (duration) => {
+        if (duration.includes(':')) {
+            // If it's in the format "HH:mm:ss"
+            const [hours, minutes, seconds] = duration.split(':').map(Number)
+            return (hours * 3600 + minutes * 60 + seconds) * 1000
+        } else {
+            // If it's in the format "nnn ms"
+            return parseInt(duration)
+        }
+    }
+    const sorted = list.sort((a, b) => parseDuration(a['duration']) - parseDuration(b['duration']))
+    if (ascending) {
+        sorted.reverse()
+    }
+    return sorted
+}
+
+const doInitSort = () => {
+    const type = storageModule.getSort(manager.initialSort)
+    const ascending = storageModule.getSortDirection()
+    const list = manager.testSubset
+    const initialOrder = ['Error', 'Failed', 'Rerun', 'XFailed', 'XPassed', 'Skipped', 'Passed']
+
+    storageModule.setSort(type)
+    storageModule.setSortDirection(ascending)
+
+    if (type?.toLowerCase() === 'original') {
+        manager.setRender(list)
+    } else {
+        let sortedList
+        switch (type) {
+        case 'duration':
+            sortedList = durationSort(list, ascending)
+            break
+        case 'result':
+            sortedList = genericSort(list, type, ascending, initialOrder)
+            break
+        default:
+            sortedList = genericSort(list, type, ascending)
+            break
+        }
+        manager.setRender(sortedList)
+    }
+}
+
+const doSort = (type, skipDirection) => {
+    const newSortType = storageModule.getSort(manager.initialSort) !== type
+    const currentAsc = storageModule.getSortDirection()
+    let ascending
+    if (skipDirection) {
+        ascending = currentAsc
+    } else {
+        ascending = newSortType ? false : !currentAsc
+    }
+    storageModule.setSort(type)
+    storageModule.setSortDirection(ascending)
+
+    const list = manager.testSubset
+    const sortedList = type === 'duration' ? durationSort(list, ascending) : genericSort(list, type, ascending)
+    manager.setRender(sortedList)
+}
+
+module.exports = {
+    doInitSort,
+    doSort,
+}
+
+},{"./datamanager.js":1,"./storage.js":8}],8:[function(require,module,exports){
+const possibleFilters = [
+    'passed',
+    'skipped',
+    'failed',
+    'error',
+    'xfailed',
+    'xpassed',
+    'rerun',
+]
+
+const getVisible = () => {
+    const url = new URL(window.location.href)
+    const settings = new URLSearchParams(url.search).get('visible')
+    const lower = (item) => {
+        const lowerItem = item.toLowerCase()
+        if (possibleFilters.includes(lowerItem)) {
+            return lowerItem
+        }
+        return null
+    }
+    return settings === null ?
+        possibleFilters :
+        [...new Set(settings?.split(',').map(lower).filter((item) => item))]
+}
+
+const hideCategory = (categoryToHide) => {
+    const url = new URL(window.location.href)
+    const visibleParams = new URLSearchParams(url.search).get('visible')
+    const currentVisible = visibleParams ? visibleParams.split(',') : [...possibleFilters]
+    const settings = [...new Set(currentVisible)].filter((f) => f !== categoryToHide).join(',')
+
+    url.searchParams.set('visible', settings)
+    window.history.pushState({}, null, unescape(url.href))
+}
+
+const showCategory = (categoryToShow) => {
+    if (typeof window === 'undefined') {
+        return
+    }
+    const url = new URL(window.location.href)
+    const currentVisible = new URLSearchParams(url.search).get('visible')?.split(',').filter(Boolean) ||
+        [...possibleFilters]
+    const settings = [...new Set([categoryToShow, ...currentVisible])]
+    const noFilter = possibleFilters.length === settings.length || !settings.length
+
+    noFilter ? url.searchParams.delete('visible') : url.searchParams.set('visible', settings.join(','))
+    window.history.pushState({}, null, unescape(url.href))
+}
+
+const getSort = (initialSort) => {
+    const url = new URL(window.location.href)
+    let sort = new URLSearchParams(url.search).get('sort')
+    if (!sort) {
+        sort = initialSort || 'result'
+    }
+    return sort
+}
+
+const setSort = (type) => {
+    const url = new URL(window.location.href)
+    url.searchParams.set('sort', type)
+    window.history.pushState({}, null, unescape(url.href))
+}
+
+const getCollapsedCategory = (renderCollapsed) => {
+    let categories
+    if (typeof window !== 'undefined') {
+        const url = new URL(window.location.href)
+        const collapsedItems = new URLSearchParams(url.search).get('collapsed')
+        switch (true) {
+        case !renderCollapsed && collapsedItems === null:
+            categories = ['passed']
+            break
+        case collapsedItems?.length === 0 || /^["']{2}$/.test(collapsedItems):
+            categories = []
+            break
+        case /^all$/.test(collapsedItems) || collapsedItems === null && /^all$/.test(renderCollapsed):
+            categories = [...possibleFilters]
+            break
+        default:
+            categories = collapsedItems?.split(',').map((item) => item.toLowerCase()) || renderCollapsed
+            break
+        }
+    } else {
+        categories = []
+    }
+    return categories
+}
+
+const getSortDirection = () => JSON.parse(sessionStorage.getItem('sortAsc')) || false
+const setSortDirection = (ascending) => sessionStorage.setItem('sortAsc', ascending)
+
+const getCollapsedIds = () => JSON.parse(sessionStorage.getItem('collapsedIds')) || []
+const setCollapsedIds = (list) => sessionStorage.setItem('collapsedIds', JSON.stringify(list))
+
+module.exports = {
+    getVisible,
+    hideCategory,
+    showCategory,
+    getCollapsedIds,
+    setCollapsedIds,
+    getSort,
+    setSort,
+    getSortDirection,
+    setSortDirection,
+    getCollapsedCategory,
+    possibleFilters,
+}
+
+},{}]},{},[4]);
+    </script>
+  </footer>
+</html>

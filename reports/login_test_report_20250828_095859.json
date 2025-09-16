@@ -1,0 +1,178 @@
+{
+    "execution_summary": {
+        "start_time": "2025-08-28 09:54:49.715011",
+        "end_time": "2025-08-28 09:58:59.249525",
+        "total_tests": 12,
+        "passed": 12,
+        "failed": 0,
+        "skipped": 0
+    },
+    "test_results": [
+        {
+            "test_name": "test_valid_login",
+            "status": "passed",
+            "duration": 19.731693267822266,
+            "error_message": null,
+            "screenshot_path": null,
+            "test_steps": [],
+            "timestamp": "2025-08-28 09:55:11"
+        },
+        {
+            "test_name": "test_invalid_email",
+            "status": "passed",
+            "duration": 8.803353786468506,
+            "error_message": null,
+            "screenshot_path": null,
+            "test_steps": [
+                "Starting invalid email test",
+                "Using invalid email: invalid@example.com",
+                "Navigating to login page",
+                "Verifying login page elements are present",
+                "Attempting login with invalid email",
+                "Current URL after failed login: https://valueinsightpro.jumpiq.com/auth/login",
+                "Invalid email test completed - login correctly rejected"
+            ],
+            "timestamp": "2025-08-28 09:55:21"
+        },
+        {
+            "test_name": "test_empty_email",
+            "status": "passed",
+            "duration": 7.695508003234863,
+            "error_message": null,
+            "screenshot_path": null,
+            "test_steps": [
+                "Starting empty email test",
+                "Navigating to login page",
+                "Verifying login page elements are present",
+                "Attempting login with empty email",
+                "Current URL after empty email login: https://valueinsightpro.jumpiq.com/auth/login",
+                "Empty email test completed - login correctly rejected"
+            ],
+            "timestamp": "2025-08-28 09:55:31"
+        },
+        {
+            "test_name": "test_empty_password",
+            "status": "passed",
+            "duration": 7.671722888946533,
+            "error_message": null,
+            "screenshot_path": null,
+            "test_steps": [
+                "Starting empty password test",
+                "Navigating to login page",
+                "Verifying login page elements are present",
+                "Attempting login with empty password",
+                "Current URL after empty password login: https://valueinsightpro.jumpiq.com/auth/login",
+                "Empty password test completed - login correctly rejected"
+            ],
+            "timestamp": "2025-08-28 09:55:40"
+        },
+        {
+            "test_name": "test_terms_not_accepted",
+            "status": "passed",
+            "duration": 15.085299015045166,
+            "error_message": null,
+            "screenshot_path": null,
+            "test_steps": [
+                "Starting terms not accepted test",
+                "Navigating to login page",
+                "Verifying login page elements are present",
+                "Attempting login without accepting terms and conditions",
+                "Current URL after login without terms: https://valueinsightpro.jumpiq.com/auth/login",
+                "Terms not accepted test completed - login correctly rejected"
+            ],
+            "timestamp": "2025-08-28 09:55:57"
+        },
+        {
+            "test_name": "test_login_page_elements",
+            "status": "passed",
+            "duration": 0.782789945602417,
+            "error_message": null,
+            "screenshot_path": null,
+            "test_steps": [],
+            "timestamp": "2025-08-28 09:56:00"
+        },
+        {
+            "test_name": "test_clear_login_form",
+            "status": "passed",
+            "duration": 11.107661724090576,
+            "error_message": null,
+            "screenshot_path": null,
+            "test_steps": [
+                "Starting clear login form test",
+                "Navigating to login page",
+                "Filling login form with test data",
+                "Verifying checkbox is checked",
+                "Clearing the login form",
+                "Verifying form is cleared",
+                "Clear login form test completed successfully"
+            ],
+            "timestamp": "2025-08-28 09:56:13"
+        },
+        {
+            "test_name": "test_successful_login_otp_redirect",
+            "status": "passed",
+            "duration": 6.659589767456055,
+            "error_message": null,
+            "screenshot_path": null,
+            "test_steps": [
+                "Starting OTP redirect validation test",
+                "Testing OTP redirect with credentials: test3",
+                "Navigating to login page",
+                "Performing login to test OTP redirect",
+                "Checking for redirect to OTP verification page",
+                "Final URL after login: https://valueinsightpro.jumpiq.com/auth/otp-verify",
+                "Expected OTP URL: https://valueinsightpro.jumpiq.com/auth/otp-verify",
+                "\u2705 OTP redirect validation test completed successfully"
+            ],
+            "timestamp": "2025-08-28 09:56:21"
+        },
+        {
+            "test_name": "test_sign_in_button_state_validation",
+            "status": "passed",
+            "duration": 0.6232850551605225,
+            "error_message": null,
+            "screenshot_path": null,
+            "test_steps": [
+                "Starting sign-in button state validation test",
+                "Navigating to login page",
+                "Verifying login page elements are present",
+                "Performing comprehensive button state validation",
+                "Initial state recorded: True",
+                "Email field completion handled: True",
+                "Password field completion handled: True",
+                "Checkbox completion handled: True",
+                "Complete form enables button: True",
+                "\u2705 Sign-in button state validation test completed successfully"
+            ],
+            "timestamp": "2025-08-28 09:56:24"
+        },
+        {
+            "test_name": "test_password_eye_icon_functionality",
+            "status": "passed",
+            "duration": 44.79886603355408,
+            "error_message": null,
+            "screenshot_path": null,
+            "test_steps": [],
+            "timestamp": "2025-08-28 09:57:11"
+        },
+        {
+            "test_name": "test_need_help_button_functionality",
+            "status": "passed",
+            "duration": 87.27980709075928,
+            "error_message": null,
+            "screenshot_path": null,
+            "test_steps": [],
+            "timestamp": "2025-08-28 09:58:40"
+        },
+        {
+            "test_name": "test_privacy_policy_button_functionality",
+            "status": "passed",
+            "duration": 16.656517028808594,
+            "error_message": null,
+            "screenshot_path": null,
+            "test_steps": [],
+            "timestamp": "2025-08-28 09:58:59"
+        }
+    ],
+    "generated_at": "2025-08-28T09:58:59.250021"
+}

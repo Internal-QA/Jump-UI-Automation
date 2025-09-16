@@ -1,0 +1,12 @@
+2025-08-28 09:55:23 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 09:55:23 - UIAutomationLogger - INFO - STARTING TEST: test_empty_email
+2025-08-28 09:55:23 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 09:55:23 - UIAutomationLogger - INFO - STEP: Starting empty email test
+2025-08-28 09:55:23 - UIAutomationLogger - INFO - STEP: Navigating to login page
+2025-08-28 09:55:24 - UIAutomationLogger - INFO - STEP: Verifying login page elements are present
+2025-08-28 09:55:24 - UIAutomationLogger - INFO - STEP: Attempting login with empty email
+2025-08-28 09:55:31 - UIAutomationLogger - INFO - STEP: Current URL after empty email login: https://valueinsightpro.jumpiq.com/auth/login
+2025-08-28 09:55:31 - UIAutomationLogger - INFO - STEP: Empty email test completed - login correctly rejected
+2025-08-28 09:55:31 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 09:55:31 - UIAutomationLogger - INFO - FINISHED TEST: test_empty_email - STATUS: PASSED
+2025-08-28 09:55:31 - UIAutomationLogger - INFO - ==================================================

@@ -1,0 +1,22 @@
+{
+    "execution_summary": {
+        "start_time": "2025-08-26 13:45:37.513585",
+        "end_time": "2025-08-26 13:47:20.364413",
+        "total_tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "skipped": 0
+    },
+    "test_results": [
+        {
+            "test_name": "test_debug_need_help_button",
+            "status": "passed",
+            "duration": 100.88936495780945,
+            "error_message": null,
+            "screenshot_path": null,
+            "test_steps": [],
+            "timestamp": "2025-08-26 13:47:20"
+        }
+    ],
+    "generated_at": "2025-08-26T13:47:20.364778"
+}

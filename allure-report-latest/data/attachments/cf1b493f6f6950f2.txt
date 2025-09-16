@@ -1,0 +1,24 @@
+2025-08-28 11:22:47 - UIAutomationLogger - INFO - USING EXISTING LOGIN SESSION
+2025-08-28 11:22:49 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 11:22:49 - UIAutomationLogger - INFO - STARTING TEST: test_complete_valuation_workflow_with_financials
+2025-08-28 11:22:49 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 11:22:49 - UIAutomationLogger - INFO - STEP: Testing complete valuation workflow with financials validation
+2025-08-28 11:22:49 - UIAutomationLogger - INFO - STEP: Navigating to valuations page
+2025-08-28 11:22:49 - UIAutomationLogger - INFO - STEP: Navigating to valuations page (using existing session)
+2025-08-28 11:22:49 - UIAutomationLogger - INFO - STEP: Navigating to home page first
+2025-08-28 11:22:54 - UIAutomationLogger - INFO - STEP: Waiting for home page to fully load
+2025-08-28 11:22:57 - UIAutomationLogger - INFO - STEP: Attempt 1 to click card 2
+2025-08-28 11:24:49 - UIAutomationLogger - WARNING - STEP: Card 2 click attempt 1 failed
+2025-08-28 11:24:55 - UIAutomationLogger - INFO - STEP: Attempt 2 to click card 2
+2025-08-28 11:26:46 - UIAutomationLogger - WARNING - STEP: Card 2 click attempt 2 failed
+2025-08-28 11:26:52 - UIAutomationLogger - INFO - STEP: Attempt 3 to click card 2
+2025-08-28 11:28:44 - UIAutomationLogger - WARNING - STEP: Card 2 click attempt 3 failed
+2025-08-28 11:28:44 - UIAutomationLogger - ERROR - STEP: All attempts to click card 2 failed
+2025-08-28 11:28:44 - UIAutomationLogger - ERROR - Failed to navigate to valuations page
+2025-08-28 11:28:44 - UIAutomationLogger - ERROR - STEP: Complete valuation workflow test failed: Failed to navigate to valuations page
+assert False
+2025-08-28 11:28:44 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 11:28:44 - UIAutomationLogger - INFO - FINISHED TEST: test_complete_valuation_workflow_with_financials
+2025-08-28 11:28:44 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 11:28:44 - UIAutomationLogger - WARNING - TEST FAILED: test_complete_valuation_workflow_with_financials - Will close browser for next test
+2025-08-28 11:28:44 - UIAutomationLogger - INFO - BROWSER CLOSED DUE TO TEST FAILURE

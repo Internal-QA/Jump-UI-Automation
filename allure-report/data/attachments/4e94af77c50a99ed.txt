@@ -1,0 +1,17 @@
+2025-08-28 11:28:44 - UIAutomationLogger - INFO - CREATING FRESH BROWSER SESSION DUE TO PREVIOUS FAILURE
+2025-08-28 11:28:46 - UIAutomationLogger - INFO - PERFORMING ONE-TIME LOGIN FOR TEST SESSION
+2025-08-28 11:28:46 - UIAutomationLogger - INFO - STEP: Performing session login with timeout protection
+2025-08-28 11:29:08 - UIAutomationLogger - INFO - STEP: Session login and OTP verification successful
+2025-08-28 11:29:08 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 11:29:08 - UIAutomationLogger - INFO - STARTING TEST: test_financial_expense_calculation_validation
+2025-08-28 11:29:08 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 11:29:08 - UIAutomationLogger - INFO - STEP: Testing expense calculation formula validation
+2025-08-28 11:29:08 - UIAutomationLogger - INFO - STEP: Navigating to valuations page (using existing session)
+2025-08-28 11:29:08 - UIAutomationLogger - INFO - STEP: Waiting for home page to fully load
+2025-08-28 11:29:11 - UIAutomationLogger - INFO - STEP: Attempt 1 to click card 2
+2025-08-28 11:29:58 - UIAutomationLogger - INFO - STEP: Card 2 clicked successfully
+2025-08-28 11:29:58 - UIAutomationLogger - INFO - STEP: Validating valuations page load
+2025-08-28 11:29:58 - UIAutomationLogger - INFO - STEP: Executing complete valuation workflow to reach financials
+2025-08-28 11:32:41 - UIAutomationLogger - INFO - STEP: Successfully reached financials page - starting expense calculation
+2025-08-28 11:32:41 - UIAutomationLogger - ERROR - STEP: Expense calculation validation test failed: calculate_expenses_using_formula() missing 1 required positional argument: 'year'
+2025-08-28 11:32:42 - UIAutomationLogger - INFO - TEST PASSED - RETURNING TO HOME PAGE FOR NEXT TEST

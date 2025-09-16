@@ -1,0 +1,18 @@
+2025-08-28 09:58:42 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 09:58:42 - UIAutomationLogger - INFO - STARTING TEST: test_privacy_policy_button_functionality
+2025-08-28 09:58:42 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 09:58:42 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 09:58:42 - UIAutomationLogger - INFO - STARTING TEST: test_privacy_policy_button_functionality
+2025-08-28 09:58:42 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 09:58:42 - UIAutomationLogger - INFO - STEP: Testing 'Privacy Policy' button functionality
+2025-08-28 09:58:43 - UIAutomationLogger - INFO - STEP: Successfully navigated to login page
+2025-08-28 09:58:58 - UIAutomationLogger - INFO - STEP: 'Privacy Policy' button functionality validated successfully
+2025-08-28 09:58:59 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 09:58:59 - UIAutomationLogger - INFO - FINISHED TEST: test_privacy_policy_button_functionality
+2025-08-28 09:58:59 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 09:58:59 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 09:58:59 - UIAutomationLogger - INFO - FINISHED TEST: test_privacy_policy_button_functionality - STATUS: PASSED
+2025-08-28 09:58:59 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 09:58:59 - UIAutomationLogger - INFO - Login Test Suite completed
+2025-08-28 09:58:59 - UIAutomationLogger - INFO - HTML Report: /Users/shtlpmac015/Desktop/Jump-UI-Automation/utils/../reports/login_test_report_20250828_095859.html
+2025-08-28 09:58:59 - UIAutomationLogger - INFO - JSON Report: /Users/shtlpmac015/Desktop/Jump-UI-Automation/utils/../reports/login_test_report_20250828_095859.json

@@ -1,0 +1,16 @@
+2025-08-28 09:56:26 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 09:56:26 - UIAutomationLogger - INFO - STARTING TEST: test_password_eye_icon_functionality
+2025-08-28 09:56:26 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 09:56:26 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 09:56:26 - UIAutomationLogger - INFO - STARTING TEST: test_password_eye_icon_functionality
+2025-08-28 09:56:26 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 09:56:26 - UIAutomationLogger - INFO - STEP: Testing password eye icon functionality
+2025-08-28 09:56:26 - UIAutomationLogger - INFO - STEP: Successfully navigated to login page
+2025-08-28 09:56:26 - UIAutomationLogger - INFO - STEP: Password entered successfully
+2025-08-28 09:57:11 - UIAutomationLogger - INFO - STEP: Password eye icon functionality validated successfully
+2025-08-28 09:57:11 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 09:57:11 - UIAutomationLogger - INFO - FINISHED TEST: test_password_eye_icon_functionality
+2025-08-28 09:57:11 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 09:57:11 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 09:57:11 - UIAutomationLogger - INFO - FINISHED TEST: test_password_eye_icon_functionality - STATUS: PASSED
+2025-08-28 09:57:11 - UIAutomationLogger - INFO - ==================================================

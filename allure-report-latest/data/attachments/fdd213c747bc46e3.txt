@@ -1,0 +1,24 @@
+Error creating Chrome driver: [Errno 8] Exec format error: '/Users/shtlpmac015/.wdm/drivers/chromedriver/mac64/139.0.7258.154/chromedriver-mac-arm64/THIRD_PARTY_NOTICES.chromedriver'
+Attempting to use system ChromeDriver...
+Starting test: test_invalid_otp_verification
+Test data loaded from: /Users/shtlpmac015/Desktop/Jump-UI-Automation/utils/../test_data/test_data.json
+Credentials loaded from config file: /Users/shtlpmac015/Desktop/Jump-UI-Automation/utils/../config/config.yaml
+Test data loaded from: /Users/shtlpmac015/Desktop/Jump-UI-Automation/utils/../test_data/test_data.json
+Starting test: test_invalid_otp_verification
+Using credentials from config file for: valid_user
+Button state validation passed
+Locator not found: login_page.invalid_credentials - 'invalid_credentials'
+Locator not found: login_page.fields_required - 'fields_required'
+Login successful - redirected to OTP page
+OTP page loaded successfully
+Starting OTP verification with code: 12345
+OTP page loaded successfully
+Entering OTP code: 12345
+OTP entered successfully: 12345
+Clicking verify button
+Verify button clicked successfully
+OTP verification process completed
+No error message found
+Failure screenshot saved: screenshots/FAILED_invalid_otp_result_20250828_100140.png
+Completed test: test_invalid_otp_verification
+Completed test: test_invalid_otp_verification

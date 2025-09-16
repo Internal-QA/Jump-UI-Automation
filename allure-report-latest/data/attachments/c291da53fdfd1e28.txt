@@ -1,0 +1,16 @@
+2025-08-28 11:44:56 - UIAutomationLogger - INFO - USING EXISTING LOGIN SESSION
+2025-08-28 11:44:58 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 11:44:58 - UIAutomationLogger - INFO - STARTING TEST: test_adjusted_profit_calculation_formula_demo
+2025-08-28 11:44:58 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 11:44:58 - UIAutomationLogger - INFO - STEP: Demonstrating adjusted profit calculation formula
+2025-08-28 11:44:58 - UIAutomationLogger - INFO - STEP: Testing adjusted profit calculation for year 2023
+2025-08-28 11:44:58 - UIAutomationLogger - INFO - STEP: Adjusted profit calculation validation PASSED for 2023
+2025-08-28 11:44:58 - UIAutomationLogger - INFO - STEP: Testing adjusted profit calculation for year 2022
+2025-08-28 11:44:58 - UIAutomationLogger - INFO - STEP: Adjusted profit calculation validation PASSED for 2022
+2025-08-28 11:44:58 - UIAutomationLogger - INFO - STEP: Testing adjusted profit calculation for year 2021
+2025-08-28 11:44:58 - UIAutomationLogger - INFO - STEP: Adjusted profit calculation validation PASSED for 2021
+2025-08-28 11:44:58 - UIAutomationLogger - INFO - STEP: All adjusted profit calculation demonstrations completed successfully
+2025-08-28 11:44:58 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 11:44:58 - UIAutomationLogger - INFO - FINISHED TEST: test_adjusted_profit_calculation_formula_demo
+2025-08-28 11:44:58 - UIAutomationLogger - INFO - ==================================================
+2025-08-28 11:44:58 - UIAutomationLogger - INFO - TEST PASSED - RETURNING TO HOME PAGE FOR NEXT TEST
