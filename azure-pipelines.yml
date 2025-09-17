@@ -1,0 +1,80 @@
+trigger:
+  - main
+
+schedules:
+  - cron: "30 4 * * 1,3,5"   # 10:00 AM IST = 4:30 AM UTC
+    displayName: "Scheduled Trigger: Mon/Wed/Fri 10:00 AM IST"
+    branches:
+      include:
+        - main
+    always: true
+
+pool:
+  vmImage: 'windows-latest'
+
+variables:
+  - name: ALLURE_VERSION
+    value: '2.25.0'
+  - name: system.debug
+    value: false
+  - name: RUNNING_IN_PIPELINE
+    value: 'true'
+
+steps:
+- checkout: self
+  fetchDepth: 1
+  displayName: 'Checkout Code'
+
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '3.11'
+    addToPath: true
+  displayName: 'Setup Python'
+
+- script: |
+    python -m pip install --upgrade pip
+    python -m pip install -r requirements.txt
+    python -m pip install allure-pytest pytest requests
+  displayName: 'Install Dependencies'
+
+- script: |
+    mkdir allure-results
+    python -m pytest tests/ --alluredir=allure-results
+  displayName: 'Run Pytest with Allure'
+  continueOnError: true
+
+- powershell: |
+    Write-Host "Downloading Allure..."
+    $AllureUrl = "https://github.com/allure-framework/allure2/releases/download/$(ALLURE_VERSION)/allure-$(ALLURE_VERSION).zip"
+    Invoke-WebRequest -Uri $AllureUrl -OutFile allure.zip
+    Expand-Archive -Path allure.zip -DestinationPath .
+    $env:PATH += ";$(Get-Location)\allure-$(ALLURE_VERSION)\bin"
+    
+    Write-Host "Generating Allure Report to TestReport..."
+    allure generate allure-results --clean -o TestReport
+  displayName: 'Generate Allure Report'
+
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: 'TestReport'
+    artifact: 'TestReport'
+    publishLocation: 'pipeline'
+  displayName: 'Publish TestReport Artifact'
+
+- task: AzureCLI@2
+  inputs:
+    azureSubscription: 'AzureBlobConnection'
+    scriptType: 'bash'
+    scriptLocation: 'inlineScript'
+    inlineScript: |
+      echo "Uploading TestReport to $web static site..."
+      az storage blob upload-batch \
+        --account-name $AZURE_STORAGE_ACCOUNT \
+        --account-key $AZURE_STORAGE_KEY \
+        --source TestReport \
+        --destination '$web' \
+        --overwrite
+  displayName: 'Upload TestReport to Azure Static Website'
+  env:
+    AZURE_STORAGE_ACCOUNT: $(AZURE_STORAGE_ACCOUNT)
+    AZURE_STORAGE_KEY: $(AZURE_STORAGE_KEY)
