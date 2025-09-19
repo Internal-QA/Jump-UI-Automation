@@ -1,0 +1,4 @@
+INFO     UIAutomationLogger:logger.py:60 Starting test: test_10_validate_adjusted_profit_calculation
+INFO     UIAutomationLogger:logger.py:60 Test 10: Testing adjusted profit calculation validation
+INFO     UIAutomationLogger:logger.py:60 ✅ Test 10: Adjusted profit calculation validation successful
+INFO     UIAutomationLogger:logger.py:60 Test test_10_validate_adjusted_profit_calculation completed in 0.30s

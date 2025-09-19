@@ -1,0 +1,3 @@
+2025-09-19 14:43:16 - UIAutomationLogger - INFO - Starting test: test_26_extract_fni_pvr_suggested_radius_from_portfolio_table
+2025-09-19 14:43:16 - UIAutomationLogger - INFO - ✅ Test 26: FNI PVR extraction successful
+2025-09-19 14:43:16 - UIAutomationLogger - INFO - Test test_26_extract_fni_pvr_suggested_radius_from_portfolio_table completed in 0.20s

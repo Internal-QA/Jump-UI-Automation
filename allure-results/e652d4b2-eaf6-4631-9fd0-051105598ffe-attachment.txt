@@ -1,0 +1,4 @@
+INFO     UIAutomationLogger:logger.py:60 Starting test: test_08_click_view_portfolio_button_access_details
+INFO     UIAutomationLogger:logger.py:60 Test 08: Testing portfolio details view
+INFO     UIAutomationLogger:logger.py:60 ✅ Test 08: Portfolio details view successful
+INFO     UIAutomationLogger:logger.py:60 Test test_08_click_view_portfolio_button_access_details completed in 0.31s

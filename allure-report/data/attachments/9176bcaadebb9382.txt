@@ -1,0 +1,4 @@
+2025-09-19 14:42:54 - UIAutomationLogger - INFO - Starting test: test_02_enter_valid_otp_code
+2025-09-19 14:42:54 - UIAutomationLogger - INFO - Test 02: Enter valid OTP code
+2025-09-19 14:42:55 - UIAutomationLogger - INFO - ✅ OTP entered: 123456
+2025-09-19 14:42:55 - UIAutomationLogger - INFO - Test test_02_enter_valid_otp_code completed in 0.50s

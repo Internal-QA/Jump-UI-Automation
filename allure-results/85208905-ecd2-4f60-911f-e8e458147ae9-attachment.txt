@@ -1,0 +1,3 @@
+INFO     UIAutomationLogger:logger.py:60 Starting test: test_28_complete_portfolio_vs_radius_validation_workflow
+INFO     UIAutomationLogger:logger.py:60 ✅ Test 28: Portfolio vs radius workflow successful
+INFO     UIAutomationLogger:logger.py:60 Test test_28_complete_portfolio_vs_radius_validation_workflow completed in 0.21s

@@ -1,0 +1,4 @@
+INFO     UIAutomationLogger:logger.py:60 Starting test: test_05_create_new_valuation_select_dealer
+INFO     UIAutomationLogger:logger.py:60 Test 05: Testing new valuation creation
+INFO     UIAutomationLogger:logger.py:60 ✅ Test 05: New valuation creation successful
+INFO     UIAutomationLogger:logger.py:60 Test test_05_create_new_valuation_select_dealer completed in 0.31s

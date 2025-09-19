@@ -1,0 +1,5 @@
+INFO     UIAutomationLogger:logger.py:60 Starting test: test_11_otp_session_expiry_handling
+INFO     UIAutomationLogger:logger.py:60 Test 11: OTP session expiry handling
+INFO     UIAutomationLogger:logger.py:60 ✅ Session expiry handling: https://valueinsightpro.jumpiq.com/auth/login
+INFO     UIAutomationLogger:logger.py:60 Test test_11_otp_session_expiry_handling completed in 0.51s
+INFO     UIAutomationLogger:logger.py:60 WebDriver closed successfully

@@ -1,0 +1,4 @@
+INFO     UIAutomationLogger:logger.py:60 Starting test: test_07_clear_login_form
+INFO     UIAutomationLogger:logger.py:60 Test 07: Clear login form
+INFO     UIAutomationLogger:logger.py:60 ✅ Logger functionality verified
+INFO     UIAutomationLogger:logger.py:60 Test test_07_clear_login_form completed in 0.51s

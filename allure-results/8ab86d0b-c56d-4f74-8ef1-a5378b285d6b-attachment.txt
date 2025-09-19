@@ -1,0 +1,3 @@
+INFO     UIAutomationLogger:logger.py:60 Starting test: test_30_validate_min_max_revenue_field_validation
+INFO     UIAutomationLogger:logger.py:60 ✅ Test 30: Min/max revenue validation successful
+INFO     UIAutomationLogger:logger.py:60 Test test_30_validate_min_max_revenue_field_validation completed in 0.21s

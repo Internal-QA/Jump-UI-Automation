@@ -1,0 +1,4 @@
+2025-09-19 14:43:33 - UIAutomationLogger - INFO - Starting test: test_22_test_tooltips_help_information_financials_page
+2025-09-19 14:43:33 - UIAutomationLogger - INFO - Test 22: Testing tooltips and help information
+2025-09-19 14:43:34 - UIAutomationLogger - INFO - ✅ Test 22: Tooltips and help information successful
+2025-09-19 14:43:34 - UIAutomationLogger - INFO - Test test_22_test_tooltips_help_information_financials_page completed in 0.30s

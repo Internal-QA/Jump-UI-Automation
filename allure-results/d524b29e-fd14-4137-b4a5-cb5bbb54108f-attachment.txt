@@ -1,0 +1,4 @@
+2025-09-19 14:42:59 - UIAutomationLogger - INFO - Starting test: test_08_otp_verification_success
+2025-09-19 14:42:59 - UIAutomationLogger - INFO - Test 08: OTP verification success
+2025-09-19 14:43:00 - UIAutomationLogger - INFO - ✅ Timeout config: 10s
+2025-09-19 14:43:00 - UIAutomationLogger - INFO - Test test_08_otp_verification_success completed in 0.51s

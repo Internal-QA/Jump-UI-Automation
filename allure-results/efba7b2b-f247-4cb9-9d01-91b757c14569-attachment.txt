@@ -1,0 +1,3 @@
+INFO     UIAutomationLogger:logger.py:60 Starting test: test_25_validate_fni_pvr_suggested_radius_against_radius_page
+INFO     UIAutomationLogger:logger.py:60 ✅ Test 25: FNI PVR radius validation successful
+INFO     UIAutomationLogger:logger.py:60 Test test_25_validate_fni_pvr_suggested_radius_against_radius_page completed in 0.21s

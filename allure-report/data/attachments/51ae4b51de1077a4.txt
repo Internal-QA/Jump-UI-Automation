@@ -1,0 +1,4 @@
+2025-09-19 14:43:30 - UIAutomationLogger - INFO - Starting test: test_11_validate_all_financial_calculations_together
+2025-09-19 14:43:30 - UIAutomationLogger - INFO - Test 11: Testing comprehensive financial calculations
+2025-09-19 14:43:30 - UIAutomationLogger - INFO - ✅ Test 11: Comprehensive financial calculations successful
+2025-09-19 14:43:30 - UIAutomationLogger - INFO - Test test_11_validate_all_financial_calculations_together completed in 0.30s

@@ -3,13 +3,13 @@ login_url: "https://valueinsightpro.jumpiq.com/auth/login"
 otp_url: "https://valueinsightpro.jumpiq.com/auth/otp-verify"
 
 timeouts:
-  implicit_wait: 10
-  explicit_wait: 20
-  page_load_timeout: 30
+  implicit_wait: 5
+  explicit_wait: 10
+  page_load_timeout: 15
 
 browser:
   default: "chrome"
-  headless: false
+  headless: true
   window_size: "1920,1080"
 
 # Test Credentials (easily configurable)

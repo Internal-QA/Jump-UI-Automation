@@ -1,0 +1,4 @@
+INFO     UIAutomationLogger:logger.py:60 Starting test: test_06_validate_click_tabs_group_rooftop_single_brand
+INFO     UIAutomationLogger:logger.py:60 Test 06: Testing tab validation
+INFO     UIAutomationLogger:logger.py:60 ✅ Test 06: Tab validation successful
+INFO     UIAutomationLogger:logger.py:60 Test test_06_validate_click_tabs_group_rooftop_single_brand completed in 0.31s

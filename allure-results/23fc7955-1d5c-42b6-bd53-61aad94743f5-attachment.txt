@@ -1,0 +1,4 @@
+INFO     UIAutomationLogger:logger.py:60 Starting test: test_31_complete_portfolio_builder_filtered_search_workflow
+INFO     UIAutomationLogger:logger.py:60 ✅ Test 31: Filtered search workflow successful
+INFO     UIAutomationLogger:logger.py:60 Test test_31_complete_portfolio_builder_filtered_search_workflow completed in 0.21s
+INFO     UIAutomationLogger:logger.py:60 WebDriver closed successfully

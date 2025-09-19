@@ -1,0 +1,6 @@
+2025-09-19 14:42:56 - UIAutomationLogger - INFO - Starting test: test_05_resend_otp_functionality
+2025-09-19 14:42:56 - UIAutomationLogger - INFO - Test 05: Resend OTP functionality
+2025-09-19 14:42:56 - UIAutomationLogger - INFO - ✅ OTP resend simulated
+2025-09-19 14:42:56 - UIAutomationLogger - INFO - Screenshot saved: screenshots/test_05_resend_otp_20250919_144256.png
+2025-09-19 14:42:56 - UIAutomationLogger - INFO - ✅ Screenshot capability: True
+2025-09-19 14:42:56 - UIAutomationLogger - INFO - Test test_05_resend_otp_functionality completed in 0.56s

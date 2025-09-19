@@ -1,0 +1,4 @@
+INFO     UIAutomationLogger:logger.py:60 Starting test: test_03_test_search_filters_with_multiple_terms
+INFO     UIAutomationLogger:logger.py:60 Test 03: Testing search filters with multiple terms
+INFO     UIAutomationLogger:logger.py:60 ✅ Test 03: Multiple search filters successful
+INFO     UIAutomationLogger:logger.py:60 Test test_03_test_search_filters_with_multiple_terms completed in 0.31s

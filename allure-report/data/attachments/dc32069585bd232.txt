@@ -1,0 +1,3 @@
+INFO     UIAutomationLogger:logger.py:60 Starting test: test_29_validate_map_zoom_in_out_functionality
+INFO     UIAutomationLogger:logger.py:60 ✅ Test 29: Map zoom functionality successful
+INFO     UIAutomationLogger:logger.py:60 Test test_29_validate_map_zoom_in_out_functionality completed in 0.20s

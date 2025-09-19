@@ -1,0 +1,3 @@
+2025-09-19 14:43:17 - UIAutomationLogger - INFO - Starting test: test_28_complete_portfolio_vs_radius_validation_workflow
+2025-09-19 14:43:17 - UIAutomationLogger - INFO - ✅ Test 28: Portfolio vs radius workflow successful
+2025-09-19 14:43:17 - UIAutomationLogger - INFO - Test test_28_complete_portfolio_vs_radius_validation_workflow completed in 0.21s

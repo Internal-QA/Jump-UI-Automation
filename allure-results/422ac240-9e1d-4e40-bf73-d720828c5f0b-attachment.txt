@@ -1,0 +1,4 @@
+INFO     UIAutomationLogger:logger.py:60 Starting test: test_18_click_ttm_analyze_12_month_revenue_trends
+INFO     UIAutomationLogger:logger.py:60 Test 18: Testing TTM revenue analysis
+INFO     UIAutomationLogger:logger.py:60 ✅ Test 18: TTM revenue analysis successful
+INFO     UIAutomationLogger:logger.py:60 Test test_18_click_ttm_analyze_12_month_revenue_trends completed in 0.31s

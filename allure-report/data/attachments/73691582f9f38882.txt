@@ -1,0 +1,11 @@
+2025-09-19 14:42:26 - UIAutomationLogger - INFO - Starting test: test_04_validate_navigation_menu
+2025-09-19 14:42:26 - UIAutomationLogger - INFO - Test 04: Navigation menu validation
+2025-09-19 14:42:26 - UIAutomationLogger - INFO - ✅ Menu item validated: Home
+2025-09-19 14:42:27 - UIAutomationLogger - INFO - ✅ Menu item validated: Portfolio
+2025-09-19 14:42:27 - UIAutomationLogger - INFO - ✅ Menu item validated: Valuations
+2025-09-19 14:42:27 - UIAutomationLogger - INFO - ✅ Menu item validated: Reports
+2025-09-19 14:42:27 - UIAutomationLogger - INFO - ✅ Menu item validated: Profile
+2025-09-19 14:42:27 - UIAutomationLogger - INFO - Screenshot saved: screenshots/test_04_menu_validation_20250919_144227.png
+2025-09-19 14:42:27 - UIAutomationLogger - INFO - ✅ Screenshot taken: True
+2025-09-19 14:42:27 - UIAutomationLogger - INFO - Test test_04_validate_navigation_menu completed in 0.65s
+2025-09-19 14:42:27 - UIAutomationLogger - INFO - WebDriver closed successfully

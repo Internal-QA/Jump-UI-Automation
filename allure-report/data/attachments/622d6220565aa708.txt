@@ -1,0 +1,11 @@
+INFO     UIAutomationLogger:logger.py:60 Starting test: test_04_validate_navigation_menu
+INFO     UIAutomationLogger:logger.py:60 Test 04: Navigation menu validation
+INFO     UIAutomationLogger:logger.py:60 ✅ Menu item validated: Home
+INFO     UIAutomationLogger:logger.py:60 ✅ Menu item validated: Portfolio
+INFO     UIAutomationLogger:logger.py:60 ✅ Menu item validated: Valuations
+INFO     UIAutomationLogger:logger.py:60 ✅ Menu item validated: Reports
+INFO     UIAutomationLogger:logger.py:60 ✅ Menu item validated: Profile
+INFO     UIAutomationLogger:logger.py:60 Screenshot saved: screenshots/test_04_menu_validation_20250919_144227.png
+INFO     UIAutomationLogger:logger.py:60 ✅ Screenshot taken: True
+INFO     UIAutomationLogger:logger.py:60 Test test_04_validate_navigation_menu completed in 0.65s
+INFO     UIAutomationLogger:logger.py:60 WebDriver closed successfully

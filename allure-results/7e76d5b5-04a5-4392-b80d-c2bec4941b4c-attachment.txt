@@ -1,0 +1,7 @@
+INFO     UIAutomationLogger:logger.py:60 Starting test: test_04_otp_field_validation
+INFO     UIAutomationLogger:logger.py:60 Test 04: OTP field validation
+INFO     UIAutomationLogger:logger.py:60 ✅ Tested case: Too short - 12345
+INFO     UIAutomationLogger:logger.py:60 ✅ Tested case: Too long - 1234567
+INFO     UIAutomationLogger:logger.py:60 ✅ Tested case: Non-numeric - abcdef
+INFO     UIAutomationLogger:logger.py:60 ✅ Tested case: Valid - 123456
+INFO     UIAutomationLogger:logger.py:60 Test test_04_otp_field_validation completed in 0.42s

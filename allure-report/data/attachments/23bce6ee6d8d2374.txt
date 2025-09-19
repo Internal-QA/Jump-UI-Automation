@@ -1,0 +1,4 @@
+INFO     UIAutomationLogger:logger.py:60 Starting test: test_05_click_rooftop_sunrise_chevrolet_handle_popup
+INFO     UIAutomationLogger:logger.py:60 Test 05: Testing rooftop selection and popup handling
+INFO     UIAutomationLogger:logger.py:60 ✅ Test 05: Rooftop selection and popup handling successful
+INFO     UIAutomationLogger:logger.py:60 Test test_05_click_rooftop_sunrise_chevrolet_handle_popup completed in 0.31s

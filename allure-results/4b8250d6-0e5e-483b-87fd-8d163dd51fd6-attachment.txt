@@ -1,0 +1,4 @@
+INFO     UIAutomationLogger:logger.py:60 Starting test: test_19_compare_fi_pvr_values_radius_performance_pages
+INFO     UIAutomationLogger:logger.py:60 Test 19: Testing FI PVR values comparison
+INFO     UIAutomationLogger:logger.py:60 ✅ Test 19: FI PVR values comparison successful
+INFO     UIAutomationLogger:logger.py:60 Test test_19_compare_fi_pvr_values_radius_performance_pages completed in 0.31s

@@ -1,0 +1,4 @@
+2025-09-19 14:42:40 - UIAutomationLogger - INFO - Starting test: test_05_attempt_login_without_accepting_terms
+2025-09-19 14:42:40 - UIAutomationLogger - INFO - Test 05: Terms not accepted
+2025-09-19 14:42:40 - UIAutomationLogger - INFO - ✅ Wait functionality: True
+2025-09-19 14:42:40 - UIAutomationLogger - INFO - Test test_05_attempt_login_without_accepting_terms completed in 0.52s

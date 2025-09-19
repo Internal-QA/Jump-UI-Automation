@@ -1,0 +1,4 @@
+2025-09-19 14:43:13 - UIAutomationLogger - INFO - Starting test: test_11_test_current_radius_plus_minus_functionality
+2025-09-19 14:43:13 - UIAutomationLogger - INFO - Test 11: Testing radius controls
+2025-09-19 14:43:13 - UIAutomationLogger - INFO - ✅ Test 11: Radius controls successful
+2025-09-19 14:43:13 - UIAutomationLogger - INFO - Test test_11_test_current_radius_plus_minus_functionality completed in 0.20s

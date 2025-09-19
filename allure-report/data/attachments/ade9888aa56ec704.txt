@@ -1,0 +1,4 @@
+INFO     UIAutomationLogger:logger.py:60 Starting test: test_03_enter_invalid_otp_code
+INFO     UIAutomationLogger:logger.py:60 Test 03: Enter invalid OTP code
+INFO     UIAutomationLogger:logger.py:60 ✅ Invalid OTP tested: 999999
+INFO     UIAutomationLogger:logger.py:60 Test test_03_enter_invalid_otp_code completed in 0.51s

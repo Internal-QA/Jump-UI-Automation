@@ -1,0 +1,4 @@
+INFO     UIAutomationLogger:logger.py:60 Starting test: test_09_demonstrate_expense_calculation_formula
+INFO     UIAutomationLogger:logger.py:60 Test 09: Testing expense formula demonstration
+INFO     UIAutomationLogger:logger.py:60 ✅ Test 09: Expense formula demonstration successful
+INFO     UIAutomationLogger:logger.py:60 Test test_09_demonstrate_expense_calculation_formula completed in 0.31s

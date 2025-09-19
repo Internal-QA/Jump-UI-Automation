@@ -1,0 +1,4 @@
+INFO     UIAutomationLogger:logger.py:60 Starting test: test_02_attempt_login_with_invalid_email
+INFO     UIAutomationLogger:logger.py:60 Test 02: Invalid email format
+INFO     UIAutomationLogger:logger.py:60 ✅ Driver functionality verified
+INFO     UIAutomationLogger:logger.py:60 Test test_02_attempt_login_with_invalid_email completed in 0.51s

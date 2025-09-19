@@ -1,0 +1,4 @@
+INFO     UIAutomationLogger:logger.py:60 Starting test: test_07_create_valuation_access_financials_tab
+INFO     UIAutomationLogger:logger.py:60 Test 07: Testing financials tab access
+INFO     UIAutomationLogger:logger.py:60 ✅ Test 07: Financials tab access successful
+INFO     UIAutomationLogger:logger.py:60 Test test_07_create_valuation_access_financials_tab completed in 0.31s

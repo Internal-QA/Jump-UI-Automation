@@ -1,0 +1,4 @@
+2025-09-19 14:43:32 - UIAutomationLogger - INFO - Starting test: test_18_click_ttm_analyze_12_month_revenue_trends
+2025-09-19 14:43:32 - UIAutomationLogger - INFO - Test 18: Testing TTM revenue analysis
+2025-09-19 14:43:32 - UIAutomationLogger - INFO - ✅ Test 18: TTM revenue analysis successful
+2025-09-19 14:43:32 - UIAutomationLogger - INFO - Test test_18_click_ttm_analyze_12_month_revenue_trends completed in 0.31s

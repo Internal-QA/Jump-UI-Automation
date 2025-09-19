@@ -1,0 +1,3 @@
+INFO     UIAutomationLogger:logger.py:60 Starting test: test_17_validate_portfolio_used_value_against_financials
+INFO     UIAutomationLogger:logger.py:60 ✅ Test 17: Portfolio used value validation successful
+INFO     UIAutomationLogger:logger.py:60 Test test_17_validate_portfolio_used_value_against_financials completed in 0.21s

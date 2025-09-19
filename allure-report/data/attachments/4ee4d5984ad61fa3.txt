@@ -1,0 +1,7 @@
+2025-09-19 14:42:40 - UIAutomationLogger - INFO - Starting test: test_06_validate_all_login_page_elements_present
+2025-09-19 14:42:40 - UIAutomationLogger - INFO - Test 06: Page elements validation
+2025-09-19 14:42:41 - UIAutomationLogger - INFO - ✅ Found element: email_field
+2025-09-19 14:42:41 - UIAutomationLogger - INFO - ✅ Found element: password_field
+2025-09-19 14:42:41 - UIAutomationLogger - INFO - ✅ Found element: submit_button
+2025-09-19 14:42:41 - UIAutomationLogger - INFO - ✅ Found element: terms_checkbox
+2025-09-19 14:42:41 - UIAutomationLogger - INFO - Test test_06_validate_all_login_page_elements_present completed in 0.50s

@@ -1,0 +1,4 @@
+INFO     UIAutomationLogger:logger.py:60 Starting test: test_17_analyze_3_year_revenue_trends_financials_page
+INFO     UIAutomationLogger:logger.py:60 Test 17: Testing 3 year revenue trends analysis
+INFO     UIAutomationLogger:logger.py:60 ✅ Test 17: 3 year revenue trends analysis successful
+INFO     UIAutomationLogger:logger.py:60 Test test_17_analyze_3_year_revenue_trends_financials_page completed in 0.31s

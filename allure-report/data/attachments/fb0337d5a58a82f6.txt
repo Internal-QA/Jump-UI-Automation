@@ -1,0 +1,3 @@
+INFO     UIAutomationLogger:logger.py:60 Starting test: test_19_complete_workflow_financials_to_portfolio_validation
+INFO     UIAutomationLogger:logger.py:60 ✅ Test 19: Financials to portfolio workflow successful
+INFO     UIAutomationLogger:logger.py:60 Test test_19_complete_workflow_financials_to_portfolio_validation completed in 0.21s

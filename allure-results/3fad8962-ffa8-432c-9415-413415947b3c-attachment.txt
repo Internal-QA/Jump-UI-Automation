@@ -1,0 +1,5 @@
+INFO     UIAutomationLogger:logger.py:60 Starting test: test_12_privacy_policy_button_functionality
+INFO     UIAutomationLogger:logger.py:60 Test 12: Privacy policy button
+INFO     UIAutomationLogger:logger.py:60 ✅ Timeout configuration: 5s
+INFO     UIAutomationLogger:logger.py:60 Test test_12_privacy_policy_button_functionality completed in 0.51s
+INFO     UIAutomationLogger:logger.py:60 WebDriver closed successfully

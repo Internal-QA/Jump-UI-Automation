@@ -1,0 +1,4 @@
+INFO     UIAutomationLogger:logger.py:60 Starting test: test_03_click_portfolio_card_navigation
+INFO     UIAutomationLogger:logger.py:60 Test 03: Portfolio card navigation
+INFO     UIAutomationLogger:logger.py:60 ✅ Current URL: https://valueinsightpro.jumpiq.com/auth/login?redirect=/
+INFO     UIAutomationLogger:logger.py:60 Test test_03_click_portfolio_card_navigation completed in 0.51s

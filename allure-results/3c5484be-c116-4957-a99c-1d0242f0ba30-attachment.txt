@@ -1,0 +1,4 @@
+INFO     UIAutomationLogger:logger.py:60 Starting test: test_22_test_tooltips_help_information_financials_page
+INFO     UIAutomationLogger:logger.py:60 Test 22: Testing tooltips and help information
+INFO     UIAutomationLogger:logger.py:60 ✅ Test 22: Tooltips and help information successful
+INFO     UIAutomationLogger:logger.py:60 Test test_22_test_tooltips_help_information_financials_page completed in 0.30s

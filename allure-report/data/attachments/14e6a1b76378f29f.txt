@@ -1,0 +1,4 @@
+2025-09-19 14:42:39 - UIAutomationLogger - INFO - Starting test: test_03_attempt_login_with_empty_email
+2025-09-19 14:42:39 - UIAutomationLogger - INFO - Test 03: Empty email field
+2025-09-19 14:42:39 - UIAutomationLogger - INFO - ✅ Configuration access verified
+2025-09-19 14:42:39 - UIAutomationLogger - INFO - Test test_03_attempt_login_with_empty_email completed in 0.51s
