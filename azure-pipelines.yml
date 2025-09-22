@@ -13,6 +13,7 @@ pool:
   vmImage: 'windows-latest'
 
 variables:
+  - group: EmailSecretsGroup
   - name: ALLURE_VERSION
     value: '2.25.0'
   - name: system.debug
@@ -21,18 +22,15 @@ variables:
     value: 'true'
 
 steps:
-- checkout: self
-  fetchDepth: 1
-  displayName: 'Checkout Code'
-
 - task: UsePythonVersion@0
   inputs:
     versionSpec: '3.11'
-    addToPath: true
   displayName: 'Setup Python'
 
 - script: |
     python -m pip install --upgrade pip
+    pip install -r requirements.txt
+    pip install allure-pytest pytest requests
     python -m pip install -r requirements.txt
     python -m pip install allure-pytest pytest requests
   displayName: 'Install Dependencies'
@@ -43,6 +41,12 @@ steps:
   displayName: 'Run Pytest with Allure'
   continueOnError: true
 
+- script: |
+    curl -o allure.zip -L https://github.com/allure-framework/allure2/releases/download/2.25.0/allure-2.25.0.zip
+    powershell Expand-Archive -Path allure.zip -DestinationPath .
+    allure-2.25.0\bin\allure generate allure-results --clean -o allure-report
+  displayName: 'Download Allure and Generate Report'
+    
 - powershell: |
     Write-Host "Downloading Allure..."
     $AllureUrl = "https://github.com/allure-framework/allure2/releases/download/$(ALLURE_VERSION)/allure-$(ALLURE_VERSION).zip"
@@ -53,6 +57,48 @@ steps:
     Write-Host "Generating Allure Report to TestReport..."
     allure generate allure-results --clean -o TestReport
   displayName: 'Generate Allure Report'
+
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: 'allure-report'
+    artifact: 'AllureReport'
+    publishLocation: 'pipeline'
+  displayName: 'Publish Report'
+
+- powershell: |
+    $ErrorActionPreference = "Stop"
+    
+    try {
+        $smtp = New-Object Net.Mail.SmtpClient("$(SMTP_SERVER)", "$(SMTP_PORT)")
+        $smtp.EnableSsl = $true
+        $smtp.Credentials = New-Object Net.NetworkCredential("$(EMAIL_USERNAME)", "$(EMAIL_PASSWORD)")
+        
+        $msg = New-Object Net.Mail.MailMessage
+        $msg.From = "$(EMAIL_FROM)"
+        $msg.To.Add("$(EMAIL_TO)")
+        $msg.Subject = "Test Report - Build $(Build.BuildNumber)"
+        $msg.Body = "Test automation report is attached. Please extract and open index.html"
+        
+        if (Test-Path "test-reports.zip") {
+            $att = New-Object Net.Mail.Attachment("test-reports.zip")
+            $msg.Attachments.Add($att)
+        }
+        
+        $smtp.Send($msg)
+        Write-Host "Email sent successfully"
+    }
+    catch {
+        Write-Error "Failed to send email: $_"
+        throw
+    }
+    finally {
+        if ($att) { $att.Dispose() }
+        if ($msg) { $msg.Dispose() }
+        if ($smtp) { $smtp.Dispose() }
+    }
+  displayName: 'Send Email'
+  env:
+    EMAIL_PASSWORD: $(EMAIL_PASSWORD)
 
 - task: PublishPipelineArtifact@1
   inputs:
