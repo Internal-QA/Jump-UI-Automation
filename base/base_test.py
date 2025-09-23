@@ -141,7 +141,7 @@ class OptimizedBaseTest:
             # Pipeline-specific options for Windows Azure agents
             is_pipeline = os.environ.get('RUNNING_IN_PIPELINE', 'false').lower() == 'true'
             if is_pipeline:
-                cls.logger.info("🔧 Configuring Chrome for pipeline environment")
+                cls.logger.info("Configuring Chrome for pipeline environment")
                 pipeline_options = [
                     '--disable-background-timer-throttling',
                     '--disable-backgrounding-occluded-windows',

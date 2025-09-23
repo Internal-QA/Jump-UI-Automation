@@ -754,7 +754,7 @@ class OTPPage(BasePage):
             
             # If no redirect occurred
             final_url = self.driver.current_url
-            print(f"❌ FAILURE: No redirect occurred after 4 attempts with backspace clearing")
+            print(f"FAIL: FAILURE: No redirect occurred after 4 attempts with backspace clearing")
             print(f"Expected: Redirect to https://valueinsightpro.jumpiq.com/auth/login")
             print(f"Actual: Remained on {final_url}")
             
@@ -834,7 +834,7 @@ class OTPPage(BasePage):
                     print(f"⚠ Redirected but not to login page: {final_url}")
                     return False
             else:
-                print("❌ FAILURE: No redirect occurred after 4th invalid OTP attempt")
+                print("FAIL: FAILURE: No redirect occurred after 4th invalid OTP attempt")
                 print("Expected: Redirect to https://valueinsightpro.jumpiq.com/auth/login")
                 print(f"Actual: Remained on {final_url}")
                 

@@ -13,7 +13,7 @@ from datetime import datetime
 def run_tests_with_allure():
     """Run tests and generate Allure reports"""
     
-    print("🚀 RUNNING TESTS WITH ALLURE REPORTING")
+    print("SUCCESS: RUNNING TESTS WITH ALLURE REPORTING")
     print("=" * 50)
     print(f"📅 Start Time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print("=" * 50)
@@ -27,7 +27,7 @@ def run_tests_with_allure():
     start_time = time.time()
     
     # Run tests with Allure
-    print("\n🧪 Running tests with Allure reporting...")
+    print("\nEXPERIMENT: Running tests with Allure reporting...")
     
     cmd = [
         'python3', '-m', 'pytest',
@@ -49,37 +49,37 @@ def run_tests_with_allure():
         failed = result.stdout.count('FAILED')
         total = passed + failed
         
-        print(f"📊 Test Results: {passed} passed, {failed} failed ({total} total)")
+        print(f"DATA: Test Results: {passed} passed, {failed} failed ({total} total)")
         
         if result.returncode == 0:
-            print("✅ All tests PASSED")
+            print("PASS: All tests PASSED")
         else:
-            print("❌ Some tests FAILED")
+            print("FAIL: Some tests FAILED")
             print("Last few lines of output:")
             print(result.stdout[-500:])
         
         # Generate Allure report
-        print("\n📊 Generating Allure report...")
+        print("\nDATA: Generating Allure report...")
         
         report_cmd = ['allure', 'generate', 'allure-results', '-o', 'allure-report', '--clean']
         
         try:
             subprocess.run(report_cmd, check=True, capture_output=True)
-            print("✅ Allure report generated successfully")
+            print("PASS: Allure report generated successfully")
             print("📁 Report location: allure-report/index.html")
             
             # Try to open report
             try:
                 subprocess.run(['allure', 'open', 'allure-report'], timeout=2)
             except:
-                print("💡 To view report: allure open allure-report")
+                print("INFO: To view report: allure open allure-report")
                 
         except subprocess.CalledProcessError:
-            print("❌ Allure report generation failed")
-            print("💡 Make sure Allure is installed: npm install -g allure-commandline")
+            print("FAIL: Allure report generation failed")
+            print("INFO: Make sure Allure is installed: npm install -g allure-commandline")
         except FileNotFoundError:
-            print("❌ Allure command not found")
-            print("💡 Install Allure: npm install -g allure-commandline")
+            print("FAIL: Allure command not found")
+            print("INFO: Install Allure: npm install -g allure-commandline")
         
         print(f"\n🏁 Total execution time: {execution_time:.1f}s ({execution_time/60:.1f} minutes)")
         

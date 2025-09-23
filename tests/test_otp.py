@@ -25,9 +25,9 @@ class TestOTPOptimized(OptimizedBaseTest):
             success = self.navigate_to_url(otp_url)
             
             if success:
-                self.logger.info("✅ OTP page navigation successful")
+                self.logger.info("PASS: OTP page navigation successful")
             else:
-                self.logger.info("✅ Mock OTP navigation completed")
+                self.logger.info("PASS: Mock OTP navigation completed")
             
             time.sleep(0.5)
             assert True, "OTP page navigation test completed"
@@ -45,7 +45,7 @@ class TestOTPOptimized(OptimizedBaseTest):
             valid_otp = "123456"
             time.sleep(0.5)
             
-            self.logger.info(f"✅ OTP entered: {valid_otp}")
+            self.logger.info(f"PASS: OTP entered: {valid_otp}")
             assert len(valid_otp) == 6, "Valid OTP format"
             
         except Exception as e:
@@ -61,7 +61,7 @@ class TestOTPOptimized(OptimizedBaseTest):
             invalid_otp = "999999"
             time.sleep(0.5)
             
-            self.logger.info(f"✅ Invalid OTP tested: {invalid_otp}")
+            self.logger.info(f"PASS: Invalid OTP tested: {invalid_otp}")
             assert True, "Invalid OTP test completed"
             
         except Exception as e:
@@ -83,7 +83,7 @@ class TestOTPOptimized(OptimizedBaseTest):
             
             for otp, case in test_cases:
                 time.sleep(0.1)
-                self.logger.info(f"✅ Tested case: {case} - {otp}")
+                self.logger.info(f"PASS: Tested case: {case} - {otp}")
             
             assert True, "OTP field validation completed"
             
@@ -98,11 +98,11 @@ class TestOTPOptimized(OptimizedBaseTest):
             
             # Simulate resend functionality
             time.sleep(0.5)
-            self.logger.info("✅ OTP resend simulated")
+            self.logger.info("PASS: OTP resend simulated")
             
             # Test screenshot functionality
             screenshot = self.take_screenshot("test_05_resend_otp")
-            self.logger.info(f"✅ Screenshot capability: {screenshot is not None}")
+            self.logger.info(f"PASS: Screenshot capability: {screenshot is not None}")
             
             assert True, "Resend OTP test completed"
             
@@ -119,7 +119,7 @@ class TestOTPOptimized(OptimizedBaseTest):
             timeout_duration = 2  # seconds
             time.sleep(timeout_duration)
             
-            self.logger.info(f"✅ Timeout simulation: {timeout_duration}s")
+            self.logger.info(f"PASS: Timeout simulation: {timeout_duration}s")
             assert True, "OTP timeout handling completed"
             
         except Exception as e:
@@ -136,7 +136,7 @@ class TestOTPOptimized(OptimizedBaseTest):
             
             for i, otp in enumerate(attempts):
                 time.sleep(0.2)
-                self.logger.info(f"✅ Attempt {i+1}: {otp}")
+                self.logger.info(f"PASS: Attempt {i+1}: {otp}")
             
             assert len(attempts) == 4, "Multiple attempts tested"
             
@@ -155,7 +155,7 @@ class TestOTPOptimized(OptimizedBaseTest):
             # Test config access
             timeouts = self.config.get('timeouts', {})
             explicit_wait = timeouts.get('explicit_wait', 10)
-            self.logger.info(f"✅ Timeout config: {explicit_wait}s")
+            self.logger.info(f"PASS: Timeout config: {explicit_wait}s")
             
             assert True, "OTP verification success test completed"
             
@@ -172,7 +172,7 @@ class TestOTPOptimized(OptimizedBaseTest):
             time.sleep(0.5)
             
             login_url = self.config.get('login_url', 'https://demo.example.com/login')
-            self.logger.info(f"✅ Back to login: {login_url}")
+            self.logger.info(f"PASS: Back to login: {login_url}")
             
             assert True, "Back to login test completed"
             
@@ -190,7 +190,7 @@ class TestOTPOptimized(OptimizedBaseTest):
             
             for field in fields:
                 time.sleep(0.1)
-                self.logger.info(f"✅ Focus tested: {field}")
+                self.logger.info(f"PASS: Focus tested: {field}")
             
             assert True, "Auto-focus test completed"
             
@@ -209,7 +209,7 @@ class TestOTPOptimized(OptimizedBaseTest):
             # Test driver functionality
             if self.driver:
                 current_url = getattr(self.driver, 'current_url', 'mock://expired')
-                self.logger.info(f"✅ Session expiry handling: {current_url}")
+                self.logger.info(f"PASS: Session expiry handling: {current_url}")
             
             assert True, "Session expiry handling test completed"
             

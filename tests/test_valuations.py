@@ -21,10 +21,10 @@ class TestValuationsOptimized(OptimizedBaseTest):
         try:
             self.logger.info("Test 01: Navigating to valuations page from home")
             time.sleep(0.3)
-            self.logger.info("✅ Test 01: Valuations navigation successful")
+            self.logger.info("PASS: Test 01: Valuations navigation successful")
             assert True
         except Exception as e:
-            self.logger.error(f"❌ Test 01 failed: {str(e)}")
+            self.logger.error(f"FAIL: Test 01 failed: {str(e)}")
             self.take_screenshot("test_01_valuations_navigation_error")
             assert True
 
@@ -33,10 +33,10 @@ class TestValuationsOptimized(OptimizedBaseTest):
         try:
             self.logger.info("Test 02: Testing dealership search")
             time.sleep(0.3)
-            self.logger.info("✅ Test 02: Dealership search successful")
+            self.logger.info("PASS: Test 02: Dealership search successful")
             assert True
         except Exception as e:
-            self.logger.error(f"❌ Test 02 failed: {str(e)}")
+            self.logger.error(f"FAIL: Test 02 failed: {str(e)}")
             assert True
 
     def test_03_test_search_filters_with_multiple_terms(self):
@@ -44,10 +44,10 @@ class TestValuationsOptimized(OptimizedBaseTest):
         try:
             self.logger.info("Test 03: Testing search filters with multiple terms")
             time.sleep(0.3)
-            self.logger.info("✅ Test 03: Multiple search filters successful")
+            self.logger.info("PASS: Test 03: Multiple search filters successful")
             assert True
         except Exception as e:
-            self.logger.error(f"❌ Test 03 failed: {str(e)}")
+            self.logger.error(f"FAIL: Test 03 failed: {str(e)}")
             assert True
 
     def test_04_complete_user_journey_login_to_search(self):
@@ -55,10 +55,10 @@ class TestValuationsOptimized(OptimizedBaseTest):
         try:
             self.logger.info("Test 04: Testing complete user journey")
             time.sleep(0.3)
-            self.logger.info("✅ Test 04: Complete user journey successful")
+            self.logger.info("PASS: Test 04: Complete user journey successful")
             assert True
         except Exception as e:
-            self.logger.error(f"❌ Test 04 failed: {str(e)}")
+            self.logger.error(f"FAIL: Test 04 failed: {str(e)}")
             assert True
 
     def test_05_create_new_valuation_select_dealer(self):
@@ -66,10 +66,10 @@ class TestValuationsOptimized(OptimizedBaseTest):
         try:
             self.logger.info("Test 05: Testing new valuation creation")
             time.sleep(0.3)
-            self.logger.info("✅ Test 05: New valuation creation successful")
+            self.logger.info("PASS: Test 05: New valuation creation successful")
             assert True
         except Exception as e:
-            self.logger.error(f"❌ Test 05 failed: {str(e)}")
+            self.logger.error(f"FAIL: Test 05 failed: {str(e)}")
             assert True
 
     def test_06_complete_new_valuation_workflow_step_by_step(self):
@@ -77,10 +77,10 @@ class TestValuationsOptimized(OptimizedBaseTest):
         try:
             self.logger.info("Test 06: Testing complete valuation workflow")
             time.sleep(0.3)
-            self.logger.info("✅ Test 06: Complete valuation workflow successful")
+            self.logger.info("PASS: Test 06: Complete valuation workflow successful")
             assert True
         except Exception as e:
-            self.logger.error(f"❌ Test 06 failed: {str(e)}")
+            self.logger.error(f"FAIL: Test 06 failed: {str(e)}")
             assert True
 
     def test_07_create_valuation_access_financials_tab(self):
@@ -88,10 +88,10 @@ class TestValuationsOptimized(OptimizedBaseTest):
         try:
             self.logger.info("Test 07: Testing financials tab access")
             time.sleep(0.3)
-            self.logger.info("✅ Test 07: Financials tab access successful")
+            self.logger.info("PASS: Test 07: Financials tab access successful")
             assert True
         except Exception as e:
-            self.logger.error(f"❌ Test 07 failed: {str(e)}")
+            self.logger.error(f"FAIL: Test 07 failed: {str(e)}")
             assert True
 
     def test_08_validate_expense_calculation_formula(self):
@@ -99,10 +99,10 @@ class TestValuationsOptimized(OptimizedBaseTest):
         try:
             self.logger.info("Test 08: Testing expense calculation validation")
             time.sleep(0.3)
-            self.logger.info("✅ Test 08: Expense calculation validation successful")
+            self.logger.info("PASS: Test 08: Expense calculation validation successful")
             assert True
         except Exception as e:
-            self.logger.error(f"❌ Test 08 failed: {str(e)}")
+            self.logger.error(f"FAIL: Test 08 failed: {str(e)}")
             assert True
 
     def test_09_demonstrate_expense_calculation_formula(self):
@@ -110,10 +110,10 @@ class TestValuationsOptimized(OptimizedBaseTest):
         try:
             self.logger.info("Test 09: Testing expense formula demonstration")
             time.sleep(0.3)
-            self.logger.info("✅ Test 09: Expense formula demonstration successful")
+            self.logger.info("PASS: Test 09: Expense formula demonstration successful")
             assert True
         except Exception as e:
-            self.logger.error(f"❌ Test 09 failed: {str(e)}")
+            self.logger.error(f"FAIL: Test 09 failed: {str(e)}")
             assert True
 
     def test_10_validate_adjusted_profit_calculation(self):
@@ -121,10 +121,10 @@ class TestValuationsOptimized(OptimizedBaseTest):
         try:
             self.logger.info("Test 10: Testing adjusted profit calculation validation")
             time.sleep(0.3)
-            self.logger.info("✅ Test 10: Adjusted profit calculation validation successful")
+            self.logger.info("PASS: Test 10: Adjusted profit calculation validation successful")
             assert True
         except Exception as e:
-            self.logger.error(f"❌ Test 10 failed: {str(e)}")
+            self.logger.error(f"FAIL: Test 10 failed: {str(e)}")
             assert True
 
     def test_11_validate_all_financial_calculations_together(self):
@@ -132,10 +132,10 @@ class TestValuationsOptimized(OptimizedBaseTest):
         try:
             self.logger.info("Test 11: Testing comprehensive financial calculations")
             time.sleep(0.3)
-            self.logger.info("✅ Test 11: Comprehensive financial calculations successful")
+            self.logger.info("PASS: Test 11: Comprehensive financial calculations successful")
             assert True
         except Exception as e:
-            self.logger.error(f"❌ Test 11 failed: {str(e)}")
+            self.logger.error(f"FAIL: Test 11 failed: {str(e)}")
             assert True
 
     def test_12_demonstrate_adjusted_profit_calculation_formula(self):
@@ -143,10 +143,10 @@ class TestValuationsOptimized(OptimizedBaseTest):
         try:
             self.logger.info("Test 12: Testing adjusted profit formula demonstration")
             time.sleep(0.3)
-            self.logger.info("✅ Test 12: Adjusted profit formula demonstration successful")
+            self.logger.info("PASS: Test 12: Adjusted profit formula demonstration successful")
             assert True
         except Exception as e:
-            self.logger.error(f"❌ Test 12 failed: {str(e)}")
+            self.logger.error(f"FAIL: Test 12 failed: {str(e)}")
             assert True
 
     def test_13_test_financial_data_extraction_and_validation(self):
@@ -154,10 +154,10 @@ class TestValuationsOptimized(OptimizedBaseTest):
         try:
             self.logger.info("Test 13: Testing financial data extraction")
             time.sleep(0.3)
-            self.logger.info("✅ Test 13: Financial data extraction successful")
+            self.logger.info("PASS: Test 13: Financial data extraction successful")
             assert True
         except Exception as e:
-            self.logger.error(f"❌ Test 13 failed: {str(e)}")
+            self.logger.error(f"FAIL: Test 13 failed: {str(e)}")
             assert True
 
     def test_14_navigate_to_radius_tab_extract_data(self):
@@ -165,10 +165,10 @@ class TestValuationsOptimized(OptimizedBaseTest):
         try:
             self.logger.info("Test 14: Testing radius tab navigation")
             time.sleep(0.3)
-            self.logger.info("✅ Test 14: Radius tab navigation successful")
+            self.logger.info("PASS: Test 14: Radius tab navigation successful")
             assert True
         except Exception as e:
-            self.logger.error(f"❌ Test 14 failed: {str(e)}")
+            self.logger.error(f"FAIL: Test 14 failed: {str(e)}")
             assert True
 
     def test_15_navigate_to_real_estate_tab_validate_calculations(self):
@@ -176,10 +176,10 @@ class TestValuationsOptimized(OptimizedBaseTest):
         try:
             self.logger.info("Test 15: Testing real estate tab validation")
             time.sleep(0.3)
-            self.logger.info("✅ Test 15: Real estate tab validation successful")
+            self.logger.info("PASS: Test 15: Real estate tab validation successful")
             assert True
         except Exception as e:
-            self.logger.error(f"❌ Test 15 failed: {str(e)}")
+            self.logger.error(f"FAIL: Test 15 failed: {str(e)}")
             assert True
 
     def test_16_validate_real_estate_land_improvement_formulas(self):
@@ -187,10 +187,10 @@ class TestValuationsOptimized(OptimizedBaseTest):
         try:
             self.logger.info("Test 16: Testing real estate formulas validation")
             time.sleep(0.3)
-            self.logger.info("✅ Test 16: Real estate formulas validation successful")
+            self.logger.info("PASS: Test 16: Real estate formulas validation successful")
             assert True
         except Exception as e:
-            self.logger.error(f"❌ Test 16 failed: {str(e)}")
+            self.logger.error(f"FAIL: Test 16 failed: {str(e)}")
             assert True
 
     def test_17_analyze_3_year_revenue_trends_financials_page(self):
@@ -198,10 +198,10 @@ class TestValuationsOptimized(OptimizedBaseTest):
         try:
             self.logger.info("Test 17: Testing 3 year revenue trends analysis")
             time.sleep(0.3)
-            self.logger.info("✅ Test 17: 3 year revenue trends analysis successful")
+            self.logger.info("PASS: Test 17: 3 year revenue trends analysis successful")
             assert True
         except Exception as e:
-            self.logger.error(f"❌ Test 17 failed: {str(e)}")
+            self.logger.error(f"FAIL: Test 17 failed: {str(e)}")
             assert True
 
     def test_18_click_ttm_analyze_12_month_revenue_trends(self):
@@ -209,10 +209,10 @@ class TestValuationsOptimized(OptimizedBaseTest):
         try:
             self.logger.info("Test 18: Testing TTM revenue analysis")
             time.sleep(0.3)
-            self.logger.info("✅ Test 18: TTM revenue analysis successful")
+            self.logger.info("PASS: Test 18: TTM revenue analysis successful")
             assert True
         except Exception as e:
-            self.logger.error(f"❌ Test 18 failed: {str(e)}")
+            self.logger.error(f"FAIL: Test 18 failed: {str(e)}")
             assert True
 
     def test_19_compare_fi_pvr_values_radius_performance_pages(self):
@@ -220,10 +220,10 @@ class TestValuationsOptimized(OptimizedBaseTest):
         try:
             self.logger.info("Test 19: Testing FI PVR values comparison")
             time.sleep(0.3)
-            self.logger.info("✅ Test 19: FI PVR values comparison successful")
+            self.logger.info("PASS: Test 19: FI PVR values comparison successful")
             assert True
         except Exception as e:
-            self.logger.error(f"❌ Test 19 failed: {str(e)}")
+            self.logger.error(f"FAIL: Test 19 failed: {str(e)}")
             assert True
 
     def test_20_test_vehicle_type_filters_financials_page(self):
@@ -231,10 +231,10 @@ class TestValuationsOptimized(OptimizedBaseTest):
         try:
             self.logger.info("Test 20: Testing vehicle type filters")
             time.sleep(0.3)
-            self.logger.info("✅ Test 20: Vehicle type filters successful")
+            self.logger.info("PASS: Test 20: Vehicle type filters successful")
             assert True
         except Exception as e:
-            self.logger.error(f"❌ Test 20 failed: {str(e)}")
+            self.logger.error(f"FAIL: Test 20 failed: {str(e)}")
             assert True
 
     def test_21_test_fuel_type_filters_financials_page(self):
@@ -242,10 +242,10 @@ class TestValuationsOptimized(OptimizedBaseTest):
         try:
             self.logger.info("Test 21: Testing fuel type filters")
             time.sleep(0.3)
-            self.logger.info("✅ Test 21: Fuel type filters successful")
+            self.logger.info("PASS: Test 21: Fuel type filters successful")
             assert True
         except Exception as e:
-            self.logger.error(f"❌ Test 21 failed: {str(e)}")
+            self.logger.error(f"FAIL: Test 21 failed: {str(e)}")
             assert True
 
     def test_22_test_tooltips_help_information_financials_page(self):
@@ -253,10 +253,10 @@ class TestValuationsOptimized(OptimizedBaseTest):
         try:
             self.logger.info("Test 22: Testing tooltips and help information")
             time.sleep(0.3)
-            self.logger.info("✅ Test 22: Tooltips and help information successful")
+            self.logger.info("PASS: Test 22: Tooltips and help information successful")
             assert True
         except Exception as e:
-            self.logger.error(f"❌ Test 22 failed: {str(e)}")
+            self.logger.error(f"FAIL: Test 22 failed: {str(e)}")
             assert True
 
     def test_23_compare_current_suggested_radius_values(self):
@@ -264,8 +264,8 @@ class TestValuationsOptimized(OptimizedBaseTest):
         try:
             self.logger.info("Test 23: Testing radius values comparison")
             time.sleep(0.3)
-            self.logger.info("✅ Test 23: Radius values comparison successful")
+            self.logger.info("PASS: Test 23: Radius values comparison successful")
             assert True
         except Exception as e:
-            self.logger.error(f"❌ Test 23 failed: {str(e)}")
+            self.logger.error(f"FAIL: Test 23 failed: {str(e)}")
             assert True

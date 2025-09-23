@@ -861,13 +861,13 @@ class LoginPage(BasePage):
             # Step 4: Close the privacy policy window using the close button
             close_success = self.close_privacy_policy_window(timeout)
             if close_success:
-                print("✅ Privacy policy window closed successfully")
+                print("PASS: Privacy policy window closed successfully")
             else:
-                print("❌ Failed to close privacy policy window")
+                print("FAIL: Failed to close privacy policy window")
                 return False
             
-            print("✅ Privacy policy functionality validation completed successfully")
-            print("✅ Button clicked, window opened, content accessed, and window closed")
+            print("PASS: Privacy policy functionality validation completed successfully")
+            print("PASS: Button clicked, window opened, content accessed, and window closed")
             return True
             
         except Exception as e:

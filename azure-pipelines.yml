@@ -61,7 +61,15 @@ steps:
     # Set environment variables for pipeline
     $env:RUNNING_IN_PIPELINE = "true"
     $env:PYTEST_CURRENT_TEST = ""
+    $env:PYTHONIOENCODING = "utf-8"
+    $env:LANG = "en_US.UTF-8"
+    
+    # Set console output encoding to UTF-8
+    [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+    [Console]::InputEncoding = [System.Text.Encoding]::UTF8
+    
     Write-Host "Environment variables set for pipeline execution"
+    Write-Host "UTF-8 encoding configured"
   displayName: 'Setup Test Environment'
 
 - powershell: |

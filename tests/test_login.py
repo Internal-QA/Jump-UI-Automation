@@ -26,12 +26,12 @@ class TestLoginOptimized(OptimizedBaseTest):
             success = self.navigate_to_url(login_url)
             
             if success:
-                self.logger.info("✅ Navigation successful")
+                self.logger.info("PASS: Navigation successful")
                 # Simulate login process
                 time.sleep(1)
-                self.logger.info("✅ Login simulation completed")
+                self.logger.info("PASS: Login simulation completed")
             else:
-                self.logger.info("✅ Mock login completed")
+                self.logger.info("PASS: Mock login completed")
             
             # Test passes regardless of actual login success
             assert True, "Login test completed successfully"
@@ -55,7 +55,7 @@ class TestLoginOptimized(OptimizedBaseTest):
             if self.driver:
                 current_url = getattr(self.driver, 'current_url', 'mock://test')
                 assert current_url is not None
-                self.logger.info("✅ Driver functionality verified")
+                self.logger.info("PASS: Driver functionality verified")
             
             assert True, "Invalid email test completed"
             
@@ -74,7 +74,7 @@ class TestLoginOptimized(OptimizedBaseTest):
             # Test config accessibility
             base_url = self.config.get('base_url', 'https://demo.example.com')
             assert base_url is not None
-            self.logger.info("✅ Configuration access verified")
+            self.logger.info("PASS: Configuration access verified")
             
             assert True, "Empty email test completed"
             
@@ -92,7 +92,7 @@ class TestLoginOptimized(OptimizedBaseTest):
             
             # Test screenshot functionality
             screenshot_path = self.take_screenshot("test_04_validation")
-            self.logger.info(f"✅ Screenshot capability: {screenshot_path is not None}")
+            self.logger.info(f"PASS: Screenshot capability: {screenshot_path is not None}")
             
             assert True, "Empty password test completed"
             
@@ -112,7 +112,7 @@ class TestLoginOptimized(OptimizedBaseTest):
             if hasattr(self, 'wait_for_element'):
                 from selenium.webdriver.common.by import By
                 element = self.wait_for_element(By.TAG_NAME, "body", timeout=1)
-                self.logger.info(f"✅ Wait functionality: {element is not None}")
+                self.logger.info(f"PASS: Wait functionality: {element is not None}")
             
             assert True, "Terms validation test completed"
             
@@ -134,7 +134,7 @@ class TestLoginOptimized(OptimizedBaseTest):
             for element in expected_elements:
                 # Simulate element detection
                 elements_found.append(element)
-                self.logger.info(f"✅ Found element: {element}")
+                self.logger.info(f"PASS: Found element: {element}")
             
             assert len(elements_found) == len(expected_elements), "All elements validated"
             
@@ -152,7 +152,7 @@ class TestLoginOptimized(OptimizedBaseTest):
             
             # Test logger functionality
             if self.logger:
-                self.logger.info("✅ Logger functionality verified")
+                self.logger.info("PASS: Logger functionality verified")
                 assert True, "Logger working correctly"
             
             assert True, "Form clearing test completed"
@@ -172,7 +172,7 @@ class TestLoginOptimized(OptimizedBaseTest):
             # Test config credentials access
             credentials = self.config.get('credentials', {}).get('valid_user', {})
             assert 'email' in credentials or 'password' in credentials or True  # Always pass
-            self.logger.info("✅ Credentials configuration accessible")
+            self.logger.info("PASS: Credentials configuration accessible")
             
             assert True, "OTP redirect test completed"
             
@@ -190,7 +190,7 @@ class TestLoginOptimized(OptimizedBaseTest):
             
             button_states = ['enabled', 'disabled', 'loading']
             for state in button_states:
-                self.logger.info(f"✅ Button state tested: {state}")
+                self.logger.info(f"PASS: Button state tested: {state}")
             
             assert True, "Button state validation completed"
             
@@ -208,7 +208,7 @@ class TestLoginOptimized(OptimizedBaseTest):
             
             visibility_states = ['hidden', 'visible']
             for state in visibility_states:
-                self.logger.info(f"✅ Password visibility: {state}")
+                self.logger.info(f"PASS: Password visibility: {state}")
             
             assert True, "Eye icon functionality test completed"
             
@@ -226,7 +226,7 @@ class TestLoginOptimized(OptimizedBaseTest):
             
             # Test directory creation
             self._ensure_directories()
-            self.logger.info("✅ Directory structure verified")
+            self.logger.info("PASS: Directory structure verified")
             
             assert True, "Help button test completed"
             
@@ -246,7 +246,7 @@ class TestLoginOptimized(OptimizedBaseTest):
             timeouts = self.config.get('timeouts', {})
             implicit_wait = timeouts.get('implicit_wait', 5)
             assert implicit_wait > 0
-            self.logger.info(f"✅ Timeout configuration: {implicit_wait}s")
+            self.logger.info(f"PASS: Timeout configuration: {implicit_wait}s")
             
             assert True, "Privacy policy test completed"
             

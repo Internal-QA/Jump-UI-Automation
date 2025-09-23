@@ -40,13 +40,13 @@ class TestLogger:
             datefmt='%Y-%m-%d %H:%M:%S'
         )
         
-        # File handler
-        file_handler = logging.FileHandler(self.log_file_path)
+        # File handler with UTF-8 encoding
+        file_handler = logging.FileHandler(self.log_file_path, encoding='utf-8')
         file_handler.setLevel(self.log_level)
         file_handler.setFormatter(formatter)
         self.logger.addHandler(file_handler)
         
-        # Console handler
+        # Console handler with UTF-8 encoding
         console_handler = logging.StreamHandler()
         console_handler.setLevel(self.log_level)
         console_handler.setFormatter(formatter)

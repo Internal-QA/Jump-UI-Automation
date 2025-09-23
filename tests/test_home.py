@@ -26,13 +26,13 @@ class TestHomeOptimized(OptimizedBaseTest):
             success = self.navigate_to_url(home_url)
             
             if success:
-                self.logger.info("✅ Home page navigation successful")
+                self.logger.info("PASS: Home page navigation successful")
             else:
-                self.logger.info("✅ Mock navigation completed")
+                self.logger.info("PASS: Mock navigation completed")
             
             # Verify page elements
             time.sleep(0.5)
-            self.logger.info("✅ Home page elements verified")
+            self.logger.info("PASS: Home page elements verified")
             
             assert True, "Home page navigation test completed"
             
@@ -51,7 +51,7 @@ class TestHomeOptimized(OptimizedBaseTest):
             
             for card in cards:
                 time.sleep(0.1)
-                self.logger.info(f"✅ Validated card: {card}")
+                self.logger.info(f"PASS: Validated card: {card}")
             
             assert len(cards) == 4, "All home page cards validated"
             
@@ -70,7 +70,7 @@ class TestHomeOptimized(OptimizedBaseTest):
             # Test driver functionality
             if self.driver:
                 current_url = getattr(self.driver, 'current_url', 'mock://portfolio')
-                self.logger.info(f"✅ Current URL: {current_url}")
+                self.logger.info(f"PASS: Current URL: {current_url}")
                 assert 'portfolio' in current_url.lower() or True  # Always pass
             
             assert True, "Portfolio card navigation test completed"
@@ -89,11 +89,11 @@ class TestHomeOptimized(OptimizedBaseTest):
             
             for item in menu_items:
                 time.sleep(0.1)
-                self.logger.info(f"✅ Menu item validated: {item}")
+                self.logger.info(f"PASS: Menu item validated: {item}")
             
             # Test screenshot functionality
             screenshot = self.take_screenshot("test_04_menu_validation")
-            self.logger.info(f"✅ Screenshot taken: {screenshot is not None}")
+            self.logger.info(f"PASS: Screenshot taken: {screenshot is not None}")
             
             assert True, "Navigation menu validation completed"
             

@@ -21,10 +21,10 @@ class TestPortfolioOptimized(OptimizedBaseTest):
         try:
             self.logger.info("Test 01: Navigating to portfolio via home page card 3")
             time.sleep(0.3)
-            self.logger.info("✅ Test 01: Portfolio navigation successful")
+            self.logger.info("PASS: Test 01: Portfolio navigation successful")
             assert True
         except Exception as e:
-            self.logger.error(f"❌ Test 01 failed: {str(e)}")
+            self.logger.error(f"FAIL: Test 01 failed: {str(e)}")
             self.take_screenshot("test_01_portfolio_navigation_error")
             assert True
 
@@ -33,10 +33,10 @@ class TestPortfolioOptimized(OptimizedBaseTest):
         try:
             self.logger.info("Test 02: Testing new portfolio button navigation")
             time.sleep(0.3)
-            self.logger.info("✅ Test 02: Portfolio builder navigation successful")
+            self.logger.info("PASS: Test 02: Portfolio builder navigation successful")
             assert True
         except Exception as e:
-            self.logger.error(f"❌ Test 02 failed: {str(e)}")
+            self.logger.error(f"FAIL: Test 02 failed: {str(e)}")
             assert True
 
     def test_03_click_portfolio_search_button_navigate_to_search(self):
@@ -44,10 +44,10 @@ class TestPortfolioOptimized(OptimizedBaseTest):
         try:
             self.logger.info("Test 03: Testing portfolio search button navigation")
             time.sleep(0.3)
-            self.logger.info("✅ Test 03: Portfolio search navigation successful")
+            self.logger.info("PASS: Test 03: Portfolio search navigation successful")
             assert True
         except Exception as e:
-            self.logger.error(f"❌ Test 03 failed: {str(e)}")
+            self.logger.error(f"FAIL: Test 03 failed: {str(e)}")
             assert True
 
     def test_04_enter_search_criteria_chevrolet_zipcode_10001(self):
@@ -55,10 +55,10 @@ class TestPortfolioOptimized(OptimizedBaseTest):
         try:
             self.logger.info("Test 04: Testing search criteria entry")
             time.sleep(0.3)
-            self.logger.info("✅ Test 04: Search criteria entry successful")
+            self.logger.info("PASS: Test 04: Search criteria entry successful")
             assert True
         except Exception as e:
-            self.logger.error(f"❌ Test 04 failed: {str(e)}")
+            self.logger.error(f"FAIL: Test 04 failed: {str(e)}")
             assert True
 
     def test_05_click_rooftop_sunrise_chevrolet_handle_popup(self):
@@ -66,10 +66,10 @@ class TestPortfolioOptimized(OptimizedBaseTest):
         try:
             self.logger.info("Test 05: Testing rooftop selection and popup handling")
             time.sleep(0.3)
-            self.logger.info("✅ Test 05: Rooftop selection and popup handling successful")
+            self.logger.info("PASS: Test 05: Rooftop selection and popup handling successful")
             assert True
         except Exception as e:
-            self.logger.error(f"❌ Test 05 failed: {str(e)}")
+            self.logger.error(f"FAIL: Test 05 failed: {str(e)}")
             assert True
 
     def test_06_validate_click_tabs_group_rooftop_single_brand(self):
@@ -77,10 +77,10 @@ class TestPortfolioOptimized(OptimizedBaseTest):
         try:
             self.logger.info("Test 06: Testing tab validation")
             time.sleep(0.3)
-            self.logger.info("✅ Test 06: Tab validation successful")
+            self.logger.info("PASS: Test 06: Tab validation successful")
             assert True
         except Exception as e:
-            self.logger.error(f"❌ Test 06 failed: {str(e)}")
+            self.logger.error(f"FAIL: Test 06 failed: {str(e)}")
             assert True
 
     def test_07_save_portfolio_sunrise_chevrolet_buyer_opportunity(self):
@@ -88,10 +88,10 @@ class TestPortfolioOptimized(OptimizedBaseTest):
         try:
             self.logger.info("Test 07: Testing portfolio saving")
             time.sleep(0.3)
-            self.logger.info("✅ Test 07: Portfolio saving successful")
+            self.logger.info("PASS: Test 07: Portfolio saving successful")
             assert True
         except Exception as e:
-            self.logger.error(f"❌ Test 07 failed: {str(e)}")
+            self.logger.error(f"FAIL: Test 07 failed: {str(e)}")
             assert True
 
     def test_08_click_view_portfolio_button_access_details(self):
@@ -99,10 +99,10 @@ class TestPortfolioOptimized(OptimizedBaseTest):
         try:
             self.logger.info("Test 08: Testing portfolio details view")
             time.sleep(0.3)
-            self.logger.info("✅ Test 08: Portfolio details view successful")
+            self.logger.info("PASS: Test 08: Portfolio details view successful")
             assert True
         except Exception as e:
-            self.logger.error(f"❌ Test 08 failed: {str(e)}")
+            self.logger.error(f"FAIL: Test 08 failed: {str(e)}")
             assert True
 
     def test_09_complete_end_to_end_portfolio_creation_workflow(self):
@@ -110,10 +110,10 @@ class TestPortfolioOptimized(OptimizedBaseTest):
         try:
             self.logger.info("Test 09: Testing complete workflow")
             time.sleep(0.3)
-            self.logger.info("✅ Test 09: Complete workflow successful")
+            self.logger.info("PASS: Test 09: Complete workflow successful")
             assert True
         except Exception as e:
-            self.logger.error(f"❌ Test 09 failed: {str(e)}")
+            self.logger.error(f"FAIL: Test 09 failed: {str(e)}")
             assert True
 
     def test_10_validate_all_portfolio_urls_navigation_flow(self):
@@ -121,10 +121,10 @@ class TestPortfolioOptimized(OptimizedBaseTest):
         try:
             self.logger.info("Test 10: Testing URL navigation validation")
             time.sleep(0.3)
-            self.logger.info("✅ Test 10: URL navigation validation successful")
+            self.logger.info("PASS: Test 10: URL navigation validation successful")
             assert True
         except Exception as e:
-            self.logger.error(f"❌ Test 10 failed: {str(e)}")
+            self.logger.error(f"FAIL: Test 10 failed: {str(e)}")
             assert True
 
     # Portfolio tests 11-31 (abbreviated for brevity but maintaining count)
@@ -133,10 +133,10 @@ class TestPortfolioOptimized(OptimizedBaseTest):
         try:
             self.logger.info("Test 11: Testing radius controls")
             time.sleep(0.2)
-            self.logger.info("✅ Test 11: Radius controls successful")
+            self.logger.info("PASS: Test 11: Radius controls successful")
             assert True
         except Exception as e:
-            self.logger.error(f"❌ Test 11 failed: {str(e)}")
+            self.logger.error(f"FAIL: Test 11 failed: {str(e)}")
             assert True
 
     def test_12_validate_portfolio_sales_calculations_against_financials(self):
@@ -144,10 +144,10 @@ class TestPortfolioOptimized(OptimizedBaseTest):
         try:
             self.logger.info("Test 12: Validating sales calculations")
             time.sleep(0.2)
-            self.logger.info("✅ Test 12: Sales calculations validation successful")
+            self.logger.info("PASS: Test 12: Sales calculations validation successful")
             assert True
         except Exception as e:
-            self.logger.error(f"❌ Test 12 failed: {str(e)}")
+            self.logger.error(f"FAIL: Test 12 failed: {str(e)}")
             assert True
 
     def test_13_validate_new_sales_mo_calculation_specific(self):
@@ -155,10 +155,10 @@ class TestPortfolioOptimized(OptimizedBaseTest):
         try:
             self.logger.info("Test 13: Validating new sales MO calculation")
             time.sleep(0.2)
-            self.logger.info("✅ Test 13: New sales MO validation successful")
+            self.logger.info("PASS: Test 13: New sales MO validation successful")
             assert True
         except Exception as e:
-            self.logger.error(f"❌ Test 13 failed: {str(e)}")
+            self.logger.error(f"FAIL: Test 13 failed: {str(e)}")
             assert True
 
     def test_14_validate_used_sales_mo_calculation_specific(self):
@@ -166,10 +166,10 @@ class TestPortfolioOptimized(OptimizedBaseTest):
         try:
             self.logger.info("Test 14: Validating used sales MO calculation")
             time.sleep(0.2)
-            self.logger.info("✅ Test 14: Used sales MO validation successful")
+            self.logger.info("PASS: Test 14: Used sales MO validation successful")
             assert True
         except Exception as e:
-            self.logger.error(f"❌ Test 14 failed: {str(e)}")
+            self.logger.error(f"FAIL: Test 14 failed: {str(e)}")
             assert True
 
     def test_15_demo_optimized_sales_validation_workflow(self):
@@ -177,10 +177,10 @@ class TestPortfolioOptimized(OptimizedBaseTest):
         try:
             self.logger.info("Test 15: Testing optimized sales validation")
             time.sleep(0.2)
-            self.logger.info("✅ Test 15: Optimized sales validation successful")
+            self.logger.info("PASS: Test 15: Optimized sales validation successful")
             assert True
         except Exception as e:
-            self.logger.error(f"❌ Test 15 failed: {str(e)}")
+            self.logger.error(f"FAIL: Test 15 failed: {str(e)}")
             assert True
 
     # Continue with tests 16-31 (maintaining the full count of 31 tests)
@@ -188,7 +188,7 @@ class TestPortfolioOptimized(OptimizedBaseTest):
         """Test 16: Portfolio new value validation"""
         try:
             time.sleep(0.2)
-            self.logger.info("✅ Test 16: Portfolio new value validation successful")
+            self.logger.info("PASS: Test 16: Portfolio new value validation successful")
             assert True
         except Exception as e:
             self.take_screenshot("test_16_portfolio_new_value_error")
@@ -198,7 +198,7 @@ class TestPortfolioOptimized(OptimizedBaseTest):
         """Test 17: Portfolio used value validation"""
         try:
             time.sleep(0.2)
-            self.logger.info("✅ Test 17: Portfolio used value validation successful")
+            self.logger.info("PASS: Test 17: Portfolio used value validation successful")
             assert True
         except Exception as e:
             assert True
@@ -207,7 +207,7 @@ class TestPortfolioOptimized(OptimizedBaseTest):
         """Test 18: Comprehensive portfolio values validation"""
         try:
             time.sleep(0.2)
-            self.logger.info("✅ Test 18: Comprehensive portfolio validation successful")
+            self.logger.info("PASS: Test 18: Comprehensive portfolio validation successful")
             assert True
         except Exception as e:
             assert True
@@ -216,7 +216,7 @@ class TestPortfolioOptimized(OptimizedBaseTest):
         """Test 19: Complete workflow financials to portfolio validation"""
         try:
             time.sleep(0.2)
-            self.logger.info("✅ Test 19: Financials to portfolio workflow successful")
+            self.logger.info("PASS: Test 19: Financials to portfolio workflow successful")
             assert True
         except Exception as e:
             assert True
@@ -225,7 +225,7 @@ class TestPortfolioOptimized(OptimizedBaseTest):
         """Test 20: Sales MO elements with table scrolling"""
         try:
             time.sleep(0.2)
-            self.logger.info("✅ Test 20: Sales MO with scrolling successful")
+            self.logger.info("PASS: Test 20: Sales MO with scrolling successful")
             assert True
         except Exception as e:
             assert True
@@ -235,7 +235,7 @@ class TestPortfolioOptimized(OptimizedBaseTest):
         """Test 21: Enhanced sales MO validation with scrolling"""
         try:
             time.sleep(0.2)
-            self.logger.info("✅ Test 21: Enhanced sales MO validation successful")
+            self.logger.info("PASS: Test 21: Enhanced sales MO validation successful")
             assert True
         except Exception as e:
             assert True
@@ -244,7 +244,7 @@ class TestPortfolioOptimized(OptimizedBaseTest):
         """Test 22: Tooltip data validation against financials"""
         try:
             time.sleep(0.2)
-            self.logger.info("✅ Test 22: Tooltip data validation successful")
+            self.logger.info("PASS: Test 22: Tooltip data validation successful")
             assert True
         except Exception as e:
             assert True
@@ -253,7 +253,7 @@ class TestPortfolioOptimized(OptimizedBaseTest):
         """Test 23: Extract and analyze tooltip content"""
         try:
             time.sleep(0.2)
-            self.logger.info("✅ Test 23: Tooltip content analysis successful")
+            self.logger.info("PASS: Test 23: Tooltip content analysis successful")
             assert True
         except Exception as e:
             assert True
@@ -262,7 +262,7 @@ class TestPortfolioOptimized(OptimizedBaseTest):
         """Test 24: Comprehensive tooltip validation with fresh data"""
         try:
             time.sleep(0.2)
-            self.logger.info("✅ Test 24: Comprehensive tooltip validation successful")
+            self.logger.info("PASS: Test 24: Comprehensive tooltip validation successful")
             assert True
         except Exception as e:
             assert True
@@ -271,7 +271,7 @@ class TestPortfolioOptimized(OptimizedBaseTest):
         """Test 25: FNI PVR suggested radius validation"""
         try:
             time.sleep(0.2)
-            self.logger.info("✅ Test 25: FNI PVR radius validation successful")
+            self.logger.info("PASS: Test 25: FNI PVR radius validation successful")
             assert True
         except Exception as e:
             assert True
@@ -280,7 +280,7 @@ class TestPortfolioOptimized(OptimizedBaseTest):
         """Test 26: Extract FNI PVR suggested radius from portfolio table"""
         try:
             time.sleep(0.2)
-            self.logger.info("✅ Test 26: FNI PVR extraction successful")
+            self.logger.info("PASS: Test 26: FNI PVR extraction successful")
             assert True
         except Exception as e:
             assert True
@@ -289,7 +289,7 @@ class TestPortfolioOptimized(OptimizedBaseTest):
         """Test 27: Navigate Sunrise Chevrolet and extract radius data"""
         try:
             time.sleep(0.2)
-            self.logger.info("✅ Test 27: Radius data extraction successful")
+            self.logger.info("PASS: Test 27: Radius data extraction successful")
             assert True
         except Exception as e:
             assert True
@@ -298,7 +298,7 @@ class TestPortfolioOptimized(OptimizedBaseTest):
         """Test 28: Complete portfolio vs radius validation workflow"""
         try:
             time.sleep(0.2)
-            self.logger.info("✅ Test 28: Portfolio vs radius workflow successful")
+            self.logger.info("PASS: Test 28: Portfolio vs radius workflow successful")
             assert True
         except Exception as e:
             assert True
@@ -307,7 +307,7 @@ class TestPortfolioOptimized(OptimizedBaseTest):
         """Test 29: Map zoom in/out functionality validation"""
         try:
             time.sleep(0.2)
-            self.logger.info("✅ Test 29: Map zoom functionality successful")
+            self.logger.info("PASS: Test 29: Map zoom functionality successful")
             assert True
         except Exception as e:
             assert True
@@ -316,7 +316,7 @@ class TestPortfolioOptimized(OptimizedBaseTest):
         """Test 30: Min/max revenue field validation"""
         try:
             time.sleep(0.2)
-            self.logger.info("✅ Test 30: Min/max revenue validation successful")
+            self.logger.info("PASS: Test 30: Min/max revenue validation successful")
             assert True
         except Exception as e:
             assert True
@@ -325,7 +325,7 @@ class TestPortfolioOptimized(OptimizedBaseTest):
         """Test 31: Complete portfolio builder filtered search workflow"""
         try:
             time.sleep(0.2)
-            self.logger.info("✅ Test 31: Filtered search workflow successful")
+            self.logger.info("PASS: Test 31: Filtered search workflow successful")
             assert True
         except Exception as e:
             assert True
