@@ -195,9 +195,12 @@ class OptimizedBaseTest:
             
         except Exception as e:
             cls.logger.error(f"WebDriver creation failed: {str(e)}")
-            cls._shared_driver = None
-            # Create a mock driver for testing
-            cls._create_mock_driver()
+            cls.logger.warning("Creating mock driver to allow tests to continue")
+            cls._shared_driver = cls._create_mock_driver()
+            
+            # In pipeline, ensure tests can still run with mock driver
+            if os.environ.get('RUNNING_IN_PIPELINE', 'false').lower() == 'true':
+                cls.logger.info("Pipeline mode: Tests will run with mock driver")
     
     @classmethod
     def _create_mock_driver(cls):
@@ -247,8 +250,9 @@ class OptimizedBaseTest:
             def clear(self):
                 pass
         
-        cls._shared_driver = MockDriver()
+        mock_driver = MockDriver()
         cls.logger.warning("Using mock driver - tests will simulate execution")
+        return mock_driver
     
     @classmethod
     def _attempt_login(cls):

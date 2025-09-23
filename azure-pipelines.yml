@@ -78,70 +78,106 @@ steps:
         New-Item -ItemType Directory -Name "allure-results"
     }
     
-    # Set environment variables
+    # Set environment variables for pipeline mode
     $env:RUNNING_IN_PIPELINE = "true"
     $env:PYTEST_CURRENT_TEST = ""
+    $env:PYTHONIOENCODING = "utf-8"
+    $env:LANG = "en_US.UTF-8"
     
-    Write-Host "Checking test discovery..."
-    python -m pytest --collect-only tests/ | Select-Object -First 20
-    Write-Host "Total tests discovered:"
-    $collectOutput = python -m pytest --collect-only tests/ -q 2>&1
-    if ($collectOutput -match "test session starts") {
-        Write-Host $collectOutput
-    } else {
-        Write-Host "No tests discovered or collection failed"
+    Write-Host "Python version and environment:"
+    python --version
+    Write-Host "Working directory: $(Get-Location)"
+    Write-Host "Environment variables:"
+    Write-Host "RUNNING_IN_PIPELINE=$env:RUNNING_IN_PIPELINE"
+    
+    Write-Host "Checking Python imports..."
+    python -c "import sys; print('Python Path:', sys.path[:3])"
+    python -c "import pytest; print('Pytest version:', pytest.__version__)"
+    
+    try {
+        python -c "import selenium; print('Selenium version:', selenium.__version__)"
+    } catch {
+        Write-Host "Selenium import failed, but continuing..."
     }
     
-    Write-Host "Running tests with comprehensive logging..."
-    $pytestArgs = @(
-        "tests/",
-        "--alluredir=allure-results",
-        "--clean-alluredir",
-        "-v",
-        "--tb=short",
-        "--maxfail=5",
-        "--capture=no",
-        "--log-cli-level=INFO"
-    )
+    Write-Host "Checking test discovery..."
+    $discoverOutput = python -m pytest --collect-only tests/ 2>&1
+    Write-Host "Discovery output:"
+    Write-Host $discoverOutput
     
-    python -m pytest @pytestArgs
+    # Count discovered tests
+    $testCount = ($discoverOutput | Select-String "test session starts" | ForEach-Object { $_.Line -replace '.*(\d+) items.*', '$1' })
+    if ($testCount) {
+        Write-Host "Discovered $testCount tests"
+    } else {
+        Write-Host "Test discovery may have failed"
+    }
+    
+    Write-Host "=========================================="
+    Write-Host "RUNNING TESTS WITH DETAILED OUTPUT"
+    Write-Host "=========================================="
+    
+    # Run tests with maximum verbosity and error details
+    python -m pytest tests/ `
+        --alluredir=allure-results `
+        --clean-alluredir `
+        -v `
+        -s `
+        --tb=long `
+        --maxfail=3 `
+        --capture=no `
+        --log-cli-level=DEBUG `
+        --log-cli-format='%(levelname)s:%(name)s:%(message)s' `
+        --disable-warnings
+    
     $PYTEST_EXIT_CODE = $LASTEXITCODE
+    Write-Host "=========================================="
     Write-Host "Pytest completed with exit code: $PYTEST_EXIT_CODE"
+    Write-Host "=========================================="
     
-    Write-Host "Checking allure-results..."
+    Write-Host "Checking allure-results directory..."
     if (Test-Path "allure-results") {
         Write-Host "Contents of allure-results:"
-        Get-ChildItem "allure-results" | Select-Object -First 10
+        $allItems = Get-ChildItem "allure-results" -Recurse
+        Write-Host "Total files: $($allItems.Count)"
+        $allItems | ForEach-Object { Write-Host "  $($_.Name) ($($_.Length) bytes)" }
+        
         $jsonFiles = Get-ChildItem "allure-results" -Filter "*.json"
         $JSON_COUNT = $jsonFiles.Count
-        Write-Host "Total JSON result files: $JSON_COUNT"
+        Write-Host "JSON result files: $JSON_COUNT"
         
         if ($JSON_COUNT -eq 0) {
             Write-Host "WARNING: No Allure result files generated!"
-            Write-Host "Creating minimal test result for report generation..."
-            $minimalResult = @{
-                uuid = "minimal-test-result"
-                name = "Pipeline Test Discovery"
-                fullName = "pipeline.test_discovery"
+            Write-Host "Tests may have failed during setup/teardown phase"
+            Write-Host "Creating diagnostic test result..."
+            
+            $diagnosticResult = @{
+                uuid = "diagnostic-result-$(Get-Date -Format 'yyyyMMdd-HHmmss')"
+                name = "Pipeline Diagnostic Test"
+                fullName = "pipeline.diagnostic.test"
                 status = "failed"
                 statusDetails = @{
-                    message = "Tests failed to execute in pipeline environment"
-                    trace = "Check pipeline logs for WebDriver or import errors"
+                    message = "No test results generated - likely WebDriver or setup failure"
+                    trace = "Exit code: $PYTEST_EXIT_CODE. Check logs above for setup errors."
                 }
                 stage = "finished"
-                start = 1640995200000
-                stop = 1640995260000
+                start = [DateTimeOffset]::Now.ToUnixTimeMilliseconds() - 60000
+                stop = [DateTimeOffset]::Now.ToUnixTimeMilliseconds()
                 labels = @(
                     @{ name = "suite"; value = "Pipeline Diagnostics" },
-                    @{ name = "framework"; value = "pytest" }
+                    @{ name = "framework"; value = "pytest" },
+                    @{ name = "exitCode"; value = "$PYTEST_EXIT_CODE" }
                 )
             }
-            $minimalResult | ConvertTo-Json -Depth 10 | Out-File -FilePath "allure-results/minimal-result.json" -Encoding UTF8
-            Write-Host "Minimal result file created for debugging"
+            $diagnosticResult | ConvertTo-Json -Depth 10 | Out-File -FilePath "allure-results/diagnostic-result.json" -Encoding UTF8
+            Write-Host "Diagnostic result file created"
+        } else {
+            Write-Host "SUCCESS: $JSON_COUNT Allure result files found!"
         }
     } else {
-        Write-Host "ERROR: allure-results directory missing!"
-        New-Item -ItemType Directory -Name "allure-results"
+        Write-Host "ERROR: allure-results directory not found!"
+        New-Item -ItemType Directory -Name "allure-results" -Force
+        Write-Host "Created allure-results directory"
     }
   displayName: 'Run Pytest with Allure'
   continueOnError: true
