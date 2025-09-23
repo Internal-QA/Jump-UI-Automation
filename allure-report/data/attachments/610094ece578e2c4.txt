@@ -1,4 +1,0 @@
-2025-09-19 14:43:14 - UIAutomationLogger - INFO - Starting test: test_14_validate_used_sales_mo_calculation_specific
-2025-09-19 14:43:14 - UIAutomationLogger - INFO - Test 14: Validating used sales MO calculation
-2025-09-19 14:43:14 - UIAutomationLogger - INFO - ✅ Test 14: Used sales MO validation successful
-2025-09-19 14:43:14 - UIAutomationLogger - INFO - Test test_14_validate_used_sales_mo_calculation_specific completed in 0.20s

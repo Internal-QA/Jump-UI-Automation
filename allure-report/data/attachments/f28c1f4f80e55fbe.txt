@@ -1,4 +1,0 @@
-2025-09-19 14:43:13 - UIAutomationLogger - INFO - Starting test: test_09_complete_end_to_end_portfolio_creation_workflow
-2025-09-19 14:43:13 - UIAutomationLogger - INFO - Test 09: Testing complete workflow
-2025-09-19 14:43:13 - UIAutomationLogger - INFO - ✅ Test 09: Complete workflow successful
-2025-09-19 14:43:13 - UIAutomationLogger - INFO - Test test_09_complete_end_to_end_portfolio_creation_workflow completed in 0.31s

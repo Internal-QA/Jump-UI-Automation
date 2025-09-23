@@ -1,0 +1,4 @@
+2025-09-23 11:29:24 - UIAutomationLogger - INFO - Starting test: test_06_otp_timeout_handling
+2025-09-23 11:29:24 - UIAutomationLogger - INFO - Test 06: OTP timeout handling
+2025-09-23 11:29:26 - UIAutomationLogger - INFO - ✅ Timeout simulation: 2s
+2025-09-23 11:29:26 - UIAutomationLogger - INFO - Test test_06_otp_timeout_handling completed in 2.01s

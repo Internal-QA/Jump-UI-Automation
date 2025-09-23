@@ -1,5 +1,0 @@
-INFO     UIAutomationLogger:logger.py:60 Starting test: test_10_password_eye_icon_functionality
-INFO     UIAutomationLogger:logger.py:60 Test 10: Password eye icon
-INFO     UIAutomationLogger:logger.py:60 ✅ Password visibility: hidden
-INFO     UIAutomationLogger:logger.py:60 ✅ Password visibility: visible
-INFO     UIAutomationLogger:logger.py:60 Test test_10_password_eye_icon_functionality completed in 0.50s

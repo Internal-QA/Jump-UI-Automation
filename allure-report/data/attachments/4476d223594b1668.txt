@@ -1,4 +1,0 @@
-2025-09-19 14:43:29 - UIAutomationLogger - INFO - Starting test: test_07_create_valuation_access_financials_tab
-2025-09-19 14:43:29 - UIAutomationLogger - INFO - Test 07: Testing financials tab access
-2025-09-19 14:43:29 - UIAutomationLogger - INFO - ✅ Test 07: Financials tab access successful
-2025-09-19 14:43:29 - UIAutomationLogger - INFO - Test test_07_create_valuation_access_financials_tab completed in 0.31s

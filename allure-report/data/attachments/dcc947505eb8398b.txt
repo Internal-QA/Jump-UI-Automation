@@ -1,0 +1,4 @@
+2025-09-23 11:29:06 - UIAutomationLogger - INFO - Starting test: test_02_attempt_login_with_invalid_email
+2025-09-23 11:29:06 - UIAutomationLogger - INFO - Test 02: Invalid email format
+2025-09-23 11:29:06 - UIAutomationLogger - INFO - ✅ Driver functionality verified
+2025-09-23 11:29:06 - UIAutomationLogger - INFO - Test test_02_attempt_login_with_invalid_email completed in 0.51s

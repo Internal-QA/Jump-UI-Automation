@@ -1,0 +1,7 @@
+2025-09-23 11:29:26 - UIAutomationLogger - INFO - Starting test: test_07_multiple_otp_attempts
+2025-09-23 11:29:26 - UIAutomationLogger - INFO - Test 07: Multiple OTP attempts
+2025-09-23 11:29:26 - UIAutomationLogger - INFO - ✅ Attempt 1: 111111
+2025-09-23 11:29:27 - UIAutomationLogger - INFO - ✅ Attempt 2: 222222
+2025-09-23 11:29:27 - UIAutomationLogger - INFO - ✅ Attempt 3: 333333
+2025-09-23 11:29:27 - UIAutomationLogger - INFO - ✅ Attempt 4: 123456
+2025-09-23 11:29:27 - UIAutomationLogger - INFO - Test test_07_multiple_otp_attempts completed in 0.82s

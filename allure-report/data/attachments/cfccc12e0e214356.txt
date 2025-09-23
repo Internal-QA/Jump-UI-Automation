@@ -1,3 +1,0 @@
-INFO     UIAutomationLogger:logger.py:60 Starting test: test_20_validate_sales_mo_elements_with_table_scrolling
-INFO     UIAutomationLogger:logger.py:60 ✅ Test 20: Sales MO with scrolling successful
-INFO     UIAutomationLogger:logger.py:60 Test test_20_validate_sales_mo_elements_with_table_scrolling completed in 0.20s

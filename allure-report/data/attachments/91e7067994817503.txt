@@ -1,0 +1,4 @@
+2025-09-23 11:29:40 - UIAutomationLogger - INFO - Starting test: test_08_click_view_portfolio_button_access_details
+2025-09-23 11:29:40 - UIAutomationLogger - INFO - Test 08: Testing portfolio details view
+2025-09-23 11:29:40 - UIAutomationLogger - INFO - ✅ Test 08: Portfolio details view successful
+2025-09-23 11:29:40 - UIAutomationLogger - INFO - Test test_08_click_view_portfolio_button_access_details completed in 0.31s

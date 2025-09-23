@@ -1,4 +1,0 @@
-2025-09-19 14:43:13 - UIAutomationLogger - INFO - Starting test: test_12_validate_portfolio_sales_calculations_against_financials
-2025-09-19 14:43:13 - UIAutomationLogger - INFO - Test 12: Validating sales calculations
-2025-09-19 14:43:14 - UIAutomationLogger - INFO - ✅ Test 12: Sales calculations validation successful
-2025-09-19 14:43:14 - UIAutomationLogger - INFO - Test test_12_validate_portfolio_sales_calculations_against_financials completed in 0.21s

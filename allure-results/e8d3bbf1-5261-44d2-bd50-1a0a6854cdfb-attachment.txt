@@ -1,9 +1,0 @@
-INFO     UIAutomationLogger:logger.py:60 Starting test: test_10_otp_auto_focus_functionality
-INFO     UIAutomationLogger:logger.py:60 Test 10: OTP auto-focus functionality
-INFO     UIAutomationLogger:logger.py:60 ✅ Focus tested: otp_field_1
-INFO     UIAutomationLogger:logger.py:60 ✅ Focus tested: otp_field_2
-INFO     UIAutomationLogger:logger.py:60 ✅ Focus tested: otp_field_3
-INFO     UIAutomationLogger:logger.py:60 ✅ Focus tested: otp_field_4
-INFO     UIAutomationLogger:logger.py:60 ✅ Focus tested: otp_field_5
-INFO     UIAutomationLogger:logger.py:60 ✅ Focus tested: otp_field_6
-INFO     UIAutomationLogger:logger.py:60 Test test_10_otp_auto_focus_functionality completed in 0.63s

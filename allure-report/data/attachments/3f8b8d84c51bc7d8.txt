@@ -1,0 +1,35 @@
+INFO     UIAutomationLogger:logger.py:60 Setting up optimized test session
+INFO     UIAutomationLogger:logger.py:60 Configuration loaded successfully
+INFO     UIAutomationLogger:logger.py:60 Chrome WebDriver created with system driver
+INFO     UIAutomationLogger:logger.py:60 WebDriver test successful
+ERROR    UIAutomationLogger:logger.py:72 Login attempt failed: Message: timeout: Timed out receiving message from renderer: 14.854
+  (Session info: chrome=140.0.7339.133)
+Stacktrace:
+0   chromedriver                        0x0000000102c47418 cxxbridge1$str$ptr + 2882044
+1   chromedriver                        0x0000000102c3f3b4 cxxbridge1$str$ptr + 2849176
+2   chromedriver                        0x0000000102769050 _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 73436
+3   chromedriver                        0x0000000102753dcc cxxbridge1$string$len + 4008
+4   chromedriver                        0x0000000102753b84 cxxbridge1$string$len + 3424
+5   chromedriver                        0x0000000102751980 chromedriver + 203136
+6   chromedriver                        0x0000000102752510 chromedriver + 206096
+7   chromedriver                        0x000000010275f768 _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 34292
+8   chromedriver                        0x000000010277565c _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 124136
+9   chromedriver                        0x0000000102752b6c chromedriver + 207724
+10  chromedriver                        0x0000000102775464 _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 123632
+11  chromedriver                        0x00000001027f190c _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 632728
+12  chromedriver                        0x00000001027a40d0 _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 315228
+13  chromedriver                        0x0000000102c0bb08 cxxbridge1$str$ptr + 2638060
+14  chromedriver                        0x0000000102c0ed20 cxxbridge1$str$ptr + 2650884
+15  chromedriver                        0x0000000102bece58 cxxbridge1$str$ptr + 2511932
+16  chromedriver                        0x0000000102c0f5cc cxxbridge1$str$ptr + 2653104
+17  chromedriver                        0x0000000102bde59c cxxbridge1$str$ptr + 2452352
+18  chromedriver                        0x0000000102c2e9f0 cxxbridge1$str$ptr + 2781140
+19  chromedriver                        0x0000000102c2eb70 cxxbridge1$str$ptr + 2781524
+20  chromedriver                        0x0000000102c3f000 cxxbridge1$str$ptr + 2848228
+21  libsystem_pthread.dylib             0x0000000192d7fc0c _pthread_start + 136
+22  libsystem_pthread.dylib             0x0000000192d7ab80 thread_start + 8
+
+INFO     UIAutomationLogger:logger.py:60 Starting test: test_01_navigate_to_valuations_page_from_home
+INFO     UIAutomationLogger:logger.py:60 Test 01: Navigating to valuations page from home
+INFO     UIAutomationLogger:logger.py:60 ✅ Test 01: Valuations navigation successful
+INFO     UIAutomationLogger:logger.py:60 Test test_01_navigate_to_valuations_page_from_home completed in 0.30s

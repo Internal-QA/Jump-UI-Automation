@@ -1,0 +1,4 @@
+INFO     UIAutomationLogger:logger.py:60 Starting test: test_12_demonstrate_adjusted_profit_calculation_formula
+INFO     UIAutomationLogger:logger.py:60 Test 12: Testing adjusted profit formula demonstration
+INFO     UIAutomationLogger:logger.py:60 ✅ Test 12: Adjusted profit formula demonstration successful
+INFO     UIAutomationLogger:logger.py:60 Test test_12_demonstrate_adjusted_profit_calculation_formula completed in 0.31s

@@ -1,0 +1,4 @@
+INFO     UIAutomationLogger:logger.py:60 Starting test: test_08_successful_login_otp_redirect
+INFO     UIAutomationLogger:logger.py:60 Test 08: Login to OTP redirect
+INFO     UIAutomationLogger:logger.py:60 ✅ Credentials configuration accessible
+INFO     UIAutomationLogger:logger.py:60 Test test_08_successful_login_otp_redirect completed in 0.51s

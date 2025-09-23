@@ -1,4 +1,0 @@
-INFO     UIAutomationLogger:logger.py:60 Starting test: test_11_validate_all_financial_calculations_together
-INFO     UIAutomationLogger:logger.py:60 Test 11: Testing comprehensive financial calculations
-INFO     UIAutomationLogger:logger.py:60 ✅ Test 11: Comprehensive financial calculations successful
-INFO     UIAutomationLogger:logger.py:60 Test test_11_validate_all_financial_calculations_together completed in 0.30s

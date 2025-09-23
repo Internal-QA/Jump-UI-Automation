@@ -1,5 +1,0 @@
-2025-09-19 14:43:34 - UIAutomationLogger - INFO - Starting test: test_23_compare_current_suggested_radius_values
-2025-09-19 14:43:34 - UIAutomationLogger - INFO - Test 23: Testing radius values comparison
-2025-09-19 14:43:34 - UIAutomationLogger - INFO - ✅ Test 23: Radius values comparison successful
-2025-09-19 14:43:34 - UIAutomationLogger - INFO - Test test_23_compare_current_suggested_radius_values completed in 0.30s
-2025-09-19 14:43:34 - UIAutomationLogger - INFO - WebDriver closed successfully

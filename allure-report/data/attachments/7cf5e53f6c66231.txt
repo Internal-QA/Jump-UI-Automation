@@ -1,4 +1,0 @@
-INFO     UIAutomationLogger:logger.py:60 Starting test: test_11_test_current_radius_plus_minus_functionality
-INFO     UIAutomationLogger:logger.py:60 Test 11: Testing radius controls
-INFO     UIAutomationLogger:logger.py:60 ✅ Test 11: Radius controls successful
-INFO     UIAutomationLogger:logger.py:60 Test test_11_test_current_radius_plus_minus_functionality completed in 0.20s

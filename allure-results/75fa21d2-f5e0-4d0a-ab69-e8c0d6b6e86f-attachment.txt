@@ -1,4 +1,0 @@
-INFO     UIAutomationLogger:logger.py:60 Starting test: test_09_otp_back_to_login
-INFO     UIAutomationLogger:logger.py:60 Test 09: Back to login from OTP
-INFO     UIAutomationLogger:logger.py:60 ✅ Back to login: https://valueinsightpro.jumpiq.com/auth/login
-INFO     UIAutomationLogger:logger.py:60 Test test_09_otp_back_to_login completed in 0.50s

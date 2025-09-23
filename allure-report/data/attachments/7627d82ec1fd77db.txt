@@ -1,4 +1,0 @@
-2025-09-19 14:43:31 - UIAutomationLogger - INFO - Starting test: test_13_test_financial_data_extraction_and_validation
-2025-09-19 14:43:31 - UIAutomationLogger - INFO - Test 13: Testing financial data extraction
-2025-09-19 14:43:31 - UIAutomationLogger - INFO - ✅ Test 13: Financial data extraction successful
-2025-09-19 14:43:31 - UIAutomationLogger - INFO - Test test_13_test_financial_data_extraction_and_validation completed in 0.30s

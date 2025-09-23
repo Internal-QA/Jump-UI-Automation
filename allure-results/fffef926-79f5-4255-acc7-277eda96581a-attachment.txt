@@ -1,0 +1,4 @@
+2025-09-23 11:30:08 - UIAutomationLogger - INFO - Starting test: test_19_compare_fi_pvr_values_radius_performance_pages
+2025-09-23 11:30:08 - UIAutomationLogger - INFO - Test 19: Testing FI PVR values comparison
+2025-09-23 11:30:08 - UIAutomationLogger - INFO - ✅ Test 19: FI PVR values comparison successful
+2025-09-23 11:30:08 - UIAutomationLogger - INFO - Test test_19_compare_fi_pvr_values_radius_performance_pages completed in 0.31s

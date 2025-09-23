@@ -1,0 +1,7 @@
+INFO     UIAutomationLogger:logger.py:60 Starting test: test_07_multiple_otp_attempts
+INFO     UIAutomationLogger:logger.py:60 Test 07: Multiple OTP attempts
+INFO     UIAutomationLogger:logger.py:60 ✅ Attempt 1: 111111
+INFO     UIAutomationLogger:logger.py:60 ✅ Attempt 2: 222222
+INFO     UIAutomationLogger:logger.py:60 ✅ Attempt 3: 333333
+INFO     UIAutomationLogger:logger.py:60 ✅ Attempt 4: 123456
+INFO     UIAutomationLogger:logger.py:60 Test test_07_multiple_otp_attempts completed in 0.82s

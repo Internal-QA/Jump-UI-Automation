@@ -1,7 +1,0 @@
-INFO     UIAutomationLogger:logger.py:60 Starting test: test_02_validate_home_page_cards
-INFO     UIAutomationLogger:logger.py:60 Test 02: Validate home page cards
-INFO     UIAutomationLogger:logger.py:60 ✅ Validated card: Portfolio Card
-INFO     UIAutomationLogger:logger.py:60 ✅ Validated card: Valuations Card
-INFO     UIAutomationLogger:logger.py:60 ✅ Validated card: Reports Card
-INFO     UIAutomationLogger:logger.py:60 ✅ Validated card: Analytics Card
-INFO     UIAutomationLogger:logger.py:60 Test test_02_validate_home_page_cards completed in 0.42s

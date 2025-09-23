@@ -1,4 +1,0 @@
-2025-09-19 14:43:10 - UIAutomationLogger - INFO - Starting test: test_02_click_new_portfolio_button_navigate_to_builder
-2025-09-19 14:43:10 - UIAutomationLogger - INFO - Test 02: Testing new portfolio button navigation
-2025-09-19 14:43:11 - UIAutomationLogger - INFO - ✅ Test 02: Portfolio builder navigation successful
-2025-09-19 14:43:11 - UIAutomationLogger - INFO - Test test_02_click_new_portfolio_button_navigate_to_builder completed in 0.31s

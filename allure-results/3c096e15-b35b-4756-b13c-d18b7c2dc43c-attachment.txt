@@ -1,4 +1,0 @@
-2025-09-19 14:43:30 - UIAutomationLogger - INFO - Starting test: test_10_validate_adjusted_profit_calculation
-2025-09-19 14:43:30 - UIAutomationLogger - INFO - Test 10: Testing adjusted profit calculation validation
-2025-09-19 14:43:30 - UIAutomationLogger - INFO - ✅ Test 10: Adjusted profit calculation validation successful
-2025-09-19 14:43:30 - UIAutomationLogger - INFO - Test test_10_validate_adjusted_profit_calculation completed in 0.30s

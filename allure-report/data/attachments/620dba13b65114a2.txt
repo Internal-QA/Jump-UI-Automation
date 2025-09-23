@@ -1,5 +1,0 @@
-2025-09-19 14:43:01 - UIAutomationLogger - INFO - Starting test: test_11_otp_session_expiry_handling
-2025-09-19 14:43:01 - UIAutomationLogger - INFO - Test 11: OTP session expiry handling
-2025-09-19 14:43:01 - UIAutomationLogger - INFO - ✅ Session expiry handling: https://valueinsightpro.jumpiq.com/auth/login
-2025-09-19 14:43:01 - UIAutomationLogger - INFO - Test test_11_otp_session_expiry_handling completed in 0.51s
-2025-09-19 14:43:01 - UIAutomationLogger - INFO - WebDriver closed successfully

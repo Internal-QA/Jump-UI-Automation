@@ -138,12 +138,42 @@ class OptimizedBaseTest:
                 '--remote-debugging-port=9222'
             ]
             
+            # Pipeline-specific options for Windows Azure agents
+            is_pipeline = os.environ.get('RUNNING_IN_PIPELINE', 'false').lower() == 'true'
+            if is_pipeline:
+                cls.logger.info("🔧 Configuring Chrome for pipeline environment")
+                pipeline_options = [
+                    '--disable-background-timer-throttling',
+                    '--disable-backgrounding-occluded-windows',
+                    '--disable-renderer-backgrounding',
+                    '--disable-default-apps',
+                    '--disable-sync',
+                    '--metrics-recording-only',
+                    '--log-level=3',
+                    '--silent',
+                    '--disable-plugins',
+                    '--disable-images'
+                ]
+                chrome_options.extend(pipeline_options)
+            
             for option in chrome_options:
                 options.add_argument(option)
             
             # Additional settings
             options.add_experimental_option('useAutomationExtension', False)
             options.add_experimental_option("excludeSwitches", ["enable-automation"])
+            
+            # Pipeline Chrome binary detection for Windows
+            if is_pipeline and os.name == 'nt':  # Windows
+                chrome_paths = [
+                    r"C:\Program Files\Google\Chrome\Application\chrome.exe",
+                    r"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"
+                ]
+                for chrome_path in chrome_paths:
+                    if os.path.exists(chrome_path):
+                        options.binary_location = chrome_path
+                        cls.logger.info(f"Using Chrome binary: {chrome_path}")
+                        break
             
             # Create driver with automatic ChromeDriver management
             try:

@@ -1,5 +1,0 @@
-2025-09-19 14:42:42 - UIAutomationLogger - INFO - Starting test: test_10_password_eye_icon_functionality
-2025-09-19 14:42:42 - UIAutomationLogger - INFO - Test 10: Password eye icon
-2025-09-19 14:42:43 - UIAutomationLogger - INFO - ✅ Password visibility: hidden
-2025-09-19 14:42:43 - UIAutomationLogger - INFO - ✅ Password visibility: visible
-2025-09-19 14:42:43 - UIAutomationLogger - INFO - Test test_10_password_eye_icon_functionality completed in 0.50s

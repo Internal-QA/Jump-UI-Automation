@@ -1,4 +1,0 @@
-INFO     UIAutomationLogger:logger.py:60 Starting test: test_05_attempt_login_without_accepting_terms
-INFO     UIAutomationLogger:logger.py:60 Test 05: Terms not accepted
-INFO     UIAutomationLogger:logger.py:60 ✅ Wait functionality: True
-INFO     UIAutomationLogger:logger.py:60 Test test_05_attempt_login_without_accepting_terms completed in 0.52s

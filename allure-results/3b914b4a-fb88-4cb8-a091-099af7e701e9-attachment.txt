@@ -1,3 +1,0 @@
-2025-09-19 14:43:15 - UIAutomationLogger - INFO - Starting test: test_20_validate_sales_mo_elements_with_table_scrolling
-2025-09-19 14:43:15 - UIAutomationLogger - INFO - ✅ Test 20: Sales MO with scrolling successful
-2025-09-19 14:43:15 - UIAutomationLogger - INFO - Test test_20_validate_sales_mo_elements_with_table_scrolling completed in 0.20s

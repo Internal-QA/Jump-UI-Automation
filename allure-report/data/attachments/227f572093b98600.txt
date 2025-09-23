@@ -1,4 +1,0 @@
-2025-09-19 14:43:33 - UIAutomationLogger - INFO - Starting test: test_20_test_vehicle_type_filters_financials_page
-2025-09-19 14:43:33 - UIAutomationLogger - INFO - Test 20: Testing vehicle type filters
-2025-09-19 14:43:33 - UIAutomationLogger - INFO - ✅ Test 20: Vehicle type filters successful
-2025-09-19 14:43:33 - UIAutomationLogger - INFO - Test test_20_test_vehicle_type_filters_financials_page completed in 0.31s

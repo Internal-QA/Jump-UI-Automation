@@ -1,0 +1,4 @@
+2025-09-23 11:30:07 - UIAutomationLogger - INFO - Starting test: test_17_analyze_3_year_revenue_trends_financials_page
+2025-09-23 11:30:07 - UIAutomationLogger - INFO - Test 17: Testing 3 year revenue trends analysis
+2025-09-23 11:30:07 - UIAutomationLogger - INFO - ✅ Test 17: 3 year revenue trends analysis successful
+2025-09-23 11:30:07 - UIAutomationLogger - INFO - Test test_17_analyze_3_year_revenue_trends_financials_page completed in 0.30s

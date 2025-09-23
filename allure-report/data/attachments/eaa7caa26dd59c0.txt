@@ -1,0 +1,4 @@
+2025-09-23 11:29:08 - UIAutomationLogger - INFO - Starting test: test_07_clear_login_form
+2025-09-23 11:29:08 - UIAutomationLogger - INFO - Test 07: Clear login form
+2025-09-23 11:29:09 - UIAutomationLogger - INFO - ✅ Logger functionality verified
+2025-09-23 11:29:09 - UIAutomationLogger - INFO - Test test_07_clear_login_form completed in 0.51s

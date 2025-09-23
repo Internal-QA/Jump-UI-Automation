@@ -1,0 +1,9 @@
+2025-09-23 11:29:28 - UIAutomationLogger - INFO - Starting test: test_10_otp_auto_focus_functionality
+2025-09-23 11:29:28 - UIAutomationLogger - INFO - Test 10: OTP auto-focus functionality
+2025-09-23 11:29:28 - UIAutomationLogger - INFO - ✅ Focus tested: otp_field_1
+2025-09-23 11:29:28 - UIAutomationLogger - INFO - ✅ Focus tested: otp_field_2
+2025-09-23 11:29:28 - UIAutomationLogger - INFO - ✅ Focus tested: otp_field_3
+2025-09-23 11:29:28 - UIAutomationLogger - INFO - ✅ Focus tested: otp_field_4
+2025-09-23 11:29:28 - UIAutomationLogger - INFO - ✅ Focus tested: otp_field_5
+2025-09-23 11:29:29 - UIAutomationLogger - INFO - ✅ Focus tested: otp_field_6
+2025-09-23 11:29:29 - UIAutomationLogger - INFO - Test test_10_otp_auto_focus_functionality completed in 0.62s

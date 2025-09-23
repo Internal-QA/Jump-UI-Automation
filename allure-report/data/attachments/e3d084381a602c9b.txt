@@ -1,4 +1,0 @@
-INFO     UIAutomationLogger:logger.py:60 Starting test: test_13_test_financial_data_extraction_and_validation
-INFO     UIAutomationLogger:logger.py:60 Test 13: Testing financial data extraction
-INFO     UIAutomationLogger:logger.py:60 ✅ Test 13: Financial data extraction successful
-INFO     UIAutomationLogger:logger.py:60 Test test_13_test_financial_data_extraction_and_validation completed in 0.30s

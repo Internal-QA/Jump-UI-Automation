@@ -1,0 +1,4 @@
+INFO     UIAutomationLogger:logger.py:60 Starting test: test_10_validate_all_portfolio_urls_navigation_flow
+INFO     UIAutomationLogger:logger.py:60 Test 10: Testing URL navigation validation
+INFO     UIAutomationLogger:logger.py:60 ✅ Test 10: URL navigation validation successful
+INFO     UIAutomationLogger:logger.py:60 Test test_10_validate_all_portfolio_urls_navigation_flow completed in 0.30s

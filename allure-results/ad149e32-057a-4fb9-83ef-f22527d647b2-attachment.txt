@@ -1,0 +1,4 @@
+2025-09-23 11:29:42 - UIAutomationLogger - INFO - Starting test: test_13_validate_new_sales_mo_calculation_specific
+2025-09-23 11:29:42 - UIAutomationLogger - INFO - Test 13: Validating new sales MO calculation
+2025-09-23 11:29:42 - UIAutomationLogger - INFO - ✅ Test 13: New sales MO validation successful
+2025-09-23 11:29:42 - UIAutomationLogger - INFO - Test test_13_validate_new_sales_mo_calculation_specific completed in 0.20s

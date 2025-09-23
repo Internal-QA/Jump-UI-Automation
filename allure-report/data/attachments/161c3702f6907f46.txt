@@ -1,6 +1,0 @@
-2025-09-19 14:42:42 - UIAutomationLogger - INFO - Starting test: test_09_sign_in_button_state_validation
-2025-09-19 14:42:42 - UIAutomationLogger - INFO - Test 09: Sign-in button validation
-2025-09-19 14:42:42 - UIAutomationLogger - INFO - ✅ Button state tested: enabled
-2025-09-19 14:42:42 - UIAutomationLogger - INFO - ✅ Button state tested: disabled
-2025-09-19 14:42:42 - UIAutomationLogger - INFO - ✅ Button state tested: loading
-2025-09-19 14:42:42 - UIAutomationLogger - INFO - Test test_09_sign_in_button_state_validation completed in 0.51s

@@ -1,0 +1,6 @@
+INFO     UIAutomationLogger:logger.py:60 Starting test: test_05_resend_otp_functionality
+INFO     UIAutomationLogger:logger.py:60 Test 05: Resend OTP functionality
+INFO     UIAutomationLogger:logger.py:60 ✅ OTP resend simulated
+INFO     UIAutomationLogger:logger.py:60 Screenshot saved: screenshots/test_05_resend_otp_20250923_112924.png
+INFO     UIAutomationLogger:logger.py:60 ✅ Screenshot capability: True
+INFO     UIAutomationLogger:logger.py:60 Test test_05_resend_otp_functionality completed in 0.65s

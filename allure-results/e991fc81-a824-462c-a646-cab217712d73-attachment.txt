@@ -1,0 +1,4 @@
+INFO     UIAutomationLogger:logger.py:60 Starting test: test_13_validate_new_sales_mo_calculation_specific
+INFO     UIAutomationLogger:logger.py:60 Test 13: Validating new sales MO calculation
+INFO     UIAutomationLogger:logger.py:60 ✅ Test 13: New sales MO validation successful
+INFO     UIAutomationLogger:logger.py:60 Test test_13_validate_new_sales_mo_calculation_specific completed in 0.20s

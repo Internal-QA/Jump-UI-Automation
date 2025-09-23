@@ -1,0 +1,3 @@
+INFO     UIAutomationLogger:logger.py:60 Starting test: test_27_navigate_sunrise_chevrolet_extract_radius_data
+INFO     UIAutomationLogger:logger.py:60 ✅ Test 27: Radius data extraction successful
+INFO     UIAutomationLogger:logger.py:60 Test test_27_navigate_sunrise_chevrolet_extract_radius_data completed in 0.21s

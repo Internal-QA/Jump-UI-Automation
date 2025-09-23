@@ -1,0 +1,4 @@
+INFO     UIAutomationLogger:logger.py:60 Starting test: test_14_navigate_to_radius_tab_extract_data
+INFO     UIAutomationLogger:logger.py:60 Test 14: Testing radius tab navigation
+INFO     UIAutomationLogger:logger.py:60 ✅ Test 14: Radius tab navigation successful
+INFO     UIAutomationLogger:logger.py:60 Test test_14_navigate_to_radius_tab_extract_data completed in 0.31s

@@ -1,4 +1,0 @@
-2025-09-19 14:42:55 - UIAutomationLogger - INFO - Starting test: test_03_enter_invalid_otp_code
-2025-09-19 14:42:55 - UIAutomationLogger - INFO - Test 03: Enter invalid OTP code
-2025-09-19 14:42:55 - UIAutomationLogger - INFO - ✅ Invalid OTP tested: 999999
-2025-09-19 14:42:55 - UIAutomationLogger - INFO - Test test_03_enter_invalid_otp_code completed in 0.51s

@@ -1,0 +1,5 @@
+2025-09-23 11:29:07 - UIAutomationLogger - INFO - Starting test: test_04_attempt_login_with_empty_password
+2025-09-23 11:29:07 - UIAutomationLogger - INFO - Test 04: Empty password field
+2025-09-23 11:29:07 - UIAutomationLogger - INFO - Screenshot saved: screenshots/test_04_validation_20250923_112907.png
+2025-09-23 11:29:07 - UIAutomationLogger - INFO - ✅ Screenshot capability: True
+2025-09-23 11:29:07 - UIAutomationLogger - INFO - Test test_04_attempt_login_with_empty_password completed in 0.62s

@@ -1,3 +1,0 @@
-INFO     UIAutomationLogger:logger.py:60 Starting test: test_26_extract_fni_pvr_suggested_radius_from_portfolio_table
-INFO     UIAutomationLogger:logger.py:60 ✅ Test 26: FNI PVR extraction successful
-INFO     UIAutomationLogger:logger.py:60 Test test_26_extract_fni_pvr_suggested_radius_from_portfolio_table completed in 0.20s

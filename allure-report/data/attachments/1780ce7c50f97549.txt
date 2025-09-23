@@ -1,0 +1,3 @@
+2025-09-23 11:29:43 - UIAutomationLogger - INFO - Starting test: test_19_complete_workflow_financials_to_portfolio_validation
+2025-09-23 11:29:43 - UIAutomationLogger - INFO - ✅ Test 19: Financials to portfolio workflow successful
+2025-09-23 11:29:43 - UIAutomationLogger - INFO - Test test_19_complete_workflow_financials_to_portfolio_validation completed in 0.21s

@@ -1,0 +1,4 @@
+2025-09-23 11:29:09 - UIAutomationLogger - INFO - Starting test: test_08_successful_login_otp_redirect
+2025-09-23 11:29:09 - UIAutomationLogger - INFO - Test 08: Login to OTP redirect
+2025-09-23 11:29:09 - UIAutomationLogger - INFO - ✅ Credentials configuration accessible
+2025-09-23 11:29:09 - UIAutomationLogger - INFO - Test test_08_successful_login_otp_redirect completed in 0.51s

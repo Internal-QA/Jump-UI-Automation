@@ -31,15 +31,110 @@ steps:
     addToPath: true
   displayName: 'Setup Python'
 
-- script: |
+- powershell: |
+    Write-Host "Installing Python dependencies..."
     python -m pip install --upgrade pip
     python -m pip install -r requirements.txt
-    python -m pip install allure-pytest pytest requests
-  displayName: 'Install Dependencies'
+    python -m pip install allure-pytest pytest requests webdriver-manager
+    Write-Host "Installed packages:"
+    python -m pip list | Select-String -Pattern "(pytest|allure|selenium|webdriver)"
+  displayName: 'Install Python Dependencies'
 
-- script: |
-    mkdir allure-results
-    python -m pytest tests/ --alluredir=allure-results
+- powershell: |
+    Write-Host "Installing Chrome browser..."
+    # Chrome is already installed on Windows Azure agents
+    # Check if Chrome is available
+    $chromePath = Get-Command chrome -ErrorAction SilentlyContinue
+    if ($chromePath) {
+        Write-Host "Chrome already available at: $($chromePath.Source)"
+        & chrome --version
+    } else {
+        Write-Host "Installing Chrome via Chocolatey..."
+        choco install googlechrome -y
+        Write-Host "Chrome installation completed"
+    }
+  displayName: 'Setup Chrome Browser'
+
+- powershell: |
+    Write-Host "Setting up test environment for Windows..."
+    # Windows doesn't need virtual display setup
+    # Set environment variables for pipeline
+    $env:RUNNING_IN_PIPELINE = "true"
+    $env:PYTEST_CURRENT_TEST = ""
+    Write-Host "Environment variables set for pipeline execution"
+  displayName: 'Setup Test Environment'
+
+- powershell: |
+    Write-Host "Setting up test execution..."
+    if (!(Test-Path "allure-results")) {
+        New-Item -ItemType Directory -Name "allure-results"
+    }
+    
+    # Set environment variables
+    $env:RUNNING_IN_PIPELINE = "true"
+    $env:PYTEST_CURRENT_TEST = ""
+    
+    Write-Host "Checking test discovery..."
+    python -m pytest --collect-only tests/ | Select-Object -First 20
+    Write-Host "Total tests discovered:"
+    $collectOutput = python -m pytest --collect-only tests/ -q 2>&1
+    if ($collectOutput -match "test session starts") {
+        Write-Host $collectOutput
+    } else {
+        Write-Host "No tests discovered or collection failed"
+    }
+    
+    Write-Host "Running tests with comprehensive logging..."
+    $pytestArgs = @(
+        "tests/",
+        "--alluredir=allure-results",
+        "--clean-alluredir",
+        "-v",
+        "--tb=short",
+        "--maxfail=5",
+        "--capture=no",
+        "--log-cli-level=INFO"
+    )
+    
+    python -m pytest @pytestArgs
+    $PYTEST_EXIT_CODE = $LASTEXITCODE
+    Write-Host "Pytest completed with exit code: $PYTEST_EXIT_CODE"
+    
+    Write-Host "Checking allure-results..."
+    if (Test-Path "allure-results") {
+        Write-Host "Contents of allure-results:"
+        Get-ChildItem "allure-results" | Select-Object -First 10
+        $jsonFiles = Get-ChildItem "allure-results" -Filter "*.json"
+        $JSON_COUNT = $jsonFiles.Count
+        Write-Host "Total JSON result files: $JSON_COUNT"
+        
+        if ($JSON_COUNT -eq 0) {
+            Write-Host "WARNING: No Allure result files generated!"
+            Write-Host "Creating minimal test result for report generation..."
+            $minimalResult = @{
+                uuid = "minimal-test-result"
+                name = "Pipeline Test Discovery"
+                fullName = "pipeline.test_discovery"
+                status = "failed"
+                statusDetails = @{
+                    message = "Tests failed to execute in pipeline environment"
+                    trace = "Check pipeline logs for WebDriver or import errors"
+                }
+                stage = "finished"
+                start = 1640995200000
+                stop = 1640995260000
+                labels = @(
+                    @{ name = "suite"; value = "Pipeline Diagnostics" },
+                    @{ name = "framework"; value = "pytest" }
+                )
+            }
+            $minimalResult | ConvertTo-Json -Depth 10 | Out-File -FilePath "allure-results/minimal-result.json" -Encoding UTF8
+            Write-Host "Minimal result file created for debugging"
+        }
+    } else {
+        Write-Host "ERROR: allure-results directory missing!"
+        New-Item -ItemType Directory -Name "allure-results"
+    }
   displayName: 'Run Pytest with Allure'
   continueOnError: true
 

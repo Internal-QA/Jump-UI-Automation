@@ -1,0 +1,5 @@
+2025-09-23 11:29:11 - UIAutomationLogger - INFO - Starting test: test_12_privacy_policy_button_functionality
+2025-09-23 11:29:11 - UIAutomationLogger - INFO - Test 12: Privacy policy button
+2025-09-23 11:29:12 - UIAutomationLogger - INFO - ✅ Timeout configuration: 5s
+2025-09-23 11:29:12 - UIAutomationLogger - INFO - Test test_12_privacy_policy_button_functionality completed in 0.51s
+2025-09-23 11:29:12 - UIAutomationLogger - INFO - WebDriver closed successfully

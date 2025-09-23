@@ -1,0 +1,29 @@
+# Pipeline-specific configuration for Azure CI/CD
+# Overrides default config for headless execution
+
+browser:
+  headless: true
+  window_size: "1920,1080"
+  timeout: 30
+  
+webdriver:
+  implicit_wait: 10
+  explicit_wait: 15
+  page_load_timeout: 30
+  
+test_data:
+  screenshot_on_failure: false
+  max_retries: 1
+  retry_delay: 2
+  
+logging:
+  level: "INFO"
+  console_output: true
+  
+# Simplified URLs for pipeline testing
+base_url: "https://jumpfiveapp.azurewebsites.net"
+login_url: "https://jumpfiveapp.azurewebsites.net/login"
+
+# Pipeline environment flags
+pipeline_mode: true
+parallel_execution: false

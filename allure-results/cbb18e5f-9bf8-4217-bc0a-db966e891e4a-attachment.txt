@@ -1,4 +1,0 @@
-2025-09-19 14:43:00 - UIAutomationLogger - INFO - Starting test: test_09_otp_back_to_login
-2025-09-19 14:43:00 - UIAutomationLogger - INFO - Test 09: Back to login from OTP
-2025-09-19 14:43:00 - UIAutomationLogger - INFO - ✅ Back to login: https://valueinsightpro.jumpiq.com/auth/login
-2025-09-19 14:43:00 - UIAutomationLogger - INFO - Test test_09_otp_back_to_login completed in 0.50s

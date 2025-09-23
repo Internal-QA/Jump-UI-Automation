@@ -1,0 +1,3 @@
+INFO     UIAutomationLogger:logger.py:60 Starting test: test_21_enhanced_sales_mo_validation_with_scrolling
+INFO     UIAutomationLogger:logger.py:60 ✅ Test 21: Enhanced sales MO validation successful
+INFO     UIAutomationLogger:logger.py:60 Test test_21_enhanced_sales_mo_validation_with_scrolling completed in 0.21s

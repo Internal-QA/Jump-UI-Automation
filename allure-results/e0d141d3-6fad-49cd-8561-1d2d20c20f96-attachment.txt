@@ -1,4 +1,0 @@
-2025-09-19 14:43:11 - UIAutomationLogger - INFO - Starting test: test_05_click_rooftop_sunrise_chevrolet_handle_popup
-2025-09-19 14:43:11 - UIAutomationLogger - INFO - Test 05: Testing rooftop selection and popup handling
-2025-09-19 14:43:12 - UIAutomationLogger - INFO - ✅ Test 05: Rooftop selection and popup handling successful
-2025-09-19 14:43:12 - UIAutomationLogger - INFO - Test test_05_click_rooftop_sunrise_chevrolet_handle_popup completed in 0.31s

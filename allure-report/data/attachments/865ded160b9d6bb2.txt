@@ -1,3 +1,0 @@
-2025-09-19 14:43:14 - UIAutomationLogger - INFO - Starting test: test_16_validate_portfolio_new_value_against_financials
-2025-09-19 14:43:14 - UIAutomationLogger - INFO - ✅ Test 16: Portfolio new value validation successful
-2025-09-19 14:43:14 - UIAutomationLogger - INFO - Test test_16_validate_portfolio_new_value_against_financials completed in 0.21s

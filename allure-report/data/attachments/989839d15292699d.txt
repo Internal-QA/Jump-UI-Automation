@@ -1,5 +1,0 @@
-INFO     UIAutomationLogger:logger.py:60 Starting test: test_04_attempt_login_with_empty_password
-INFO     UIAutomationLogger:logger.py:60 Test 04: Empty password field
-INFO     UIAutomationLogger:logger.py:60 Screenshot saved: screenshots/test_04_validation_20250919_144240.png
-INFO     UIAutomationLogger:logger.py:60 ✅ Screenshot capability: True
-INFO     UIAutomationLogger:logger.py:60 Test test_04_attempt_login_with_empty_password completed in 0.65s

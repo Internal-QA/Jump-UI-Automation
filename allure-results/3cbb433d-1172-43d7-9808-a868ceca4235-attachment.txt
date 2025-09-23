@@ -1,4 +1,0 @@
-2025-09-19 14:43:28 - UIAutomationLogger - INFO - Starting test: test_05_create_new_valuation_select_dealer
-2025-09-19 14:43:28 - UIAutomationLogger - INFO - Test 05: Testing new valuation creation
-2025-09-19 14:43:28 - UIAutomationLogger - INFO - ✅ Test 05: New valuation creation successful
-2025-09-19 14:43:28 - UIAutomationLogger - INFO - Test test_05_create_new_valuation_select_dealer completed in 0.31s
