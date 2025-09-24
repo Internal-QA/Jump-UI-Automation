@@ -41,17 +41,13 @@ steps:
   displayName: 'Install Python Dependencies'
 
 - powershell: |
-    Write-Host "Installing Chrome browser..."
-    # Chrome is already installed on Windows Azure agents
-    # Check if Chrome is available
-    $chromePath = Get-Command chrome -ErrorAction SilentlyContinue
-    if ($chromePath) {
-        Write-Host "Chrome already available at: $($chromePath.Source)"
-        & chrome --version
+    Write-Host "Checking Chrome availability on hosted agent..."
+    $chromePath = "C:\Program Files\Google\Chrome\Application\chrome.exe"
+    if (Test-Path $chromePath) {
+        Write-Host "Chrome found at: $chromePath"
+        & $chromePath --version
     } else {
-        Write-Host "Installing Chrome via Chocolatey..."
-        choco install googlechrome -y
-        Write-Host "Chrome installation completed"
+        Write-Error "Chrome not found! Please check agent configuration."
     }
   displayName: 'Setup Chrome Browser'
 
